@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Tags, Hexo">
-    <meta name="description" content="Tags | Hexo">
+    <meta name="keywords" content="Category: 子龙, Hexo">
+    <meta name="description" content="Category: 子龙 | Hexo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Tags | Hexo</title>
+    <title>Category: 子龙 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,45 +283,31 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fa fa-tags"></i>&nbsp;&nbsp;Post Tags
+                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;Post Categories
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/网课/" title="网课: 1">
+                
+                <a href="/categories/子龙/" title="子龙: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="网课" style="background-color: #F9EBEA;">网课
+                             chip-active " style="background-color: #F9EBEA;">子龙
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/秘籍/" title="秘籍: 1">
+                <a href="/categories/ZL/" title="ZL: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="秘籍" style="background-color: #F5EEF8;">秘籍
+                             chip-default " style="background-color: #F5EEF8;">ZL
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
-                
-                <a href="/tags/文章/" title="文章: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="文章" style="background-color: #D5F5E3;">文章
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/格式/" title="格式: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="格式" style="background-color: #E8F8F5;">格式
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
                 
             </div>
         </div>
@@ -329,31 +315,64 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
 
     
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/05/18/t/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="智慧树刷课秘籍">
+                            
+                            <span class="card-title">智慧树刷课秘籍</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                最安全的刷课方式！！！
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-18
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/子龙/" class="post-category" target="_blank">
+                                    子龙
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"网课","weight":1,"link":"http://yoursite.com/tags/网课/"},{"text":"秘籍","weight":1,"link":"http://yoursite.com/tags/秘籍/"},{"text":"文章","weight":1,"link":"http://yoursite.com/tags/文章/"},{"text":"格式","weight":1,"link":"http://yoursite.com/tags/格式/"}], {
-        autoResize: true
-    });
-</script>
-    
-
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/网课/" target="_blank">
+                            <span class="chip bg-color">网课</span>
+                        </a>
+                        
+                        <a href="/tags/秘籍/" target="_blank">
+                            <span class="chip bg-color">秘籍</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
