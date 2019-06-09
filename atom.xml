@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-25T09:25:50.745Z</updated>
+  <updated>2019-06-09T09:47:39.953Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于本站</title>
+    <link href="http://yoursite.com/2019/06/09/aboutweb/"/>
+    <id>http://yoursite.com/2019/06/09/aboutweb/</id>
+    <published>2019-06-09T09:25:00.000Z</published>
+    <updated>2019-06-09T09:47:39.953Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我是个非常懒的人，非常不自律，嗯，可能在老师眼里我就是那个学习吊儿郎当，不踏实的学生，虽然老师们没有直说，但我还是能看清自己，俗话说的好知错能改就是好孩子，&lt;br&gt;所以呢！我决定时常反省一下自己，没事就写写博客吧！起初没想好写些什么，圈子里都讲不想当黑客的程序员不是好程序员
+        
+      
+    
+    </summary>
+    
+      <category term="子龙" scheme="http://yoursite.com/categories/%E5%AD%90%E9%BE%99/"/>
+    
+    
+      <category term="作者" scheme="http://yoursite.com/tags/%E4%BD%9C%E8%80%85/"/>
+    
+      <category term="赵子龙" scheme="http://yoursite.com/tags/%E8%B5%B5%E5%AD%90%E9%BE%99/"/>
+    
+  </entry>
   
   <entry>
     <title>智慧树刷课秘籍</title>
@@ -72,7 +100,7 @@
     <link href="http://yoursite.com/2018/09/07/test/"/>
     <id>http://yoursite.com/2018/09/07/test/</id>
     <published>2018-09-07T01:25:00.000Z</published>
-    <updated>2019-05-25T09:28:32.560Z</updated>
+    <updated>2019-06-09T09:49:11.977Z</updated>
     
     <summary type="html">
     
