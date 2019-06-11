@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>踏上黑客之路</title>
+      <link href="/2019/06/11/frist/"/>
+      <url>/2019/06/11/frist/</url>
+      
+        <content type="html"><![CDATA[<p>在我们翻开一本关于开发类的书籍的时候都会看到一句：“工欲善其事必先利其器”，这句话给我们的意思呢大概就是，要想学好编程，首先得有开发工具，接下来，我就来讲怎么安装Linux kali 系统的环境，这时候很多人会产生疑惑，不久是个系统吗直接装不就好了？为啥还要环境，由于kali系统是全root模式安全性为0，容易被病毒入侵，不利于测试，几乎很少有人把它直接装在自己的电脑硬盘上，所以这时候我们有需要一个虚拟机，（简单说一下虚拟机的概念：虚拟机它就是可以模拟各种系统运行的一个软件，通常都指-VMware）<br><a href="https://blog.csdn.net/baijinswpu/article/details/80835417" target="_blank" rel="noopener">虚拟机安装教程</a></p><p>这时候呢你电脑上已经有虚拟机软件了，接下来就需要linux kali的镜像文件进行安装到虚拟机上就ok了<br>注意网络模式要设为桥接！还有就是密匙网上都有！随便搜一下就永久免费啦！下面附上kali系统的安装教程。<br><a href="https://blog.csdn.net/qq_40950957/article/details/80468030" target="_blank" rel="noopener">kali系统安装教程</a></p><p>到这我相信你已经安装好了kali系统的环境！！！，如果有问题可以点博客下的企鹅咨询我！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 作者 </tag>
+            
+            <tag> 赵子龙 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于本站</title>
       <link href="/2019/06/09/aboutweb/"/>
       <url>/2019/06/09/aboutweb/</url>

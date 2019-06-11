@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-09T09:47:39.953Z</updated>
+  <updated>2019-06-11T14:53:33.344Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>踏上黑客之路</title>
+    <link href="http://yoursite.com/2019/06/11/frist/"/>
+    <id>http://yoursite.com/2019/06/11/frist/</id>
+    <published>2019-06-11T14:25:00.000Z</published>
+    <updated>2019-06-11T14:53:33.344Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在我们翻开一本关于开发类的书籍的时候都会看到一句：“工欲善其事必先利其器”，这句话给我们的意思呢大概就是，要想学好编程，首先得有开发工具，接下来，我就来讲怎么安装Linux kali
+        
+      
+    
+    </summary>
+    
+      <category term="Markdown" scheme="http://yoursite.com/categories/Markdown/"/>
+    
+    
+      <category term="作者" scheme="http://yoursite.com/tags/%E4%BD%9C%E8%80%85/"/>
+    
+      <category term="赵子龙" scheme="http://yoursite.com/tags/%E8%B5%B5%E5%AD%90%E9%BE%99/"/>
+    
+  </entry>
   
   <entry>
     <title>关于本站</title>
