@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>局域网内的不速之客（1）</title>
+      <link href="/2019/06/13/1/"/>
+      <url>/2019/06/13/1/</url>
+      
+        <content type="html"><![CDATA[<p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_175422.png" alt="@子龙"><br>当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程</p><p>##ARP协议<br>ARP（Address Resolution Protocol，地址解析协议）是一个位于TCP/IP协议栈中的网络层，负责将某个IP地址解析成对应的MAC地址。</p><p>###基本功能<br>通过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的进行。</p><p>###ARP攻击的局限性<br>ARP攻击仅能在以太网（局域网如：机房、内网、公司网络等）进行。</p><p>无法对外网（互联网、非本区域内的局域网）进行攻击。</p><p>###ARP攻击的攻击原理<br>ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。</p><p>##在Kali Linux环境下的实现ARP攻击<br>攻击环境<br>攻击主机：Kali Linux </p><p>IP：192.168.1.13</p><p>被攻击主机：Windows 10</p><p>IP：192.168.1.10</p><p>因为是在虚拟机环境下实现的攻击，所以要提前将虚拟机的网络适配器设置为桥接模式，这样一来虚拟机便可以单独获得一个ip地址，而不是和NAT模式下一样和宿主机共用一个ip地址。</p><p>###ARP断网攻击（更多攻击手段持续更新ing）<br>在进行攻击的时候我们需要先知道自己的IP地址，在终端中输入ifconfig指令即可（所说的终端是kali系统中的cmd在左侧任务栏内，一般是第二个）</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_181357.png" alt="@子龙"></p><p>在知道了自己IP地址的情况下，我们同时也知道了自己所在的网段，接下来我们可以找一下当前局域网下还存在哪些主机，<br>如果想看自己电脑连接的那台路由器上的网管输入ipconfig查看<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183724.png" alt="@子龙"><br>这里使用nmap脚本（nmap可以扫描出当前路由器下被占用的端口，通俗点讲就是这些端口都是有人在使用的！）出于道德我演示攻击自己的电脑为例子！<br>命令：namp -sP 192.168.1.*<br>后面的是网关ip，不是绝对的，网关地址在上图中可以看到<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183837.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183911.png" alt="@子龙"><br>可以看到我们已经通过namp命令扫描出了当前路由器下的ip<br>对比上下图，我们可以发现我们的目标ip的确也是在列表中的，这个时候目标还是可以正常上网的</p><p>此时，在Kali中使用arpspoof工具实现ARP攻击<br>攻击命令：Arpspoof -i eth0 -t 192.168.1.10 -t 192.168.1.1<br>ip就是目标ip加上网关地址<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185319.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185346.png" alt="@子龙"></p><p>这个时候的目标已经无法正常上网了</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185512.png" alt="@子龙"></p><p>停止ARP攻击，目标就能恢复到正常上网状态<br>快捷键是（Ctrl+c）结束攻击！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 赵子龙 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 攻击 </tag>
+            
+            <tag> 断网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>踏上黑客之路</title>
       <link href="/2019/06/11/frist/"/>
       <url>/2019/06/11/frist/</url>
