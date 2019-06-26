@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>网站开发概述（1）</title>
+      <link href="/2019/06/26/web1/"/>
+      <url>/2019/06/26/web1/</url>
+      
+        <content type="html"><![CDATA[<h5 id="你是否也想拥有一个自己的网站呢？"><a href="#你是否也想拥有一个自己的网站呢？" class="headerlink" title="你是否也想拥有一个自己的网站呢？"></a>你是否也想拥有一个自己的网站呢？</h5><p>接下来的网站系列我会概述，制作一个静态网站所需要的东西，以及将制作好的项目发布到服务器上的教程。</p><p>####### 网站类型：网站呢！它分为静态网站和动态网站，所谓静态网站就是没有后台的，作为静态展示用的网站<br>动态的，大家一般就理解成有后台支持的，可以通过后台修改网页内容的网站那种（这里的后台指后台管理操作，有数据库支持，能对网站做出更新的功能）</p><h5 id="1-开发软件的安装-HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）"><a href="#1-开发软件的安装-HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）" class="headerlink" title="1.开发软件的安装 HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）"></a>1.开发软件的安装 HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）</h5><p>这里附上HBuilder的安装包地址—<a href="https://share.weiyun.com/5AOIOrI" target="_blank" rel="noopener">腾讯微云</a>—<br>安装好了之后你就可以开始开发一个静态网站了！一个静态网站基本需要会html的标签语法加上css布局和一定的js水平<br>如果是小白的话不用担心，可以自学，这里跟一些比较好的自学网站地址<br><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a>  <a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">W3school</a></p><h5 id="2-网站发布概述"><a href="#2-网站发布概述" class="headerlink" title="2.网站发布概述"></a>2.网站发布概述</h5><p>发布网站，想让全国各地的人访问到你的网站，就要把你制作好的网站发布到服务器上（服务器呢它虽然叫服务器，其实它就是一台不关机的电脑，不知道你是否了解远程连接，远程访问，可以这么理解服务器它就是任何用户都可以访问的一台电脑）<br>嗯！可能解释的有些抽象，但当你有了一台自己的服务器的时候，你会发现我说的非常通俗易懂！哈哈<br>这时候你会产生疑问，我的项目该放在服务器的哪个地方呢！这里就需要说到应用层服务器，阿帕奇的tomcat，这个东西它能自动解析你的项目，一主默认的主网页都是index.html，它解析过了之后呢，你运行它通常就是出来一个dos界面里面显示几月几月份<br>然后你通过你服务器公网的ip地址就能直接访问到你的网站了！</p><h5 id="3-环境搭建"><a href="#3-环境搭建" class="headerlink" title="3.环境搭建"></a>3.环境搭建</h5><p>当你手中有一个比较完善的项目的时候，这时候就需要将web项目进行部署<br>1.你需要一台服务器来运行你的项目，服务器哪里买呢，中国四大服务器运营商，什么阿里，腾讯，华为，百度，我是买的阿里的，阿里有个云翼计划（活动），对学生优惠9.5一个月服务器，很便宜，可以玩很久.<br>2.你需要一个域名来解析你的服务器公网ip地址，（这时候可能有人会疑问，什么是域名呢，域名它实际上是一个网址，一般都是万维网www开头的，通过这个域名就能访问你的网站内容，嗯，是不是很容易理解呢）<br>3.你需要将tomecat或其他..安装到服务器上，并配置jdk环境</p><h4 id="4-内网穿透（把自己电脑当成服务器）"><a href="#4-内网穿透（把自己电脑当成服务器）" class="headerlink" title="4.内网穿透（把自己电脑当成服务器）"></a>4.内网穿透（把自己电脑当成服务器）</h4><p>比如有些人不想买服务器，或者我没有钱买怎么办呢，在网站教程系列的末尾，<br>会出一篇关于使用《花生壳内网穿透的教程》，这个原理很容易明白就是把你的电脑ip地址映射到公网上，这样别人就能通过浏览器来访问你的网站，嗯，但是也有弊端，自己的电脑需要一直开着，并且会使它不安全，或者出现上行不够的情况</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 赵子龙 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 建站 </tag>
+            
+            <tag> 概述 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>局域网内的不速之客（1）</title>
       <link href="/2019/06/13/1/"/>
       <url>/2019/06/13/1/</url>
       
-        <content type="html"><![CDATA[<p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_175422.png" alt="@子龙"><br>当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程</p><p>##ARP协议<br>ARP（Address Resolution Protocol，地址解析协议）是一个位于TCP/IP协议栈中的网络层，负责将某个IP地址解析成对应的MAC地址。</p><p>###基本功能<br>通过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的进行。</p><p>###ARP攻击的局限性<br>ARP攻击仅能在以太网（局域网如：机房、内网、公司网络等）进行。</p><p>无法对外网（互联网、非本区域内的局域网）进行攻击。</p><p>###ARP攻击的攻击原理<br>ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。</p><p>##在Kali Linux环境下的实现ARP攻击<br>攻击环境<br>攻击主机：Kali Linux </p><p>IP：192.168.1.13</p><p>被攻击主机：Windows 10</p><p>IP：192.168.1.10</p><p>因为是在虚拟机环境下实现的攻击，所以要提前将虚拟机的网络适配器设置为桥接模式，这样一来虚拟机便可以单独获得一个ip地址，而不是和NAT模式下一样和宿主机共用一个ip地址。</p><p>###ARP断网攻击（更多攻击手段持续更新ing）<br>在进行攻击的时候我们需要先知道自己的IP地址，在终端中输入ifconfig指令即可（所说的终端是kali系统中的cmd在左侧任务栏内，一般是第二个）</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_181357.png" alt="@子龙"></p><p>在知道了自己IP地址的情况下，我们同时也知道了自己所在的网段，接下来我们可以找一下当前局域网下还存在哪些主机，<br>如果想看自己电脑连接的那台路由器上的网管输入ipconfig查看<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183724.png" alt="@子龙"><br>这里使用nmap脚本（nmap可以扫描出当前路由器下被占用的端口，通俗点讲就是这些端口都是有人在使用的！）出于道德我演示攻击自己的电脑为例子！<br>命令：namp -sP 192.168.1.*<br>后面的是网关ip，不是绝对的，网关地址在上图中可以看到<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183837.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183911.png" alt="@子龙"><br>可以看到我们已经通过namp命令扫描出了当前路由器下的ip<br>对比上下图，我们可以发现我们的目标ip的确也是在列表中的，这个时候目标还是可以正常上网的</p><p>此时，在Kali中使用arpspoof工具实现ARP攻击<br>攻击命令：Arpspoof -i eth0 -t 192.168.1.10 -t 192.168.1.1<br>ip就是目标ip加上网关地址<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185319.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185346.png" alt="@子龙"></p><p>这个时候的目标已经无法正常上网了</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185512.png" alt="@子龙"></p><p>停止ARP攻击，目标就能恢复到正常上网状态<br>快捷键是（Ctrl+c）结束攻击！</p>]]></content>
+        <content type="html"><![CDATA[<p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_175422.png" alt="@子龙"><br>当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程</p><h2 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h2><p>ARP（Address Resolution Protocol，地址解析协议）是一个位于TCP/IP协议栈中的网络层，负责将某个IP地址解析成对应的MAC地址。</p><h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><p>通过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的进行。</p><h3 id="ARP攻击的局限性"><a href="#ARP攻击的局限性" class="headerlink" title="ARP攻击的局限性"></a>ARP攻击的局限性</h3><p>ARP攻击仅能在以太网（局域网如：机房、内网、公司网络等）进行。</p><p>无法对外网（互联网、非本区域内的局域网）进行攻击。</p><h3 id="ARP攻击的攻击原理"><a href="#ARP攻击的攻击原理" class="headerlink" title="ARP攻击的攻击原理"></a>ARP攻击的攻击原理</h3><p>ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。</p><h2 id="在Kali-Linux环境下的实现ARP攻击"><a href="#在Kali-Linux环境下的实现ARP攻击" class="headerlink" title="在Kali Linux环境下的实现ARP攻击"></a>在Kali Linux环境下的实现ARP攻击</h2><p>攻击环境<br>攻击主机：Kali Linux </p><p>IP：192.168.1.13</p><p>被攻击主机：Windows 10</p><p>IP：192.168.1.10</p><p>因为是在虚拟机环境下实现的攻击，所以要提前将虚拟机的网络适配器设置为桥接模式，这样一来虚拟机便可以单独获得一个ip地址，而不是和NAT模式下一样和宿主机共用一个ip地址。</p><h3 id="ARP断网攻击（更多攻击手段持续更新ing）"><a href="#ARP断网攻击（更多攻击手段持续更新ing）" class="headerlink" title="ARP断网攻击（更多攻击手段持续更新ing）"></a>ARP断网攻击（更多攻击手段持续更新ing）</h3><p>在进行攻击的时候我们需要先知道自己的IP地址，在终端中输入ifconfig指令即可（所说的终端是kali系统中的cmd在左侧任务栏内，一般是第二个）</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_181357.png" alt="@子龙"></p><p>在知道了自己IP地址的情况下，我们同时也知道了自己所在的网段，接下来我们可以找一下当前局域网下还存在哪些主机，<br>如果想看自己电脑连接的那台路由器上的网管输入ipconfig查看<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183724.png" alt="@子龙"><br>这里使用nmap脚本（nmap可以扫描出当前路由器下被占用的端口，通俗点讲就是这些端口都是有人在使用的！）出于道德我演示攻击自己的电脑为例子！<br>命令：namp -sP 192.168.1.*<br>后面的是网关ip，不是绝对的，网关地址在上图中可以看到<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183837.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183911.png" alt="@子龙"><br>可以看到我们已经通过namp命令扫描出了当前路由器下的ip<br>对比上下图，我们可以发现我们的目标ip的确也是在列表中的，这个时候目标还是可以正常上网的</p><p>此时，在Kali中使用arpspoof工具实现ARP攻击<br>攻击命令：Arpspoof -i eth0 -t 192.168.1.10 -t 192.168.1.1<br>ip就是目标ip加上网关地址<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185319.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185346.png" alt="@子龙"></p><p>这个时候的目标已经无法正常上网了</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185512.png" alt="@子龙"></p><p>停止ARP攻击，目标就能恢复到正常上网状态<br>快捷键是（Ctrl+c）结束攻击！</p>]]></content>
       
       
       <categories>
