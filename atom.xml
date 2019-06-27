@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-26T15:28:09.871Z</updated>
+  <updated>2019-06-27T14:01:58.653Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站开发概述（2）</title>
+    <link href="http://yoursite.com/2019/06/27/web2/"/>
+    <id>http://yoursite.com/2019/06/27/web2/</id>
+    <published>2019-06-27T14:44:00.000Z</published>
+    <updated>2019-06-27T14:01:58.653Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;材料准备：&quot;&gt;&lt;a href=&quot;#材料准备：&quot; class=&quot;headerlink&quot; title=&quot;材料准备：&quot;&gt;&lt;/a&gt;材料准备：&lt;/h3&gt;&lt;p&gt;1.云服务器–以我的服务器为例子&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="赵子龙" scheme="http://yoursite.com/categories/%E8%B5%B5%E5%AD%90%E9%BE%99/"/>
+    
+    
+      <category term="静态网站" scheme="http://yoursite.com/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
+    
+      <category term="发布" scheme="http://yoursite.com/tags/%E5%8F%91%E5%B8%83/"/>
+    
+  </entry>
   
   <entry>
     <title>网站开发概述（1）</title>

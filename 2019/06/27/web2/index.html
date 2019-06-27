@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="局域网内的不速之客（1）, Hexo">
-    <meta name="description" content="当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程
-ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位于">
+    <meta name="keywords" content="网站开发概述（2）, Hexo">
+    <meta name="description" content="材料准备：1.云服务器–以我的服务器为例子2.tomcat服务器（这时候可能有些人会懵，这两个服务器有啥区别，云服务器呢就是放tomcat的服务器，而tomcat服务器是存放你项目的服务器，它们是一种从属，包含关系）这里附上tomcat的下">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>局域网内的不速之客（1） | Hexo</title>
+    <title>网站开发概述（2） | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -258,13 +257,13 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://img1.juimg.com/160331/330829-16033115022983.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        局域网内的不速之客（1）
+                        网站开发概述（2）
                     </div>
                 </div>
             </div>
@@ -286,12 +285,12 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/攻击/" target="_blank">
-                                <span class="chip bg-color">攻击</span>
+                            <a href="/tags/静态网站/" target="_blank">
+                                <span class="chip bg-color">静态网站</span>
                             </a>
                         
-                            <a href="/tags/断网/" target="_blank">
-                                <span class="chip bg-color">断网</span>
+                            <a href="/tags/发布/" target="_blank">
+                                <span class="chip bg-color">发布</span>
                             </a>
                         
                     </div>
@@ -314,21 +313,21 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-06-13
+                    2019-06-27
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        775
+                        410
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        2 Min
+                        1 Min
                     </div>
                     
                 
@@ -344,24 +343,11 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_175422.png" alt="@子龙"><br>当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程</p>
-<h2 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h2><p>ARP（Address Resolution Protocol，地址解析协议）是一个位于TCP/IP协议栈中的网络层，负责将某个IP地址解析成对应的MAC地址。</p>
-<h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><p>通过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的进行。</p>
-<h3 id="ARP攻击的局限性"><a href="#ARP攻击的局限性" class="headerlink" title="ARP攻击的局限性"></a>ARP攻击的局限性</h3><p>ARP攻击仅能在以太网（局域网如：机房、内网、公司网络等）进行。</p>
-<p>无法对外网（互联网、非本区域内的局域网）进行攻击。</p>
-<h3 id="ARP攻击的攻击原理"><a href="#ARP攻击的攻击原理" class="headerlink" title="ARP攻击的攻击原理"></a>ARP攻击的攻击原理</h3><p>ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。</p>
-<h2 id="在Kali-Linux环境下的实现ARP攻击"><a href="#在Kali-Linux环境下的实现ARP攻击" class="headerlink" title="在Kali Linux环境下的实现ARP攻击"></a>在Kali Linux环境下的实现ARP攻击</h2><p>攻击环境<br>攻击主机：Kali Linux </p>
-<p>IP：192.168.1.13</p>
-<p>被攻击主机：Windows 10</p>
-<p>IP：192.168.1.10</p>
-<p>因为是在虚拟机环境下实现的攻击，所以要提前将虚拟机的网络适配器设置为桥接模式，这样一来虚拟机便可以单独获得一个ip地址，而不是和NAT模式下一样和宿主机共用一个ip地址。</p>
-<h3 id="ARP断网攻击（更多攻击手段持续更新ing）"><a href="#ARP断网攻击（更多攻击手段持续更新ing）" class="headerlink" title="ARP断网攻击（更多攻击手段持续更新ing）"></a>ARP断网攻击（更多攻击手段持续更新ing）</h3><p>在进行攻击的时候我们需要先知道自己的IP地址，在终端中输入ifconfig指令即可（所说的终端是kali系统中的cmd在左侧任务栏内，一般是第二个）</p>
-<p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_181357.png" alt="@子龙"></p>
-<p>在知道了自己IP地址的情况下，我们同时也知道了自己所在的网段，接下来我们可以找一下当前局域网下还存在哪些主机，<br>如果想看自己电脑连接的那台路由器上的网管输入ipconfig查看<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183724.png" alt="@子龙"><br>这里使用nmap脚本（nmap可以扫描出当前路由器下被占用的端口，通俗点讲就是这些端口都是有人在使用的！）出于道德我演示攻击自己的电脑为例子！<br>命令：namp -sP 192.168.1.*<br>后面的是网关ip，不是绝对的，网关地址在上图中可以看到<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183837.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183911.png" alt="@子龙"><br>可以看到我们已经通过namp命令扫描出了当前路由器下的ip<br>对比上下图，我们可以发现我们的目标ip的确也是在列表中的，这个时候目标还是可以正常上网的</p>
-<p>此时，在Kali中使用arpspoof工具实现ARP攻击<br>攻击命令：Arpspoof -i eth0 -t 192.168.1.10 -t 192.168.1.1<br>ip就是目标ip加上网关地址<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185319.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185346.png" alt="@子龙"></p>
-<p>这个时候的目标已经无法正常上网了</p>
-<p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185512.png" alt="@子龙"></p>
-<p>停止ARP攻击，目标就能恢复到正常上网状态<br>快捷键是（Ctrl+c）结束攻击！</p>
+                <h3 id="材料准备："><a href="#材料准备：" class="headerlink" title="材料准备："></a>材料准备：</h3><p>1.云服务器–以我的服务器为例子<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172422.png" alt><br>2.tomcat服务器（这时候可能有些人会懵，这两个服务器有啥区别，云服务器呢就是放tomcat的服务器，而tomcat服务器是存放你项目的服务器，它们是一种从属，包含关系）这里附上tomcat的下载连接(自带jdk-我都叫它解压版的tomcat)<br><a href="https://share.weiyun.com/57Wjpp2" target="_blank" rel="noopener">tomcat</a><br>3.你的项目</p>
+<h3 id="远程连接："><a href="#远程连接：" class="headerlink" title="远程连接："></a>远程连接：</h3><p>第一步，首先要对你的云服务器进行环境部署，那么这极为重要的一步就是要通过远程桌面连接上服务器<br>1.右键点击开始点击运行（快捷键win+R）在命令行内输入mstsc<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172423.png" alt><br>2.输入本机计算机用户名（administrator），和需要连接的服务器公网ip地址<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172424.png" alt><br>3.输入服务器的密码<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172425.png" alt><br>4.连接成功<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_214328.png" alt></p>
+<h3 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h3><p>将下载好的 websever（tomcat）打包复制粘贴到服务器上<br>解压后把项目放到下图路径内<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_214613.png" alt><br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_214831.png" alt><br>启动tomcat服务器<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_215101.png" alt><br>出现如上图字样服务器运行成功，此时dos界面不可以关闭，在浏览器内输入公网的IP地址就你能访问的网站<br>以我的项目演示<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_215356.png" alt><br>此时静态网站发布完成！</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>一、本机测试<br>在HBuilder里测试<br>在WebServer里测试<br>二、部署到公网服务器<br>申请一台公网服务器 ( 阿里云/腾讯云/百度云)<br>远程登录上去，把WebServer.zip拷上去<br>把网站项目文件拷贝到 webapps\ROOT\下<br>启动服务</p>
+<h5 id="后续loading"><a href="#后续loading" class="headerlink" title="后续loading"></a>后续loading</h5><p>动态网站开发概述与项目发布</p>
 
             </div>
             <hr>
@@ -517,9 +503,9 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《局域网内的不速之客（1）》
+                    《网站开发概述（2）》
                 </span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/13/1/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/27/web2/" property="cc:attributionName" rel="cc:attributionURL">
                 子龙
             </a> is licensed under a
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
@@ -559,7 +545,7 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
         repo: '',
         owner: '',
         admin: null,
-        id: '2019-06-13T16-22-00',
+        id: '2019-06-27T22-44-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -582,7 +568,62 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2019/06/27/web2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="网站开发概述（2）">
+                        
+                        <span class="card-title">网站开发概述（2）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            静态网站发布
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/赵子龙/" class="post-category" target="_blank">
+                                    赵子龙
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/静态网站/" target="_blank">
+                        <span class="chip bg-color">静态网站</span>
+                    </a>
+                    
+                    <a href="/tags/发布/" target="_blank">
+                        <span class="chip bg-color">发布</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/06/26/web1/">
                     <div class="card-image">
@@ -600,9 +641,9 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -624,58 +665,6 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
                     
                     <a href="/tags/概述/" target="_blank">
                         <span class="chip bg-color">概述</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/06/11/frist/">
-                    <div class="card-image">
-                        
-                        <img src="http://fech.in/static/images/03cedb5963ef7add274464539765a1eb.jpg" class="responsive-img" alt="踏上渗透之路">
-                        
-                        <span class="card-title">踏上渗透之路</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            初识Linux kali
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-11
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/作者/" target="_blank">
-                        <span class="chip bg-color">作者</span>
-                    </a>
-                    
-                    <a href="/tags/赵子龙/" target="_blank">
-                        <span class="chip bg-color">赵子龙</span>
                     </a>
                     
                 </div>
