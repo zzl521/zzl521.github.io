@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>java数组</title>
+      <link href="/2019/07/27/java/java3/"/>
+      <url>/2019/07/27/java/java3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组的声明方式："><a href="#数组的声明方式：" class="headerlink" title="数组的声明方式："></a>数组的声明方式：</h4><h5 id="1-动态初始化"><a href="#1-动态初始化" class="headerlink" title="1.动态初始化"></a>1.动态初始化</h5><h5 id="2-静态初始化"><a href="#2-静态初始化" class="headerlink" title="2.静态初始化"></a>2.静态初始化</h5><p>动态数组一般就理解成可以无限扩大的容器，二而静态数组就是一开始设定时就规定了其大小<br>动态初始化指在创建时，使用了new对象的方式创建：  </p><p>####格式为：  </p><h5 id="int-arr-new-int-4"><a href="#int-arr-new-int-4" class="headerlink" title="int arr[] =new int [4];"></a>int arr[] =new int [4];</h5><h5 id="int-arr-new-int-1-2-3-4"><a href="#int-arr-new-int-1-2-3-4" class="headerlink" title="int []arr=new int[]{1,2,3,4};"></a>int []arr=new int[]{1,2,3,4};</h5><h4 id="静态初始化个格式："><a href="#静态初始化个格式：" class="headerlink" title="静态初始化个格式："></a>静态初始化个格式：</h4><h5 id="int-arr-1-2-3-4"><a href="#int-arr-1-2-3-4" class="headerlink" title="int arr[]={1,2,3,4};"></a>int arr[]={1,2,3,4};</h5><p>动态是运行期间确定元素值，静态是编译期间确定元素值 ，静态数组一经建立不可以更改。<br>复制扩容的方法改变；</p><h3 id="1-arrays-copyof-src-length-src表示数组名，length表示长度"><a href="#1-arrays-copyof-src-length-src表示数组名，length表示长度" class="headerlink" title="1.arrays.copyof(src,length);src表示数组名，length表示长度"></a>1.arrays.copyof(src,length);src表示数组名，length表示长度</h3><h3 id="2-System-arraycopy-src-srcpos-dest-destpos-length"><a href="#2-System-arraycopy-src-srcpos-dest-destpos-length" class="headerlink" title="2.System.arraycopy(src,srcpos,dest,destpos,length);"></a>2.System.arraycopy(src,srcpos,dest,destpos,length);</h3><p>其中<br>src：数组源  （被复制）<br>srcpos：原数组开始复制的位置<br>dest：目标数组（当前希望复制的数组）<br>destpos：目标数组复制的位置<br>length：复制长度   </p><p>数组的访问都是，从0开始，0表示数组开始的下标<br>数组定义格式</p><h3 id="数组输出方式："><a href="#数组输出方式：" class="headerlink" title="数组输出方式："></a>数组输出方式：</h3><h4 id="System-out-println-arrays-tostring-XX"><a href="#System-out-println-arrays-tostring-XX" class="headerlink" title="System.out.println(arrays.tostring(XX));"></a>System.out.println(arrays.tostring(XX));</h4><h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><p>public class ArrSortDemo {<br>    public static void main(String[] args) {<br>        Integer[] ary = {2,7,9,3,6,8,1};<br>  //1.可以使用Arrays.sort对数组进行排序<br>        Arrays.sort(ary);<br>        System.out.println(Arrays.toString(ary));<br>        //2.Comparator:是一个接口，这个接口中的compare的方法是自定义排序方法<br>        Arrays.sort(ary,new Comparator<integer>() {<br>            @Override<br>            public int compare(Integer o1, Integer o2) {<br>                return o2-o1;<br>            }<br>        });<br>        System.out.println(Arrays.toString(ary));<br>    }<br>}</integer></p><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><pre><code>栈内存：栈内存是计算机的一种数据存储方式，是Java进程启动的时候在内存中开辟的存储空间。栈内存利用遵循LIFO(后进先出)原则Java中所有的局部变量都在栈内存中分配空间(压入)，方法的参数(形参)也是局部变量，局部变量离开作用域时，收回(从栈内存中弹出)。Java方法调用使用栈实现，递归调用就是栈的操作。</code></pre><p>注意：递归的时候按照递归深度分配全部临时变量，栈内存开销极大，性能不好。<br>在使用递归调用的时候，切记要有跳出条件。如果没有跳出条件，就会爆栈.</p><p>什么时候使用递归？<br>    尽可能不使用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数组,递归 </tag>
+            
+            <tag> 原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java面向对象</title>
+      <link href="/2019/07/18/java/java4/"/>
+      <url>/2019/07/18/java/java4/</url>
+      
+        <content type="html"><![CDATA[<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><h4 id="什么是Object-对象-？"><a href="#什么是Object-对象-？" class="headerlink" title="什么是Object(对象)？"></a>什么是Object(对象)？</h4><p>Object是指一个具体的事物实例。<br>面向对象的定义。<br>首先根据客户需求抽象出业务对象，然后对需求进行合理分层。构建相对独立的业务模块，之后设计业务逻辑，利用多态，继承，封装，抽象的编程思想，实现业务需求，最后通过整合各个模块，达到高类聚，低耦合的效果，满足客户需求。</p><h3 id="面向对象分析-面向对象设计"><a href="#面向对象分析-面向对象设计" class="headerlink" title="面向对象分析/面向对象设计"></a>面向对象分析/面向对象设计</h3><p>软件企业广泛采用的一项有效技术，OOAD 在设计中要映射现实生活中指定问题领域中的对象和实体。这种设计要尽可能的接近于现实，即，以最自然的方式表述实体。所以说，面向对象技术的有点就是能构建与现实世界相对应的问题模型，并且保持结构、关系、行为。</p><h3 id="面向对象的概念"><a href="#面向对象的概念" class="headerlink" title="面向对象的概念"></a>面向对象的概念</h3><p>类型(类) 指一个名词的概念<br>引用(变量) 指引用具体概念实例的代词。<br>对象(东西) 指具体概念的个体实例<br>行为    指具体实例的功能/函数/方法<br>多态    行为或者引用，在具体情形下会发生变化的现象。<br>在Java中，多态多表示父类引用指向子类实例<br>封装    任何对象实例都是尽可能封装，减少暴露它的实现细节是不可见的<br>继承    增强代码的可复用性,抽取业务功能的共性。</p><h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><h4 id="什么是构造器？"><a href="#什么是构造器？" class="headerlink" title="什么是构造器？"></a>什么是构造器？</h4><p>构造对象的函数。<br>构造器的特点：<br>Java中的构造器(构造方法)声明在类内部<br>方法名与类名一直的方法叫构造方法<br>构造方法不能声明返回值类型<br>构造方法可以包含参数，参数一般是创建对象实例必须依赖的条件。<br>任何类都一定有构造器，如果程序员不写构造器，JVM会自动的为该类添<br>一个无参构造器。<br>构造器重载<br>构造器重载指写多个参数不一样的构造器。</p><h3 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h3><p>指当前对象。</p><h4 id="四、方法的重载"><a href="#四、方法的重载" class="headerlink" title="四、方法的重载"></a>四、方法的重载</h4><p>方法的重载是发生在同类中的，方法名一样，方法签名不一样的方法，称为重载。<br>方法的重载与返回值无关。<br>多态，功能的多样性。</p><h3 id="Java参数的传递规则"><a href="#Java参数的传递规则" class="headerlink" title="Java参数的传递规则"></a>Java参数的传递规则</h3><p>Java是基于值的传递，是变量值的复制.<br>基本类型就是其中的值的复制<br>引用类型就是地址值的复制</p><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>提高代码的复用性。抽取业务功能的共通性。<br>继承中有两个概念：<br>父类<br>用来抽取共性代码。<br>子类</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java面向对象 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 对象 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java变量与二进制</title>
       <link href="/2019/07/16/java/java2/"/>
       <url>/2019/07/16/java/java2/</url>
