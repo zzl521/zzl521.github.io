@@ -45,6 +45,63 @@
   </entry>
   
   <entry>
+    <title>域名</title>
+    <link href="http://yoursite.com/2019/07/22/yuming/"/>
+    <id>http://yoursite.com/2019/07/22/yuming/</id>
+    <published>2019-07-22T10:59:00.000Z</published>
+    <updated>2019-07-22T14:57:25.302Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;域名是什么呢？&quot;&gt;&lt;a href=&quot;#域名是什么呢？&quot; class=&quot;headerlink&quot; title=&quot;域名是什么呢？&quot;&gt;&lt;/a&gt;域名是什么呢？&lt;/h5&gt;&lt;p&gt;我就不解释了昂，不懂可以&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="域名" scheme="http://yoursite.com/categories/%E5%9F%9F%E5%90%8D/"/>
+    
+    
+      <category term="域名" scheme="http://yoursite.com/tags/%E5%9F%9F%E5%90%8D/"/>
+    
+      <category term="二级域名" scheme="http://yoursite.com/tags/%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java难点</title>
+    <link href="http://yoursite.com/2019/07/22/java/java5/"/>
+    <id>http://yoursite.com/2019/07/22/java/java5/</id>
+    <published>2019-07-22T10:59:00.000Z</published>
+    <updated>2019-07-22T10:59:28.458Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;•-继承&quot;&gt;&lt;a href=&quot;#•-继承&quot; class=&quot;headerlink&quot; title=&quot;•  继承&quot;&gt;&lt;/a&gt;•  继承&lt;/h3&gt;&lt;p&gt;exdents 关键字 是继承的意思&lt;/p&gt;
+&lt;h3 id=&quot;重写&quot;&gt;&lt;a href=&quot;#重写&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="抽象类" scheme="http://yoursite.com/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/"/>
+    
+      <category term="接口" scheme="http://yoursite.com/tags/%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java面向对象</title>
     <link href="http://yoursite.com/2019/07/18/java/java4/"/>
     <id>http://yoursite.com/2019/07/18/java/java4/</id>
@@ -162,7 +219,7 @@
     <link href="http://yoursite.com/2019/07/08/composition/"/>
     <id>http://yoursite.com/2019/07/08/composition/</id>
     <published>2019-07-08T14:44:00.000Z</published>
-    <updated>2019-07-18T08:16:56.849Z</updated>
+    <updated>2019-07-22T15:10:04.612Z</updated>
     
     <summary type="html">
     
@@ -176,7 +233,7 @@
     
     </summary>
     
-      <category term="日记" scheme="http://yoursite.com/categories/%E6%97%A5%E8%AE%B0/"/>
+      <category term="diary" scheme="http://yoursite.com/categories/diary/"/>
     
     
       <category term="经历" scheme="http://yoursite.com/tags/%E7%BB%8F%E5%8E%86/"/>
@@ -190,7 +247,7 @@
     <link href="http://yoursite.com/2019/06/27/web/web2/"/>
     <id>http://yoursite.com/2019/06/27/web/web2/</id>
     <published>2019-06-27T14:44:00.000Z</published>
-    <updated>2019-07-18T08:19:33.145Z</updated>
+    <updated>2019-07-22T10:44:40.102Z</updated>
     
     <summary type="html">
     
@@ -246,7 +303,7 @@
     <link href="http://yoursite.com/2019/06/13/attark/arp1/"/>
     <id>http://yoursite.com/2019/06/13/attark/arp1/</id>
     <published>2019-06-13T08:22:00.000Z</published>
-    <updated>2019-07-18T08:20:21.275Z</updated>
+    <updated>2019-07-22T10:42:29.535Z</updated>
     
     <summary type="html">
     
@@ -254,7 +311,7 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;http://psu9uo26a.bkt.clouddn.com/2019-06-13_175422.png&quot;
+          &lt;p&gt;&lt;img src=&quot;http://img.ahdy.top/2019-06-13_175422.png&quot;
         
       
     
@@ -274,7 +331,7 @@
     <link href="http://yoursite.com/2019/06/11/attark/frist/"/>
     <id>http://yoursite.com/2019/06/11/attark/frist/</id>
     <published>2019-06-11T14:25:00.000Z</published>
-    <updated>2019-06-23T08:07:13.271Z</updated>
+    <updated>2019-07-22T15:09:02.834Z</updated>
     
     <summary type="html">
     
@@ -288,7 +345,7 @@
     
     </summary>
     
-      <category term="Markdown" scheme="http://yoursite.com/categories/Markdown/"/>
+      <category term="kali" scheme="http://yoursite.com/categories/kali/"/>
     
     
       <category term="作者" scheme="http://yoursite.com/tags/%E4%BD%9C%E8%80%85/"/>
@@ -302,7 +359,7 @@
     <link href="http://yoursite.com/2019/06/09/web/aboutweb/"/>
     <id>http://yoursite.com/2019/06/09/web/aboutweb/</id>
     <published>2019-06-09T09:25:00.000Z</published>
-    <updated>2019-07-18T10:56:54.994Z</updated>
+    <updated>2019-07-22T15:09:34.271Z</updated>
     
     <summary type="html">
     
@@ -316,7 +373,7 @@
     
     </summary>
     
-      <category term="博客简述" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E7%AE%80%E8%BF%B0/"/>
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
     
     
       <category term="作者" scheme="http://yoursite.com/tags/%E4%BD%9C%E8%80%85/"/>
@@ -330,7 +387,7 @@
     <link href="http://yoursite.com/2019/06/07/test/"/>
     <id>http://yoursite.com/2019/06/07/test/</id>
     <published>2019-06-06T22:25:00.000Z</published>
-    <updated>2019-07-18T08:18:32.401Z</updated>
+    <updated>2019-07-22T15:15:39.538Z</updated>
     
     <summary type="html">
     
@@ -338,7 +395,7 @@
       
         
         
-          &lt;p&gt;markdown基本语法应用——————暂未更新&lt;/p&gt;
+          &lt;p&gt;markdown基本语法应用&lt;br&gt;我想了想，有时间上截图吧，假如我直接写的话，是不是这个文档就生效了看不见了呢！！&lt;/p&gt;
 
         
       
@@ -384,11 +441,11 @@
   </entry>
   
   <entry>
-    <title>你好世界</title>
+    <title>helloworld——文档样式展示</title>
     <link href="http://yoursite.com/2019/05/18/hello-world/"/>
     <id>http://yoursite.com/2019/05/18/hello-world/</id>
     <published>2019-05-17T20:11:24.409Z</published>
-    <updated>2019-05-18T04:51:06.009Z</updated>
+    <updated>2019-07-22T15:03:21.165Z</updated>
     
     <summary type="html">
     
