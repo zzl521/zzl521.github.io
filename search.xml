@@ -31,25 +31,25 @@
     
     
     <entry>
-      <title>域名</title>
-      <link href="/2019/07/22/yuming/"/>
-      <url>/2019/07/22/yuming/</url>
+      <title>Markdown</title>
+      <link href="/2019/07/23/markdown/"/>
+      <url>/2019/07/23/markdown/</url>
       
-        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
+        <content type="html"><![CDATA[<h5 id="内容如图"><a href="#内容如图" class="headerlink" title="内容如图"></a>内容如图</h5><p>为啥上图呢，因为我的文档就是markdown写的，直接写的话会对文档产生效果，so。<br><img src="http://img.ahdy.top/20190723103212.png" alt><br><img src="http://img.ahdy.top/20190723103225.png" alt><br><img src="http://img.ahdy.top/20190723103233.png" alt></p>]]></content>
       
       
       <categories>
           
-          <category> 域名 </category>
+          <category> markdown </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 域名 </tag>
+            <tag> markdown </tag>
             
-            <tag> 二级域名 </tag>
+            <tag> 语法 </tag>
             
         </tags>
       
@@ -77,6 +77,33 @@
             <tag> 抽象类 </tag>
             
             <tag> 接口 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>域名</title>
+      <link href="/2019/07/22/yuming/"/>
+      <url>/2019/07/22/yuming/</url>
+      
+        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 域名 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+            <tag> 二级域名 </tag>
             
         </tags>
       
@@ -355,38 +382,11 @@
     
     
     <entry>
-      <title>typora-vue-theme主题介绍</title>
-      <link href="/2019/06/07/test/"/>
-      <url>/2019/06/07/test/</url>
-      
-        <content type="html"><![CDATA[<p>markdown基本语法应用<br>我想了想，有时间上截图吧，假如我直接写的话，是不是这个文档就生效了看不见了呢！！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> markdown </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> markdown </tag>
-            
-            <tag> 语法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>智慧树刷课秘籍</title>
       <link href="/2019/05/18/class/"/>
       <url>/2019/05/18/class/</url>
       
-        <content type="html"><![CDATA[<p>网课可以自己刷，很多人花钱去弄，我觉得没必要，简述一下最安全的刷课方法，你看了之后，或许可以利用它赚钱，话不多说，</p><p>登陆！<br>登上之后选择你要看的一门课，然后播放，一般浏览器按f12就会调出开发者模式，建议用谷歌，这个下学期写网页也会用到，将下面一段js代码复制粘贴到开发者模式下的console窗口内<br>代码从下面var开始复制，js当中只有var类型变量..话不多说<br>var ti = $(“body”);<br>var video = $(“.catalogue_ul1 li[id*=video-]”);<br>var i = 1;<br>var v = 1;<br>video.css(“color”, “blue”);<br>console.log(“已选取” + video.length + “个小节,并已用蓝色标明,请检查是否有遗漏,如有遗漏,概不负责”);<br>setTimeout(function () {<br>    $(‘.speedTab15’).click();<br>    $(‘.volumeIcon’).click();<br>    console.log(“已进行静音和1.5倍加速”);<br>}, 3000);<br>ti.on(“DOMNodeInserted”, function (e) {<br>    if (e.target.textContent == “关闭”) {<br>        console.log(“检测到第” + i + “个弹题窗口”);<br>        window.setTimeout(function () {<br>            document.getElementById(“tmDialog_iframe”).contentWindow.document.getElementsByClassName(“answerOption”)[0].getElementsByTagName(“input”)[0].click();<br>            $(“.popbtn_cancel”).click();<br>            console.log(“已关闭”);<br>        }, 3000);<br>        i++;<br>    } else if (e.target.textContent == “本节视频,累计观看时间『100%』”) {<br>        console.log(“检测到视频观看完成，准备跳到下一节”);<br>        $(‘.next_lesson_bg’).find(‘a’).trigger(‘click’);<br>        console.log(“已跳转”);<br>        setTimeout(function () {<br>            $(‘.volumeIcon’).click();<br>            $(‘.speedTab15’).click();<br>            console.log(“已进行静音和1.5倍加速”);<br>        }, 6000);<br>        v++;<br>        console.log(“目前播放了” + v + “个视频”);<br>    }<br>});<br>按回车运行js代码,（代码于2019.3.24号优化更新）之后电脑就会自己刷课<br>虽然代码有静音操作，但是还是建议把声音关了，因为时不时会bug一下出声</p>]]></content>
+        <content type="html"><![CDATA[<p>网课可以自己刷，很多人花钱去弄，我觉得没必要，简述一下最安全的刷课方法，你看了之后，或许可以利用它赚钱，话不多说，</p><p>登陆！<br>登上之后选择你要看的一门课，然后播放，一般浏览器按f12就会调出开发者模式，建议用谷歌，这个下学期写网页也会用到，将下面一段js代码复制粘贴到开发者模式下的console窗口内<br>代码从下面var开始复制，js中只有var类型变量..话不多说<br><code>var ti = $(&quot;body&quot;);var video = $(&quot;.catalogue_ul1 li[id*=video-]&quot;);var i = 1;var v = 1;video.css(&quot;color&quot;, &quot;blue&quot;);console.log(&quot;已选取&quot; + video.length + &quot;个小节,并已用蓝色标明,请检查是否有遗漏,如有遗漏,概不负责&quot;);setTimeout(function () {    $(&#39;.speedTab15&#39;).click();    $(&#39;.volumeIcon&#39;).click();    console.log(&quot;已进行静音和1.5倍加速&quot;);}, 3000);ti.on(&quot;DOMNodeInserted&quot;, function (e) {    if (e.target.textContent == &quot;关闭&quot;) {        console.log(&quot;检测到第&quot; + i + &quot;个弹题窗口&quot;);        window.setTimeout(function () {            document.getElementById(&quot;tmDialog_iframe&quot;).contentWindow.document.getElementsByClassName(&quot;answerOption&quot;)[0].getElementsByTagName(&quot;input&quot;)[0].click();            $(&quot;.popbtn_cancel&quot;).click();            console.log(&quot;已关闭&quot;);        }, 3000);        i++;    } else if (e.target.textContent == &quot;本节视频,累计观看时间『100%』&quot;) {        console.log(&quot;检测到视频观看完成，准备跳到下一节&quot;);        $(&#39;.next_lesson_bg&#39;).find(&#39;a&#39;).trigger(&#39;click&#39;);        console.log(&quot;已跳转&quot;);        setTimeout(function () {            $(&#39;.volumeIcon&#39;).click();            $(&#39;.speedTab15&#39;).click();            console.log(&quot;已进行静音和1.5倍加速&quot;);        }, 6000);        v++;        console.log(&quot;目前播放了&quot; + v + &quot;个视频&quot;);    }});</code><br>按回车运行js代码,（代码于2019.3.24号优化更新）之后电脑就会自己刷课<br>虽然代码有静音操作，但是还是建议把声音关了，因为时不时会bug一下出声</p>]]></content>
       
       
       <categories>
