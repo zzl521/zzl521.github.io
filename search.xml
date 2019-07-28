@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Java常用API（详细实例）</title>
+      <link href="/2019/07/28/java/java6/"/>
+      <url>/2019/07/28/java/java6/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、String-字符串"><a href="#一、String-字符串" class="headerlink" title="一、String 字符串"></a>一、String 字符串</h3><p>String是一个API提供的类，存放字符串。底层是char[]String字面量相同时，会替换为同一个String对象的引用。常量连接的结果也被优化为一个字符串.<br>String比较的时候用equals</p><h4 id="解析："><a href="#解析：" class="headerlink" title="解析："></a>解析：</h4><p>在字符串当中使用加号（a+=b）可以对字符串进行拼接<br>也可以使用StringfBuffer类进行拼接，元素插入<br>例如：<br><code>`</code> StringBuilder buider = new StringBuilder();<br>    buider.append(“李敖先生”).append(“的前妻”).append(“胡因梦女士”).insert(0, “大师”).append(“据说十分漂亮”).delet(4, 6);<br>    System.out.println(buider);</p><pre><code>相比较String而言StringBuffer的性能更加高效  可以通过:   System.currentTimeMillis();  对比如二者效率### 二、静态字符串Java编译期间(javac)，凡是字面量和常量的运算，都会先算出结果运行期当字符串池有String&quot;字面量&quot;时，Java会直接用，如果没有才创建。  &quot;&quot;就是一个对象 String是一个特殊的类### 三、API``` charAt()        根据指定的index下标返回指定的字符    length()        返回字符串的长度    trim();            去除前后两端的空白 \n \t \s    toLoweCase()    将字符串变为小写    toUpperCase()    将字符串变为大写    indexOf(String str) 根据指定的字符串返回下标            lastIndexof()    返回最后一次出现的指定字符的下标位置    endsWith()        是否已指定的后缀结尾    startsWith()    是否已指定的前缀开始    subString(int start,int end)    截取一段子字符串(包前不包后)    subString(int start)        截取一段子字符串(包前不包后)    tocharArray()    将字符串转换成一个数组    split()            根据既定的字符进行分割字符串    equalsIgnoreCase() 忽略大小写比较</code></pre><h3 id="四、StringBuilder、StringBuffer"><a href="#四、StringBuilder、StringBuffer" class="headerlink" title="四、StringBuilder、StringBuffer"></a>四、StringBuilder、StringBuffer</h3><pre><code>StringBuilder内部也是对char数组的操作，但是数组内容是可变的，如果长度不够，利用数组边长算法来维护自动扩容长度。StringBuffer 是线程安全的，速度比较慢StringBuilder 非线程安全的，速度比较快StringBuilder与StringBuffer API几乎一模一样</code></pre><h3 id="五、日期"><a href="#五、日期" class="headerlink" title="五、日期"></a>五、日期</h3><pre><code>Date    long + 操作(很多API的方法已经过时了。有BUG)Calender    long + 操作(一般情况都使用Calender)</code></pre><pre class=" language-/*"><code class="language-/*">    * Date内部维护着一个long值    * 即：1970年至今的毫秒数    */    Date date = new Date();    System.out.println(date);    long time = date.getTime();    System.out.println(System.currentTimeMillis());    System.out.println(time);</code></pre><pre><code>SimpleDateFormat    Date + 操作  (日期格式的操作)#### 解析：</code></pre><p><code>`</code> String dt = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss EE”).format(calender.getTime());<br>        System.out.println(dt);</p><pre><code>### 六   一、集合    集合底层就是数组    集合的底层就是对象数组 = Object[] objs = new Object[n];    List    LinkedList            LinkedList实现了List接口，能进行队列操作。    LinkedList实现了Deque接口， 能当做双端队列使用。(即：头，尾操作,类似于栈)    #### 解析：  ``` LinkedList&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;();        /****************基本操作**********************/        linkedList.addFirst(0);//添加元素到列表开头        linkedList.add(1);//在列表结尾添加元素        linkedList.add(2, 2);//在指定位置添加元素        linkedList.addLast(3);//添加元素到列表结尾        System.out.println(&quot;linkedList:&quot; + linkedList);            //获取数据        System.out.println(&quot;getFirst():&quot; +linkedList.getFirst());//返回集合中第一个元素        System.out.println(&quot;getLast():&quot; + linkedList.getLast());//返回集合中的最后一个元素        System.out.println(&quot;removeFirst():&quot; + linkedList.removeFirst());//移除并返回集合中的第一个元素        System.out.println(&quot;removeLast():&quot; + linkedList.removeLast());//移除并返回集合中的最后一个元素        System.out.println(&quot;linkedList:&quot; + linkedList);        System.out.println(&quot;contains(1):&quot; + linkedList.contains(1));//判断此集合中指定的元素，如果包含返回true 否则false        /************************位置访问操作**************************/        System.out.println(&quot;------------------------------------------------&quot;);        linkedList.set(1, 3);//将此集合中指定位置的元素替换成指定的元素        System.out.println(&quot;After set :&quot; + linkedList);        System.out.println(linkedList.get(1));//获取指定下标位置的元素        linkedList.add(3);        System.out.println(&quot;linkedList:&quot; + linkedList);        System.out.println(&quot;indexOf(3)：&quot; + linkedList.indexOf(3));//返回集合中首次出现的指定元素的索引        System.out.println(&quot;lastIndexOf(3)：&quot; + linkedList.lastIndexOf(3));////返回集合中最后一次出现的指定元素的索引        /*****************Queue操作***********************/        System.out.println(&quot;------------------------------------------&quot;);        //linkedList.clear();//清除集合中所有的元素        System.out.println(linkedList.peek());   //获取但不移除此列表的头        System.out.println(linkedList.element());//获取但不移除此列表的头        //linkedList.clear();//清除集合中所有的元素        /*         * poll()与remove()差异在于poll返回null remove 抛异常         */        System.out.println(&quot;poll():&quot; + linkedList.poll());//获取并移除此列表的头        System.out.println(&quot;After poll :&quot; + linkedList);        System.out.println(&quot;remove():&quot; + linkedList.remove());//获取并移除此列表的头        System.out.println(&quot;After remove :&quot; + linkedList);        System.out.println(&quot;linkedList:&quot; + linkedList);        linkedList.offer(4);//添加元素到列表结尾        System.out.println(&quot;linkedList:&quot; + linkedList);        linkedList.offerFirst(2);//在此列表的开头插入指定元素        System.out.println(&quot;linkedList:&quot; + linkedList);        linkedList.offerLast(5);//在此列表的结尾插入指定元素        System.out.println(&quot;linkedList:&quot; + linkedList);        System.out.println(&quot;-------------------------------------------&quot;);        System.out.println(linkedList.peekFirst());//获取但不移除此列表的头        System.out.println(&quot;linkedList:&quot; + linkedList);        System.out.println(linkedList.peekLast());//获取但不移除此列表的尾部        linkedList.pollFirst();//获取并且移除此列表的头        linkedList.pollLast();//获取并且移除此列表的尾部        linkedList.push(2);//将元素推入此列表所表示的堆栈(插入到列表的头)        System.out.println(&quot;linkedList:&quot; + linkedList);        linkedList.pop();//从此列表所表示的堆栈弹出一个元素(获取并移除第一个元素)        System.out.println(&quot;linkedList:&quot; + linkedList);        linkedList.add(3);        linkedList.removeLastOccurrence(3);//从此列表中移除最后一次出现的指定的元素(遍历)        System.out.println(&quot;linkedList:&quot; + linkedList);        /**********************遍历操作***********************/        System.out.println(&quot;----------------------------&quot;);        linkedList.clear();        for (int i = 0; i &lt; 1000000; i++) {            linkedList.add(i);        }        //迭代器遍历        long start = System.currentTimeMillis();        //获取迭代器        Iterator&lt;Integer&gt; iterator = linkedList.iterator();        /*         * hasNext():判断集合中有没有元素，如果有返回true 否则false         */        while(iterator.hasNext()) {            iterator.next();        }        long end  = System.currentTimeMillis();        System.out.println(&quot;iterator:&quot; + (end - start) + &quot;ms&quot;);        //顺序迭代(随机遍历)/*        start = System.currentTimeMillis();        for (int i = 0; i &lt;linkedList.size(); i++) {            linkedList.get(i);        }        end  = System.currentTimeMillis();        System.out.println(&quot;for:&quot; + (end - start) + &quot;ms&quot;);*/        //foreach循环迭代        start = System.currentTimeMillis();        for (Integer integer : linkedList) {}        end  = System.currentTimeMillis();        System.out.println(&quot;foreach:&quot; + (end - start) + &quot;ms&quot;);        LinkedList&lt;Integer&gt; temp = new LinkedList&lt;&gt;();        temp.addAll(linkedList);        //通过pollFirst或者pollLast来遍历        start = System.currentTimeMillis();        while(linkedList.size()!=0) {            linkedList.pollFirst();        }        end  = System.currentTimeMillis();        System.out.println(&quot;pollFirst:&quot; + (end - start) + &quot;ms&quot;);        System.out.println(linkedList);        //通过removeFirst或者removeLast来遍历        start = System.currentTimeMillis();        while(temp.size()!=0) {            temp.removeFirst();        }        end  = System.currentTimeMillis();        System.out.println(&quot;removeFirst:&quot; + (end - start) + &quot;ms&quot;);    }</code></pre><pre><code>ArrayListArrayList底层是由数组支持，而LinkedList是由双向链表支持的，其中的每个对象包含数据的同时还包含指向链表中前一个与后一个元素的引用.线性算法。``` ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();    list.add(&quot;one&quot;);    list.add(&quot;two&quot;);    list.add(&quot;three&quot;);    list.add(&quot;four&quot;);    System.out.println(list);    list.remove(2);    System.out.println(list);    list.add(0, &quot;aaa&quot;);    System.out.println(list);    String one = list.get(1);//获取指定下标所对应的元素    System.out.println(one);    list.set(1, &quot;2&quot;);    System.out.println(list);    String old = list.remove(1);    System.out.println(old);    System.out.println(list);    //contains 查看此集合中是否包含指定的元素，如果有 true 否则false    boolean flag = list.contains(&quot;aaa&quot;);    System.out.println(flag);    //isEmpty() 检索次列表是否为空    boolean f = list.isEmpty();    System.out.println(f);    System.out.println(list);    //截取一个子集合,按照包前不包后的原则    List&lt;String&gt; list2 = list.subList(1, 2);    System.out.println(list2);    List&lt;String&gt; list3 = new ArrayList&lt;&gt;();    list3.add(&quot;5&quot;);    list3.add(&quot;6&quot;);    list.addAll(list3);    System.out.println(list);}</code></pre><pre><code>```         List&lt;User&gt; list = new ArrayList&lt;&gt;();        User u1 = new User(&quot;Tom&quot;, &quot;123456&quot;);        User u2 = new User(&quot;Tom&quot;, &quot;123456&quot;);        User u3 = new User(&quot;Tom&quot;, &quot;123456&quot;);        System.out.println(u1.equals(u3));//true        list.add(u1);        list.add(u2);        System.out.println(list);        boolean f = list.remove(new User(&quot;Tom&quot;, &quot;123456&quot;));        System.out.println(f);        System.out.println(list);        boolean f2 = list.contains(new User(&quot;Tom&quot;, &quot;123456&quot;));        System.out.println(f2);//true        /**************************/        LinkedList&lt;User&gt; linkedList = new LinkedList&lt;&gt;();        linkedList.add(u1);        linkedList.add(u2);        System.out.println(linkedList);        boolean f3 = linkedList.contains(new User(&quot;Tom&quot;, &quot;123456&quot;));        System.out.println(f3);//true        /*         * LinkedList中 如果方法中包含First或者last 都不会去隐含调用equals和hashCode         */    }</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> 集合·字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java数组</title>
       <link href="/2019/07/27/java/java3/"/>
       <url>/2019/07/27/java/java3/</url>
@@ -62,7 +89,7 @@
       <link href="/2019/07/22/java/java5/"/>
       <url>/2019/07/22/java/java5/</url>
       
-        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思</p><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
       
       
       <categories>
@@ -74,9 +101,9 @@
       
         <tags>
             
-            <tag> 抽象类 </tag>
+            <tag> 抽象类|接口 </tag>
             
-            <tag> 接口 </tag>
+            <tag> 访问控制符 </tag>
             
         </tags>
       
@@ -290,9 +317,9 @@
       
         <tags>
             
-            <tag> 建站 </tag>
-            
             <tag> 概述 </tag>
+            
+            <tag> 建站 </tag>
             
         </tags>
       
@@ -344,9 +371,9 @@
       
         <tags>
             
-            <tag> 作者 </tag>
+            <tag> 环境 </tag>
             
-            <tag> 赵子龙 </tag>
+            <tag> Kali </tag>
             
         </tags>
       
@@ -371,9 +398,7 @@
       
         <tags>
             
-            <tag> 作者 </tag>
-            
-            <tag> 赵子龙 </tag>
+            <tag> 概述 </tag>
             
         </tags>
       

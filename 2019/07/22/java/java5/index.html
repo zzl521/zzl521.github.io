@@ -5,14 +5,14 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Java难点, Joker">
-    <meta name="description" content="•  继承exdents 关键字 是继承的意思
-重写重写是发生在父类与子类之间的。
-父类方法被子类方法重写后，一定调用子类的。
-•  多态父类引用指向子类实例。
-重写，重载都是多态的一种。
-方法动态绑定对象
-属性静态绑定变量类型
-•  继承">
+    <meta name="description" content="•  继承exdents 关键字 是继承的意思Object类
+Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，
+
+其中有三个方法，比较重要：
+
+1.toString()
+
+    重写了对象的内容。如果不重写">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -292,12 +292,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/抽象类/" target="_blank">
-                                <span class="chip bg-color">抽象类</span>
+                            <a href="/tags/抽象类-接口/" target="_blank">
+                                <span class="chip bg-color">抽象类|接口</span>
                             </a>
                         
-                            <a href="/tags/接口/" target="_blank">
-                                <span class="chip bg-color">接口</span>
+                            <a href="/tags/访问控制符/" target="_blank">
+                                <span class="chip bg-color">访问控制符</span>
                             </a>
                         
                     </div>
@@ -327,14 +327,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        726
+                        1.5k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        2 Min
+                        5 Min
                     </div>
                     
                 
@@ -350,8 +350,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思</p>
-<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p>
+                <h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p>
+<pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，
+
+其中有三个方法，比较重要：
+
+1.toString()
+
+    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回
+
+    的指定的字符串。
+
+2.equals();
+
+    用来比较两个对象是否相等的方法
+
+    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;
+
+    比较引用值是否相等，使用 &quot;==&quot;
+
+    比较对象是否相等，使用&quot;equals&quot;
+
+    但是 equals需要被重写，因为Object的类的equals方法就是 ==
+
+    eques默认的比较规则是地址值的比较。
+
+    如果覆盖的话，请规循比较规则：
+
+    自反性：
+
+    对称性:
+
+    传递性:
+
+    一致性:
+
+3.hashCode();
+
+    hachCode方法要与equals方法一同覆盖(规定)
+
+    当两个对象equals比较为true时，应具有相同的hashCode值
+
+    当两个对象equals比较为false时,应具有不同的hashCode值
+
+    hashCode值要稳定，一个对象创建以后就应该在变化。
+
+    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。
+
+    一般使用对象的OID值作为hashCode值。
+
+    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.
+</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p>
 <p>父类方法被子类方法重写后，一定调用子类的。</p>
 <h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p>
 <p>重写，重载都是多态的一种。</p>
@@ -382,7 +431,73 @@
 <h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p>
 <p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p>
 <p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p>
+<h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。
 
+public 任意
+
+protected 类        包内        子类
+
+[default] 类        包内
+
+private        类
+
+
+
+同一个.java文件当中只能有一个public修饰的类
+</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.
+
+1.static修饰的资源属于类级别，是全体对象实例共享的资源
+
+
+
+静态属性
+
+    使用static修饰，属于整个类的属性。
+
+    静态资源是在类加载期间初始化的
+
+    静态资源可以直接使用类名.资源名访问。比如：System.out
+
+实例属性
+
+    属于对象的属性
+
+    必须要有对象才能够访问。
+
+
+
+
+
+静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。
+
+一般用来在类加载以后初始化一些静态资源的时候使用。
+</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承
+
+final修饰方法不能被重写
+
+final修饰的变量，初始化以后就不能再修改
+</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。
+
+有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)
+
+简化规范：
+
+1.必须有包
+
+    项目名、包名、类名、等路径名，不要使用中文。
+
+2.Java类，具有无参数构造器
+
+3.属性尽可能私有化，方法尽可能公开化
+
+    属性私有后提供set、get方法。
+
+4.必须实现序列化接口
+
+
+
+JDK提供的类几乎都符合JavaBean规范。
+</code></pre>
             </div>
             <hr>
 
@@ -997,7 +1112,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">10k</span>
+                <span class="white-color">12.8k</span>
             
 
             
