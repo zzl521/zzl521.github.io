@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java环境变量, Joker">
-    <meta name="description" content="如何配置Java环境变量1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）2.    Java环境变量配置：a)    JAVA_HOME
-i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]点击进入[高">
+    <meta name="keywords" content="Java常用API（详细实例2）, Joker">
+    <meta name="description" content="一 Hashset集合这是一个无序去重的集合，在它的内部不存在重复的数据，这个原理基于equalsHashset虽然它是无序的，但是TreeMap弥补了这个缺陷TreeMap &amp;lt;Integer&amp;gt;tree =new TreeSet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java环境变量 | Joker</title>
+    <title>Java常用API（详细实例2） | Joker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -258,13 +257,13 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java环境变量
+                        Java常用API（详细实例2）
                     </div>
                 </div>
             </div>
@@ -286,12 +285,12 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/" target="_blank">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/API/" target="_blank">
+                                <span class="chip bg-color">API</span>
                             </a>
                         
-                            <a href="/tags/环境/" target="_blank">
-                                <span class="chip bg-color">环境</span>
+                            <a href="/tags/JAVA/" target="_blank">
+                                <span class="chip bg-color">JAVA</span>
                             </a>
                         
                     </div>
@@ -314,21 +313,21 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-07-11
+                    2019-07-29
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        709
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        2 Min
+                        4 Min
                     </div>
                     
                 
@@ -344,16 +343,118 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="如何配置Java环境变量"><a href="#如何配置Java环境变量" class="headerlink" title="如何配置Java环境变量"></a>如何配置Java环境变量</h2><h3 id="1-下载1-8版本的JDK-傻瓜式安装，（一路默认选择）"><a href="#1-下载1-8版本的JDK-傻瓜式安装，（一路默认选择）" class="headerlink" title="1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）"></a>1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）</h3><h3 id="2-Java环境变量配置："><a href="#2-Java环境变量配置：" class="headerlink" title="2.    Java环境变量配置："></a>2.    Java环境变量配置：</h3><p>a)    JAVA_HOME</p>
-<h5 id="i-首先右击-计算机-进入-属性-然后选择其中的-高级系统设置"><a href="#i-首先右击-计算机-进入-属性-然后选择其中的-高级系统设置" class="headerlink" title="i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]"></a>i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]</h5><p>点击进入[高级]中的[环境变量]，进入环境变量编辑界面。<br>变量名：JAVA_HOME<br>变量值：实际的安装路径（jdk所在的路径，通常默认在c盘programfile—&gt;java文件内）</p>
-<h5 id="b-Path变量的设置"><a href="#b-Path变量的设置" class="headerlink" title="b)    Path变量的设置"></a>b)    Path变量的设置</h5><p>i.    同样是在[系统变量中]，我们可以看到path变量已经存在，那么我们只需要点击编辑即可。  </p>
-<h5 id="变量值：-JAVA-HOME-bin-JAVA-HOME-jre-bin"><a href="#变量值：-JAVA-HOME-bin-JAVA-HOME-jre-bin" class="headerlink" title="变量值：%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin;"></a>变量值：%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin;</h5><h5 id="bug："><a href="#bug：" class="headerlink" title="bug："></a>bug：</h5><p>我在配置path环境变量的时候发生了一个小问题，按%Java_HOME%,这个是相对路径，但是在dos界面Javac却找不到命令，于是我将path变量新增了jre和jdk/bin目录（绝对路径）后这个问题得到了解决</p>
-<h4 id="c-Classpath"><a href="#c-Classpath" class="headerlink" title="c)    Classpath:"></a>c)    Classpath:</h4><h5 id="变量值：-java-home-lib-java-home-lib-tools-jar"><a href="#变量值：-java-home-lib-java-home-lib-tools-jar" class="headerlink" title="变量值：.;%java_home%\lib;%java_home%\lib\tools.jar;"></a>变量值：.;%java_home%\lib;%java_home%\lib\tools.jar;</h5><h3 id="二、-Java环境变量配置详解"><a href="#二、-Java环境变量配置详解" class="headerlink" title="二、    Java环境变量配置详解"></a>二、    Java环境变量配置详解</h3><h4 id="1-JAVA-HOME"><a href="#1-JAVA-HOME" class="headerlink" title="1.    JAVA_HOME"></a>1.    JAVA_HOME</h4><p>为了方便引用，例如你jdk安装在C：/xxx/xx/xx目录里，则设置JAVA_HOME为该目录的引用。那么以后你要使用这个路径的时候，只需要输入%JAVA_HOME%即可。</p>
-<h4 id="2-path"><a href="#2-path" class="headerlink" title="2.    path"></a>2.    path</h4><p>你想在任何时候都使用%JAVA_HOME%\bin\java命令来执行可行性文件吗？显然不会。于是你可以选择把%JAVA_HOME%\bin\java添加到PATH路径下。这样我们就可以在任何路径下只用java执行命令.</p>
-<h4 id="3-classpath"><a href="#3-classpath" class="headerlink" title="3.    classpath"></a>3.    classpath</h4><p>为了程序能够找到相应的.class文件。举个例子：编译一个JAVA程序A.java<br>会得到一个A.class的类文件。在当前目录下执行java A 将会得到相应的结果<br>(前提是已经设置CLASSPATH为”.”)现在，把A.class移到别的目录下，在执行<br>Java A 将会抛出java.lang.NoClassDelFoundError异常。因为找不到.class文件。<br>现在你把CLASSPATH增加为你转移的目录在运行，结果才会正常。<br>总之一句话去高阔classpath：加载被编译过的.java文件，使之可以找到对应的.class文件。  </p>
-<h5 id="总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件"><a href="#总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件" class="headerlink" title="总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件"></a>总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件</h5><h5 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h5><p>JDK :就是Java开发工具包<br>JRE：就是Java运行时环境<br>JVM：Java虚拟机<br>Java Se API：就是Java系统核心类库<br>JDK包含了JRE</p>
-<p>JavaSe:基础<br>JavaEE：web企业级应用开发<br>JavaMe：Android</p>
-<h4 id="问题：-jar包是什么？封装好的jar包是否能得到源码？"><a href="#问题：-jar包是什么？封装好的jar包是否能得到源码？" class="headerlink" title="问题： jar包是什么？封装好的jar包是否能得到源码？"></a>问题： jar包是什么？封装好的jar包是否能得到源码？</h4><h4 id="答：jar包实际上是一个压缩文件，类似-rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。"><a href="#答：jar包实际上是一个压缩文件，类似-rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。" class="headerlink" title="答：jar包实际上是一个压缩文件，类似.rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。"></a>答：jar包实际上是一个压缩文件，类似.rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。</h4>
+                <h4 id="一-Hashset集合"><a href="#一-Hashset集合" class="headerlink" title="一 Hashset集合"></a>一 Hashset集合</h4><p>这是一个无序去重的集合，在它的内部不存在重复的数据，这个原理基于<br>equalsHashset<br>虽然它是无序的，但是TreeMap弥补了这个缺陷<br><code>TreeMap &lt;Integer&gt;tree =new TreeSet&lt;&gt;();</code><br>Set集合的实现类是HashSet() 与Arraylist区别是：算法不同<br>但是2个类都是继承与Collection。<br>假如有一个数组，里面包含重复的元素，你可以按照下面的形式进行元素去重</p>
+<pre class=" language-String[]names={&quot;tom&quot;,&quot;bob&quot;,&quot;bob&quot;};"><code class="language-String[]names={&quot;tom&quot;,&quot;bob&quot;,&quot;bob&quot;};">Set <string>stes =new Hashset<>(names);
+System.out.println(stes);
+</string></code></pre>
+<h4 id="数组转集合"><a href="#数组转集合" class="headerlink" title="数组转集合"></a>数组转集合</h4><p> String []names={“tom”,”bob”,”bob”};<br>list<string>list =Array.alist(names);<br>System…..//输出</string></p>
+<pre class=" language-API"><code class="language-API">list.add("???");  
+list.remove("???");//可以传入下标或者字符串  
+list.get(0);//获取某个下标值  
+list.set(0,"???");//修改某个下标的值  
+list.contains("???");//判断集合内是否有这个元素
+Collections.sort();//排序
+Collections.shuffle();//随机置换，可用于扑克牌
+</code></pre>
+<h4 id="集合转数组"><a href="#集合转数组" class="headerlink" title="集合转数组"></a>集合转数组</h4><p><code>list&lt;String&gt;list2=new Arraylist(???);
+Object[]objs=list2.toArray();//无指定类型  
+String[]names=list.toArray(new String[]{});//转换成指定类型的数组</code> </p>
+<h3 id="二、Map集合"><a href="#二、Map集合" class="headerlink" title="二、Map集合"></a>二、Map集合</h3><pre><code>Map集合是一个独立的集合不继承与Collection
+HashTable() 是jdk1.0提供的，是线程安全的，性能比较慢
+HashMap()   是jdk1.2提供的，是非线程安全的，性能相对于来说快一些。
+Map&lt;String, String&gt; maps = new HashMap&lt;String, String&gt;();
+    maps.put(&quot;3866&quot;, &quot;董大炮&quot;);
+    maps.put(&quot;8888&quot;, &quot;剑&quot;);
+    maps.put(&quot;88888&quot;, &quot;Andi&quot;);
+    maps.put(&quot;8888&quot;, &quot;剑&quot;);
+    System.out.println(maps);
+    System.out.println(maps.get(&quot;3866&quot;));
+    System.out.println(maps.size());
+
+    Set&lt;Entry&lt;String, String&gt;&gt; setMap =  maps.entrySet();//遍历map
+    System.out.println(setMap);
+    System.out.println(setMap.iterator().next());
+    System.out.println(setMap.iterator().next().getKey());//打印Key
+    System.out.println(setMap.iterator().next().getValue());//打印值
+
+
+    Set&lt;String&gt; set = maps.keySet();
+    System.out.println(set);
+    Collection&lt;String&gt; cs =  maps.values();
+    System.out.println(cs);
+
+    //根据key删除元素，返回被删除的value
+    String rvalue = maps.remove(&quot;8888&quot;);
+    System.out.println(rvalue);
+    System.out.println(maps);
+    //判断是否有指定的key
+    System.out.println(maps.containsKey(&quot;38661&quot;));
+    //判断是否有指定的value
+    System.out.println(maps.containsValue(&quot;Andis&quot;));
+
+
+    Map&lt;Integer, Student&gt; stuMap = new HashMap&lt;&gt;();
+    stuMap.put(1, new Student(&quot;Jerry&quot;, 18));
+    stuMap.put(2, new Student(&quot;Jerry&quot;, 18));
+    System.out.println(stuMap);//hashMap中的元素重复与否与key相关，key的底层就是Set  
+
+map集合应用，统计字符串当中，每一个字出现的次数    
+public static void main(String[] args) {
+    // TODO Auto-generated method stub
+    NumberFormat number =NumberFormat.getInstance();
+    String s=&quot;如果你是在一个面临美国制裁的国家使用GitHub的在线服务，你的账号可能会因此被限制只能使用最基本的产品。GitHub 本周告诉居住在克里米亚的21岁俄罗斯公民 Anatoliy Kashkin，由于美国的贸易管制，它“限制”了他的 GitHub 账户。Anatoliy Kashkin 在 YC 上发了帖子说明此事，据说与该开发者同一地区的其他开发者也同样被限制。GitHub 确实为开发者提供了一个争议限制的申诉表格，但 Kashkin 声称通过上诉限制没有任何好处：“这是毫无意义的。我的帐户被标记为限制，为了取消标记，我必须提供一份证据证明我不住在克里米亚。我实际上是一名克里米亚人注册的俄罗斯公民，我身处其中克里米亚，我一生都住在克里米亚。”&quot;;
+System.out.println(s);
+
+ Count(s);
+ }
+public static void Count(String s)
+ {
+    int count = 0 ;
+    String sss=null;
+    NumberFormat number =NumberFormat.getInstance();
+    HashMap&lt;Character,Integer&gt; map =new HashMap&lt;&gt;();
+    int point;
+    for (int i = 0; i &lt;s.length() ; i++)
+    {
+        if(!map.containsKey(s.charAt(i)))
+        {
+            map.put(s.charAt(i),1);
+            }else {
+                 count = map.get(s.charAt(i));
+                count++;
+                map.put(s.charAt(i),count);
+
+
+                }
+
+         sss=number.format((float)map.get(s.charAt(i))/(float)s.length()*100);    
+        System.out.println(sss);
+
+        }
+    System.out.println(map);
+System.out.println(&quot;\r&quot;);
+}
+</code></pre><h3 id="三、集合的继承结构"><a href="#三、集合的继承结构" class="headerlink" title="三、集合的继承结构"></a>三、集合的继承结构</h3><pre><code>                Collection
+
+        List                    Set                                Map
+
+
+ArrayList    LinkedList        HashSet    SortedSet                HashMap        HashTable        SortedMap
+
+                                    TreeSet                                Properties        TreeMap
+以上是集合的继承结构，请务必知悉。
+</code></pre><h3 id="四、集合的复制"><a href="#四、集合的复制" class="headerlink" title="四、集合的复制"></a>四、集合的复制</h3><pre><code>Java默认的复制规则是浅层复制
+集合复制有2种形式
+1.clone()  是Object定义的.一般API都重写了这个方法
+2.使用复制构造器
+    List&lt;Entry&lt;String, Object&gt;&gt; lists = new ArrayList&lt;&gt;(map.entrySet());
+</code></pre><h4 id="五、同步化-线程安全"><a href="#五、同步化-线程安全" class="headerlink" title="五、同步化(线程安全)"></a>五、同步化(线程安全)</h4><pre><code>Collections.synchronizedList(list)
+可以将非线程安全的list包装为一个线程安全的
+如果将一个非线程安全的list包装为一个线程安全的转换以后就相当于Vector
+
+Collections.synchronizedMap(Map)
+可以将非线程安全的Map包装为一个线程安全的  
+</code></pre>
             </div>
             <hr>
 
@@ -508,9 +609,9 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《Java环境变量》
+                    《Java常用API（详细实例2）》
                 </span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/11/java/java/" property="cc:attributionName" rel="cc:attributionURL">
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/29/java/java7/" property="cc:attributionName" rel="cc:attributionURL">
                 子龙
             </a> is licensed under a
             <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
@@ -810,48 +911,50 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/07/15/attark/arp2/">
+                <a href="/2019/07/29/java/java7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="局域网内的不速之客（2）">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Java常用API（详细实例2）">
                         
-                        <span class="card-title">局域网内的不速之客（2）</span>
+                        <span class="card-title">Java常用API（详细实例2）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Arp欺骗
+                            Java集合常用API
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Arp/" class="post-category" target="_blank">
-                                    Arp
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/转发/" target="_blank">
-                        <span class="chip bg-color">转发</span>
+                    <a href="/tags/API/" target="_blank">
+                        <span class="chip bg-color">API</span>
                     </a>
                     
-                    <a href="/tags/截获/" target="_blank">
-                        <span class="chip bg-color">截获</span>
+                    <a href="/tags/JAVA/" target="_blank">
+                        <span class="chip bg-color">JAVA</span>
                     </a>
                     
                 </div>
@@ -865,31 +968,31 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/08/composition/">
+                <a href="/2019/07/28/java/java6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="闲散">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Java常用API（详细实例1）">
                         
-                        <span class="card-title">闲散</span>
+                        <span class="card-title">Java常用API（详细实例1）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            生活真有那么难
+                            Java字符串,链表常用API
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-08
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/diary/" class="post-category" target="_blank">
-                                    diary
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
                             
@@ -899,12 +1002,12 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/经历/" target="_blank">
-                        <span class="chip bg-color">经历</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/感悟/" target="_blank">
-                        <span class="chip bg-color">感悟</span>
+                    <a href="/tags/API/" target="_blank">
+                        <span class="chip bg-color">API</span>
                     </a>
                     
                 </div>

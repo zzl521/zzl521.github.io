@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java常用API（详细实例）, Joker">
+    <meta name="keywords" content="Java常用API（详细实例1）, Joker">
     <meta name="description" content="一、String 字符串String是一个API提供的类，存放字符串。底层是char[]String字面量相同时，会替换为同一个String对象的引用。常量连接的结果也被优化为一个字符串.String比较的时候用equals
 解析：在字符串">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java常用API（详细实例） | Joker</title>
+    <title>Java常用API（详细实例1） | Joker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -258,13 +258,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java常用API（详细实例）
+                        Java常用API（详细实例1）
                     </div>
                 </div>
             </div>
@@ -286,12 +286,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/API/" target="_blank">
-                                <span class="chip bg-color">API</span>
+                            <a href="/tags/Java/" target="_blank">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/集合·字符串/" target="_blank">
-                                <span class="chip bg-color">集合·字符串</span>
+                            <a href="/tags/API/" target="_blank">
+                                <span class="chip bg-color">API</span>
                             </a>
                         
                     </div>
@@ -382,20 +382,18 @@ StringBuilder与StringBuffer API几乎一模一样
     long + 操作(很多API的方法已经过时了。有BUG)
 Calender
     long + 操作(一般情况都使用Calender)
-</code></pre><pre class=" language-/*"><code class="language-/*">    * Date内部维护着一个long值
-    * 即：1970年至今的毫秒数
-    */
+</code></pre><pre><code>     Date内部维护着一个long值
+     即：1970年至今的毫秒数
+
     Date date = new Date();
     System.out.println(date);
 
     long time = date.getTime();
     System.out.println(System.currentTimeMillis());
     System.out.println(time);
-</code></pre>
-<pre><code>SimpleDateFormat
+</code></pre><pre><code>SimpleDateFormat
     Date + 操作  (日期格式的操作)
-#### 解析：
-</code></pre><p><code>`</code> String dt = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss EE”).format(calender.getTime());<br>        System.out.println(dt);</p>
+</code></pre><h4 id="解析：-1"><a href="#解析：-1" class="headerlink" title="解析："></a>解析：</h4><p><code>`</code> String dt = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss EE”).format(calender.getTime());<br>        System.out.println(dt);</p>
 <pre><code>
 ### 六   一、集合
     集合底层就是数组
@@ -421,9 +419,8 @@ Calender
         System.out.println(&quot;removeFirst():&quot; + linkedList.removeFirst());//移除并返回集合中的第一个元素
         System.out.println(&quot;removeLast():&quot; + linkedList.removeLast());//移除并返回集合中的最后一个元素
         System.out.println(&quot;linkedList:&quot; + linkedList);
-        System.out.println(&quot;contains(1):&quot; + linkedList.contains(1));//判断此集合中指定的元素，如果包含返回true 否则false
-
-        /************************位置访问操作**************************/
+        System.out.println(&quot;contains(1):&quot; + linkedList.contains(1));//判断此集合中指定的元素，如果包含返回true 否则false  
+       位置访问操作
         System.out.println(&quot;------------------------------------------------&quot;);
 
         linkedList.set(1, 3);//将此集合中指定位置的元素替换成指定的元素
@@ -763,7 +760,7 @@ ArrayList底层是由数组支持，而LinkedList是由双向链表支持的，�
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《Java常用API（详细实例）》
+                    《Java常用API（详细实例1）》
                 </span> by
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/28/java/java6/" property="cc:attributionName" rel="cc:attributionURL">
                 子龙
@@ -1065,28 +1062,27 @@ ArrayList底层是由数组支持，而LinkedList是由双向链表支持的，�
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/07/28/java/java6/">
+                <a href="/2019/07/29/java/java7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Java常用API（详细实例）">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Java常用API（详细实例2）">
                         
-                        <span class="card-title">Java常用API（详细实例）</span>
+                        <span class="card-title">Java常用API（详细实例2）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java字符串,集合常用API
+                            Java集合常用API
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1099,7 +1095,6 @@ ArrayList底层是由数组支持，而LinkedList是由双向链表支持的，�
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1107,8 +1102,8 @@ ArrayList底层是由数组支持，而LinkedList是由双向链表支持的，�
                         <span class="chip bg-color">API</span>
                     </a>
                     
-                    <a href="/tags/集合·字符串/" target="_blank">
-                        <span class="chip bg-color">集合·字符串</span>
+                    <a href="/tags/JAVA/" target="_blank">
+                        <span class="chip bg-color">JAVA</span>
                     </a>
                     
                 </div>
@@ -1225,7 +1220,7 @@ ArrayList底层是由数组支持，而LinkedList是由双向链表支持的，�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">12.8k</span>
+                <span class="white-color">13.9k</span>
             
 
             
