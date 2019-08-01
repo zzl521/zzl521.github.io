@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>MySQL安装</title>
+      <link href="/2019/08/01/web/mysql/"/>
+      <url>/2019/08/01/web/mysql/</url>
+      
+        <content type="html"><![CDATA[<p>MySQL是什么，MySQL是目前世界上最常用的关系型数据库，数据库啊，顾名思义，它就是存放数据的地方，这些数据，可以是你的一些注册信息，年龄，邮箱，账号密码，比如你要登陆某个平台or app时，你所输入的账号密码，就会通过网络，发送请求数据，与数据库当中的信息进行校验，通过的话，就登陆成功了，不通过当然就会报异常咯。  </p><h3 id="MySQL安装："><a href="#MySQL安装：" class="headerlink" title="MySQL安装："></a>MySQL安装：</h3><p>方式一·<a href="https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.11-winx64.zip" target="_blank" rel="noopener">直接下载</a>版本为8.0.11，如果想下载最新版请进入官网！<br>方式二·<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">官网下载</a><br>我也不知道这官网为啥这么卡….<br>进去之后大概就是这个样的，选红圈的下，不要问为啥下这个，我也不知道<br><img src="http://img.ahdy.top/2019-08-01_151652.png" alt><br>然后会进到这个页面，点击下面的，”不用，谢谢，仅开始下载（no thanks just<strong>**</strong>）”如果我翻译的不对也不要讲！<br><img src="http://img.ahdy.top/2019-08-01_151620.png" alt></p><p>方式三·<a href="https://share.weiyun.com/5BeMjhg" target="_blank" rel="noopener">网盘下载</a><br>我这里提供了一个MySQL5.6版本+Sqlyog，这个操作比较简单，解压版的，内包含启动MySQL的.bat脚本，解压好后以管理员身份启动服务就可以用了，关闭同样操作。里面有不同的版本，不要胡乱下，选择你操作系统相同的系统位数下载！</p><h3 id="官方版MySQL起步："><a href="#官方版MySQL起步：" class="headerlink" title="官方版MySQL起步："></a>官方版MySQL起步：</h3><p>要用MySQL，就要会sql命令，这个命令emmm就像我们的c语言一样，起到一个入门作用，官网上下载的也好，我附加上去的解压版也好，都得会sql命令才能对数据库操作，当然这是就体现了图形化工具的好处，比如navicat，sqlyog。<br>下面教你下载好后怎么对数据库初始化~<br>我相信你此时已经下载好了MySQL，并且把它解压到一个安全的地方，（不要放中文路径的文件内）<br>双击进入你解压好的文件,里面创建一个后缀为.ini的配置文件<br><img src="http://img.ahdy.top/2019-08-01_155046.png" alt></p><h5 id="文件内容如下："><a href="#文件内容如下：" class="headerlink" title="文件内容如下："></a>文件内容如下：</h5><pre class=" language-[client]"><code class="language-[client]"> # 设置mysql客户端默认字符集default-character-set=utf8[mysqld] # 设置3306端口port = 3306 # 设置mysql的安装目录,这个路径关系着MySQL能否启动，解压在哪就填哪basedir=D:\\mysql-8.0.11 # 设置 mysql数据库的数据的存放目录，MySQL 8+ 不需要以下配置，系统自己生成即可，否则有可能报错 # datadir=C:\\web\\sqldata 不用动  允许最大连接数max_connections=20 # 服务端使用的字符集默认为8比特编码的latin1字符集character-set-server=utf8 # 创建新表时将使用的默认存储引擎 default-storage-engine=INNODB </code></pre><p>到这儿MySQL的配置已经完成，下面需要对它进行初始化操作<br>1.以管理员身份打开 cmd 命令行工具，切换目录：<br><code>D:</code><br><code>cd mysql-8.0.11\bin</code><br>2.初始化<br><code>mysqld --initialize --console</code><br>执行完成后，会输出 root 用户的初始默认密码，如：<br>…<br>2018-04-20T02:35:05.464644Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: APWCY5ws&amp;hjQ<br>…<br>APWCY5ws&amp;hjQ 就是初始密码，后续登录需要用到（请先保存或者记住它），你也可以在登陆后修改密码。</p><p>3.输入以下安装命令：</p><p>mysqld install<br>启动输入以下命令即可启动：</p><p><code>net start mysql</code><br>关闭：<br><code>net stop mysql</code><br><img src="http://img.ahdy.top/2019-08-01_160546.png" alt> </p><h3 id="登录-MySQL"><a href="#登录-MySQL" class="headerlink" title="登录 MySQL"></a>登录 MySQL</h3><p>当 MySQL 服务已经运行时, 我们可以通过 MySQL 自带的客户端工具登录到 MySQL 数据库中, 首先打开命令提示符, 输入以下格式的命名:</p><h5 id="mysql-h-主机名-u-用户名-p"><a href="#mysql-h-主机名-u-用户名-p" class="headerlink" title="mysql -h 主机名 -u 用户名 -p"></a>mysql -h 主机名 -u 用户名 -p</h5><p>参数说明：</p><p>-h : 指定客户端所要登录的 MySQL 主机名, 登录本机(localhost 或 127.0.0.1)该参数可以省略;<br>-u : 登录的用户名;<br>-p : 告诉服务器将会使用一个密码来登录, 如果所要登录的用户名密码为空, 可以忽略此选项。<br>如果我们要登录本机的 MySQL 数据库，只需要输入以下命令即可：</p><p>mysql -u root -p<br>按回车确认, 如果安装正确且 MySQL 正在运行, 会得到以下响应:</p><p>Enter password:<br>若密码存在, 输入密码登录, 不存在则直接按回车登录。登录成功后你将会看到 Welcome to the MySQL monitor… 的提示语。</p><p>然后命令提示符会一直以 mysq&gt; 加一个闪烁的光标等待命令的输入, 输入 exit 或 quit 退出登录，一般默认用户名都是root，密码就是初始化的时候的密码</p><h5 id="接下来，尽情挖掘新大陆吧-少年！"><a href="#接下来，尽情挖掘新大陆吧-少年！" class="headerlink" title="接下来，尽情挖掘新大陆吧,少年！"></a>接下来，尽情挖掘新大陆吧,少年！</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java常用API（详细实例2）</title>
       <link href="/2019/07/29/java/java7/"/>
       <url>/2019/07/29/java/java7/</url>
@@ -112,33 +139,6 @@
     
     
     <entry>
-      <title>Java难点</title>
-      <link href="/2019/07/22/java/java5/"/>
-      <url>/2019/07/22/java/java5/</url>
-      
-        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 抽象类|接口 </tag>
-            
-            <tag> 访问控制符 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>域名</title>
       <link href="/2019/07/22/yuming/"/>
       <url>/2019/07/22/yuming/</url>
@@ -158,6 +158,33 @@
             <tag> 域名 </tag>
             
             <tag> 二级域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java难点</title>
+      <link href="/2019/07/22/java/java5/"/>
+      <url>/2019/07/22/java/java5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抽象类|接口 </tag>
+            
+            <tag> 访问控制符 </tag>
             
         </tags>
       
