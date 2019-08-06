@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-01T08:23:21.538Z</updated>
+  <updated>2019-08-06T08:19:08.123Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL入门</title>
+    <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
+    <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
+    <published>2019-08-06T08:15:00.000Z</published>
+    <updated>2019-08-06T08:19:08.123Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;MySQL的数据库创建、删除&quot;&gt;&lt;a href=&quot;#MySQL的数据库创建、删除&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL安装</title>
     <link href="http://yoursite.com/2019/08/01/web/mysql/"/>
     <id>http://yoursite.com/2019/08/01/web/mysql/</id>
     <published>2019-08-01T08:25:00.000Z</published>
-    <updated>2019-08-01T08:23:21.538Z</updated>
+    <updated>2019-08-06T08:22:10.806Z</updated>
     
     <summary type="html">
     

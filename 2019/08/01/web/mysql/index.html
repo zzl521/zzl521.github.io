@@ -409,14 +409,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        1.2k
+                        1.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        4 Min
+                        5 Min
                     </div>
                     
                 
@@ -432,11 +432,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>MySQL是什么，MySQL是目前世界上最常用的关系型数据库，数据库啊，顾名思义，它就是存放数据的地方，这些数据，可以是你的一些注册信息，年龄，邮箱，账号密码，比如你要登陆某个平台or app时，你所输入的账号密码，就会通过网络，发送请求数据，与数据库当中的信息进行校验，通过的话，就登陆成功了，不通过当然就会报异常咯。  </p>
-<h3 id="MySQL安装："><a href="#MySQL安装：" class="headerlink" title="MySQL安装："></a>MySQL安装：</h3><p>方式一·<a href="https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.11-winx64.zip" target="_blank" rel="noopener">直接下载</a>版本为8.0.11，如果想下载最新版请进入官网！<br>方式二·<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">官网下载</a><br>我也不知道这官网为啥这么卡….<br>进去之后大概就是这个样的，选红圈的下，不要问为啥下这个，我也不知道<br><img src="http://img.ahdy.top/2019-08-01_151652.png" alt><br>然后会进到这个页面，点击下面的，”不用，谢谢，仅开始下载（no thanks just<strong>**</strong>）”如果我翻译的不对也不要讲！<br><img src="http://img.ahdy.top/2019-08-01_151620.png" alt></p>
-<p>方式三·<a href="https://share.weiyun.com/5BeMjhg" target="_blank" rel="noopener">网盘下载</a><br>我这里提供了一个MySQL5.6版本+Sqlyog，这个操作比较简单，解压版的，内包含启动MySQL的.bat脚本，解压好后以管理员身份启动服务就可以用了，关闭同样操作。里面有不同的版本，不要胡乱下，选择你操作系统相同的系统位数下载！</p>
-<h3 id="官方版MySQL起步："><a href="#官方版MySQL起步：" class="headerlink" title="官方版MySQL起步："></a>官方版MySQL起步：</h3><p>要用MySQL，就要会sql命令，这个命令emmm就像我们的c语言一样，起到一个入门作用，官网上下载的也好，我附加上去的解压版也好，都得会sql命令才能对数据库操作，当然这是就体现了图形化工具的好处，比如navicat，sqlyog。<br>下面教你下载好后怎么对数据库初始化~<br>我相信你此时已经下载好了MySQL，并且把它解压到一个安全的地方，（不要放中文路径的文件内）<br>双击进入你解压好的文件,里面创建一个后缀为.ini的配置文件<br><img src="http://img.ahdy.top/2019-08-01_155046.png" alt></p>
-<h5 id="文件内容如下："><a href="#文件内容如下：" class="headerlink" title="文件内容如下："></a>文件内容如下：</h5><pre class=" language-[client]"><code class="language-[client]"> # 设置mysql客户端默认字符集
+                <p>MySQL是什么，MySQL是目前世界上最常用的关系型数据库，数据库啊，顾名思义，它就是存放数据的地方，这些数据，可以是你的一些注册信息，年龄，邮箱，账号密码，比如你要登陆某个平台or app时，你所输入的账号密码，就会通过网络，发送请求数据，与数据库当中的信息进行校验，通过的话，就登陆成功了，不通过当然就会报异常咯。<br>    -之前通过流操作文件的方式存储数据。—弊端。<br>    1.执行效率<br>    2.进行增删改查操作，代码书写比较麻烦<br>    3.一般只能保存文本数据。</p>
+<pre><code>Mysql是轻量级，开源的，免费的数据存储集合。
+
+#### 什么是DB
+DB:Database 数据库 ,指一个文件集合。
+
+#### 什么是DBMS
+DBMS:Database Management System 数据库管理系统,用于管理数据库的软件。
+常见的DBMS：Mysql、Oracle、DB2、SQLServer SQLite
+
+#### 数据库的分类
+1.关系型数据库：经过数学论证开源保存现实生活中的各种关系，以表为单位保存数据。
+2.非关系型数据库(网状型数据库):用于决绝某些特定场景 比如：高并发访问时的数据缓存。举例：Redis 以key-value形式保存数据的。
+</code></pre><h3 id="MySQL安装："><a href="#MySQL安装：" class="headerlink" title="MySQL安装："></a>MySQL安装：</h3><p>方式一·<a href="https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-8.0.11-winx64.zip" target="_blank" rel="noopener">直接下载</a>版本为8.0.11，如果想下载最新版请进入官网！<br>方式二·<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">官网下载</a><br>我也不知道这官网为啥这么卡….<br>进去之后大概就是这个样的，选红圈的下，不要问为啥下这个，我也不知道<br><img src="http://img.ahdy.top/2019-08-01_151652.png" alt><br>然后会进到这个页面，点击下面的，”不用，谢谢，仅开始下载（no thanks just<strong>**</strong>）”如果我翻译的不对也不要讲！<br><img src="http://img.ahdy.top/2019-08-01_151620.png" alt></p>
+<p>方式三·<a href="https://share.weiyun.com/5BeMjhg" target="_blank" rel="noopener">网盘下载</a><br>我这里提供了一个MySQL5.6版本+Sqlyog，这个操作比较简单，解压版的，内包含启动MySQL的.bat脚本，解压好后以管理员身份启动服务就可以用了，关闭同样操作。里面有不同的版本，不要胡乱下，选择你操作系统相同的系统位数下载！  </p>
+<h3 id="MySQL配置环境变量"><a href="#MySQL配置环境变量" class="headerlink" title="MySQL配置环境变量"></a>MySQL配置环境变量</h3><p>右键此电脑打开属性，打开高级系统设置<br><img src="http://img.ahdy.top/2019-08-06_094215.png" alt><br><img src="http://img.ahdy.top/2019-08-06_094248.png" alt><br><img src="http://img.ahdy.top/2019-08-06_094319.png" alt><br>进入系统的path变量选择新增，这个路径就是你安装好的MySQL/bin路径，将绝对路径复制粘贴进来就完成了MySQL环境变量的配置。</p>
+<h3 id="官方版MySQL起步："><a href="#官方版MySQL起步：" class="headerlink" title="官方版MySQL起步："></a>官方版MySQL起步：</h3><p>要用MySQL，就要会sql命令，这个命令emmm就像我们的c语言一样，起到一个入门作用，官网上下载的也好，我附加上去的解压版也好，都得会sql命令才能对数据库操作，当然这是就体现了图形化工具的好处，比如navicat，sqlyog。<br>下面教你下载好后怎么对数据库初始化~<br>我相信你此时已经下载好了MySQL，并且把它解压到一个安全的地方，（不要放中文路径的文件内）<br>双击进入你解压好的文件,里面创建一个后缀为.ini的配置文件<br><img src="http://img.ahdy.top/2019-08-06_090425.png" alt></p>
+<h5 id="文件内容如下："><a href="#文件内容如下：" class="headerlink" title="文件内容如下："></a>文件内容如下：</h5><pre class=" language-#"><code class="language-#">   [client]
+ # 设置mysql客户端默认字符集
 default-character-set=utf8
 
 [mysqld]
@@ -454,17 +468,21 @@ character-set-server=utf8
 default-storage-engine=INNODB 
 
 </code></pre>
-<p>到这儿MySQL的配置已经完成，下面需要对它进行初始化操作<br>1.以管理员身份打开 cmd 命令行工具，切换目录：<br><code>D:</code><br><code>cd mysql-8.0.11\bin</code><br>2.初始化<br><code>mysqld --initialize --console</code><br>执行完成后，会输出 root 用户的初始默认密码，如：<br>…<br>2018-04-20T02:35:05.464644Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: APWCY5ws&amp;hjQ<br>…<br>APWCY5ws&amp;hjQ 就是初始密码，后续登录需要用到（请先保存或者记住它），你也可以在登陆后修改密码。</p>
+<p>到这儿MySQL的配置已经完成，下面需要对它进行初始化操作<br>1.以管理员身份打开 cmd 命令行工具，切换目录：<br><code>D:</code><br><code>cd mysql-8.0.11\bin</code><br><img src="http://img.ahdy.top/2019-08-06_091117.png" alt><br>2.初始化<br><code>mysqld --initialize --console</code><br>执行完成后，会输出 root 用户的初始默认密码，如：<br>…<br>2018-04-20T02:35:05.464644Z 5 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: APWCY5ws&amp;hjQ<br>…<br>APWCY5ws&amp;hjQ 就是初始密码，后续登录需要用到（注意！：请先保存或者记住它），你也可以在登陆后修改密码。</p>
 <p>3.输入以下安装命令：</p>
-<p>mysqld install<br>启动输入以下命令即可启动：</p>
-<p><code>net start mysql</code><br>关闭：<br><code>net stop mysql</code><br><img src="http://img.ahdy.top/2019-08-01_160546.png" alt> </p>
+<p><code>mysqld install</code><br>4.启动输入以下命令即可启动：</p>
+<p><code>net start mysql</code>  </p>
+<p><img src="http://img.ahdy.top/2019-08-01_160546.png" alt> </p>
 <h3 id="登录-MySQL"><a href="#登录-MySQL" class="headerlink" title="登录 MySQL"></a>登录 MySQL</h3><p>当 MySQL 服务已经运行时, 我们可以通过 MySQL 自带的客户端工具登录到 MySQL 数据库中, 首先打开命令提示符, 输入以下格式的命名:</p>
-<h5 id="mysql-h-主机名-u-用户名-p"><a href="#mysql-h-主机名-u-用户名-p" class="headerlink" title="mysql -h 主机名 -u 用户名 -p"></a>mysql -h 主机名 -u 用户名 -p</h5><p>参数说明：</p>
+<h5 id="mysql-h-主机名-u-用户名-p-简写法：mysql-u-root-p"><a href="#mysql-h-主机名-u-用户名-p-简写法：mysql-u-root-p" class="headerlink" title="mysql -h 主机名 -u 用户名 -p(简写法：mysql -u root -p)"></a>mysql -h 主机名 -u 用户名 -p(简写法：mysql -u root -p)</h5><p>参数说明：</p>
 <p>-h : 指定客户端所要登录的 MySQL 主机名, 登录本机(localhost 或 127.0.0.1)该参数可以省略;<br>-u : 登录的用户名;<br>-p : 告诉服务器将会使用一个密码来登录, 如果所要登录的用户名密码为空, 可以忽略此选项。<br>如果我们要登录本机的 MySQL 数据库，只需要输入以下命令即可：</p>
 <p>mysql -u root -p<br>按回车确认, 如果安装正确且 MySQL 正在运行, 会得到以下响应:</p>
 <p>Enter password:<br>若密码存在, 输入密码登录, 不存在则直接按回车登录。登录成功后你将会看到 Welcome to the MySQL monitor… 的提示语。</p>
-<p>然后命令提示符会一直以 mysq&gt; 加一个闪烁的光标等待命令的输入, 输入 exit 或 quit 退出登录，一般默认用户名都是root，密码就是初始化的时候的密码</p>
-<h5 id="接下来，尽情挖掘新大陆吧-少年！"><a href="#接下来，尽情挖掘新大陆吧-少年！" class="headerlink" title="接下来，尽情挖掘新大陆吧,少年！"></a>接下来，尽情挖掘新大陆吧,少年！</h5>
+<p>然后命令提示符会一直以 mysq&gt; 加一个闪烁的光标等待命令的输入, 输入 exit 或 quit 退出登录，一般默认用户名都是root，密码就是初始化的时候的密码  </p>
+<h3 id="密码修改"><a href="#密码修改" class="headerlink" title="密码修改"></a>密码修改</h3><p><img src="http://img.ahdy.top/2019-08-06_092528.png" alt>  </p>
+<p><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;123456&#39;;</code><br>登陆密码为你初始化生成的密码，在开启数据库服务的条件下，才能登陆成功  </p>
+<p>后面123456是你修改的密码，你也可以随意更改，但最好不要包含特殊符号，because很有可能造成sqlyog等图形化工具连接报错！</p>
+<h5 id="接下来，尽情挖掘新大陆吧-少年！下一篇—-mysql入门（MySQL—-sql命令基础操作—-常见问题）"><a href="#接下来，尽情挖掘新大陆吧-少年！下一篇—-mysql入门（MySQL—-sql命令基础操作—-常见问题）" class="headerlink" title="接下来，尽情挖掘新大陆吧,少年！下一篇—-mysql入门（MySQL—-sql命令基础操作—-常见问题）"></a>接下来，尽情挖掘新大陆吧,少年！下一篇—-mysql入门（MySQL—-sql命令基础操作—-常见问题）</h5>
             </div>
             <hr>
 
@@ -611,28 +629,6 @@ default-storage-engine=INNODB
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
-</div>
-
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '',
-        clientSecret: '',
-        repo: '',
-        owner: '',
-        admin: null,
-        id: '2019-08-01T16-25-00',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
-    
 
     
 
@@ -649,15 +645,15 @@ default-storage-engine=INNODB
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/08/01/web/mysql/">
+                <a href="/2019/08/06/web/mysql2/">
                     <div class="card-image">
                         
-                        <img src="http://img.ahdy.top/mysql.png" class="responsive-img" alt="MySQL安装">
                         
-                        <span class="card-title">MySQL安装</span>
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL入门">
+                        
+                        <span class="card-title">MySQL入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -667,9 +663,9 @@ default-storage-engine=INNODB
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -682,16 +678,15 @@ default-storage-engine=INNODB
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/环境/" target="_blank">
-                        <span class="chip bg-color">环境</span>
-                    </a>
-                    
                     <a href="/tags/MySQL/" target="_blank">
                         <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/tags/SQL/" target="_blank">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
                 </div>
@@ -901,7 +896,7 @@ default-storage-engine=INNODB
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">15k</span>
+                <span class="white-color">16.6k</span>
             
 
             

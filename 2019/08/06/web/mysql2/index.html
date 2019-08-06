@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java环境变量, Joker">
-    <meta name="description" content="如何配置Java环境变量1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）2.    Java环境变量配置：a)    JAVA_HOME
-i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]点击进入[高">
+    <meta name="keywords" content="MySQL入门, Joker">
+    <meta name="description" content="MySQL的数据库创建、删除下面为MySQL操作成功例子，相关命令我会放在本文档后面1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下2.启动MySQL服务，登陆MySQL3.输入show databases;显示My">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java环境变量 | Joker</title>
+    <title>MySQL入门 | Joker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -258,13 +257,13 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java环境变量
+                        MySQL入门
                     </div>
                 </div>
             </div>
@@ -274,10 +273,99 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -286,12 +374,12 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/环境/" target="_blank">
-                                <span class="chip bg-color">环境</span>
+                            <a href="/tags/MySQL/" target="_blank">
+                                <span class="chip bg-color">MySQL</span>
                             </a>
                         
-                            <a href="/tags/Java/" target="_blank">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/SQL/" target="_blank">
+                                <span class="chip bg-color">SQL</span>
                             </a>
                         
                     </div>
@@ -302,8 +390,8 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category" target="_blank">
-                                Java
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
+                                MySQL
                             </a>
                         
                     </div>
@@ -314,21 +402,21 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-07-11
+                    2019-08-06
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        709
+                        1.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        2 Min
+                        4 Min
                     </div>
                     
                 
@@ -344,16 +432,101 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="如何配置Java环境变量"><a href="#如何配置Java环境变量" class="headerlink" title="如何配置Java环境变量"></a>如何配置Java环境变量</h2><h3 id="1-下载1-8版本的JDK-傻瓜式安装，（一路默认选择）"><a href="#1-下载1-8版本的JDK-傻瓜式安装，（一路默认选择）" class="headerlink" title="1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）"></a>1.    下载1.8版本的JDK -傻瓜式安装，（一路默认选择）</h3><h3 id="2-Java环境变量配置："><a href="#2-Java环境变量配置：" class="headerlink" title="2.    Java环境变量配置："></a>2.    Java环境变量配置：</h3><p>a)    JAVA_HOME</p>
-<h5 id="i-首先右击-计算机-进入-属性-然后选择其中的-高级系统设置"><a href="#i-首先右击-计算机-进入-属性-然后选择其中的-高级系统设置" class="headerlink" title="i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]"></a>i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设置]</h5><p>点击进入[高级]中的[环境变量]，进入环境变量编辑界面。<br>变量名：JAVA_HOME<br>变量值：实际的安装路径（jdk所在的路径，通常默认在c盘programfile—&gt;java文件内）</p>
-<h5 id="b-Path变量的设置"><a href="#b-Path变量的设置" class="headerlink" title="b)    Path变量的设置"></a>b)    Path变量的设置</h5><p>i.    同样是在[系统变量中]，我们可以看到path变量已经存在，那么我们只需要点击编辑即可。  </p>
-<h5 id="变量值：-JAVA-HOME-bin-JAVA-HOME-jre-bin"><a href="#变量值：-JAVA-HOME-bin-JAVA-HOME-jre-bin" class="headerlink" title="变量值：%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin;"></a>变量值：%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin;</h5><h5 id="bug："><a href="#bug：" class="headerlink" title="bug："></a>bug：</h5><p>我在配置path环境变量的时候发生了一个小问题，按%Java_HOME%,这个是相对路径，但是在dos界面Javac却找不到命令，于是我将path变量新增了jre和jdk/bin目录（绝对路径）后这个问题得到了解决</p>
-<h4 id="c-Classpath"><a href="#c-Classpath" class="headerlink" title="c)    Classpath:"></a>c)    Classpath:</h4><h5 id="变量值：-java-home-lib-java-home-lib-tools-jar"><a href="#变量值：-java-home-lib-java-home-lib-tools-jar" class="headerlink" title="变量值：.;%java_home%\lib;%java_home%\lib\tools.jar;"></a>变量值：.;%java_home%\lib;%java_home%\lib\tools.jar;</h5><h3 id="二、-Java环境变量配置详解"><a href="#二、-Java环境变量配置详解" class="headerlink" title="二、    Java环境变量配置详解"></a>二、    Java环境变量配置详解</h3><h4 id="1-JAVA-HOME"><a href="#1-JAVA-HOME" class="headerlink" title="1.    JAVA_HOME"></a>1.    JAVA_HOME</h4><p>为了方便引用，例如你jdk安装在C：/xxx/xx/xx目录里，则设置JAVA_HOME为该目录的引用。那么以后你要使用这个路径的时候，只需要输入%JAVA_HOME%即可。</p>
-<h4 id="2-path"><a href="#2-path" class="headerlink" title="2.    path"></a>2.    path</h4><p>你想在任何时候都使用%JAVA_HOME%\bin\java命令来执行可行性文件吗？显然不会。于是你可以选择把%JAVA_HOME%\bin\java添加到PATH路径下。这样我们就可以在任何路径下只用java执行命令.</p>
-<h4 id="3-classpath"><a href="#3-classpath" class="headerlink" title="3.    classpath"></a>3.    classpath</h4><p>为了程序能够找到相应的.class文件。举个例子：编译一个JAVA程序A.java<br>会得到一个A.class的类文件。在当前目录下执行java A 将会得到相应的结果<br>(前提是已经设置CLASSPATH为”.”)现在，把A.class移到别的目录下，在执行<br>Java A 将会抛出java.lang.NoClassDelFoundError异常。因为找不到.class文件。<br>现在你把CLASSPATH增加为你转移的目录在运行，结果才会正常。<br>总之一句话去高阔classpath：加载被编译过的.java文件，使之可以找到对应的.class文件。  </p>
-<h5 id="总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件"><a href="#总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件" class="headerlink" title="总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件"></a>总结：一共需要配置三个环境变量，每个环境变量所对应的执行条件不同，环境变量的配置意味着操作系统能否找到并成功执行java文件</h5><h5 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h5><p>JDK :就是Java开发工具包<br>JRE：就是Java运行时环境<br>JVM：Java虚拟机<br>Java Se API：就是Java系统核心类库<br>JDK包含了JRE</p>
-<p>JavaSe:基础<br>JavaEE：web企业级应用开发<br>JavaMe：Android</p>
-<h4 id="问题：-jar包是什么？封装好的jar包是否能得到源码？"><a href="#问题：-jar包是什么？封装好的jar包是否能得到源码？" class="headerlink" title="问题： jar包是什么？封装好的jar包是否能得到源码？"></a>问题： jar包是什么？封装好的jar包是否能得到源码？</h4><h4 id="答：jar包实际上是一个压缩文件，类似-rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。"><a href="#答：jar包实际上是一个压缩文件，类似-rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。" class="headerlink" title="答：jar包实际上是一个压缩文件，类似.rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。"></a>答：jar包实际上是一个压缩文件，类似.rar，jar包通常叫第三方库，框架，其实就是别人写好的工具类，通过反编译就能得到源码。</h4>
+                <h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p>
+<h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p>
+<h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p>
+<h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库
+    show databases;
+2.创建数据库
+    -格式：create    database 数据库名
+    create database newdb1;
+
+    创建数据库并且指定字符集
+    create database newdb1 character set gbk/utf8;
+
+3.查看数据库的详情 可以查看数据库的字符集。
+    show create database 数据库名。
+
+    show create database newdb1;
+
+4.删除数据库
+    --格式：drop database 数据库名
+
+    drop database newdb2;
+
+5.使用数据库
+    use newdb1;
+
+#### 表相关的操作
+1.查看所有表
+    show tables;
+2.创建表
+    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);
+    create table person(name varchar(10),age int);
+3.查看详情
+    show create table person;
+    --数据库表引擎
+    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。
+    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。
+4.创建表指定引擎和字符集。
+    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;
+    create table t1(name varchar(10),age int)engine=innodb charset=gbk;
+
+5.查看表字段
+    desc t1;
+
+6.删除表
+    drop table t1;
+
+#### 数据相关的SQL
+ create table hero(name varchar(10),age int);
+
+--全表插入格式：insert into 表名 values(值1,值2);
+insert into hero values(&#39;刘备&#39;,18);
+
+--指定字段插入
+    insert into hero(name) values(&#39;李白&#39;);
+
+--批量插入数据：
+insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);
+insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);
+
+### 查询数据
+    --格式：select 字段信息 from 表名 where 条件。
+
+1.查询所有数据，所有字段信息。
+    select * from hero;
+2.查询所有的名字.
+    select name from hero;
+3.查询年龄18岁人的所有信息。
+    seelct * from hero where age = 18;
+
+### 修改数据
+    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.
+    update hero set age=25 where name=&#39;刘备&#39;;
+    --注意：如果不给条件则修改全表信息。
+### 删除数据
+    delete from 表名 where 条件。
+    delete from hero where name=&#39;杜甫&#39;;
+
+    delete from hero;  
+</code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p>
+<p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p>
+<p>看过很多方法：</p>
+<p> 总结如下：</p>
+<p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p>
+<p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p>
+<p>修改密码：</p>
+<p>方法1：</p>
+<pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；
+</code></pre><p>方法2：</p>
+<pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);
+
+    mysql&gt;flush privileges;
+</code></pre><p>方法3：</p>
+<pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；
+</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>
+
             </div>
             <hr>
 
@@ -516,48 +689,50 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/07/15/attark/arp2/">
+                <a href="/2019/08/06/web/mysql2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="局域网内的不速之客（2）">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL入门">
                         
-                        <span class="card-title">局域网内的不速之客（2）</span>
+                        <span class="card-title">MySQL入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Arp欺骗
+                            MySQL入门
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Arp/" class="post-category" target="_blank">
-                                    Arp
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
+                                    MySQL
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/转发/" target="_blank">
-                        <span class="chip bg-color">转发</span>
+                    <a href="/tags/MySQL/" target="_blank">
+                        <span class="chip bg-color">MySQL</span>
                     </a>
                     
-                    <a href="/tags/截获/" target="_blank">
-                        <span class="chip bg-color">截获</span>
+                    <a href="/tags/SQL/" target="_blank">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
                 </div>
@@ -571,31 +746,30 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/08/composition/">
+                <a href="/2019/08/01/web/mysql/">
                     <div class="card-image">
                         
+                        <img src="http://img.ahdy.top/mysql.png" class="responsive-img" alt="MySQL安装">
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="闲散">
-                        
-                        <span class="card-title">闲散</span>
+                        <span class="card-title">MySQL安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            生活真有那么难
+                            MySQL安装
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-08
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/diary/" class="post-category" target="_blank">
-                                    diary
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
+                                    MySQL
                                 </a>
                             
                             
@@ -605,12 +779,12 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/经历/" target="_blank">
-                        <span class="chip bg-color">经历</span>
+                    <a href="/tags/环境/" target="_blank">
+                        <span class="chip bg-color">环境</span>
                     </a>
                     
-                    <a href="/tags/感悟/" target="_blank">
-                        <span class="chip bg-color">感悟</span>
+                    <a href="/tags/MySQL/" target="_blank">
+                        <span class="chip bg-color">MySQL</span>
                     </a>
                     
                 </div>
@@ -661,6 +835,99 @@ i.    首先右击[计算机]进入[属性]然后选择其中的[高级系统设
 </script>
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
     
 
 </main>
