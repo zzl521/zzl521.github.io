@@ -4,9 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="局域网内的不速之客（1）, Joker">
-    <meta name="description" content="当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程
-ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位于">
+    <meta name="keywords" content="Tomcat与服务器, Joker">
+    <meta name="description" content="Tomcat端口配置tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    
+修改Shutdow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>局域网内的不速之客（1） | Joker</title>
+    <title>Tomcat与服务器 | Joker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -258,13 +258,13 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://img1.juimg.com/160331/330829-16033115022983.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        局域网内的不速之客（1）
+                        Tomcat与服务器
                     </div>
                 </div>
             </div>
@@ -274,10 +274,99 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -286,12 +375,12 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/攻击/" target="_blank">
-                                <span class="chip bg-color">攻击</span>
+                            <a href="/tags/Tomcat/" target="_blank">
+                                <span class="chip bg-color">Tomcat</span>
                             </a>
                         
-                            <a href="/tags/断网/" target="_blank">
-                                <span class="chip bg-color">断网</span>
+                            <a href="/tags/服务器/" target="_blank">
+                                <span class="chip bg-color">服务器</span>
                             </a>
                         
                     </div>
@@ -302,8 +391,8 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Arp/" class="post-category" target="_blank">
-                                Arp
+                            <a href="/categories/Tomcat/" class="post-category" target="_blank">
+                                Tomcat
                             </a>
                         
                     </div>
@@ -314,21 +403,21 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-06-13
+                    2019-08-06
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        775
+                        881
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        2 Min
+                        3 Min
                     </div>
                     
                 
@@ -344,25 +433,17 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="http://img.ahdy.top/2019-06-13_175422.png" alt="@子龙"><br>当你在虚拟机中安装好了kali系统的时候（如上图所示），kali系统包含众多脚本，可以帮助我们做很多测试，下面主要介绍Arp攻击的原理及教程</p>
-<h2 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h2><p>ARP（Address Resolution Protocol，地址解析协议）是一个位于TCP/IP协议栈中的网络层，负责将某个IP地址解析成对应的MAC地址。</p>
-<h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><p>通过目标设备的IP地址，查询目标设备的MAC地址，以保证通信的进行。</p>
-<h3 id="ARP攻击的局限性"><a href="#ARP攻击的局限性" class="headerlink" title="ARP攻击的局限性"></a>ARP攻击的局限性</h3><p>ARP攻击仅能在以太网（局域网如：机房、内网、公司网络等）进行。</p>
-<p>无法对外网（互联网、非本区域内的局域网）进行攻击。</p>
-<h3 id="ARP攻击的攻击原理"><a href="#ARP攻击的攻击原理" class="headerlink" title="ARP攻击的攻击原理"></a>ARP攻击的攻击原理</h3><p>ARP攻击就是通过伪造IP地址和MAC地址实现ARP欺骗，能够在网络中产生大量的ARP通信量使网络阻塞，攻击者只要持续不断的发出伪造的ARP响应包就能更改目标主机ARP缓存中的IP-MAC条目，造成网络中断或中间人攻击。</p>
-<h2 id="在Kali-Linux环境下的实现ARP攻击"><a href="#在Kali-Linux环境下的实现ARP攻击" class="headerlink" title="在Kali Linux环境下的实现ARP攻击"></a>在Kali Linux环境下的实现ARP攻击</h2><p>攻击环境<br>攻击主机：Kali Linux </p>
-<p>IP：192.168.1.13</p>
-<p>被攻击主机：Windows 10</p>
-<p>IP：192.168.1.10</p>
-<p>因为是在虚拟机环境下实现的攻击，所以要提前将虚拟机的网络适配器设置为桥接模式，这样一来虚拟机便可以单独获得一个ip地址，而不是和NAT模式下一样和宿主机共用一个ip地址。</p>
-<h3 id="ARP断网攻击（更多攻击手段持续更新ing）"><a href="#ARP断网攻击（更多攻击手段持续更新ing）" class="headerlink" title="ARP断网攻击（更多攻击手段持续更新ing）"></a>ARP断网攻击（更多攻击手段持续更新ing）</h3><p>在进行攻击的时候我们需要先知道自己的IP地址，在终端中输入ifconfig指令即可（所说的终端是kali系统中的cmd在左侧任务栏内，一般是第二个）</p>
-<p><img src="http://img.ahdy.top/2019-06-13_181357.png" alt></p>
-<p>在知道了自己IP地址的情况下，我们同时也知道了自己所在的网段，接下来我们可以找一下当前局域网下还存在哪些主机，<br>如果想看自己电脑连接的那台路由器上的网管输入ipconfig查看<br><img src="http://img.ahdy.top/2019-06-13_183724.png" alt><br>这里使用nmap脚本（nmap可以扫描出当前路由器下被占用的端口，通俗点讲就是这些端口都是有人在使用的！）出于道德我演示攻击自己的电脑为例子！<br>命令：namp -sP 192.168.1.*<br>后面的是网关ip，不是绝对的，网关地址在上图中可以看到<br><img src="http://img.ahdy.top/2019-06-13_183837.png" alt><br><img src="http://img.ahdy.top/2019-06-13_183911.png" alt><br>可以看到我们已经通过namp命令扫描出了当前路由器下的ip<br>对比上下图，我们可以发现我们的目标ip的确也是在列表中的，这个时候目标还是可以正常上网的</p>
-<p>此时，在Kali中使用arpspoof工具实现ARP攻击<br>攻击命令：Arpspoof -i eth0 -t 192.168.1.10 -t 192.168.1.1<br>ip就是目标ip加上网关地址<br><img src="http://img.ahdy.top/2019-06-13_185319.png" alt><br><img src="http://img.ahdy.top/2019-06-13_185346.png" alt></p>
-<p>这个时候的目标已经无法正常上网了</p>
-<p><img src="http://img.ahdy.top/2019-06-13_185512.png" alt></p>
-<p>停止ARP攻击，目标就能恢复到正常上网状态<br>快捷键是（Ctrl+c）结束攻击！</p>
-
+                <h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p>
+<h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p>
+<h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p>
+<h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p>
+<h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p>
+<h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;  
+            unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;  
+            xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p>
+<p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p>
+<h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p>
+<h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>
             </div>
             <hr>
 
@@ -525,48 +606,50 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/06/26/web/web1/">
+                <a href="/2019/08/06/web/tomcat/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="网站开发概述（1）">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Tomcat与服务器">
                         
-                        <span class="card-title">网站开发概述（1）</span>
+                        <span class="card-title">Tomcat与服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            网站设计到部署核心概括
+                            tomcat端口、项目路径映射、服务器端口开放
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/网站/" class="post-category" target="_blank">
-                                    网站
+                            <a href="/categories/Tomcat/" class="post-category" target="_blank">
+                                    Tomcat
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/概述/" target="_blank">
-                        <span class="chip bg-color">概述</span>
+                    <a href="/tags/Tomcat/" target="_blank">
+                        <span class="chip bg-color">Tomcat</span>
                     </a>
                     
-                    <a href="/tags/建站/" target="_blank">
-                        <span class="chip bg-color">建站</span>
+                    <a href="/tags/服务器/" target="_blank">
+                        <span class="chip bg-color">服务器</span>
                     </a>
                     
                 </div>
@@ -580,30 +663,31 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/11/attark/frist/">
+                <a href="/2019/08/06/web/mysql2/">
                     <div class="card-image">
                         
-                        <img src="http://fech.in/static/images/03cedb5963ef7add274464539765a1eb.jpg" class="responsive-img" alt="踏上渗透之路">
                         
-                        <span class="card-title">踏上渗透之路</span>
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL入门">
+                        
+                        <span class="card-title">MySQL入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            初识Linux kali
+                            MySQL入门
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/kali/" class="post-category" target="_blank">
-                                    kali
+                            <a href="/categories/MySQL/" class="post-category" target="_blank">
+                                    MySQL
                                 </a>
                             
                             
@@ -613,12 +697,12 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Kali/" target="_blank">
-                        <span class="chip bg-color">Kali</span>
+                    <a href="/tags/MySQL/" target="_blank">
+                        <span class="chip bg-color">MySQL</span>
                     </a>
                     
-                    <a href="/tags/环境/" target="_blank">
-                        <span class="chip bg-color">环境</span>
+                    <a href="/tags/SQL/" target="_blank">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
                 </div>
@@ -669,6 +753,99 @@ ARP协议ARP（Address Resolution Protocol，地址解析协议）是一个位�
 </script>
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
     
 
 </main>
