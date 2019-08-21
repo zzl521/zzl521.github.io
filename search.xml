@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>CSS快速入门</title>
+      <link href="/2019/08/21/web/html2/"/>
+      <url>/2019/08/21/web/html2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="极速更新中······"><a href="#极速更新中······" class="headerlink" title="极速更新中······"></a>极速更新中······</h3><h3 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h3><pre><code>        CSS 指层叠样式表(Cascading Style sheets)&lt;br /&gt;        定义样式如何显示HTML。更好的渲染html页面，让它看上去更加的绚丽多彩        有3种展示展示方式：        1.外部样式            定义在以.css为后缀的文件当中，然后在.html为后缀的文件中引入。            方便维护。提高工作效率        2.内部样式            写在html文件中的head标记中。        3.内联样式            写在html标签中。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 语法 </tag>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML快速入门</title>
+      <link href="/2019/08/21/web/html/"/>
+      <url>/2019/08/21/web/html/</url>
+      
+        <content type="html"><![CDATA[<h3 id="什么是HTML5语言"><a href="#什么是HTML5语言" class="headerlink" title="什么是HTML5语言"></a>什么是HTML5语言</h3><pre><code>    HTML是一种标记语言，用于网络渲染界面呈现具体图形，网络流，文字等信息给用户查阅的一种    浏览器解释运行的弱语言。    HTML文件必须以.html或者.htm为后缀。但是.htm是很多年以前过时的写法，一些浏览器也兼容    但是不建议使用.htm的后缀</code></pre><h3 id="什么是CSS3"><a href="#什么是CSS3" class="headerlink" title="什么是CSS3"></a>什么是CSS3</h3><pre><code>    用于渲染页面的色彩、样式等规则。总结：用于美化页面    老师形象的把css样式比喻成女生的化妆品。</code></pre><h3 id="什么是JS-JavaScript"><a href="#什么是JS-JavaScript" class="headerlink" title="什么是JS(JavaScript)"></a>什么是JS(JavaScript)</h3><pre><code>    可以动态渲染页面的一种弱类型语言。    是页面的行为。    HTML5 + CSS3 是静态页面，不能与用户进行交互。    而使用JS后，可以与用户进行交互。</code></pre><h3 id="HTML文本标签"><a href="#HTML文本标签" class="headerlink" title="HTML文本标签"></a>HTML文本标签</h3><p><img src="http://img.ahdy.top/2019-08-20_154347.png" alt></p><h3 id="HTML超链接"><a href="#HTML超链接" class="headerlink" title="HTML超链接"></a>HTML超链接</h3><p><img src="http://img.ahdy.top/2019-08-20_160811.png" alt></p><h3 id="HTML列表"><a href="#HTML列表" class="headerlink" title="HTML列表"></a>HTML列表</h3><p><img src="http://img.ahdy.top/2019-08-20_173123.png" alt></p><h3 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h3><p><img src="http://img.ahdy.top/2019-08-20_173908.png" alt></p><h3 id="HTML页面框架"><a href="#HTML页面框架" class="headerlink" title="HTML页面框架"></a>HTML页面框架</h3><p>你需要创建几个HTML页面，并在frameset标签下引入，标签的头部可以使用比例进行排版<br>注意该标签不能放在&lt;body 标签下使用<br><img src="http://img.ahdy.top/2019-08-20_175443.png" alt></p><h3 id="常用权重标签"><a href="#常用权重标签" class="headerlink" title="常用权重标签"></a>常用权重标签</h3><h4 id="div"><a href="#div" class="headerlink" title="div"></a>div</h4><p><img src="http://img.ahdy.top/2019-08-20_182454.png" alt></p><h4 id="form"><a href="#form" class="headerlink" title="form"></a>form</h4><p><img src="http://img.ahdy.top/2019-08-20_182559.png" alt></p><h4 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h4><p>外边框<br><img src="http://img.ahdy.top/2019-08-20_182804.png" alt></p><h4 id="nav"><a href="#nav" class="headerlink" title="nav"></a>nav</h4><p>横向排版超链接<br><img src="http://img.ahdy.top/2019-08-21_111503.png" alt></p><h4 id="下拉选项"><a href="#下拉选项" class="headerlink" title="下拉选项"></a>下拉选项</h4><p><img src="http://img.ahdy.top/2019-08-21_111557.png" alt></p><h4 id="progress"><a href="#progress" class="headerlink" title="progress"></a>progress</h4><p>加载进度条<br><img src="http://img.ahdy.top/2019-08-21_121831.png" alt></p><h4 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h4><p>文本框<br><img src="http://img.ahdy.top/2019-08-21_171250.png" alt></p><h4 id="input"><a href="#input" class="headerlink" title="input"></a>input</h4><p>极为重要的签，功能强大<br><img src="http://img.ahdy.top/2019-08-21_172002.png" alt><br>效果预览<br><img src="http://img.ahdy.top/2019-08-21_172100.png" alt></p><h4 id="lable"><a href="#lable" class="headerlink" title="lable"></a>lable</h4><p><img src="http://img.ahdy.top/2019-08-21_172325.png" alt></p><h4 id="table"><a href="#table" class="headerlink" title="table"></a>table</h4><p>表格<br><img src="http://img.ahdy.top/2019-08-21_172524.png" alt><br>效果预览<br><img src="http://img.ahdy.top/2019-08-21_172538.png" alt></p><h3 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h3><p>单纯的HTML是否显得过于简陋？，怎样使页面变得美观绚丽？</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 语法 </tag>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>QQ机器人</title>
+      <link href="/2019/08/20/robot/"/>
+      <url>/2019/08/20/robot/</url>
+      
+        <content type="html"><![CDATA[<p>你是否见过QQ上的qq小冰呢！你是否也想拥有一个自己的机器人的呢！<br>下面我将告诉你，怎么一行代码都不写就实现一个QQ机器人</p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol><li>工具需要，酷Q插件+图灵机器人api</li><li>步骤，百度一下入图灵机器人官网，注册一个账号，这个实名注册一下，一天有100条免费消息，嗯以前是500条就在前不久，官方说机器人资源泛滥，决定调整，它这个意思很明确，咱用免费的就可以了，（实名认证一般一天之内就能认证成功）<br><img src="http://img.ahdy.top/201908201.png" alt></li><li>这时候我相信你已经注册，并且实名认证成功了，接下来就选择创建一个机器人<br><img src="http://img.ahdy.top/2001908202.png" alt></li><li>这些选项可以根据自己的需求去选，它这个语言库可能有区别<br>创建好了之后，百度下载一个叫酷Q的插件（这个插件可以登陆QQ号）<br>登上去你的这个QQ它就变成了机器人<br><img src="http://img.ahdy.top/201908203.png" alt></li><li>登录以后配置它<br><img src="http://img.ahdy.top/201908204.png" alt><br>进入图灵官网找到apikey<br><img src="http://img.ahdy.top/201908205.png" alt></li><li>将你创建好的机器人api密匙复制到下图apykey处选择保存<br><img src="http://img.ahdy.top/201908206.png" alt></li><li>使用QQ对当前机器人发送消息：<br><img src="http://img.ahdy.top/201908207.png" alt><br>8.QQ机器人创建完成！</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> robot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> 机器人 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>花生壳内网穿透</title>
       <link href="/2019/08/15/web/sever/"/>
       <url>/2019/08/15/web/sever/</url>
@@ -74,9 +155,9 @@
       
         <tags>
             
-            <tag> Tomcat </tag>
-            
             <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -155,9 +236,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> API </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -182,9 +263,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> API </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -455,33 +536,6 @@
             <tag> 静态网站 </tag>
             
             <tag> 发布 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>HTML快速入门</title>
-      <link href="/2019/06/27/web/web3/"/>
-      <url>/2019/06/27/web/web3/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> HTML </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 语法 </tag>
-            
-            <tag> HTML </tag>
             
         </tags>
       

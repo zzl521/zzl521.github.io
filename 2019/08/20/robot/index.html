@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="HTML快速入门, Joker">
-    <meta name="description" content="HTML快速入门 | Joker">
+    <meta name="keywords" content="QQ机器人, Joker">
+    <meta name="description" content="你是否见过QQ上的qq小冰呢！你是否也想拥有一个自己的机器人的呢！下面我将告诉你，怎么一行代码都不写就实现一个QQ机器人
+步骤
+工具需要，酷Q插件+图灵机器人api
+步骤，百度一下入图灵机器人官网，注册一个账号，这个实名注册一下，一天有10">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>HTML快速入门 | Joker</title>
+    <title>QQ机器人 | Joker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -257,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        HTML快速入门
+                        QQ机器人
                     </div>
                 </div>
             </div>
@@ -273,10 +276,99 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -285,12 +377,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/语法/" target="_blank">
-                                <span class="chip bg-color">语法</span>
+                            <a href="/tags/API/" target="_blank">
+                                <span class="chip bg-color">API</span>
                             </a>
                         
-                            <a href="/tags/HTML/" target="_blank">
-                                <span class="chip bg-color">HTML</span>
+                            <a href="/tags/机器人/" target="_blank">
+                                <span class="chip bg-color">机器人</span>
                             </a>
                         
                     </div>
@@ -301,8 +393,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/HTML/" class="post-category" target="_blank">
-                                HTML
+                            <a href="/categories/robot/" class="post-category" target="_blank">
+                                robot
                             </a>
                         
                     </div>
@@ -313,14 +405,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-06-27
+                    2019-08-20
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        0
+                        327
                     </div>
                     
 
@@ -343,7 +435,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>你是否见过QQ上的qq小冰呢！你是否也想拥有一个自己的机器人的呢！<br>下面我将告诉你，怎么一行代码都不写就实现一个QQ机器人</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li>工具需要，酷Q插件+图灵机器人api</li>
+<li>步骤，百度一下入图灵机器人官网，注册一个账号，这个实名注册一下，一天有100条免费消息，嗯以前是500条就在前不久，官方说机器人资源泛滥，决定调整，它这个意思很明确，咱用免费的就可以了，（实名认证一般一天之内就能认证成功）<br><img src="http://img.ahdy.top/201908201.png" alt></li>
+<li>这时候我相信你已经注册，并且实名认证成功了，接下来就选择创建一个机器人<br><img src="http://img.ahdy.top/2001908202.png" alt></li>
+<li>这些选项可以根据自己的需求去选，它这个语言库可能有区别<br>创建好了之后，百度下载一个叫酷Q的插件（这个插件可以登陆QQ号）<br>登上去你的这个QQ它就变成了机器人<br><img src="http://img.ahdy.top/201908203.png" alt></li>
+<li>登录以后配置它<br><img src="http://img.ahdy.top/201908204.png" alt><br>进入图灵官网找到apikey<br><img src="http://img.ahdy.top/201908205.png" alt></li>
+<li>将你创建好的机器人api密匙复制到下图apykey处选择保存<br><img src="http://img.ahdy.top/201908206.png" alt></li>
+<li>使用QQ对当前机器人发送消息：<br><img src="http://img.ahdy.top/201908207.png" alt><br>8.QQ机器人创建完成！</li>
+</ol>
+
             </div>
             <hr>
 
@@ -505,7 +607,7 @@
         repo: 'zzl521.github.io',
         owner: 'zzl521',
         admin: "zzl521",
-        id: '2019-06-27T22-44-00',
+        id: '2019-08-20T22-40-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -530,31 +632,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/06/27/web/web2/">
+                <a href="/2019/08/21/web/html/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="网站开发概述（2）">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="HTML快速入门">
                         
-                        <span class="card-title">网站开发概述（2）</span>
+                        <span class="card-title">HTML快速入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            静态网站发布
+                            HTML标签/HTML新特性
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-27
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-21
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/网站/" class="post-category" target="_blank">
-                                    网站
+                            <a href="/categories/HTML/" class="post-category" target="_blank">
+                                    HTML
                                 </a>
                             
                             
@@ -564,12 +666,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/静态网站/" target="_blank">
-                        <span class="chip bg-color">静态网站</span>
+                    <a href="/tags/语法/" target="_blank">
+                        <span class="chip bg-color">语法</span>
                     </a>
                     
-                    <a href="/tags/发布/" target="_blank">
-                        <span class="chip bg-color">发布</span>
+                    <a href="/tags/HTML/" target="_blank">
+                        <span class="chip bg-color">HTML</span>
                     </a>
                     
                 </div>
@@ -583,31 +685,30 @@
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/26/web/web1/">
+                <a href="/2019/08/15/web/sever/">
                     <div class="card-image">
                         
+                        <img src="http://img.ahdy.top/201908015.jpg" class="responsive-img" alt="花生壳内网穿透">
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="网站开发概述（1）">
-                        
-                        <span class="card-title">网站开发概述（1）</span>
+                        <span class="card-title">花生壳内网穿透</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            网站设计到部署核心概括
+                            电脑变服务器的简易方式
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-26
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/网站/" class="post-category" target="_blank">
-                                    网站
+                            <a href="/categories/花生壳/" class="post-category" target="_blank">
+                                    花生壳
                                 </a>
                             
                             
@@ -617,12 +718,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/概述/" target="_blank">
-                        <span class="chip bg-color">概述</span>
+                    <a href="/tags/环境/" target="_blank">
+                        <span class="chip bg-color">环境</span>
                     </a>
                     
-                    <a href="/tags/建站/" target="_blank">
-                        <span class="chip bg-color">建站</span>
+                    <a href="/tags/服务器/" target="_blank">
+                        <span class="chip bg-color">服务器</span>
                     </a>
                     
                 </div>
@@ -673,6 +774,99 @@
 </script>
 
 
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
     
 
 </main>
@@ -686,7 +880,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">18.8k</span>
+                <span class="white-color">19.6k</span>
             
 
             
