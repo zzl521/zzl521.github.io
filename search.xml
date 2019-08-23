@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>JS快速入门</title>
+      <link href="/2019/08/21/web/html3/"/>
+      <url>/2019/08/21/web/html3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="极速更细中······"><a href="#极速更细中······" class="headerlink" title="极速更细中······"></a>极速更细中······</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 语法 </tag>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS快速入门</title>
       <link href="/2019/08/21/web/html2/"/>
       <url>/2019/08/21/web/html2/</url>
       
-        <content type="html"><![CDATA[<h3 id="极速更新中······"><a href="#极速更新中······" class="headerlink" title="极速更新中······"></a>极速更新中······</h3><h3 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h3><pre><code>        CSS 指层叠样式表(Cascading Style sheets)&lt;br /&gt;        定义样式如何显示HTML。更好的渲染html页面，让它看上去更加的绚丽多彩        有3种展示展示方式：        1.外部样式            定义在以.css为后缀的文件当中，然后在.html为后缀的文件中引入。            方便维护。提高工作效率        2.内部样式            写在html文件中的head标记中。        3.内联样式            写在html标签中。</code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h3><pre><code>        CSS 指层叠样式表(Cascading Style sheets)        定义样式如何显示HTML。更好的渲染html页面，让它看上去更加的绚丽多彩。        有3种展示展示方式：        1.外部样式            定义在以.css为后缀的文件当中，然后在.html为后缀的文件中引入。            方便维护。提高工作效率        2.内部样式            写在html文件中的head标记中。        3.内联样式            写在html标签中。        通常css样式可以写在.css文件当中，也可以在HTML文件当中，使用&lt;style&gt;标签来声明。</code></pre><h3 id="HTML样式嵌入"><a href="#HTML样式嵌入" class="headerlink" title="HTML样式嵌入"></a>HTML样式嵌入</h3><p>如图，是js以及css样式内部写法，当然也可以将其放在.js/.cs文件夹内，通过link/script标签将其引入，这种写法就达到了一种封装设计理念!<br><img src="http://img.ahdy.top/2019-08-23_084436.png" alt></p><h3 id="CSS常用标签"><a href="#CSS常用标签" class="headerlink" title="CSS常用标签"></a>CSS常用标签</h3><h4 id="display-visibility"><a href="#display-visibility" class="headerlink" title="display/visibility"></a>display/visibility</h4><p><img src="http://img.ahdy.top/2019-08-23_085658.png" alt><br>可能效果不是太明显，大概意思就是，&lt;span 标签经过css样式修饰后有了和&lt;p 标签一样的属性，注*span标签是没有任何属性的一个标签，通常被用来提示，脚注等<br><img src="http://img.ahdy.top/2019-08-23_090419.png" alt>  </p><p><img src="http://img.ahdy.top/2019-08-23_091422.png" alt></p><h4 id="背景颜色"><a href="#背景颜色" class="headerlink" title="背景颜色"></a>背景颜色</h4><p>可以通过两种方式来设置背景颜色，背景颜色可以被细分为全局颜色，和局部颜色<br><img src="http://img.ahdy.top/2019-08-23_092502.png" alt><br><img src="http://img.ahdy.top/2019-08-23_092520.png" alt="效果图"></p><h4 id="背景图片"><a href="#背景图片" class="headerlink" title="背景图片"></a>背景图片</h4><p>假如你有一个喜欢的图片想将它作为背景图片,可以通过这种方式<br><img src="http://img.ahdy.top/2019-08-23_094235.png" alt><br>其大小根据百分比设定，直接使用了&lt;body标签命名样式所以不再需要样式引入！  </p><h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><p><img src="http://img.ahdy.top/2019-08-23_101443.png" alt><br><img src="http://img.ahdy.top/2019-08-23_101508.png" alt="样式展示"></p><h4 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h4><p><img src="http://img.ahdy.top/2019-08-23_100037.png" alt><br><img src="http://img.ahdy.top/2019-08-23_100147.png" alt="效果展示"><br><img src="http://img.ahdy.top/2019-08-23_100626.png" alt><br><img src="http://img.ahdy.top/2019-08-23_100711.png" alt="效果展示"></p><h4 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h4><p><img src="http://img.ahdy.top/2019-08-23_101036.png" alt><br><img src="http://img.ahdy.top/2019-08-23_101049.png" alt="样式展示"></p><h4 id="滚动框"><a href="#滚动框" class="headerlink" title="滚动框"></a>滚动框</h4><p><img src="http://img.ahdy.top/2019-08-23_102356.png" alt><br><img src="http://img.ahdy.top/2019-08-23_102604.png" alt="效果展示"></p><h4 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h4><p><img src="http://img.ahdy.top/2019-08-23_102855.png" alt></p><h4 id="超链接样式"><a href="#超链接样式" class="headerlink" title="超链接样式"></a>超链接样式</h4><p><img src="http://img.ahdy.top/2019-08-23_103428.png" alt></p><h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><p><img src="http://img.ahdy.top/2019-08-23_103601.png" alt="盒模型"><br>这个概念主要应用在padding/margin上，padding意为间距，其排版为顺时针，也就是上左下又，经常可见padding参数中有四个px参数，margin也是如此，区别是margin是外边距，padding是内边距，&lt;div标签可以形象展示，通俗点说，padding是盒子内部的间距，margin是盒子相对于其他元素间的间距。</p>]]></content>
       
       
       <categories>

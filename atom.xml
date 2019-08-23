@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-21T09:38:53.373Z</updated>
+  <updated>2019-08-23T02:58:48.575Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CSS快速入门</title>
-    <link href="http://yoursite.com/2019/08/21/web/html2/"/>
-    <id>http://yoursite.com/2019/08/21/web/html2/</id>
+    <title>JS快速入门</title>
+    <link href="http://yoursite.com/2019/08/21/web/html3/"/>
+    <id>http://yoursite.com/2019/08/21/web/html3/</id>
     <published>2019-08-21T14:40:00.000Z</published>
-    <updated>2019-08-21T09:38:53.373Z</updated>
+    <updated>2019-08-23T02:58:48.575Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,36 @@
       
         
         
-          &lt;h3 id=&quot;极速更新中······&quot;&gt;&lt;a href=&quot;#极速更新中······&quot; class=&quot;headerlink&quot; title=&quot;极速更新中······&quot;&gt;&lt;/a&gt;极速更新中······&lt;/h3&gt;&lt;h3 id=&quot;CSS简介&quot;&gt;&lt;a href=&quot;#CSS简介&quot;
+          &lt;h3 id=&quot;极速更细中······&quot;&gt;&lt;a href=&quot;#极速更细中······&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+    
+    
+      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS快速入门</title>
+    <link href="http://yoursite.com/2019/08/21/web/html2/"/>
+    <id>http://yoursite.com/2019/08/21/web/html2/</id>
+    <published>2019-08-21T14:40:00.000Z</published>
+    <updated>2019-08-23T02:51:30.631Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;CSS简介&quot;&gt;&lt;a href=&quot;#CSS简介&quot; class=&quot;headerlink&quot; title=&quot;CSS简介&quot;&gt;&lt;/a&gt;CSS简介&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;        CSS 指层叠样式表(Cascading Style sheets)
+      
         
       
     
@@ -547,34 +576,6 @@
       <category term="经历" scheme="http://yoursite.com/tags/%E7%BB%8F%E5%8E%86/"/>
     
       <category term="感悟" scheme="http://yoursite.com/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站开发概述（2）</title>
-    <link href="http://yoursite.com/2019/06/27/web/web2/"/>
-    <id>http://yoursite.com/2019/06/27/web/web2/</id>
-    <published>2019-06-27T14:44:00.000Z</published>
-    <updated>2019-07-22T10:44:40.102Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;材料准备：&quot;&gt;&lt;a href=&quot;#材料准备：&quot; class=&quot;headerlink&quot; title=&quot;材料准备：&quot;&gt;&lt;/a&gt;材料准备：&lt;/h3&gt;&lt;p&gt;1.云服务器–以我的服务器为例子&lt;br&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="网站" scheme="http://yoursite.com/categories/%E7%BD%91%E7%AB%99/"/>
-    
-    
-      <category term="静态网站" scheme="http://yoursite.com/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
-    
-      <category term="发布" scheme="http://yoursite.com/tags/%E5%8F%91%E5%B8%83/"/>
     
   </entry>
   
