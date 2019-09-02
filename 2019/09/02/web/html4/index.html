@@ -1,0 +1,1377 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="JS进阶, Joker">
+    <meta name="description" content="正则表达式什么是正则表达式？正则表达式是由一个字符序列形成的搜索模式。
+当你在文本中搜索数据时，你可以用搜索模式来描述你要查询的内容。
+正则表达式可以是一个简单的字符，或一个更复杂的模式。
+正则表达式可用于所有文本搜索和文本替换的操作。  ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>JS进阶 | Joker</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Joker</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于个人</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Joker</div>
+        <div class="logo-desc">
+            
+            我什么时候才能像你一样优秀呢！
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于个人
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewbox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://img.ahdy.top/20190902.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        JS进阶
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/语法/" target="_blank">
+                                <span class="chip bg-color">语法</span>
+                            </a>
+                        
+                            <a href="/tags/JS/" target="_blank">
+                                <span class="chip bg-color">JS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JS/" class="post-category" target="_blank">
+                                JS
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-09-02
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
+                        2.9k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
+                        14 Min
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><h4 id="什么是正则表达式？"><a href="#什么是正则表达式？" class="headerlink" title="什么是正则表达式？"></a>什么是正则表达式？</h4><p>正则表达式是由一个字符序列形成的搜索模式。</p>
+<p>当你在文本中搜索数据时，你可以用搜索模式来描述你要查询的内容。</p>
+<p>正则表达式可以是一个简单的字符，或一个更复杂的模式。</p>
+<p>正则表达式可用于所有文本搜索和文本替换的操作。  </p>
+<pre><code>使用正则表达式搜索 &quot;Runoob&quot; 字符串，且不区分大小写：
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var string =&quot;helloword!&quot;;
+    var i=string.search(&#39;h&#39;);
+    document.getElementById(&quot;1&quot;).innerHTML=i;
+&lt;/script&gt;
+/*是否带有小数*/  
+function    isDecimal(strValue )  {  
+   var  objRegExp= /^\d+\.\d+$/;
+   return  objRegExp.test(strValue);  
+}  
+
+/*校验是否中文名称组成 */  
+function ischina(str) {
+    var reg=/^[\u4E00-\u9FA5]{2,4}$/;   /*定义验证表达式*/
+    return reg.test(str);     /*进行验证*/
+}
+
+/*校验是否全由8位数字组成 */  
+function isStudentNo(str) {
+    var reg=/^[0-9]{8}$/;   /*定义验证表达式*/
+    return reg.test(str);     /*进行验证*/
+}
+
+/*校验电话码格式 */  
+function isTelCode(str) {
+    var reg= /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+    return reg.test(str);
+}
+
+/*校验邮件地址是否合法 */  
+function IsEmail(str) {
+    var reg=/^\w+@[a-zA-Z0-9]{2,10}(?:\.[a-z]{2,4}){1,3}$/;
+    return reg.test(str);
+}
+</code></pre><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><pre><code>        对于后台开发人员来说，很重要的一个标签。
+        form 是一个表单，用于存放用户需要提交到后台进行处理的一些数据。
+        用户填写完后，提交到指定的action
+1. 检查输入内容是否为空
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;My frist javascript&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        input{
+            padding: auto;
+            margin-top: 250px;
+
+            background-color: chartreuse;
+            text-align: center;
+            border: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form name=&quot;myfram&quot; action=&quot;&quot; onsubmit=&quot;return test()&quot; method=&quot;post&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;sum&quot; &gt;
+    &lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
+
+&lt;/form&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function test () {
+       var x=document.forms[&quot;myfram&quot;][&quot;sum&quot;].value;
+        if (x==null || x==&quot;&quot;)
+        {
+            alert(&#39;请输入内容&#39;);
+            return false;
+        }
+        else {
+            alert(&#39;输入内容合法&#39;);
+            return true;
+        }
+    }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+2. 检查输入内容是否是一个Email地址
+&lt;script&gt;
+function validateForm(){
+    var x=document.forms[&quot;myForm&quot;][&quot;email&quot;].value;
+    var atpos=x.indexOf(&quot;@&quot;);
+    var dotpos=x.lastIndexOf(&quot;.&quot;);
+    if (atpos&lt;1 || dotpos&lt;atpos+2 || dotpos+2&gt;=x.length){
+        alert(&quot;不是一个有效的 e-mail 地址&quot;);
+          return false;
+    }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;form name=&quot;myForm&quot; action=&quot;demo-form.php&quot; onsubmit=&quot;return validateForm();&quot; method=&quot;post&quot;&gt;
+Email: &lt;input type=&quot;text&quot; name=&quot;email&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="标签元素值获取"><a href="#标签元素值获取" class="headerlink" title="标签元素值获取"></a>标签元素值获取</h3><pre><code>1. 通过id获取
+2. 通过标签名获取
+3. 通过类名获取
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;My frist javascript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;88&quot;&gt;
+    &lt;p id=&quot;5&quot;&gt;&lt;/p&gt;
+    &lt;p id=&quot;8848&quot; class=&quot;c3p0&quot;&gt;今天是星期五！&lt;/p&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;!--  通过id获取元素值--&gt;
+var z=document.getElementById(&quot;8848&quot;).innerHTML
+document.write(z)
+
+&lt;!--通过标签名获取元素值--&gt;
+    var x = document.getElementById(&quot;88&quot;);
+    var y = x.getElementsByTagName(&quot;p&quot;);
+    document.write(y[1].innerHTML);
+&lt;!--  通过类名获取元素的值--&gt;
+    var b=document.getElementsByClassName(&quot;c3p0&quot;);
+    //元素标签下标的使用其实是根据某一块级标签下相同元素个数使用的
+    //比如在一个div标签当中有多个p标签，那么当byclass获取到div值的时候就可以用下标的方式来显示你想输出第几个标签的内容
+    document.write(b[0].innerHTML);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="修图片的地址"><a href="#修图片的地址" class="headerlink" title="修图片的地址"></a>修图片的地址</h3><pre><code>&lt;img id=&quot;image&quot; src=&quot;smiley.gif&quot;&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;image&quot;).src=&quot;landscape.jpg&quot;;
+&lt;/script&gt;
+</code></pre><h3 id="API验证输入"><a href="#API验证输入" class="headerlink" title="API验证输入"></a>API验证输入</h3><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;请输入100~300之间的数据进行api验证！&lt;/p&gt;
+&lt;input type=&quot;number&quot; min=&quot;100&quot; max=&quot;300&quot; id=&quot;test&quot; required&gt;
+&lt;button onclick=&quot;f()&quot;&gt;验证&lt;/button&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function f() {
+        var x=document.getElementById(&quot;test&quot;);
+        if(x.checkValidity()==false)
+        {
+            document.getElementById(&quot;demo&quot;).innerHTML=x.validationMessage;
+        }
+        else
+        {
+            document.getElementById(&quot;demo&quot;).innerHTML=&quot;输入正确&quot;;
+        }
+    }
+&lt;/script&gt;
+/*&lt;script&gt;
+function myFunction() {
+var txt = &quot;&quot;;
+if (document.getElementById(&quot;id1&quot;).validity.rangeOverflow) {
+    txt = &quot;输入的值太大了&quot;;
+} else {
+    txt = &quot;输入正确&quot;;
+}
+document.getElementById(&quot;demo&quot;).innerHTML = txt;
+}
+&lt;/script&gt;
+&lt;script&gt;
+function myFunction() {
+var txt = &quot;&quot;;
+var inpObj = document.getElementById(&quot;id1&quot;);
+if(!isNumeric(inpObj.value)) {
+    txt = &quot;你输入的不是数字&quot;;
+} else if (inpObj.validity.rangeUnderflow) {
+    txt = &quot;输入的值太小了&quot;;
+} else {
+    txt = &quot;输入正确&quot;;
+}
+document.getElementById(&quot;demo&quot;).innerHTML = txt;
+}
+
+// 判断输入是否为数字
+function isNumeric(n) {
+return !isNaN(parseFloat(n)) &amp;&amp; isFinite(n);
+}
+&lt;/script&gt;*/
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>JavaScript this 关键字<br>面向对象语言中 this 表示当前对象的一个引用。</p>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>JSON 英文全称 JavaScript Object Notation<br>JSON 是一种轻量级的数据交换格式。<br>JSON是独立的语言 *<br>JSON 易于理解。  </p>
+<pre><code>1. json数据转换为js对象
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;为 JSON 字符串创建对象&lt;/h2&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+var text = &#39;{ &quot;sites&quot; : [&#39; +
+    &#39;{ &quot;name&quot;:&quot;Runoob&quot; , &quot;url&quot;:&quot;www.runoob.com&quot; },&#39; +
+    &#39;{ &quot;name&quot;:&quot;Google&quot; , &quot;url&quot;:&quot;www.google.com&quot; },&#39; +
+    &#39;{ &quot;name&quot;:&quot;Taobao&quot; , &quot;url&quot;:&quot;www.taobao.com&quot; } ]}&#39;;
+
+obj = JSON.parse(text);
+document.getElementById(&quot;demo&quot;).innerHTML = obj.sites[1].name + &quot; &quot; + obj.sites[1].url;
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="void"><a href="#void" class="headerlink" title="void"></a>void</h3><p>javascript:void(0) 中最关键的是 void 关键字， void 是 JavaScript 中非常重要的关键字，该操作符指定要计算一个表达式但是不返回值。<br>href=”#”与href=”javascript:void(0)”的区别</p>
+<pre><code># 包含了一个位置信息，默认的锚是#top 也就是网页的上端。
+</code></pre><p>而javascript:void(0), 仅仅表示一个死链接。</p>
+<p>在页面很长的时候会使用 # 来定位页面的具体位置，格式为：# + id。</p>
+<p>如果你要定义一个死链接请使用 javascript:void(0)</p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>在JS当中，函数存在构造函数，递归，函数是一个对象，也可以作为值来传递</p>
+<h3 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h3><pre><code>先看一个简单的时间显示，该方法能显示出当前系统时间
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;p&gt;在页面显示一个时钟&lt;/p&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
+var myVar=setInterval(function(){myTimer()},1000);
+function myTimer(){
+    var d=new Date();
+    var t=d.toLocaleTimeString();
+    document.getElementById(&quot;demo&quot;).innerHTML=t;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>Cookie 是一些数据, 存储于你电脑上的文本文件中。</p>
+<p>当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。</p>
+<p>Cookie 的作用就是用于解决 “如何记录客户端的用户信息”:</p>
+<p>当用户访问 web 页面时，他的名字可以记录在 cookie 中。<br>在用户下一次访问该页面时，可以在 cookie 中读取用户访问记录。<br>使用js可以对本地的cookie进行修改，也可以将一些数据写入到本地cookie当中！<br>JavaScript 可以使用 document.cookie 属性来创建 、读取、及删除 cookie</p>
+<h3 id="弹窗"><a href="#弹窗" class="headerlink" title="弹窗"></a>弹窗</h3><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;f()&quot;&gt;确定&lt;/button&gt;
+&lt;!--加载式弹窗--&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    window.alert(&#39;你好&#39;);
+&lt;/script&gt;
+&lt;!--事件式弹窗--&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function f() {
+        var x= confirm(&quot;按下了按钮&quot;);//confirf函数中返回的是true/false值
+        if (x=true)
+        {
+            x=&quot;你按下了确定按钮&quot;;
+        }
+        else
+        {
+            x=&quot;你按的不是确定按钮&quot;;
+        }
+        document.getElementById(&quot;demo&quot;).innerHTML=x;
+    }
+
+&lt;/script&gt;
+&lt;!--输入式弹窗--&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+ var y=prompt();
+ document.write(y)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;  
+
+
+检查当前cookie是否可用
+&lt;script&gt;
+function checkCookies(){
+    if (navigator.cookieEnabled==true){
+        alert(&quot;Cookies 可用&quot;)
+    }
+    else{
+        alert(&quot;Cookies 不可用&quot;)
+    }
+}
+&lt;/script&gt;
+</code></pre><h3 id="JS中的页面前进与后退"><a href="#JS中的页面前进与后退" class="headerlink" title="JS中的页面前进与后退"></a>JS中的页面前进与后退</h3><pre><code>实现界面的专挑可以使用a标签，添加指定的跳转页面，当然用JS也是可以进行界面跳转的设置。  
+window.history函数
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button type=&quot;button&quot; onclick=&quot;f()&quot;&gt;返回&lt;/button&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function f() {
+        //返回后一个界面
+        window.history.back();
+
+    }
+    function b() {
+        //前进上一个界面
+        window.history.forward();
+    }
+&lt;/script&gt;
+&lt;!--function a(){
+    history.go(1);  // go() 里面的参数表示跳转页面的个数 例如 history.go(1) 表示前进一个页面
+}
+function b(){
+    history.go(-1);  // go() 里面的参数表示跳转页面的个数 例如 history.go(-1) 表示后退一个页面
+}--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="获取当前浏览器URL"><a href="#获取当前浏览器URL" class="headerlink" title="获取当前浏览器URL"></a>获取当前浏览器URL</h3><p>ocation.hostname 返回 web 主机的域名  </p>
+<p>location.pathname 返回当前页面的路径和文件名 </p>
+<p>location.port 返回 web 主机的端口 （80 或 443）</p>
+<p>location.protocol 返回所使用的 web 协议（http: 或 https:）</p>
+<pre><code>返回（当前页面的）整个 URL：
+
+&lt;script&gt;
+
+document.write(location.href);
+
+&lt;/script&gt;
+返回当前 URL 的路径名：
+
+&lt;script&gt;
+
+document.write(location.pathname);
+
+&lt;/script&gt;
+重定向一个网页
+function f1() {
+    window.location.assign(&quot;http://www.baidu.com&quot;);
+}
+</code></pre><h3 id="获取屏幕的高和宽-px"><a href="#获取屏幕的高和宽-px" class="headerlink" title="获取屏幕的高和宽(px)"></a>获取屏幕的高和宽(px)</h3><p>screen.availWidth - 可用的屏幕宽度<br>screen.availHeight - 可用的屏幕高度  </p>
+<pre><code>例：
+&lt;script&gt;
+
+document.write(&quot;可用高度: &quot; + screen.availHeight);
+
+&lt;/script&gt;
+</code></pre><h3 id="字符串查询"><a href="#字符串查询" class="headerlink" title="字符串查询"></a>字符串查询</h3><p>test()<br>test()方法搜索字符串指定的值，根据结果并返回真或假。  </p>
+<p>exec()<br>exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。<br>使用方法：当定义了一个变量var x=”xxxxx”；<br>document.write(x.test(‘参数’))；  </p>
+<h3 id="算术函数"><a href="#算术函数" class="headerlink" title="算术函数"></a>算术函数</h3><p>round()<br>使用 round()。</p>
+<p>random()<br>使用 random() 来返回 0 到 1 之间的随机数。</p>
+<p>max()<br>如何使用 max() 来返回两个给定的数中的较大的数。（在 ECMASCript v3 之前，该方法只有两个参数。）</p>
+<p>min()<br>如何使用 min() 来返回两个给定的数中的较小的数。（在 ECMASCript v3 之前，该方法只有两个参数。）</p>
+<h3 id="点击事件的创建"><a href="#点击事件的创建" class="headerlink" title="点击事件的创建"></a>点击事件的创建</h3><pre><code>&lt;script&gt;
+document.getElementById(&quot;myBtn&quot;).addEventListener(&quot;click&quot;, displayDate);
+function displayDate() {
+    document.getElementById(&quot;demo&quot;).innerHTML = Date();
+}
+&lt;/script&gt;
+</code></pre><h4 id="文本修改事件"><a href="#文本修改事件" class="headerlink" title="文本修改事件"></a>文本修改事件</h4><pre><code>&lt;h1 onclick=&quot;this.innerHTML=&#39;Ooops!&#39;&quot;&gt;点击文本!&lt;/h1&gt;
+</code></pre><p>你可以点击下面的文字进行测试！</p>
+<p></p><h1 onclick="this.innerHTML='Ooops!'">点击文本!</h1><p></p>
+<h4 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h4><pre><code> 1. 
+函数使用&lt;input 文本框，当时鼠标离开文本框时，事件触发，    
+该函数的作用是将大小写进行转换
+&lt;script&gt;
+function myFunction(){
+    var x=document.getElementById(&quot;fname&quot;);
+    x.value=x.value.toUpperCase();
+}
+&lt;/script&gt;
+
+
+2. 
+div onmouseover=&quot;mOver(this)&quot; onmouseout=&quot;mOut(this)&quot; style=&quot;background-color:#D94A38;width:120px;height:20px;padding:40px;&quot;&gt;Mouse Over Me&lt;/div&gt;
+&lt;script&gt;
+function mOver(obj){
+    obj.innerHTML=&quot;Thank You&quot;
+}
+function mOut(obj){
+    obj.innerHTML=&quot;Mouse Over Me&quot;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+</code></pre><h3 id="样式的改变"><a href="#样式的改变" class="headerlink" title="样式的改变"></a>样式的改变</h3><pre><code>改变 HTML 样式
+如需改变 HTML 元素的样式，请使用这个语法：
+
+document.getElementById(id).style.property=新样式
+</code></pre><h3 id="JS实例"><a href="#JS实例" class="headerlink" title="JS实例"></a>JS实例</h3><p><a href="https://www.runoob.com/js/js-examples.html" target="_blank" rel="noopener">菜鸟</a></p>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">您的打赏是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/2019-05-18_143649.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/2019-05-18_143810.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '78aa328b20eecd23b14a',
+        clientSecret: '16f06a63894138517c042c4ed46fdd4f2d116373',
+        repo: 'zzl521.github.io',
+        owner: 'zzl521',
+        admin: "zzl521",
+        id: '2019-09-02T10-25-00',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2019/09/02/web/html5/">
+                    <div class="card-image">
+                        
+                        <img src="http://img.ahdy.top/20190823.jpeg" class="responsive-img" alt="jQuery">
+                        
+                        <span class="card-title">jQuery</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            正在更新······
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JS/" class="post-category" target="_blank">
+                                    JS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/语法/" target="_blank">
+                        <span class="chip bg-color">语法</span>
+                    </a>
+                    
+                    <a href="/tags/jQuery/" target="_blank">
+                        <span class="chip bg-color">jQuery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/08/28/web/html3/">
+                    <div class="card-image">
+                        
+                        <img src="http://img.ahdy.top/20190823.jpeg" class="responsive-img" alt="JS快速入门">
+                        
+                        <span class="card-title">JS快速入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Javascript基础用法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JS/" class="post-category" target="_blank">
+                                    JS
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/语法/" target="_blank">
+                        <span class="chip bg-color">语法</span>
+                    </a>
+                    
+                    <a href="/tags/JS/" target="_blank">
+                        <span class="chip bg-color">JS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Joker<br />'
+            + 'Author: 子龙<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，转载请注明出处----。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href target="_blank">子龙</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">24.6k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/zzl521/zzl521.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2503963481@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2503963481&website=www.oicqzone.com" class="tooltipped" data-tooltip="QQ联系我: 2503963481" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
