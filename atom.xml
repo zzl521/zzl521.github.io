@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-02T02:22:58.713Z</updated>
+  <updated>2019-09-03T09:51:50.936Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>jQuery</title>
-    <link href="http://yoursite.com/2019/09/02/web/html5/"/>
-    <id>http://yoursite.com/2019/09/02/web/html5/</id>
-    <published>2019-09-02T03:25:00.000Z</published>
-    <updated>2019-09-02T02:22:58.713Z</updated>
+    <title>网络传输协议</title>
+    <link href="http://yoursite.com/2019/09/03/web/html6/"/>
+    <id>http://yoursite.com/2019/09/03/web/html6/</id>
+    <published>2019-09-03T09:55:00.000Z</published>
+    <updated>2019-09-03T09:51:50.936Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h3 id=&quot;HTTP协议&quot;&gt;&lt;a href=&quot;#HTTP协议&quot; class=&quot;headerlink&quot; title=&quot;HTTP协议&quot;&gt;&lt;/a&gt;HTTP协议&lt;/h3&gt;&lt;p&gt;HTTP协议（HyperText Transfer
+        
+      
+    
     </summary>
     
-      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+      <category term="网络传输" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93/"/>
+    
+    
+      <category term="TCP/IP" scheme="http://yoursite.com/tags/TCP-IP/"/>
+    
+      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery的使用</title>
+    <link href="http://yoursite.com/2019/09/02/web/html5/"/>
+    <id>http://yoursite.com/2019/09/02/web/html5/</id>
+    <published>2019-09-02T03:25:00.000Z</published>
+    <updated>2019-09-03T09:53:13.005Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;什么是jQuery？&quot;&gt;&lt;a href=&quot;#什么是jQuery？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="jQuery" scheme="http://yoursite.com/categories/jQuery/"/>
     
     
       <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
@@ -264,34 +300,6 @@
   </entry>
   
   <entry>
-    <title>Tomcat与服务器</title>
-    <link href="http://yoursite.com/2019/08/06/web/tomcat/"/>
-    <id>http://yoursite.com/2019/08/06/web/tomcat/</id>
-    <published>2019-08-06T08:15:00.000Z</published>
-    <updated>2019-08-07T03:13:35.484Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Tomcat端口配置&quot;&gt;&lt;a href=&quot;#Tomcat端口配置&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
-    
-    
-      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MySQL入门</title>
     <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
     <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
@@ -316,6 +324,34 @@
       <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
       <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tomcat与服务器</title>
+    <link href="http://yoursite.com/2019/08/06/web/tomcat/"/>
+    <id>http://yoursite.com/2019/08/06/web/tomcat/</id>
+    <published>2019-08-06T08:15:00.000Z</published>
+    <updated>2019-08-07T03:13:35.484Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Tomcat端口配置&quot;&gt;&lt;a href=&quot;#Tomcat端口配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
+    
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
     
   </entry>
   
@@ -540,35 +576,6 @@
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="对象" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java变量与二进制</title>
-    <link href="http://yoursite.com/2019/07/16/java/java2/"/>
-    <id>http://yoursite.com/2019/07/16/java/java2/</id>
-    <published>2019-07-16T11:44:00.000Z</published>
-    <updated>2019-07-18T08:20:51.113Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-变量&quot;&gt;&lt;a href=&quot;#1-变量&quot; class=&quot;headerlink&quot; title=&quot;1.变量&quot;&gt;&lt;/a&gt;1.变量&lt;/h3&gt;&lt;p&gt;一、    变量&lt;br&gt;变量相当于自然语言中的代词。比如：“您好”中的您。&lt;/p&gt;
-&lt;h3 id=&quot;a-变量的分类&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="变量 进制" scheme="http://yoursite.com/tags/%E5%8F%98%E9%87%8F-%E8%BF%9B%E5%88%B6/"/>
     
   </entry>
   

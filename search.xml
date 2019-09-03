@@ -4,16 +4,43 @@
   
     
     <entry>
-      <title>jQuery</title>
-      <link href="/2019/09/02/web/html5/"/>
-      <url>/2019/09/02/web/html5/</url>
+      <title>网络传输协议</title>
+      <link href="/2019/09/03/web/html6/"/>
+      <url>/2019/09/03/web/html6/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><p>HTTP协议（HyperText Transfer Protocol，超文本传输协议）是因特网上应用最为广泛的一种网络传输协议，所有的WWW文件都必须遵守这个标准。</p><p>HTTP是一个基于TCP/IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）。</p><h4 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h4><p>HTTP协议工作于客户端-服务端架构上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。</p><p>Web服务器有：Apache服务器，IIS服务器（Internet Information Services）等。</p><p>Web服务器根据接收到的请求后，向客户端发送响应信息。</p><p>HTTP默认端口号为80，但是你也可以改为8080或者其他端口。</p><h4 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h4><p>HTTP是无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。  </p><p>HTTP是媒体独立的：这意味着，只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送。客户端以及服务器指定使用适合的MIME-type内容类型。  </p><p>HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</p><h4 id="消息结构"><a href="#消息结构" class="headerlink" title="消息结构"></a>消息结构</h4><p>HTTP是基于客户端/服务端（C/S）的架构模型，通过一个可靠的链接来交换信息，是一个无状态的请求/响应协议。</p><p>一个HTTP”客户端”是一个应用程序（Web浏览器或其他任何客户端），通过连接到服务器达到向服务器发送一个或多个HTTP的请求的目的。</p><p>一个HTTP”服务器”同样也是一个应用程序（通常是一个Web服务，如Apache Web服务器或IIS服务器等），通过接收客户端的请求并向客户端发送HTTP响应数据。</p><p>HTTP使用统一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。</p><p>一旦建立连接后，数据消息就通过类似Internet邮件所使用的格式[RFC5322]和多用途Internet邮件扩展（MIME）[RFC2045]来传送。</p><h4 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h4><p>根据 HTTP 标准，HTTP 请求可以使用多种请求方法。</p><p>HTTP1.0 定义了三种请求方法： GET, POST 和 HEAD方法。</p><p>HTTP1.1 新增了六种请求方法：OPTIONS、PUT、PATCH、DELETE、TRACE 和 CONNECT 方法。</p><h4 id="常见异常状态码"><a href="#常见异常状态码" class="headerlink" title="常见异常状态码"></a>常见异常状态码</h4><pre><code>200 - 请求成功301 - 资源（网页等）被永久转移到其它URL404 - 请求的资源（网页等）不存在500 - 内部服务器错误</code></pre><h3 id="TCP-IP协议"><a href="#TCP-IP协议" class="headerlink" title="TCP/IP协议"></a>TCP/IP协议</h3><p>TCP/IP 是因特网的通信协议。</p><p>TCP/IP 通信协议是对计算机必须遵守的规则的描述，只有遵守这些规则，计算机之间才能进行通信。</p><h4 id="什么是-TCP-IP？"><a href="#什么是-TCP-IP？" class="headerlink" title="什么是 TCP/IP？"></a>什么是 TCP/IP？</h4><p>TCP/IP 是供已连接因特网的计算机进行通信的通信协议。</p><p>TCP/IP 指传输控制协议/网际协议（Transmission Control Protocol / Internet Protocol）。</p><p>TCP/IP 定义了电子设备（比如计算机）如何连入因特网，以及数据如何在它们之间传输的标准。</p><h4 id="内部协议"><a href="#内部协议" class="headerlink" title="内部协议"></a>内部协议</h4><p>在 TCP/IP 中包含一系列用于处理数据通信的协议：</p><p>TCP (传输控制协议) - 应用程序之间通信  </p><p>UDP (用户数据报协议) - 应用程序之间的简单通信  </p><p>IP (网际协议) - 计算机之间的通信<br>IP 是无连接的，用于计算机之间的通信。</p><p>IP 是无连接的通信协议。它不会占用两个正在通信的计算机之间的通信线路。这样，IP 就降低了对网络线路的需求。每条线可以同时满足许多不同的计算机之间的通信需要。</p><p>通过 IP，消息（或者其他数据）被分割为小的独立的包，并通过因特网在计算机之间传送。</p><p>IP 负责将每个包路由至它的目的地。  </p><p>ICMP (因特网消息控制协议) - 针对错误和状态  </p><p>DHCP (动态主机配置协议) - 针对动态寻址</p><h4 id="寻址"><a href="#寻址" class="headerlink" title="寻址"></a>寻址</h4><p>TCP/IP 使用 32 个比特或者 4 组 0 到 255 之间的数字来为计算机编址。</p><h4 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h4><p>每个计算机必须有一个 IP 地址才能够连入因特网。</p><p>每个 IP 包必须有一个地址才能够发送到另一台计算机。</p><p>在本教程下一节，您会学习到更多关于 IP 地址和 IP 名称的知识。<br>TCP/IP 使用 4 组数字来为计算机编址。每个计算机必须有一个唯一的 4 组数字的地址。</p><p>每组数字必须在 0 到 255 之间，并由点号隔开，比如：192.168.1.60。<br>TCP/IP 使用 32 个比特来编址。一个计算机字节是 8 比特。所以 TCP/IP 使用了 4 个字节。</p><p>一个计算机字节可以包含 256 个不同的值：</p><p>00000000、00000001、00000010、00000011、00000100、00000101、00000110、00000111、00001000 ……. 直到 11111111。</p><p>现在，您应该知道了为什么 TCP/IP 地址是介于 0 到 255 之间的 4 组数字。</p><h4 id="IPV6"><a href="#IPV6" class="headerlink" title="IPV6"></a>IPV6</h4><p>Pv6 是 “Internet Protocol Version 6” 的缩写，也被称作下一代互联网协议，它是由 IETF 小组（Internet 工程任务组Internet Engineering Task Force）设计的用来替代现行的 IPv4（现行的）协议的一种新的 IP 协议。</p><p>我们知道，Internet 的主机都有一个唯一的 IP 地址，IP 地址用一个 32 位二进制的数表示一个主机号码，但 32 位地址资源有限，已经不能满足用户的需求了，因此 Internet 研究组织发布新的主机标识方法，即 IPv6。</p><p>在 RFC1884 中（RFC 是 Request for Comments document 的缩写。RFC 实际上就是 Internet 有关服务的一些标准），规定的标准语法建议把 IPv6 地址的 128 位（16 个字节）写成 8 个 16 位的无符号整数，每个整数用 4 个十六进制位表示，这些数之间用冒号（:）分开，例如：</p><p>686E：8C64：FFFF：FFFF：0：1180：96A：FFFF</p><h3 id="常见协议"><a href="#常见协议" class="headerlink" title="常见协议"></a>常见协议</h3><pre><code>TCP/IP 协议TCP/IP 是不同的通信协议的大集合。协议族TCP/IP 是基于 TCP 和 IP 这两个最初的协议之上的不同的通信协议的大集合。TCP - 传输控制协议TCP 用于从应用程序到网络的数据传输控制。TCP 负责在数据传送之前将它们分割为 IP 包，然后在它们到达的时候将它们重组。IP - 网际协议（Internet Protocol）IP 负责计算机之间的通信。IP 负责在因特网上发送和接收数据包。HTTP - 超文本传输协议(Hyper Text Transfer Protocol)HTTP 负责 web 服务器与 web 浏览器之间的通信。HTTP 用于从 web 客户端（浏览器）向 web 服务器发送请求，并从 web 服务器向 web 客户端返回内容（网页）。HTTPS - 安全的 HTTP（HTTP Secure）HTTPS 负责在 web 服务器和 web 浏览器之间的安全通信。作为有代表性的应用，HTTPS 会用于处理信用卡交易和其他的敏感数据。SSL - 安全套接字层（Secure Sockets Layer）SSL 协议用于为安全数据传输加密数据。SMTP - 简易邮件传输协议（Simple Mail Transfer Protocol）SMTP 用于电子邮件的传输。MIME - 多用途因特网邮件扩展（Multi-purpose Internet Mail Extensions）MIME 协议使 SMTP 有能力通过 TCP/IP 网络传输多媒体文件，包括声音、视频和二进制数据。IMAP - 因特网消息访问协议（Internet Message Access Protocol）IMAP 用于存储和取回电子邮件。POP - 邮局协议（Post Office Protocol）POP 用于从电子邮件服务器向个人电脑下载电子邮件。FTP - 文件传输协议（File Transfer Protocol）FTP 负责计算机之间的文件传输。NTP - 网络时间协议（Network Time Protocol）NTP 用于在计算机之间同步时间（钟）。DHCP - 动态主机配置协议（Dynamic Host Configuration Protocol）DHCP 用于向网络中的计算机分配动态 IP 地址。SNMP - 简单网络管理协议（Simple Network Management Protocol）SNMP 用于计算机网络的管理。LDAP - 轻量级的目录访问协议（Lightweight Directory Access Protocol）LDAP 用于从因特网搜集关于用户和电子邮件地址的信息。ICMP - 因特网消息控制协议（Internet Control Message Protocol）ICMP 负责网络中的错误处理。ARP - 地址解析协议（Address Resolution Protocol）ARP - 用于通过 IP 来查找基于 IP 地址的计算机网卡的硬件地址。RARP - 反向地址转换协议（Reverse Address Resolution Protocol）RARP 用于通过 IP 查找基于硬件地址的计算机网卡的 IP 地址。BOOTP - 自举协议（Boot Protocol）BOOTP 用于从网络启动计算机。PPTP - 点对点隧道协议（Point to Point Tunneling Protocol）PPTP 用于私人网络之间的连接（隧道）。</code></pre>]]></content>
       
       
       <categories>
           
-          <category> JS </category>
+          <category> 网络传输 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> TCP/IP </tag>
+            
+            <tag> HTTP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jQuery的使用</title>
+      <link href="/2019/09/02/web/html5/"/>
+      <url>/2019/09/02/web/html5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="什么是jQuery？"><a href="#什么是jQuery？" class="headerlink" title="什么是jQuery？"></a>什么是jQuery？</h3><p>jQuery是一个JavaScript函数库。</p><p>jQuery是一个轻量级的”写的少，做的多”的JavaScript库。</p><p>jQuery库包含以下功能：</p><p>HTML 元素选取<br>HTML 元素操作<br>CSS 操作<br>HTML 事件函数<br>JavaScript 特效和动画<br>HTML DOM 遍历和修改<br>AJAX<br>Utilities<br>提示： 除此之外，Jquery还提供了大量的插件。<br>目前网络上有大量开源的 JS 框架, 但是 jQuery 是目前最流行的 JS 框架，而且提供了大量的扩展。</p><p>很多大公司都在使用 jQuery</p><h3 id="jQuery安装"><a href="#jQuery安装" class="headerlink" title="jQuery安装"></a>jQuery安装</h3><p><a href="https://jquery.com/download/" target="_blank" rel="noopener">jQuery官网</a><br>下载比较特殊，你可以选择第一个精简版的下载，不要左键点击（会出现一堆乱码），右键选择将连接另存为到本地就可以下载下来了！下载到本地之后，将js文件引入到web项目当中就可以使用jQuery了！<br>当然也可以不下载官网的jQuery文件，使用URL的方式对jQuery进行响应式加载，例如：使用 Staticfile CDN、百度、又拍云、新浪、谷歌或微软的 jQuery，有一个很大的优势：<br>许多用户在访问其他站点时，已经从百度、又拍云、新浪、谷歌或微软加载过 jQuery。所以结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p><h3 id="jQuery引入"><a href="#jQuery引入" class="headerlink" title="jQuery引入"></a>jQuery引入</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> jQuery </category>
           
       </categories>
       
@@ -247,33 +274,6 @@
     
     
     <entry>
-      <title>Tomcat与服务器</title>
-      <link href="/2019/08/06/web/tomcat/"/>
-      <url>/2019/08/06/web/tomcat/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tomcat </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 服务器 </tag>
-            
-            <tag> Tomcat </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL入门</title>
       <link href="/2019/08/06/web/mysql2/"/>
       <url>/2019/08/06/web/mysql2/</url>
@@ -293,6 +293,33 @@
             <tag> MySQL </tag>
             
             <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tomcat与服务器</title>
+      <link href="/2019/08/06/web/tomcat/"/>
+      <url>/2019/08/06/web/tomcat/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
