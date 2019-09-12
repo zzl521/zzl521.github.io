@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Oracle安装与连接</title>
+      <link href="/2019/09/11/web/mysql4/"/>
+      <url>/2019/09/11/web/mysql4/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Oracle数据库简介"><a href="#Oracle数据库简介" class="headerlink" title="Oracle数据库简介"></a>Oracle数据库简介</h3><p>Oracle也是甲骨文公司的名字，这个公司在IT行业的权重就不用说了呗，该公司推行的Oracle数据库也是十分优秀，在数据库领域一直处于领先地位的产品。可以说Oracle数据库系统是目前世界上流行的关系数据库管理系统，系统可移植性好、使用方便、功能强，适用于各类大、中、小、微机环境。它是一种高效率、可靠性好的、适应高吞吐量的数据库方案。<br>特点：安全,稳定</p><h3 id="Oracle安装"><a href="#Oracle安装" class="headerlink" title="Oracle安装"></a>Oracle安装</h3><p><a href="https://www.oracle.com/technetwork/cn/database/enterprise-edition/downloads/oracle12c-windows-3633015-zhs.html" target="_blank" rel="noopener">官网安装地址</a><br>需要注意的两点。  </p><ol><li>需要注册登陆oracle  </li><li>需要接受协议才能下载<br><img src="http://img.ahdy.top/2019-09-11_143417.png" alt><br>下载解压好如下图，选择.exe文件就能安装，最好退出360，关闭防火墙等，以防出现意外！<br><img src="http://img.ahdy.top/2019-09-11_144707.png" alt><br><img src="http://img.ahdy.top/2019-09-11_145321.png" alt><br><img src="http://img.ahdy.top/2019-09-11_145528.png" alt><br><img src="http://img.ahdy.top/2019-09-11_145721.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151035.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151104.png" alt></li></ol><p><img src="http://img.ahdy.top/2019-09-11_151254.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151132.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151500.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151543.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151629.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151727.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151852.png" alt><br><img src="http://img.ahdy.top/2019-09-11_151904.png" alt><br><img src="http://img.ahdy.top/2019-09-11_152011.png" alt><br><img src="http://img.ahdy.top/2019-09-11_152111.png" alt><br><img src="http://img.ahdy.top/2019-09-11_152209.png" alt><br><img src="http://img.ahdy.top/2019-09-11_152448.png" alt><br><img src="http://img.ahdy.top/2019-09-11_152629.png" alt><br><img src="http://img.ahdy.top/2019-09-11_152756.png" alt></p><h4 id="先决条件可以选择忽略！"><a href="#先决条件可以选择忽略！" class="headerlink" title="先决条件可以选择忽略！"></a>先决条件可以选择忽略！</h4><p><img src="http://img.ahdy.top/2019-09-11_165410.png" alt><br><img src="http://img.ahdy.top/2019-09-11_165206.png" alt></p><h4 id="等待"><a href="#等待" class="headerlink" title="等待"></a>等待</h4><p>该过程非常漫长······给我等死了都！！！<br><img src="http://img.ahdy.top/2019-09-11_170004.png" alt></p><h4 id="安装成功"><a href="#安装成功" class="headerlink" title="安装成功"></a>安装成功</h4><p><img src="http://img.ahdy.top/2019-09-11_172612.png" alt></p><h4 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h4><p>打开开始菜单，最近添加，找到sql plus，打开后输入用户名及密码<br><img src="http://img.ahdy.top/2019-09-11_175317.png" alt><br>出现连接到xxxxx之后oracle已经彻底安装成功！<br>注意：这里的用户名是orcale自带的超级管理员，密码是你在安装过程中中设置的任何用户通用密码。</p><h3 id="密码修改"><a href="#密码修改" class="headerlink" title="密码修改"></a>密码修改</h3><p><a href="https://www.cnblogs.com/xujiating/p/6337511.html" target="_blank" rel="noopener">此处学习</a></p><h3 id="图形化工具下载"><a href="#图形化工具下载" class="headerlink" title="图形化工具下载"></a>图形化工具下载</h3><p><a href="https://www.jetbrains.com/zh/datagrip/promo/?utm_source=baidu&amp;utm_medium=cpc&amp;utm_campaign=cn-bai-br-datagrip-ex-pc&amp;utm_content=datagrip-pure&amp;utm_term=datagrip" target="_blank" rel="noopener">DataGrip下载</a><br>假如你有多个数据库，比如电脑上既有MySQL，又有orcale，那么建议使用DataGrip，其拥有强大的索引及支持多库连接的功能！</p><h4 id="图形化工具安装教程"><a href="#图形化工具安装教程" class="headerlink" title="图形化工具安装教程"></a>图形化工具安装教程</h4><p><a href="https://jingyan.baidu.com/article/86112f13b2a9ee273797871a.html" target="_blank" rel="noopener">百度教程</a></p><h4 id="Datagrip连接数据库"><a href="#Datagrip连接数据库" class="headerlink" title="Datagrip连接数据库"></a>Datagrip连接数据库</h4><p>File -&gt; new -&gt;project -&gt;起一个项目名-&gt;database-&gt;+ -&gt;data source -&gt;创建你需要的数据库</p><h5 id="orcale连接"><a href="#orcale连接" class="headerlink" title="orcale连接"></a>orcale连接</h5><p><img src="http://img.ahdy.top/2019-09-12_100940.png" alt></p><p>如果test测试不成功可以切换Driver进行尝试，并确保orcale的基本服务都已经启动  </p><p>默认的SID是orcl一般都不会对它进行修改，你修改了它并且忘记了Sid可以从<a href="https://jingyan.baidu.com/article/f25ef2549a7e58482c1b82f7.html" target="_blank" rel="noopener">查看sid方法</a>知道你的SID。  </p><p> —在默认情况下，SID的名称和数据库的名称是完全一致的，在网络上使用的是SID名称。</p><h5 id="mysql连接"><a href="#mysql连接" class="headerlink" title="mysql连接"></a>mysql连接</h5><p><img src="http://img.ahdy.top/2019-09-12_101658.png" alt><br>在连接MySQL时可能会出现这种报错<br>解决方法：<br>关联mysql失败_Server returns invalid timezone. Go to ‘Advanced’ tab and set ‘serverTimezon’<br>时区错误，MySQL默认的时区是UTC时区，比北京时间晚8个小时。</p><p>所以要修改mysql的时长</p><p>在mysql的命令模式下，输入：</p><p>set global time_zone=’+8:00’;<br><img src="http://img.ahdy.top/2019-09-12_101926.png" alt><br>再次进行测试连接，发现连接成功！<br><img src="http://img.ahdy.top/2019-09-12_102039.png" alt><br>成功建立连接后你就可以使用图形化工具对数据库进行增删改查！</p><h3 id="服务禁用"><a href="#服务禁用" class="headerlink" title="服务禁用"></a>服务禁用</h3><p>orcale的后台服务非常拖慢系统运行，建议讲orcale服务修改为手动启动，这样在开机的时候就不会自启。<br>而每次启动的时候，只需要启动两个服务即可：</p><ol><li><p>OracleOraDb11g_home1TNSListener  （监听服务，如果要通过程序或者不同的客户端连接Oracle数据库的时候， 此服务必须启动，否则无法连接。如是自己在本机上操作Oracle，则不需要启动该服务）</p></li><li><p>OracleServiceORCL （数据库的实例服务–保存所有的数据，它的命名标准:OracleServiceSID，每当为系统增加一个数据库的时候，都会出现一个类似的服务名称）</p></li><li><p>查看后台服务的方法，打开控制面板。找到管理工具-&gt;服务<br><img src="http://img.ahdy.top/2019-09-12_103831.png" alt><br><img src="http://img.ahdy.top/2019-09-12_103859.png" alt></p><h3 id="orcale安装失败"><a href="#orcale安装失败" class="headerlink" title="orcale安装失败"></a>orcale安装失败</h3><p>安装失败可能是中断了安装程序，或者装了多个orcale<br>需要卸载干净之后重装。<br>注: 卸载之后可能无法立刻安装成功</p><p> 1.Oracle正常安装完成</p><pre><code>     -- 使用Oracle提供的卸载程序     -- 重新启动电脑，进入到安全模式(启动时按住F8)     -- 找到系统上的对应的磁盘路径，并且删除     -- 运行注册表命令 regedit.exe，搜索所有与oracle有关的内容，并且删除     -- 程序启动电脑后就可以重新执行安装</code></pre><p> 2.Oracle安装失败</p><pre><code>     -- 重新启动电脑，进入到安全模式(启动时按住F8)     -- 找到系统上的对应的磁盘路径，并且删除     -- 运行注册表命令 regedit.exe，搜索所有与oracle有关的内容，并且删除     -- 程序启动电脑后就可以重新执行安装</code></pre></li></ol><p>如果以上操作不行，就需要重新安装操作系统了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Oracle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> Oracle </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JSP</title>
+      <link href="/2019/09/04/web/heml7/"/>
+      <url>/2019/09/04/web/heml7/</url>
+      
+        <content type="html"><![CDATA[<h3 id="JSP发展史"><a href="#JSP发展史" class="headerlink" title="JSP发展史"></a>JSP发展史</h3><p>早年说到JAVA Web，那么最具体现力的就是 JSP，但随着时间的发展，原生JSP渐渐淡出了舞台，因为其前后端代码的结合，即是它的优点，又是它的缺点，在团队模块开发上，造成了很大困难，影响团队协作能力，取而代之的是ajax，Ajax的出现使前后端人员可以分工协作，前端不再会为JSP当中的Java代码而苦恼，也很大程度上提高了开发效率。</p><h3 id="JSP格式"><a href="#JSP格式" class="headerlink" title="JSP格式"></a>JSP格式</h3><p><img src="http://img.ahdy.top/2019-09-04_153117.png" alt><br>如你所见，JSP的格式非常像一个HTML网页，那么它的特点在？<br>她最大的特点就是能嵌入Java代码，实现很多由Java代码组合的功能</p><pre><code>&lt;% 代码片段 %&gt; 在括号内写入Java代码  &lt;%! declaration; [ declaration; ]+ ... %&gt; 声明&lt;%= 表达式 %&gt;&lt;%-- 该部分注释在网页中不会被显示--%&gt; &lt;%@ directive attribute=&quot;value&quot; %&gt; 指令</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JSP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 语法 </tag>
+            
+            <tag> JSP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络传输协议</title>
       <link href="/2019/09/03/web/html6/"/>
       <url>/2019/09/03/web/html6/</url>
@@ -317,9 +371,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> Tomcat </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       
@@ -614,9 +668,9 @@
       
         <tags>
             
-            <tag> 环境 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 环境 </tag>
             
         </tags>
       
@@ -749,9 +803,9 @@
       
         <tags>
             
-            <tag> Kali </tag>
-            
             <tag> 环境 </tag>
+            
+            <tag> Kali </tag>
             
         </tags>
       

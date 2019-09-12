@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-03T09:51:50.936Z</updated>
+  <updated>2019-09-12T02:40:49.047Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oracle安装与连接</title>
+    <link href="http://yoursite.com/2019/09/11/web/mysql4/"/>
+    <id>http://yoursite.com/2019/09/11/web/mysql4/</id>
+    <published>2019-09-11T08:25:00.000Z</published>
+    <updated>2019-09-12T02:40:49.047Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Oracle数据库简介&quot;&gt;&lt;a href=&quot;#Oracle数据库简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Oracle" scheme="http://yoursite.com/categories/Oracle/"/>
+    
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="Oracle" scheme="http://yoursite.com/tags/Oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JSP</title>
+    <link href="http://yoursite.com/2019/09/04/web/heml7/"/>
+    <id>http://yoursite.com/2019/09/04/web/heml7/</id>
+    <published>2019-09-04T09:55:00.000Z</published>
+    <updated>2019-09-12T03:03:43.599Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;JSP发展史&quot;&gt;&lt;a href=&quot;#JSP发展史&quot; class=&quot;headerlink&quot; title=&quot;JSP发展史&quot;&gt;&lt;/a&gt;JSP发展史&lt;/h3&gt;&lt;p&gt;早年说到JAVA Web，那么最具体现力的就是
+        
+      
+    
+    </summary>
+    
+      <category term="JSP" scheme="http://yoursite.com/categories/JSP/"/>
+    
+    
+      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="JSP" scheme="http://yoursite.com/tags/JSP/"/>
+    
+  </entry>
   
   <entry>
     <title>网络传输协议</title>
@@ -349,9 +405,9 @@
       <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
     
     
-      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
       <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
@@ -520,62 +576,6 @@
       <category term="抽象类|接口" scheme="http://yoursite.com/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E6%8E%A5%E5%8F%A3/"/>
     
       <category term="访问控制符" scheme="http://yoursite.com/tags/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%AC%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>域名</title>
-    <link href="http://yoursite.com/2019/07/22/yuming/"/>
-    <id>http://yoursite.com/2019/07/22/yuming/</id>
-    <published>2019-07-22T10:59:00.000Z</published>
-    <updated>2019-07-22T14:57:25.302Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;域名是什么呢？&quot;&gt;&lt;a href=&quot;#域名是什么呢？&quot; class=&quot;headerlink&quot; title=&quot;域名是什么呢？&quot;&gt;&lt;/a&gt;域名是什么呢？&lt;/h5&gt;&lt;p&gt;我就不解释了昂，不懂可以&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="域名" scheme="http://yoursite.com/categories/%E5%9F%9F%E5%90%8D/"/>
-    
-    
-      <category term="域名" scheme="http://yoursite.com/tags/%E5%9F%9F%E5%90%8D/"/>
-    
-      <category term="二级域名" scheme="http://yoursite.com/tags/%E4%BA%8C%E7%BA%A7%E5%9F%9F%E5%90%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java面向对象</title>
-    <link href="http://yoursite.com/2019/07/18/java/java4/"/>
-    <id>http://yoursite.com/2019/07/18/java/java4/</id>
-    <published>2019-07-18T07:51:00.000Z</published>
-    <updated>2019-07-18T07:59:43.310Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h3&gt;&lt;h4 id=&quot;什么是Object-对象-？&quot;&gt;&lt;a href=&quot;#什么是Object-对象-？&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java面向对象" scheme="http://yoursite.com/categories/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="对象" scheme="http://yoursite.com/tags/%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
