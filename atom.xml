@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-15T06:05:59.754Z</updated>
+  <updated>2019-09-15T06:16:35.220Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/09/15/threecomputer/"/>
     <id>http://yoursite.com/2019/09/15/threecomputer/</id>
     <published>2019-09-15T05:57:00.000Z</published>
-    <updated>2019-09-15T06:05:59.754Z</updated>
+    <updated>2019-09-15T06:16:35.220Z</updated>
     
     <summary type="html">
     
@@ -377,9 +377,9 @@
       <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
     
     
-      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
-    
       <category term="JBDC" scheme="http://yoursite.com/tags/JBDC/"/>
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
     
   </entry>
   
@@ -405,9 +405,9 @@
       <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
     
     
-      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
-    
       <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
     
   </entry>
   

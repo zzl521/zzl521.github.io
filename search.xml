@@ -344,9 +344,9 @@
       
         <tags>
             
-            <tag> SQL </tag>
-            
             <tag> JBDC </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
@@ -371,9 +371,9 @@
       
         <tags>
             
-            <tag> Tomcat </tag>
-            
             <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
