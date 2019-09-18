@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-15T06:16:35.220Z</updated>
+  <updated>2019-09-18T12:46:50.063Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Layui</title>
+    <link href="http://yoursite.com/2019/09/18/framework/layui/"/>
+    <id>http://yoursite.com/2019/09/18/framework/layui/</id>
+    <published>2019-09-18T12:21:34.958Z</published>
+    <updated>2019-09-18T12:46:50.063Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;时常听老师讲做后端开发的多少都得会点前端，但是写前端的话框架又不能太丑，这时候使用框架让我们在开发上如虎添翼。&lt;/p&gt;
+&lt;h3 id=&quot;layui框架概述&quot;&gt;&lt;a href=&quot;#layui框架概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Layui" scheme="http://yoursite.com/tags/Layui/"/>
+    
+  </entry>
   
   <entry>
     <title>三级数据库</title>
@@ -377,7 +406,35 @@
       <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
     
     
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
       <category term="JBDC" scheme="http://yoursite.com/tags/JBDC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL入门</title>
+    <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
+    <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
+    <published>2019-08-06T08:15:00.000Z</published>
+    <updated>2019-08-06T08:19:08.123Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;MySQL的数据库创建、删除&quot;&gt;&lt;a href=&quot;#MySQL的数据库创建、删除&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
       <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
     
@@ -408,34 +465,6 @@
       <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
       <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL入门</title>
-    <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
-    <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
-    <published>2019-08-06T08:15:00.000Z</published>
-    <updated>2019-08-06T08:19:08.123Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;MySQL的数据库创建、删除&quot;&gt;&lt;a href=&quot;#MySQL的数据库创建、删除&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
-    
-      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
     
   </entry>
   
@@ -548,34 +577,6 @@
       <category term="数组,递归" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84-%E9%80%92%E5%BD%92/"/>
     
       <category term="原理" scheme="http://yoursite.com/tags/%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown</title>
-    <link href="http://yoursite.com/2019/07/23/markdown/"/>
-    <id>http://yoursite.com/2019/07/23/markdown/</id>
-    <published>2019-07-23T02:25:00.000Z</published>
-    <updated>2019-07-23T02:40:11.419Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;内容如图&quot;&gt;&lt;a href=&quot;#内容如图&quot; class=&quot;headerlink&quot; title=&quot;内容如图&quot;&gt;&lt;/a&gt;内容如图&lt;/h5&gt;&lt;p&gt;为啥上图呢，因为我的文档就是markdown写的，直接写的话会对文档产生效果，so。&lt;br&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
-    
-    
-      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
-    
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
