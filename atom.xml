@@ -518,35 +518,7 @@
       <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
     
     
-      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
-    
       <category term="JBDC" scheme="http://yoursite.com/tags/JBDC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL入门</title>
-    <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
-    <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
-    <published>2019-08-06T08:15:00.000Z</published>
-    <updated>2019-08-06T08:19:10.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;MySQL的数据库创建、删除&quot;&gt;&lt;a href=&quot;#MySQL的数据库创建、删除&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
       <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
     
@@ -577,6 +549,34 @@
       <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
       <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL入门</title>
+    <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
+    <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
+    <published>2019-08-06T08:15:00.000Z</published>
+    <updated>2019-08-06T08:19:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;MySQL的数据库创建、删除&quot;&gt;&lt;a href=&quot;#MySQL的数据库创建、删除&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
     
   </entry>
   
