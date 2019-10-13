@@ -4,78 +4,11 @@
   
     
     <entry>
-      <title>Layui</title>
-      <link href="/2019/10/13/framework/layui/"/>
-      <url>/2019/10/13/framework/layui/</url>
-      
-        <content type="html"><![CDATA[<p>时常听老师讲做后端开发的多少都得会点前端，但是写前端的话框架又不能太丑，这时候使用框架让我们在开发上如虎添翼。</p><h3 id="layui框架概述"><a href="#layui框架概述" class="headerlink" title="layui框架概述"></a>layui框架概述</h3><p>很久以前，我为写不出优美的web界面发愁时，杨爽老哥（学长）告诉了我这个框架，俗话说的好，与贤一席话，胜读十年书，在后续的界面开发过程中，这个框架帮我解决了很多问题。<br>据我使用过后的观点，首先它比较容易上手，在操作上比bootstarp要简易，文档通俗易懂。<br>了解更多可以百度一下。</p><h3 id="框架下载"><a href="#框架下载" class="headerlink" title="框架下载"></a>框架下载</h3><p><a href="https://www.layui.com/" target="_blank" rel="noopener">layui官网</a><br>下载好了之后，将文件导入编译器<br><img src="http://img.ahdy.top/2019-09-18_203546.png" alt="演示图"></p><h3 id="如何使用layui"><a href="#如何使用layui" class="headerlink" title="如何使用layui"></a>如何使用layui</h3><p><a href="https://www.layui.com/doc/" target="_blank" rel="noopener">layui官方文档</a>  </p><p><a href="https://pan.baidu.com/s/1NxGgdZhjyX3s8iLNYrP36g#list/path=%2F" target="_blank" rel="noopener">layui视频教程</a></p><h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>在使用框架时请务必引入相应的js/css<br>在使用文档中相应的模板时请务必将外联css/js，修改为你本地地址。<br>clss需要根据特有的参数引入<br>多框架引入可能会出现索引，布局冲突。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 框架 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 框架 </tag>
-            
-            <tag> Layui </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>helloworld——文档样式展示</title>
-      <link href="/2019/10/13/hello-world/"/>
-      <url>/2019/10/13/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>智慧树刷课秘籍</title>
-      <link href="/2019/10/13/class/"/>
-      <url>/2019/10/13/class/</url>
-      
-        <content type="html"><![CDATA[<p>网课可以自己刷，很多人花钱去弄，我觉得没必要，简述一下最安全的刷课方法，你看了之后，或许可以利用它赚钱，话不多说，</p><p>登陆！<br>登上之后选择你要看的一门课，然后播放，一般浏览器按f12就会调出开发者模式，建议用谷歌，这个下学期写网页也会用到，将下面一段js代码复制粘贴到开发者模式下的console窗口内<br>代码从下面var开始复制，js中只有var类型变量..话不多说<br><code>var ti = $(&quot;body&quot;);var video = $(&quot;.catalogue_ul1 li[id*=video-]&quot;);var i = 1;var v = 1;video.css(&quot;color&quot;, &quot;blue&quot;);console.log(&quot;已选取&quot; + video.length + &quot;个小节,并已用蓝色标明,请检查是否有遗漏,如有遗漏,概不负责&quot;);setTimeout(function () {    $(&#39;.speedTab15&#39;).click();    $(&#39;.volumeIcon&#39;).click();    console.log(&quot;已进行静音和1.5倍加速&quot;);}, 3000);ti.on(&quot;DOMNodeInserted&quot;, function (e) {    if (e.target.textContent == &quot;关闭&quot;) {        console.log(&quot;检测到第&quot; + i + &quot;个弹题窗口&quot;);        window.setTimeout(function () {            document.getElementById(&quot;tmDialog_iframe&quot;).contentWindow.document.getElementsByClassName(&quot;answerOption&quot;)[0].getElementsByTagName(&quot;input&quot;)[0].click();            $(&quot;.popbtn_cancel&quot;).click();            console.log(&quot;已关闭&quot;);        }, 3000);        i++;    } else if (e.target.textContent == &quot;本节视频,累计观看时间『100%』&quot;) {        console.log(&quot;检测到视频观看完成，准备跳到下一节&quot;);        $(&#39;.next_lesson_bg&#39;).find(&#39;a&#39;).trigger(&#39;click&#39;);        console.log(&quot;已跳转&quot;);        setTimeout(function () {            $(&#39;.volumeIcon&#39;).click();            $(&#39;.speedTab15&#39;).click();            console.log(&quot;已进行静音和1.5倍加速&quot;);        }, 6000);        v++;        console.log(&quot;目前播放了&quot; + v + &quot;个视频&quot;);    }});</code><br>按回车运行js代码,（代码于2019.3.24号优化更新）之后电脑就会自己刷课<br>虽然代码有静音操作，但是还是建议把声音关了，因为时不时会bug一下出声</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 刷课 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 网课 </tag>
-            
-            <tag> 秘籍 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>IP获取及定位</title>
       <link href="/2019/10/11/attark/findip/"/>
       <url>/2019/10/11/attark/findip/</url>
       
-        <content type="html"><![CDATA[<h3 id="NTRQQ插件集成"><a href="#NTRQQ插件集成" class="headerlink" title="NTRQQ插件集成"></a>NTRQQ插件集成</h3><p>NtrQQ可以可以点亮各种钻的图标，本功能可本地开启所有业务图标（别人不可见），开启此功能后还可享受绿钻的特权：比如在群内可分享歌曲给你的群友。QQ越做越大，内存占用越来越高，那点小内存根本不够用，打开内存整理这个功能可以自动定时定点整理内存。平时有很多QQ自带组件根本就用不到，您可以自己动手借助本软件的插件过滤功能关掉  </p><p>总之这个插件，非常强，能够破解掉QQ上很多权限，最主要的是它显示IP的功能，通过远程对话，或者在线传输文件就能获取到对方的IP地址，有了IP地址就能对其定位，找到对方大概的位置，其实也可以通过一些抓包软件抓到对方的外网IP，但那并不适合新手。这个插件在一年前就停止了更新（涉嫌侵权），但留下来的插件被其他大牛继续优化更新。<br><a href="http://www.carrotchou.blog/17112.html" target="_blank" rel="noopener">ntrqq插件</a>  </p><p><a href="https://www.lanzous.com/i66ured" target="_blank" rel="noopener">下载</a><br>插件内包含使用说明文档，看文档进行操作。<br>细节操作自行挖掘，因：（散播教程侵犯他人隐私）<br><img src="http://img.ahdy.top/2019-10-11_112309.png" alt="集成成功演示图"></p><h3 id="木子李QQ"><a href="#木子李QQ" class="headerlink" title="木子李QQ"></a>木子李QQ</h3><p>这可能是一个笔名为木子李的人利用NTRQQ插件集成的QQ，但是自NTRQQ站长被腾讯告了之后，今年木子李QQ停止了对显示IP功能的开放，但其它功能也非常好，可以百度了解一下。  </p><h3 id="利用地图开放接口定位"><a href="#利用地图开放接口定位" class="headerlink" title="利用地图开放接口定位"></a>利用地图开放接口定位</h3><p>以百度地图为例子，首先百度一下，搜索百度地图开放平台，登陆百度账号。<br><img src="http://img.ahdy.top/2019-10-11_101554.png" alt><br>在上方功能与服务当中，选择定位<br><img src="http://img.ahdy.top/2019-10-11_101845.png" alt><br>查看文档使用<br><img src="http://img.ahdy.top/2019-10-11_105344.png" alt><br><img src="http://img.ahdy.top/2019-10-11_105424.png" alt><br><img src="http://img.ahdy.top/2019-10-11_105713.png" alt="效果图"><br>经纬度都有了，是不是够精确了？其实并不是，这个点只能算是阵眼。至于它网络的覆盖面积有多大，还是个谜！</p><h3 id="IP地址查询"><a href="#IP地址查询" class="headerlink" title="IP地址查询"></a>IP地址查询</h3><p>现在有很都查ip的工具，百度搜索精准IP查询，当然这些网站都具有时效性，说不定哪时候就访问不到了<br><a href="http://chaipip.com/ip.php" target="_blank" rel="noopener">精准查询</a>   </p>]]></content>
+        <content type="html"><![CDATA[<h3 id="NTRQQ插件集成"><a href="#NTRQQ插件集成" class="headerlink" title="NTRQQ插件集成"></a>NTRQQ插件集成</h3><p>NtrQQ可以点亮各种钻的图标，本功能可本地开启所有业务图标（别人不可见），开启此功能后还可享受绿钻的特权：比如在群内可分享歌曲给你的群友。QQ越做越大，内存占用越来越高，那点小内存根本不够用，打开内存整理这个功能可以自动定时定点整理内存。平时有很多QQ自带组件根本就用不到，您可以自己动手借助本软件的插件过滤功能关掉  </p><p>总之这个插件，非常强，能够破解掉QQ上很多权限，最主要的是它显示IP的功能，通过远程对话，或者在线传输文件就能获取到对方的IP地址，有了IP地址就能对其定位，找到对方大概的位置，其实也可以通过一些抓包软件抓到对方的外网IP，但那并不适合新手。这个插件在一年前就停止了更新（涉嫌侵权），但留下来的插件被其他大牛继续优化更新。<br><a href="http://www.carrotchou.blog/17112.html" target="_blank" rel="noopener">ntrqq插件</a>  </p><p><a href="https://www.lanzous.com/i66ured" target="_blank" rel="noopener">下载</a><br>插件内包含使用说明文档，看文档进行操作。<br>细节操作自行挖掘，因：（散播教程侵犯他人隐私）<br><img src="http://img.ahdy.top/2019-10-11_112309.png" alt="集成成功演示图"></p><h3 id="木子李QQ"><a href="#木子李QQ" class="headerlink" title="木子李QQ"></a>木子李QQ</h3><p>这可能是一个笔名为木子李的人利用NTRQQ插件集成的QQ，但是自NTRQQ站长被腾讯告了之后，今年木子李QQ停止了对显示IP功能的开放，但其它功能也非常好，可以百度了解一下。  </p><h3 id="利用地图开放接口定位"><a href="#利用地图开放接口定位" class="headerlink" title="利用地图开放接口定位"></a>利用地图开放接口定位</h3><p>以百度地图为例子，首先百度一下，搜索百度地图开放平台，登陆百度账号。<br><img src="http://img.ahdy.top/2019-10-11_101554.png" alt><br>在上方功能与服务当中，选择定位<br><img src="http://img.ahdy.top/2019-10-11_101845.png" alt><br>查看文档使用<br><img src="http://img.ahdy.top/2019-10-11_105344.png" alt><br><img src="http://img.ahdy.top/2019-10-11_105424.png" alt><br><img src="http://img.ahdy.top/2019-10-11_105713.png" alt="效果图"><br>经纬度都有了，是不是够精确了？其实并不是，这个点只能算是阵眼。至于它网络的覆盖面积有多大，还是个谜！</p><h3 id="IP地址查询"><a href="#IP地址查询" class="headerlink" title="IP地址查询"></a>IP地址查询</h3><p>现在有很都查ip的工具，百度搜索精准IP查询，当然这些网站都具有时效性，说不定哪时候就访问不到了<br><a href="http://chaipip.com/ip.php" target="_blank" rel="noopener">精准查询</a>   </p>]]></content>
       
       
       <categories>
@@ -102,7 +35,7 @@
       <link href="/2019/10/09/attark/websafty/"/>
       <url>/2019/10/09/attark/websafty/</url>
       
-        <content type="html"><![CDATA[<h3 id="被神化的黑客"><a href="#被神化的黑客" class="headerlink" title="被神化的黑客"></a>被神化的黑客</h3><p>在这个信息时代，黑客这个名词已经被抽象化，原因是真正的黑客十分稀少，加上黑客行为非常神秘，各种小学生行为的夸大，黑客最终被神化，成为万能侠，背锅侠。</p><h3 id="盗号有多难"><a href="#盗号有多难" class="headerlink" title="盗号有多难"></a>盗号有多难</h3><p>以腾讯的QQ为例，早在2005年以前，是可以通过数据字典试出QQ的密码，但之后验证码机制的出现使得这种方法暴毙，账号的密码都是存放在数据库当中的，hacker不会担着这么大风险，去搬倒腾讯，阿里的服务器，和法律对着干，当然最主要的原因是没有那个水平，所以黑进什么什么管理系统，基本是无稽之谈。在传输过程中，密码会被加密，以密文形式存进数据库，至于是什么加密方式，还要进行分析，反编译，解算，所以就算hacker暴库了很多用户数据，也不会对用户造成直接损害。这就体现了设置密码的技术，设置密码其实也是一门艺术，尽量使用组合密码，不要设置的过于简单，比如大小写字母+数字+特殊符号，这样的密码经过加密后一般是无法被破解的！</p><h4 id="不要把多个账户密码设置成同一个！"><a href="#不要把多个账户密码设置成同一个！" class="headerlink" title="不要把多个账户密码设置成同一个！"></a>不要把多个账户密码设置成同一个！</h4><p>这个概念在安全领域叫做撞库，就是你的一个密码泄露，可能会导致多个账号丢失，其实真正hacker是需要会很多东西的，能被成为hacker的人那得是计算机领域的天才！他需要会各种编程语言，能够制造木马，编写想要的蠕虫，同时精通算法，心理学，密码学，社会工程学，法律等，才能做到游走于刀尖之上。</p><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>最近，经常看到很多人微信，QQ号被盗，盗号者利用人际关系进行钱财诈骗，先不说安全意识的问题，账号被盗一般跟个人使用有直接关系，可能是受到某种诱惑，好奇心的左右，为什么这么说，因为80%的账号密码的泄露都是因为钓鱼网站。</p><h3 id="钓鱼网站"><a href="#钓鱼网站" class="headerlink" title="钓鱼网站"></a>钓鱼网站</h3><p>这是一个非常形象的词，通常钓鱼网站的页面做的非常逼真，能够与官方网站媲美，达到以假乱真（当然也有做的很垃圾的），一般点进去条鱼网站不做任何操作，账号不会被盗，但是当用户输入了账号，密码登陆才能领取某些奖励的时候，你所输入的账号密码就会被该网站的后台记录，他轻而易举的得到了你的账号密码，所以一般像什么中大奖了，免费送点卷领皮肤，这里面的照片是你吗？这都是高危词！还要那些来历不明的连接，来历不明的活动，让扫二维码的，一律不要贪图小便宜！就记住一句话，天上不会掉馅饼，有也不会砸到你。嗯，没错！</p><h3 id="木马"><a href="#木马" class="headerlink" title="木马"></a>木马</h3><p>木马这个词的由来就是，经典的特洛伊木马，从内部打破防御，有些木马潜行的非常深，这个东西就像人体的病毒一样，说不定哪个时候就会爆发，对于木马的防范，只能提高警惕，不要乱下载东西，这样就能最大可能的减少被植入木马的风险，当然现在的杀毒软件都很厉害，如果一个木马能过得了毒杀，那…确实就算你倒霉！！毕竟病毒库这个东西，是定期更新的。</p><h3 id="嗅探"><a href="#嗅探" class="headerlink" title="嗅探"></a>嗅探</h3><p>这个词一般针对于局域网内，嗅探与监听通常结合使用，这类安全隐患主要作用于公共场合（危害极大），比如免费wifi，这类WiFi可以是被设置好的陷阱，通过某些工具，就能对流经路由器的数据进行抓取，比如浏览那些网站，账号密码，一些文本信息，都会被抓取到本地，说到这个有点像大数据的爬虫，其实不然，现在很多软件在安装的时候就已经被授权，可以读取用户的信息，大数据采集这些信息，就实现了针对用户的推送，比如，你百度搜个物品，打开淘宝发现淘宝给你推送了这类商品，然后再打开抖音，发现抖音也给你推类似的视频广告，我不知到这是否算是侵犯了用户的隐私，但用户的日常行为确实在互联网当中是透明的，希望未来能够遵循GDPR的规则合法采集数据。</p><h3 id="服务商的阴谋"><a href="#服务商的阴谋" class="headerlink" title="服务商的阴谋"></a>服务商的阴谋</h3><p>现在使用任何软件基本上都需要注册，注册过程其实变向丢失了你的个人信息，这些服务商可以变卖你的个人信息，有时候注册了一些litter软件，推销信息多了，广告信息也多了，卖保险，卖房电话经常打来，说出来你可能不信，推销，骚扰电话占据了我大片童话记录，我与他们之间的联系也非常密切，典型的就是拼刀刀砍价，什么就差你一刀……</p><h4 id="这个世界-想要得到什么，就要付出一些什么，很真实！"><a href="#这个世界-想要得到什么，就要付出一些什么，很真实！" class="headerlink" title="这个世界 想要得到什么，就要付出一些什么，很真实！"></a>这个世界 想要得到什么，就要付出一些什么，很真实！</h4>]]></content>
+        <content type="html"><![CDATA[<h3 id="被神化的黑客"><a href="#被神化的黑客" class="headerlink" title="被神化的黑客"></a>被神化的黑客</h3><p>在这个信息时代，黑客这个名词已经被抽象化，原因是真正的黑客十分稀少，加上黑客行为非常神秘，各种小学生行为的夸大，黑客最终被神化，成为万能侠，背锅侠。</p><h3 id="盗号有多难"><a href="#盗号有多难" class="headerlink" title="盗号有多难"></a>盗号有多难</h3><p>以腾讯的QQ为例，早在2005年以前，是可以通过数据字典暴力出QQ的密码，但之后验证码机制的出现使得这种方法暴毙，账号的密码都是存放在数据库当中的，hacker不会担着这么大风险，去搬倒腾讯，阿里的服务器，和法律对着干，当然最主要的原因是没有那个水平，所以黑进什么什么管理系统，基本是无稽之谈。在传输过程中，密码会被加密，以密文形式存进数据库，至于是什么加密方式，还要进行分析，反编译，解算，所以就算hacker暴库了很多用户数据，也不会对用户造成直接损害。这就体现了设置密码的技术，设置密码其实也是一门艺术，尽量使用组合密码，不要设置的过于简单，比如大小写字母+数字+特殊符号，这样的密码经过加密后一般是无法被破解的！</p><h4 id="不要把多个账户密码设置成同一个！"><a href="#不要把多个账户密码设置成同一个！" class="headerlink" title="不要把多个账户密码设置成同一个！"></a>不要把多个账户密码设置成同一个！</h4><p>这个概念在安全领域叫做撞库，就是你的一个密码泄露，可能会导致多个账号丢失，其实真正hacker是需要会很多东西的，能被成为hacker的人那得是计算机领域的天才！他需要会各种编程语言，能够制造木马，编写想要的蠕虫，同时精通算法，心理学，密码学，社会工程学，法律等，才能做到游走于刀尖之上。</p><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>最近，经常看到很多人微信，QQ号被盗，盗号者利用人际关系进行钱财诈骗，先不说安全意识的问题，账号被盗一般跟个人使用有直接关系，可能是受到某种诱惑，好奇心的左右，为什么这么说，因为80%的账号密码的泄露都是因为钓鱼网站。</p><h3 id="钓鱼网站"><a href="#钓鱼网站" class="headerlink" title="钓鱼网站"></a>钓鱼网站</h3><p>这是一个非常形象的词，通常钓鱼网站的页面做的非常逼真，能够与官方网站媲美，达到以假乱真（当然也有做的很垃圾的），一般点进去条鱼网站不做任何操作，账号不会被盗，但是当用户输入了账号，密码登陆才能领取某些奖励的时候，你所输入的账号密码就会被该网站的后台记录，他轻而易举的得到了你的账号密码，所以一般像什么中大奖了，免费送点卷领皮肤，这里面的照片是你吗？这些都是高危词！还要那些来历不明的连接，来历不明的活动，让扫二维码的，一律不要贪图小便宜！就记住一句话，天上不会掉馅饼，有也不会砸到你。嗯，没错！</p><h3 id="木马"><a href="#木马" class="headerlink" title="木马"></a>木马</h3><p>木马这个词的由来就是，经典的特洛伊木马，从内部打破防御，有些木马潜行的非常深，这个东西就像人体的病毒一样，说不定哪个时候就会爆发，对于木马的防范，只能提高警惕，不要乱下载东西，这样就能最大可能的减少被植入木马的风险，当然现在的杀毒软件都很厉害，如果一个木马能过得了毒杀，那…确实就算你倒霉！！毕竟病毒库这个东西，是定期更新的。</p><h3 id="嗅探"><a href="#嗅探" class="headerlink" title="嗅探"></a>嗅探</h3><p>这个词一般针对于局域网内，嗅探与监听通常结合使用，这类安全隐患主要作用于公共场合（危害极大），比如免费wifi，这类WiFi可以是被设置好的陷阱，通过某些工具，就能对流经路由器的数据进行抓取，比如浏览那些网站，账号密码，一些文本信息，都会被抓取到本地，说到这个有点像大数据的爬虫，其实不然，现在很多软件在安装的时候就已经被授权，可以读取用户的信息，大数据采集这些信息，就实现了针对用户的推送，比如，你百度搜个物品，打开淘宝发现淘宝给你推送了这类商品，然后再打开抖音，发现抖音也给你推类似的视频广告，我不知到这是否算是侵犯了用户的隐私，但用户的日常行为确实在互联网当中是透明的，希望未来能够遵循GDPR的规则合法采集数据。</p><h3 id="服务商的阴谋"><a href="#服务商的阴谋" class="headerlink" title="服务商的阴谋"></a>服务商的阴谋</h3><p>现在使用任何软件基本上都需要注册，注册过程其实变向丢失了你的个人信息，这些服务商可以变卖你的个人信息，有时候注册了一些litter软件，推销信息多了，广告信息也多了，卖保险，卖房电话经常打来，说出来你可能不信，推销，骚扰电话占据了我大片通话记录，我与他们之间的联系也非常密切，典型的就是拼刀刀砍价，什么就差你一刀……</p><h4 id="这个世界-想要得到什么，就要付出一些什么，很真实！"><a href="#这个世界-想要得到什么，就要付出一些什么，很真实！" class="headerlink" title="这个世界 想要得到什么，就要付出一些什么，很真实！"></a>这个世界 想要得到什么，就要付出一些什么，很真实！</h4>]]></content>
       
       
       <categories>
@@ -144,6 +77,33 @@
             <tag> 日记 </tag>
             
             <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Layui</title>
+      <link href="/2019/10/01/framework/layui/"/>
+      <url>/2019/10/01/framework/layui/</url>
+      
+        <content type="html"><![CDATA[<p>时常听老师讲做后端开发的多少都得会点前端，但是写前端的话框架又不能太丑，这时候使用框架让我们在开发上如虎添翼。</p><h3 id="layui框架概述"><a href="#layui框架概述" class="headerlink" title="layui框架概述"></a>layui框架概述</h3><p>很久以前，我为写不出优美的web界面发愁时，杨爽老哥（学长）告诉了我这个框架，俗话说的好，与贤一席话，胜读十年书，在后续的界面开发过程中，这个框架帮我解决了很多问题。<br>据我使用过后的观点，首先它比较容易上手，在操作上比bootstarp要简易，文档通俗易懂。<br>了解更多可以百度一下。</p><h3 id="框架下载"><a href="#框架下载" class="headerlink" title="框架下载"></a>框架下载</h3><p><a href="https://www.layui.com/" target="_blank" rel="noopener">layui官网</a><br>下载好了之后，将文件导入编译器<br><img src="http://img.ahdy.top/2019-09-18_203546.png" alt="演示图"></p><h3 id="如何使用layui"><a href="#如何使用layui" class="headerlink" title="如何使用layui"></a>如何使用layui</h3><p><a href="https://www.layui.com/doc/" target="_blank" rel="noopener">layui官方文档</a>  </p><p><a href="https://pan.baidu.com/s/1NxGgdZhjyX3s8iLNYrP36g#list/path=%2F" target="_blank" rel="noopener">layui视频教程</a></p><h3 id="提示"><a href="#提示" class="headerlink" title="提示"></a>提示</h3><p>在使用框架时请务必引入相应的js/css<br>在使用文档中相应的模板时请务必将外联css/js，修改为你本地地址。<br>clss需要根据特有的参数引入<br>多框架引入可能会出现索引，布局冲突。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 框架 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 框架 </tag>
+            
+            <tag> Layui </tag>
             
         </tags>
       
@@ -492,36 +452,9 @@
       
         <tags>
             
+            <tag> SQL </tag>
+            
             <tag> JBDC </tag>
-            
-            <tag> SQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL入门</title>
-      <link href="/2019/08/06/web/mysql2/"/>
-      <url>/2019/08/06/web/mysql2/</url>
-      
-        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> MySQL </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-            <tag> SQL </tag>
             
         </tags>
       
@@ -549,6 +482,33 @@
             <tag> 服务器 </tag>
             
             <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL入门</title>
+      <link href="/2019/08/06/web/mysql2/"/>
+      <url>/2019/08/06/web/mysql2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
@@ -1008,6 +968,46 @@
             <tag> 概述 </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>智慧树刷课秘籍</title>
+      <link href="/2019/05/21/class/"/>
+      <url>/2019/05/21/class/</url>
+      
+        <content type="html"><![CDATA[<p>网课可以自己刷，很多人花钱去弄，我觉得没必要，简述一下最安全的刷课方法，你看了之后，或许可以利用它赚钱，话不多说，</p><p>登陆！<br>登上之后选择你要看的一门课，然后播放，一般浏览器按f12就会调出开发者模式，建议用谷歌，这个下学期写网页也会用到，将下面一段js代码复制粘贴到开发者模式下的console窗口内<br>代码从下面var开始复制，js中只有var类型变量..话不多说<br><code>var ti = $(&quot;body&quot;);var video = $(&quot;.catalogue_ul1 li[id*=video-]&quot;);var i = 1;var v = 1;video.css(&quot;color&quot;, &quot;blue&quot;);console.log(&quot;已选取&quot; + video.length + &quot;个小节,并已用蓝色标明,请检查是否有遗漏,如有遗漏,概不负责&quot;);setTimeout(function () {    $(&#39;.speedTab15&#39;).click();    $(&#39;.volumeIcon&#39;).click();    console.log(&quot;已进行静音和1.5倍加速&quot;);}, 3000);ti.on(&quot;DOMNodeInserted&quot;, function (e) {    if (e.target.textContent == &quot;关闭&quot;) {        console.log(&quot;检测到第&quot; + i + &quot;个弹题窗口&quot;);        window.setTimeout(function () {            document.getElementById(&quot;tmDialog_iframe&quot;).contentWindow.document.getElementsByClassName(&quot;answerOption&quot;)[0].getElementsByTagName(&quot;input&quot;)[0].click();            $(&quot;.popbtn_cancel&quot;).click();            console.log(&quot;已关闭&quot;);        }, 3000);        i++;    } else if (e.target.textContent == &quot;本节视频,累计观看时间『100%』&quot;) {        console.log(&quot;检测到视频观看完成，准备跳到下一节&quot;);        $(&#39;.next_lesson_bg&#39;).find(&#39;a&#39;).trigger(&#39;click&#39;);        console.log(&quot;已跳转&quot;);        setTimeout(function () {            $(&#39;.volumeIcon&#39;).click();            $(&#39;.speedTab15&#39;).click();            console.log(&quot;已进行静音和1.5倍加速&quot;);        }, 6000);        v++;        console.log(&quot;目前播放了&quot; + v + &quot;个视频&quot;);    }});</code><br>按回车运行js代码,（代码于2019.3.24号优化更新）之后电脑就会自己刷课<br>虽然代码有静音操作，但是还是建议把声音关了，因为时不时会bug一下出声</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 刷课 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网课 </tag>
+            
+            <tag> 秘籍 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>初始文档样例</title>
+      <link href="/2019/05/20/hello-world/"/>
+      <url>/2019/05/20/hello-world/</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="title-helloworld——文档样式展示"><a href="#title-helloworld——文档样式展示" class="headerlink" title="title: helloworld——文档样式展示"></a>title: helloworld——文档样式展示</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
       
     </entry>
     

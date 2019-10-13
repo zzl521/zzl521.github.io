@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-18T12:46:52.000Z</updated>
+  <updated>2019-10-13T13:19:44.312Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,91 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Layui</title>
-    <link href="http://yoursite.com/2019/10/13/framework/layui/"/>
-    <id>http://yoursite.com/2019/10/13/framework/layui/</id>
-    <published>2019-10-13T11:47:56.847Z</published>
-    <updated>2019-09-18T12:46:52.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;时常听老师讲做后端开发的多少都得会点前端，但是写前端的话框架又不能太丑，这时候使用框架让我们在开发上如虎添翼。&lt;/p&gt;
-&lt;h3 id=&quot;layui框架概述&quot;&gt;&lt;a href=&quot;#layui框架概述&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="Layui" scheme="http://yoursite.com/tags/Layui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>helloworld——文档样式展示</title>
-    <link href="http://yoursite.com/2019/10/13/hello-world/"/>
-    <id>http://yoursite.com/2019/10/13/hello-world/</id>
-    <published>2019-10-13T11:47:56.804Z</published>
-    <updated>2019-07-22T15:03:22.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>智慧树刷课秘籍</title>
-    <link href="http://yoursite.com/2019/10/13/class/"/>
-    <id>http://yoursite.com/2019/10/13/class/</id>
-    <published>2019-10-13T11:47:56.798Z</published>
-    <updated>2019-08-23T03:19:58.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;网课可以自己刷，很多人花钱去弄，我觉得没必要，简述一下最安全的刷课方法，你看了之后，或许可以利用它赚钱，话不多说，&lt;/p&gt;
-&lt;p&gt;登陆！&lt;br&gt;登上之后选择你要看的一门课，然后播放，一般浏览器按f12就会调出开发者模式，建议用谷歌，这个下学期写网页也会用到，将下面一段js代
-        
-      
-    
-    </summary>
-    
-      <category term="刷课" scheme="http://yoursite.com/categories/%E5%88%B7%E8%AF%BE/"/>
-    
-    
-      <category term="网课" scheme="http://yoursite.com/tags/%E7%BD%91%E8%AF%BE/"/>
-    
-      <category term="秘籍" scheme="http://yoursite.com/tags/%E7%A7%98%E7%B1%8D/"/>
-    
-  </entry>
-  
-  <entry>
     <title>IP获取及定位</title>
     <link href="http://yoursite.com/2019/10/11/attark/findip/"/>
     <id>http://yoursite.com/2019/10/11/attark/findip/</id>
     <published>2019-10-11T04:30:00.000Z</published>
-    <updated>2019-10-11T04:07:52.000Z</updated>
+    <updated>2019-10-13T13:19:44.312Z</updated>
     
     <summary type="html">
     
@@ -129,7 +49,7 @@
     <link href="http://yoursite.com/2019/10/09/attark/websafty/"/>
     <id>http://yoursite.com/2019/10/09/attark/websafty/</id>
     <published>2019-10-09T04:15:00.000Z</published>
-    <updated>2019-10-09T06:31:36.000Z</updated>
+    <updated>2019-10-13T13:23:59.820Z</updated>
     
     <summary type="html">
     
@@ -177,6 +97,35 @@
       <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
     
       <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Layui</title>
+    <link href="http://yoursite.com/2019/10/01/framework/layui/"/>
+    <id>http://yoursite.com/2019/10/01/framework/layui/</id>
+    <published>2019-10-01T04:15:00.000Z</published>
+    <updated>2019-10-13T13:24:55.756Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;时常听老师讲做后端开发的多少都得会点前端，但是写前端的话框架又不能太丑，这时候使用框架让我们在开发上如虎添翼。&lt;/p&gt;
+&lt;h3 id=&quot;layui框架概述&quot;&gt;&lt;a href=&quot;#layui框架概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Layui" scheme="http://yoursite.com/tags/Layui/"/>
     
   </entry>
   
@@ -541,9 +490,37 @@
       <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
     
     
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
       <category term="JBDC" scheme="http://yoursite.com/tags/JBDC/"/>
     
-      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+  </entry>
+  
+  <entry>
+    <title>Tomcat与服务器</title>
+    <link href="http://yoursite.com/2019/08/06/web/tomcat/"/>
+    <id>http://yoursite.com/2019/08/06/web/tomcat/</id>
+    <published>2019-08-06T08:15:00.000Z</published>
+    <updated>2019-08-07T03:13:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Tomcat端口配置&quot;&gt;&lt;a href=&quot;#Tomcat端口配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
+    
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
     
   </entry>
   
@@ -572,6 +549,34 @@
       <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
       <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL安装</title>
+    <link href="http://yoursite.com/2019/08/01/web/mysql/"/>
+    <id>http://yoursite.com/2019/08/01/web/mysql/</id>
+    <published>2019-08-01T08:25:00.000Z</published>
+    <updated>2019-08-06T08:22:12.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;MySQL是什么，MySQL是目前世界上最常用的关系型数据库，数据库啊，顾名思义，它就是存放数据的地方，这些数据，可以是你的一些注册信息，年龄，邮箱，账号密码，比如你要登陆某个平台or
+        
+      
+    
+    </summary>
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
+    
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
   </entry>
   
