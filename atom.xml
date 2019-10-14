@@ -518,9 +518,9 @@
       <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
     
     
-      <category term="JBDC" scheme="http://yoursite.com/tags/JBDC/"/>
-    
       <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+      <category term="JBDC" scheme="http://yoursite.com/tags/JBDC/"/>
     
   </entry>
   
