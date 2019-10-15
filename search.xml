@@ -5,24 +5,24 @@
     
     <entry>
       <title>安卓安装</title>
-      <link href="/2019/10/14/framework/asset/"/>
-      <url>/2019/10/14/framework/asset/</url>
+      <link href="/2019/10/15/framework/asset/"/>
+      <url>/2019/10/15/framework/asset/</url>
       
         <content type="html"><![CDATA[<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>这个编译器，一开始装比较困难，但是当你经历失败重装几次系统之后，那么我觉得你应该对AS的安装轻车熟路，比如我一开始安装，电脑就半身不遂了，一定要非常小心的装！不要乱选，当然，如果你运气很好，当我没讲。</p><h3 id="图文教程"><a href="#图文教程" class="headerlink" title="图文教程"></a>图文教程</h3><p>安装包，我也没有，官网下，一定要耐心，安装过程也如此，没有演示到的细节就默认选择。<br>我相信你已经下载好了安装包<br><img src="http://img.ahdy.top/2019-10-14_192723.png" alt="AS-3.5版本为例"><br><img src="http://img.ahdy.top/2019-10-14_192747.png" alt><br><img src="http://img.ahdy.top/2019-10-14_192851.png" alt><br><img src="http://img.ahdy.top/2019-10-14_192859.png" alt><br><img src="http://img.ahdy.top/2019-10-14_192946.png" alt><br><img src="http://img.ahdy.top/2019-10-14_193044.png" alt><br><img src="http://img.ahdy.top/2019-10-14_193105.png" alt><br><img src="http://img.ahdy.top/2019-10-14_193155.png" alt><br><img src="http://img.ahdy.top/2019-10-14_193252.png" alt><br><img src="http://img.ahdy.top/2019-10-14_193357.png" alt><br><img src="http://img.ahdy.top/2019-10-14_193408.png" alt><br><img src="http://img.ahdy.top/2019-10-14_193432.png" alt><br><img src="http://img.ahdy.top/2019-10-14_194441.png" alt><br><img src="http://img.ahdy.top/2019-10-14_194455.png" alt><br><img src="http://img.ahdy.top/2019-10-14_194615.png" alt><br><img src="http://img.ahdy.top/2019-10-14_195914.png" alt="此界面等待所有缓冲完成！"></p><h3 id="虚拟机安装"><a href="#虚拟机安装" class="headerlink" title="虚拟机安装"></a>虚拟机安装</h3><p>手机配置可以根据需求设置<br><img src="http://img.ahdy.top/2019-10-14_201340.png" alt="选择右上角按钮"><br><img src="http://img.ahdy.top/2019-10-14_201416.png" alt><br><img src="http://img.ahdy.top/2019-10-14_201519.png" alt="这里我选了个占屏比高的"><br><img src="http://img.ahdy.top/2019-10-14_201557.png" alt="选了安卓10.0系统"><br><img src="http://img.ahdy.top/2019-10-14_201623.png" alt="等待下载"><br><img src="http://img.ahdy.top/2019-10-14_203621.png" alt="完成"><br><img src="http://img.ahdy.top/2019-10-14_203734.png" alt="finsh"><br><img src="http://img.ahdy.top/2019-10-14_204142.png" alt="怎么样是不是很好看"></p>]]></content>
       
       
       <categories>
           
-          <category> GitHub </category>
+          <category> AS </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> GitHub </tag>
-            
             <tag> 环境 </tag>
+            
+            <tag> AS </tag>
             
         </tags>
       
@@ -32,8 +32,8 @@
     
     <entry>
       <title>GitHub仓库</title>
-      <link href="/2019/10/13/framework/hexogithub/"/>
-      <url>/2019/10/13/framework/hexogithub/</url>
+      <link href="/2019/10/14/framework/hexogithub/"/>
+      <url>/2019/10/14/framework/hexogithub/</url>
       
         <content type="html"><![CDATA[<p>不知道怎么了，前段时间github仓库突然传不上文件了，于是我决定写个文档记录一下。<br>写博客，如果想免费托管你的网站，就要用到github仓库，这个仓库非常特殊，它解析能掉你项目内的网页文件，总而言之，它相当于一个免费的服务器，如果想搭建一个博客，就要去选一个博客框架进行套用，然后下载你喜欢的博客主题到本地，配置好之后就能上传到GitHub仓库了，<br>关于博客框架的使用，建议去它们的官方查看文档进行学习</p><h3 id="hexo框架"><a href="#hexo框架" class="headerlink" title="hexo框架"></a>hexo框架</h3><p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a></p><h3 id="ssh创建"><a href="#ssh创建" class="headerlink" title="ssh创建"></a>ssh创建</h3><p><a href="https://blog.csdn.net/u013778905/article/details/83501204" target="_blank" rel="noopener">CSDN</a></p>]]></content>
       
@@ -47,36 +47,9 @@
       
         <tags>
             
+            <tag> 环境 </tag>
+            
             <tag> GitHub </tag>
-            
-            <tag> 环境 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JAVA开发利器IDEA</title>
-      <link href="/2019/10/13/web/javatool/"/>
-      <url>/2019/10/13/web/javatool/</url>
-      
-        <content type="html"><![CDATA[<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>工欲善其事必先~~~算了，其实这就是个编译器，不过功能非常强大，jetbre…家的（单词不会拼），见谅！在使用安装之前，你的电脑上需要安装java1.8.0以上的jdk，并且确保在cmd下，Java，javac，java -version等命令正常显示，因为…嗯，懂不懂无所谓，会敲代码就行。</p><h3 id="安装步骤截图"><a href="#安装步骤截图" class="headerlink" title="安装步骤截图"></a>安装步骤截图</h3><p>首先，你需要百度一下，搜IDEA就能找到它家的官网，然后把这个编译器安装包下载下来，X64就是64位操作系统装的，X86就是32位系统装的，别装错了！<br><img src="http://img.ahdy.top/2019-10-12_224104.png" alt><br><img src="http://img.ahdy.top/2019-10-12_224233.gif" alt><br><img src="http://img.ahdy.top/2019-10-12_224526.gif" alt><br><img src="http://img.ahdy.top/2019-10-12_224538.gif" alt><br><img src="http://img.ahdy.top/2019-10-12_224547.gif" alt><br><img src="http://img.ahdy.top/2019-10-12_224910.gif" alt><br><img src="http://img.ahdy.top/2019-10-12_224933.gif" alt><br>选择跳过<br><img src="http://img.ahdy.top/2019-10-12_224952.gif" alt><br>dont send 不发送<br><img src="http://img.ahdy.top/2019-10-12_225033.gif" alt><br><img src="http://img.ahdy.top/2019-10-12_225225.gif" alt><br>这边它应该是说一些插件跟工具，我也没用过不会用 所以默认就好<br><img src="http://img.ahdy.top/2019-10-12_225334.png" alt><br><img src="http://img.ahdy.top/2019-10-12_225455.png" alt><br>这软件其实要钱的，而且好贵正版一年四千多，不过你百度一下就会找到激活码可以用，而且这个软件是有破解方法的。<br><img src="http://img.ahdy.top/2019-10-12_225531.png" alt><br>安装好了以后就是这个样子<br><img src="http://img.ahdy.top/2019-10-12_230301.png" alt><br>如果不会创建Java项目可以点下面链接<br><a href="https://jingyan.baidu.com/article/bad08e1ecafcdf09c9512179.html" target="_blank" rel="noopener">百度经验</a></p><h3 id="快速创建web项目"><a href="#快速创建web项目" class="headerlink" title="快速创建web项目"></a>快速创建web项目</h3><p>当你用了一段时间后会发现，这个编译器大有学问，比起eclipse要爽很多的感觉。<br><img src="http://img.ahdy.top/2019-10-13_221521.png" alt="file-&gt;new project"><br><img src="http://img.ahdy.top/2019-10-13_221656.png" alt><br>这里你需要加上tomcat服务器，勾选webapplication，下一步<br><img src="http://img.ahdy.top/2019-10-13_221736.png" alt><br><img src="http://img.ahdy.top/2019-10-13_222001.png" alt></p><h4 id="web项目完成"><a href="#web项目完成" class="headerlink" title="web项目完成"></a>web项目完成</h4>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编译器 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 环境 </tag>
-            
-            <tag> IDEA </tag>
             
         </tags>
       
@@ -560,34 +533,7 @@
       
         <tags>
             
-            <tag> SQL </tag>
-            
             <tag> JBDC </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL入门</title>
-      <link href="/2019/08/06/web/mysql2/"/>
-      <url>/2019/08/06/web/mysql2/</url>
-      
-        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> MySQL </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
             
             <tag> SQL </tag>
             
@@ -617,6 +563,33 @@
             <tag> 服务器 </tag>
             
             <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL入门</title>
+      <link href="/2019/08/06/web/mysql2/"/>
+      <url>/2019/08/06/web/mysql2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
@@ -1046,9 +1019,9 @@
       
         <tags>
             
-            <tag> 环境 </tag>
-            
             <tag> Kali </tag>
+            
+            <tag> 环境 </tag>
             
         </tags>
       
