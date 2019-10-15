@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-13T14:23:25.981Z</updated>
+  <updated>2019-10-13T14:35:07.757Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/10/13/java/javatool/"/>
     <id>http://yoursite.com/2019/10/13/java/javatool/</id>
     <published>2019-10-13T14:40:00.000Z</published>
-    <updated>2019-10-13T14:23:25.981Z</updated>
+    <updated>2019-10-13T14:35:07.757Z</updated>
     
     <summary type="html">
     
@@ -525,34 +525,6 @@
   </entry>
   
   <entry>
-    <title>Tomcat与服务器</title>
-    <link href="http://yoursite.com/2019/08/06/web/tomcat/"/>
-    <id>http://yoursite.com/2019/08/06/web/tomcat/</id>
-    <published>2019-08-06T08:15:00.000Z</published>
-    <updated>2019-08-07T03:13:36.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Tomcat端口配置&quot;&gt;&lt;a href=&quot;#Tomcat端口配置&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
-    
-    
-      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MySQL入门</title>
     <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
     <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
@@ -577,6 +549,34 @@
       <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
       <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tomcat与服务器</title>
+    <link href="http://yoursite.com/2019/08/06/web/tomcat/"/>
+    <id>http://yoursite.com/2019/08/06/web/tomcat/</id>
+    <published>2019-08-06T08:15:00.000Z</published>
+    <updated>2019-08-07T03:13:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Tomcat端口配置&quot;&gt;&lt;a href=&quot;#Tomcat端口配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
+    
+    
+      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
