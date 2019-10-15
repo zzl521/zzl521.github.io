@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-13T14:35:07.757Z</updated>
+  <updated>2019-10-15T01:53:59.413Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,90 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓安装</title>
+    <link href="http://yoursite.com/2019/10/14/framework/asset/"/>
+    <id>http://yoursite.com/2019/10/14/framework/asset/</id>
+    <published>2019-10-14T14:40:00.000Z</published>
+    <updated>2019-10-15T01:53:59.413Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;注意事项&quot;&gt;&lt;a href=&quot;#注意事项&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="GitHub" scheme="http://yoursite.com/categories/GitHub/"/>
+    
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub仓库</title>
+    <link href="http://yoursite.com/2019/10/13/framework/hexogithub/"/>
+    <id>http://yoursite.com/2019/10/13/framework/hexogithub/</id>
+    <published>2019-10-13T14:40:00.000Z</published>
+    <updated>2019-10-15T02:04:34.450Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;不知道怎么了，前段时间github仓库突然传不上文件了，于是我决定写个文档记录一下。&lt;br&gt;写博客，如果想免费托管你的网站，就要用到github仓库，这个仓库非常特殊，它解析能掉你项目内的网页文件，总而言之，它相当于一个免费的服务器，如果想搭建一个博客，就要去选一个博客框架
+        
+      
+    
+    </summary>
+    
+      <category term="GitHub" scheme="http://yoursite.com/categories/GitHub/"/>
+    
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JAVA开发利器IDEA</title>
+    <link href="http://yoursite.com/2019/10/13/web/javatool/"/>
+    <id>http://yoursite.com/2019/10/13/web/javatool/</id>
+    <published>2019-10-13T14:40:00.000Z</published>
+    <updated>2019-10-13T14:35:07.757Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="编译器" scheme="http://yoursite.com/categories/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
+    
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+  </entry>
   
   <entry>
     <title>JAVA开发利器IDEA</title>
@@ -491,90 +575,6 @@
     
     
       <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
-    
-      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL进阶</title>
-    <link href="http://yoursite.com/2019/08/12/web/mysql3/"/>
-    <id>http://yoursite.com/2019/08/12/web/mysql3/</id>
-    <published>2019-08-12T06:55:00.000Z</published>
-    <updated>2019-08-12T07:42:40.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;什么是JBDC&quot;&gt;&lt;a href=&quot;#什么是JBDC&quot; class=&quot;headerlink&quot; title=&quot;什么是JBDC&quot;&gt;&lt;/a&gt;什么是JBDC&lt;/h3&gt;&lt;p&gt;1、Java Data
-        
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
-    
-    
-      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
-    
-      <category term="JBDC" scheme="http://yoursite.com/tags/JBDC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL入门</title>
-    <link href="http://yoursite.com/2019/08/06/web/mysql2/"/>
-    <id>http://yoursite.com/2019/08/06/web/mysql2/</id>
-    <published>2019-08-06T08:15:00.000Z</published>
-    <updated>2019-08-06T08:19:10.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;MySQL的数据库创建、删除&quot;&gt;&lt;a href=&quot;#MySQL的数据库创建、删除&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="MySQL" scheme="http://yoursite.com/categories/MySQL/"/>
-    
-    
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
-    
-      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tomcat与服务器</title>
-    <link href="http://yoursite.com/2019/08/06/web/tomcat/"/>
-    <id>http://yoursite.com/2019/08/06/web/tomcat/</id>
-    <published>2019-08-06T08:15:00.000Z</published>
-    <updated>2019-08-07T03:13:36.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Tomcat端口配置&quot;&gt;&lt;a href=&quot;#Tomcat端口配置&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Tomcat" scheme="http://yoursite.com/categories/Tomcat/"/>
-    
-    
-      <category term="Tomcat" scheme="http://yoursite.com/tags/Tomcat/"/>
     
       <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
