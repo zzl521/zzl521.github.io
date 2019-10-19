@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>系统维护工具</title>
+      <link href="/2019/10/19/framework/protectwin/"/>
+      <url>/2019/10/19/framework/protectwin/</url>
+      
+        <content type="html"><![CDATA[<h3 id="软媒魔方"><a href="#软媒魔方" class="headerlink" title="软媒魔方"></a>软媒魔方</h3><p><a href="https://mofang.ruanmei.com/" target="_blank" rel="noopener">官方网站</a><br>这些工具主要是针对维护系统的，虽然在16年就停止了更新，但其实用性与影响意义深远！  </p><p>这篇文档算是划水吧，我发现我现在也变得油条了，写文档很少打字，以前，写一篇文档准备很久的时间!</p><h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>下载绿色完整版，为什么下这个版本因为它免安装，在众多.exe文件的底部，有一个读我.exe文件。这个文件很好了解释了每个.exe程序的功能！<br><img src="http://img.ahdy.top/2019-10-19_150045.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+            <tag> 运维 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>破解电脑开机密码</title>
       <link href="/2019/10/19/framework/winpassword/"/>
       <url>/2019/10/19/framework/winpassword/</url>
@@ -74,9 +101,9 @@
       
         <tags>
             
-            <tag> 环境 </tag>
-            
             <tag> AS </tag>
+            
+            <tag> 环境 </tag>
             
         </tags>
       
@@ -101,9 +128,9 @@
       
         <tags>
             
-            <tag> GitHub </tag>
-            
             <tag> 环境 </tag>
+            
+            <tag> GitHub </tag>
             
         </tags>
       
@@ -587,9 +614,9 @@
       
         <tags>
             
-            <tag> SQL </tag>
-            
             <tag> JBDC </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
