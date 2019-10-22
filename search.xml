@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JSP</title>
+      <link href="/2019/10/22/framework/jspuplogin/"/>
+      <url>/2019/10/22/framework/jspuplogin/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Servlet特性"><a href="#Servlet特性" class="headerlink" title="Servlet特性"></a>Servlet特性</h3><p>在Servlet3.0之后，更新了文件上传相关的API。<br>不用导入jar包就能实现文件上传功能。</p><h3 id="架构与原理"><a href="#架构与原理" class="headerlink" title="架构与原理"></a>架构与原理</h3><p>文件上传，自然少不了，前后端的结合，前端需要提供给用户选择上传文件，后者数据传输到servlet，Servlet主要利用到了两个流传输API<br><a href="https://www.jianshu.com/p/e5bc7ea5f948" target="_blank" rel="noopener">API地址</a></p><h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="[](https://www.jianshu.com/p/e5bc7ea5f948">百度网盘</a>)<br><a href="https://bbs.csdn.net/topics/390772658" target="_blank" rel="noopener">地址空指针异常问题</a><br>简单封装实现了文件的上传下载功能。</p><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>没有UI界面，原生态的，仅仅实现了功能，bug未知。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> fileLogin </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> servlet </tag>
+            
+            <tag> 文件上传 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>系统维护工具</title>
       <link href="/2019/10/19/framework/protectwin/"/>
       <url>/2019/10/19/framework/protectwin/</url>
@@ -614,9 +641,9 @@
       
         <tags>
             
-            <tag> JBDC </tag>
-            
             <tag> SQL </tag>
+            
+            <tag> JBDC </tag>
             
         </tags>
       
@@ -641,9 +668,9 @@
       
         <tags>
             
-            <tag> SQL </tag>
-            
             <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       

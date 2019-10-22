@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-19T07:05:43.798Z</updated>
+  <updated>2019-10-22T12:24:51.869Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSP</title>
+    <link href="http://yoursite.com/2019/10/22/framework/jspuplogin/"/>
+    <id>http://yoursite.com/2019/10/22/framework/jspuplogin/</id>
+    <published>2019-10-22T11:59:00.000Z</published>
+    <updated>2019-10-22T12:24:51.869Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Servlet特性&quot;&gt;&lt;a href=&quot;#Servlet特性&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="fileLogin" scheme="http://yoursite.com/categories/fileLogin/"/>
+    
+    
+      <category term="servlet" scheme="http://yoursite.com/tags/servlet/"/>
+    
+      <category term="文件上传" scheme="http://yoursite.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>系统维护工具</title>
@@ -548,34 +576,6 @@
       <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
     
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML快速入门</title>
-    <link href="http://yoursite.com/2019/08/21/web/html/"/>
-    <id>http://yoursite.com/2019/08/21/web/html/</id>
-    <published>2019-08-21T09:40:00.000Z</published>
-    <updated>2019-08-21T09:32:56.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;什么是HTML5语言&quot;&gt;&lt;a href=&quot;#什么是HTML5语言&quot; class=&quot;headerlink&quot; title=&quot;什么是HTML5语言&quot;&gt;&lt;/a&gt;什么是HTML5语言&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;   
-        
-      
-    
-    </summary>
-    
-      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
-    
-    
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
   </entry>
   
