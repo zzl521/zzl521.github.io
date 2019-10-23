@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-22T12:24:51.869Z</updated>
+  <updated>2019-10-23T08:55:22.425Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA创建Maven项目</title>
+    <link href="http://yoursite.com/2019/10/23/framework/maven/"/>
+    <id>http://yoursite.com/2019/10/23/framework/maven/</id>
+    <published>2019-10-23T09:59:00.000Z</published>
+    <updated>2019-10-23T08:55:22.425Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Maven简述&quot;&gt;&lt;a href=&quot;#Maven简述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Maven" scheme="http://yoursite.com/categories/Maven/"/>
+    
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+  </entry>
   
   <entry>
     <title>JSP</title>
@@ -547,35 +575,6 @@
       <category term="Url" scheme="http://yoursite.com/tags/Url/"/>
     
       <category term="外链" scheme="http://yoursite.com/tags/%E5%A4%96%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS快速入门</title>
-    <link href="http://yoursite.com/2019/08/22/web/html2/"/>
-    <id>http://yoursite.com/2019/08/22/web/html2/</id>
-    <published>2019-08-22T14:40:00.000Z</published>
-    <updated>2019-08-23T03:26:20.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;CSS简介&quot;&gt;&lt;a href=&quot;#CSS简介&quot; class=&quot;headerlink&quot; title=&quot;CSS简介&quot;&gt;&lt;/a&gt;CSS简介&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;        CSS 指层叠样式表(Cascading Style sheets)
-      
-        
-      
-    
-    </summary>
-    
-      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
-    
-    
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
     
   </entry>
   
