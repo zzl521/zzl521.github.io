@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-05T15:38:55.972Z</updated>
+  <updated>2019-11-05T15:59:41.818Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA激活码</title>
+    <link href="http://yoursite.com/2019/11/06/framework/ideacoad/"/>
+    <id>http://yoursite.com/2019/11/06/framework/ideacoad/</id>
+    <published>2019-11-05T16:59:00.000Z</published>
+    <updated>2019-11-05T15:59:41.818Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;http://idea.medeming.com/jetbrains/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
+    
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+      <category term="激活码" scheme="http://yoursite.com/tags/%E6%BF%80%E6%B4%BB%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>C3p0数据库连接池</title>
@@ -535,35 +563,6 @@
         
         
           &lt;h3 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h3&gt;&lt;h4 id=&quot;什么是正则表达式？&quot;&gt;&lt;a href=&quot;#什么是正则表达式？&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
-    
-    
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS快速入门</title>
-    <link href="http://yoursite.com/2019/08/28/web/html3/"/>
-    <id>http://yoursite.com/2019/08/28/web/html3/</id>
-    <published>2019-08-28T03:25:00.000Z</published>
-    <updated>2019-09-02T02:20:36.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;JS变量&quot;&gt;&lt;a href=&quot;#JS变量&quot; class=&quot;headerlink&quot; title=&quot;JS变量&quot;&gt;&lt;/a&gt;JS变量&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;在js当中没有特殊的数据类型声明方式，所有类型的数据都以var命名  
-例如：var a = 0； 
         
       
     
