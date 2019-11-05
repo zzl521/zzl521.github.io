@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>C3p0数据库连接池</title>
+      <link href="/2019/11/05/framework/c3p0/"/>
+      <url>/2019/11/05/framework/c3p0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><p>如果与数据库进行交互，必须导入相应的数据库驱动，以为maven为例子，需要在pom.xml当中引入相关jar包的下载地址</p><pre class=" language-&lt;dependencies&gt;"><code class="language-&lt;dependencies&gt;">  <dependency><groupId>junit</groupId><artifactId>junit</artifactId> <version>4.11</version> <scope>test</scope> </dependency> <dependency>   <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> <version>5.1.25</version>   </dependency>  </dependencies></code></pre><h3 id="jbdc相关配置"><a href="#jbdc相关配置" class="headerlink" title="jbdc相关配置"></a>jbdc相关配置</h3><p>jar包引入相关MySQL，最好用5.1版本以上的。<br><code>`</code>import java.io.InputStream;<br>import java.sql.*;<br>import java.util.Properties;<br>import java.util.Scanner;</p><p>public class test {</p><p>//    static PreparedStatement pstmt=null;<br>//    static Connection dbConn =null;<br>   static ResultSet rs=null;<br>//<br>//    static InputStream fis=null;<br>//    static Properties pp=null;<br>//    static String driver=””;<br>//    static String url=””;<br>//    static String username=””;<br>//    static String password=””;</p><pre><code>public static void testConnect(String sql) throws Exception{    // 注册MySQL驱动 (可以省略这一步)    Class.forName(&quot;com.mysql.jdbc.Driver&quot;);    // 连接MySQL服务器    String username= &quot;root&quot;;    String password = &quot;&quot;;    String connectionUrl = &quot;jdbc:mysql://127.0.0.1:3306/java?useUnicode=true&amp;characterEncoding=UTF-8&quot;;    Connection conn = DriverManager.getConnection(connectionUrl, username, password);    System.out.println(&quot;连接成功!&quot;);    Statement statement =conn.createStatement();    rs=statement.executeQuery(sql);    while (rs.next())    {        String name=rs.getString(&quot;name&quot;);        String wpassword =rs.getString(&quot;password&quot;);        System.out.println(name+&quot;\t&quot;+wpassword);        //由这啥接口带回来的一个对象，对象内包含对数据库的查询数据    }    conn.close();}public void  findbyid(){}public static void main(String[] args) throws Exception {    Scanner src =new Scanner(System.in);    System.out.println(&quot;尊敬的超级管理员,欢迎您\n请输入id进行查询&quot;);    int id =src.nextInt();    String sql=&quot;select * from user where id=&quot;+id;    System.out.println(sql);    try {        testConnect(sql);    } finally {        System.out.println(&quot;关闭连接!&quot;);    }}</code></pre><p>}<br><code>`</code></p><h4 id="长连接，与短连接"><a href="#长连接，与短连接" class="headerlink" title="长连接，与短连接"></a>长连接，与短连接</h4><p>短连接是指，使用完一次SQL语句后就关闭对数据库的连接，该方法操作简单，缺点效率不够高<br>长连接顾名思义与短连接相反，它是指在连接成功时候，使用多条SQL语句，难点就在于什么时候断开连接，开发维护有一定难度。</p><h4 id="普通查询和预处理查询"><a href="#普通查询和预处理查询" class="headerlink" title="普通查询和预处理查询"></a>普通查询和预处理查询</h4><p>这两个查询完全取决于两个不同的接口<br>1.Statement//普通查询<br>2.preparedstatement//预处理查询<br>使用第二种查询是目前主流，它具有一定防御SQL注入的功能。</p><h3 id="C3p0连接池的使用"><a href="#C3p0连接池的使用" class="headerlink" title="C3p0连接池的使用"></a>C3p0连接池的使用</h3><p>该项目源码未使用maven，如果你使用了maven，可以百度找到相关jar包的仓库地址引入pom.xml配置文件当中。与其效果一样。<br>1.使用连接池必须添加相关的jar包，这种包可以称它为第三方框架<br><a href="https://share.weiyun.com/5KTiFSF" target="_blank" rel="noopener">jar包下载</a><br>2.添加c3p0的配置文件，该文件名必须以c3p0-config.xml命名<br><a href="https://share.weiyun.com/5WheqVp" target="_blank" rel="noopener">配置文件下载</a><br>该文件建议放在src目录下<br>3.项目源码<br><a href="https://pan.baidu.com/s/1ucYrlp6wB8UDBWOBwKGfFQ" target="_blank" rel="noopener">下载</a><br><img src="http://img.ahdy.top/2019-11-05_231600.png" alt><br>这里简单配置好了一个，数据库自己建吧！记得修改xml里数据库的相关参数。如果导入项目报红，或者出现红叉一般是jre/jdk不兼容导致的，删除项目当中的jdk，添加你电脑本地的jar。<br>4.为什么使用连接池？<br>因为连接池能优化连接次数，减少资源消耗，大大提高访问数据库的时间效率，目前druid被称为功能性最强的连接池，它是阿里，支付宝专用连接池，提供了服务监控，线程，防注入等功能。学到后面连接池会搭配一些优秀框架来集成使用，这就是大佬口中常说的框架整合。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C3p0 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 连接池 </tag>
+            
+            <tag> C3p0 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDEA创建Maven项目</title>
       <link href="/2019/10/23/framework/maven/"/>
       <url>/2019/10/23/framework/maven/</url>
@@ -74,9 +101,9 @@
       
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> windows </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
       
@@ -101,9 +128,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> 解密 </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -679,6 +706,33 @@
     
     
     <entry>
+      <title>Tomcat与服务器</title>
+      <link href="/2019/08/06/web/tomcat/"/>
+      <url>/2019/08/06/web/tomcat/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tomcat </tag>
+            
+            <tag> 服务器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL入门</title>
       <link href="/2019/08/06/web/mysql2/"/>
       <url>/2019/08/06/web/mysql2/</url>
@@ -698,33 +752,6 @@
             <tag> MySQL </tag>
             
             <tag> SQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Tomcat与服务器</title>
-      <link href="/2019/08/06/web/tomcat/"/>
-      <url>/2019/08/06/web/tomcat/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tomcat </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 服务器 </tag>
-            
-            <tag> Tomcat </tag>
             
         </tags>
       

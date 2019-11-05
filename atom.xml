@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-23T08:55:22.425Z</updated>
+  <updated>2019-11-05T15:17:53.186Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C3p0数据库连接池</title>
+    <link href="http://yoursite.com/2019/11/05/framework/c3p0/"/>
+    <id>http://yoursite.com/2019/11/05/framework/c3p0/</id>
+    <published>2019-11-05T15:59:00.000Z</published>
+    <updated>2019-11-05T15:17:53.186Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;连接数据库&quot;&gt;&lt;a href=&quot;#连接数据库&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="C3p0" scheme="http://yoursite.com/categories/C3p0/"/>
+    
+    
+      <category term="连接池" scheme="http://yoursite.com/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/"/>
+    
+      <category term="C3p0" scheme="http://yoursite.com/tags/C3p0/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA创建Maven项目</title>
@@ -94,9 +122,9 @@
       <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="运维" scheme="http://yoursite.com/tags/%E8%BF%90%E7%BB%B4/"/>
-    
       <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
+    
+      <category term="运维" scheme="http://yoursite.com/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -122,9 +150,9 @@
       <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
-    
       <category term="解密" scheme="http://yoursite.com/tags/%E8%A7%A3%E5%AF%86/"/>
+    
+      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
     
   </entry>
   
@@ -547,34 +575,6 @@
       <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
     
       <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网易音乐外链获取</title>
-    <link href="http://yoursite.com/2019/08/23/link/"/>
-    <id>http://yoursite.com/2019/08/23/link/</id>
-    <published>2019-08-23T12:30:00.000Z</published>
-    <updated>2019-08-23T12:37:42.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;外链简述&quot;&gt;&lt;a href=&quot;#外链简述&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Url" scheme="http://yoursite.com/categories/Url/"/>
-    
-    
-      <category term="Url" scheme="http://yoursite.com/tags/Url/"/>
-    
-      <category term="外链" scheme="http://yoursite.com/tags/%E5%A4%96%E9%93%BE/"/>
     
   </entry>
   
