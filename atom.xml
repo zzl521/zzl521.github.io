@@ -178,9 +178,9 @@
       <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
-    
       <category term="运维" scheme="http://yoursite.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
     
   </entry>
   
@@ -234,9 +234,9 @@
       <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="MAC" scheme="http://yoursite.com/tags/MAC/"/>
-    
       <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
+    
+      <category term="MAC" scheme="http://yoursite.com/tags/MAC/"/>
     
   </entry>
   
