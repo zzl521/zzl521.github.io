@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>百度地图API</title>
+      <link href="/2019/11/12/framework/baidumap/"/>
+      <url>/2019/11/12/framework/baidumap/</url>
+      
+        <content type="html"><![CDATA[<h3 id="地图API"><a href="#地图API" class="headerlink" title="地图API"></a>地图API</h3><p>其实没必要解释太多了，就是地图，只不过是静态那种，因为没有GPS的支持，所以你懂的，为啥用百度，因为它文档的字我能看懂，那为啥不用谷歌，那肯定是因为谷歌上面都是英文，我看不懂而且注册个啥还要外网贼卡！</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>我还是喜欢用简短的话来表达，使用百度地图API，需要有百度账号，然后进到这个<a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">百度地图</a>官网，登录上去。<br><img src="http://img.ahdy.top/2019-11-12_213627.png" alt><br>这我只用到了Javascript API，因为别的我也不会…<br>然后你看API，它应该会让你去认证一下子，认证好了就就到控制台创建一个应用。<br><img src="http://img.ahdy.top/2019-11-12_213918.png" alt><br>在白名单里，打个*号就行。<br><img src="http://img.ahdy.top/2019-11-12_214732.png" alt><br>创建好了之后可以参考。<br><a href="http://lbsyun.baidu.com/jsdemo.htm#i8_2" target="_blank" rel="noopener">开放平台</a></p><h4 id="这里生成的API-KEY需要添加到你的DEMO当中，I-believe-you-make-sense。"><a href="#这里生成的API-KEY需要添加到你的DEMO当中，I-believe-you-make-sense。" class="headerlink" title="这里生成的API KEY需要添加到你的DEMO当中，I believe you make sense。"></a>这里生成的API KEY需要添加到你的DEMO当中，I believe you make sense。</h4><h3 id="成品"><a href="#成品" class="headerlink" title="成品"></a>成品</h3><h4 id="指定地点显示"><a href="#指定地点显示" class="headerlink" title="指定地点显示"></a>指定地点显示</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:&quot;微软雅黑&quot;;}&lt;/style&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;//api.map.baidu.com/api?v=2.0&amp;ak=VdlHAppjcIXtyeSX75HqYSphoGuoGjcY&quot;&gt;&lt;/script&gt;&lt;title&gt;地图展示&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;allmap&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&lt;script type=&quot;text/javascript&quot;&gt;// 百度地图API功能var map = new BMap.Map(&quot;allmap&quot;);    // 创建Map实例map.centerAndZoom(new BMap.Point(117.35, 32.95), 11);  // 初始化地图,设置中心点坐标和地图级别//添加地图类型控件map.addControl(new BMap.MapTypeControl({    mapTypes:[        BMAP_NORMAL_MAP,        BMAP_HYBRID_MAP    ]}));      map.setCurrentCity(&quot;蚌埠&quot;);          // 设置地图显示的城市 此项是必须设置的map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放</code></pre><h4 id="IP定位显示"><a href="#IP定位显示" class="headerlink" title="IP定位显示"></a>IP定位显示</h4><pre><code>这里我加了一个搜索可以根据自己需求&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1.0, user-scalable=no&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;body, html{width: 100%;height: 100%;margin:0;font-family:&quot;微软雅黑&quot;;}#allmap {height: 500px;width:100%;overflow: hidden;}#result {width:100%;font-size:12px;}dl,dt,dd,ul,li{    margin:0;    padding:0;    list-style:none;}dt{    font-size:14px;    font-family:&quot;微软雅黑&quot;;    font-weight:bold;    border-bottom:1px dotted #000;    padding:5px 0 5px 5px;    margin:5px 0;}dd{    padding:5px 0 0 5px;}li{    line-height:28px;}&lt;/style&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/api?v=2.0&amp;ak=VdlHAppjcIXtyeSX75HqYSphoGuoGjcY&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css&quot; /&gt;&lt;title&gt;带检索功能的信息窗口&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;allmap&quot;&gt;    &lt;/div&gt;&lt;div id=&quot;result&quot;&gt;    &lt;input type=&quot;button&quot; value=&quot;默认样式&quot; onclick=&quot;openInfoWindow2()&quot;/&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot;&gt;// 百度地图API功能var map = new BMap.Map(&quot;allmap&quot;);var point = new BMap.Point(116.331398,39.897445);map.centerAndZoom(point,12);function myFun(result){    var cityName = result.name;    map.setCenter(cityName);    alert(&quot;当前定位城市:&quot;+cityName);}var myCity = new BMap.LocalCity();myCity.get(myFun);&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;// 百度地图API功能var map = new BMap.Map(&#39;allmap&#39;);var poi = new BMap.Point(116.307852,40.057031);map.centerAndZoom(poi, 16);map.enableScrollWheelZoom();var content = &#39;&lt;div style=&quot;margin:0;line-height:20px;padding:2px;&quot;&gt;&#39; +                &#39;&lt;img src=&quot;../img/baidu.jpg&quot; alt=&quot;&quot; style=&quot;float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;&quot;/&gt;&#39; +                &#39;地址：北京市海淀区上地十街10号&lt;br/&gt;电话：(010)59928888&lt;br/&gt;简介：百度大厦位于北京市海淀区西二旗地铁站附近，为百度公司综合研发及办公总部。&#39; +              &#39;&lt;/div&gt;&#39;;//创建检索信息窗口对象var searchInfoWindow = null;searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {        title  : &quot;百度大厦&quot;,      //标题        width  : 290,             //宽度        height : 150,              //高度        panel  : &quot;panel&quot;,         //检索结果面板        enableAutoPan : true,     //自动平移        searchTypes   :[            BMAPLIB_TAB_SEARCH,   //周边检索            BMAPLIB_TAB_TO_HERE,  //到这里去            BMAPLIB_TAB_FROM_HERE //从这里出发        ]    });var marker = new BMap.Marker(poi); //创建marker对象marker.enableDragging(); //marker可拖拽marker.addEventListener(&quot;click&quot;, function(e){    searchInfoWindow.open(marker);})map.addOverlay(marker); //在地图中添加marker//样式1var searchInfoWindow2 = new BMapLib.SearchInfoWindow(map, &quot;信息检索&quot;, {    title: &quot;搜索框&quot;, //标题    panel : &quot;panel&quot;, //检索结果面板    enableAutoPan : true, //自动平移    searchTypes :[        BMAPLIB_TAB_SEARCH   //周边检索    ]});function openInfoWindow2() {    searchInfoWindow2.open(new BMap.Point(117.35707987,32.92949891));}&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://img.ahdy.top/2019-11-12_215537.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 地图 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> API </tag>
+            
+            <tag> 地图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mybatis集成</title>
       <link href="/2019/11/08/framework/mybatis-druid/"/>
       <url>/2019/11/08/framework/mybatis-druid/</url>
@@ -803,9 +830,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> Tomcat </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       

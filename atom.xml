@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-08T10:24:55.429Z</updated>
+  <updated>2019-11-12T13:58:49.787Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>百度地图API</title>
+    <link href="http://yoursite.com/2019/11/12/framework/baidumap/"/>
+    <id>http://yoursite.com/2019/11/12/framework/baidumap/</id>
+    <published>2019-11-12T14:59:00.000Z</published>
+    <updated>2019-11-12T13:58:49.787Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;地图API&quot;&gt;&lt;a href=&quot;#地图API&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="地图" scheme="http://yoursite.com/categories/%E5%9C%B0%E5%9B%BE/"/>
+    
+    
+      <category term="API" scheme="http://yoursite.com/tags/API/"/>
+    
+      <category term="地图" scheme="http://yoursite.com/tags/%E5%9C%B0%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Mybatis集成</title>
@@ -546,34 +574,6 @@
       <category term="TCP/IP" scheme="http://yoursite.com/tags/TCP-IP/"/>
     
       <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jQuery的使用</title>
-    <link href="http://yoursite.com/2019/09/02/web/html5/"/>
-    <id>http://yoursite.com/2019/09/02/web/html5/</id>
-    <published>2019-09-02T03:25:00.000Z</published>
-    <updated>2019-09-03T09:53:14.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;什么是jQuery？&quot;&gt;&lt;a href=&quot;#什么是jQuery？&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="jQuery" scheme="http://yoursite.com/categories/jQuery/"/>
-    
-    
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
     
   </entry>
   
