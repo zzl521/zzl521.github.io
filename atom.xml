@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-12T13:58:49.787Z</updated>
+  <updated>2019-11-15T07:38:13.516Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>各种JAR包</title>
+    <link href="http://yoursite.com/2019/11/15/framework/mysqljar/"/>
+    <id>http://yoursite.com/2019/11/15/framework/mysqljar/</id>
+    <published>2019-11-15T07:59:00.000Z</published>
+    <updated>2019-11-15T07:38:13.516Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;下载地址&quot;&gt;&lt;a href=&quot;#下载地址&quot; class=&quot;headerlink&quot; title=&quot;下载地址&quot;&gt;&lt;/a&gt;下载地址&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Mysql" scheme="http://yoursite.com/categories/Mysql/"/>
+    
+    
+      <category term="驱动" scheme="http://yoursite.com/tags/%E9%A9%B1%E5%8A%A8/"/>
+    
+      <category term="JAR包" scheme="http://yoursite.com/tags/JAR%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>百度地图API</title>
@@ -206,9 +234,9 @@
       <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="运维" scheme="http://yoursite.com/tags/%E8%BF%90%E7%BB%B4/"/>
-    
       <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
+    
+      <category term="运维" scheme="http://yoursite.com/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -245,7 +273,7 @@
     <link href="http://yoursite.com/2019/10/15/framework/system/"/>
     <id>http://yoursite.com/2019/10/15/framework/system/</id>
     <published>2019-10-15T14:59:00.000Z</published>
-    <updated>2019-10-15T14:18:52.124Z</updated>
+    <updated>2019-11-15T07:37:08.785Z</updated>
     
     <summary type="html">
     
@@ -262,9 +290,9 @@
       <category term="系统" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
     
     
-      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
-    
       <category term="MAC" scheme="http://yoursite.com/tags/MAC/"/>
+    
+      <category term="windows" scheme="http://yoursite.com/tags/windows/"/>
     
   </entry>
   
@@ -546,34 +574,6 @@
       <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
     
       <category term="JSP" scheme="http://yoursite.com/tags/JSP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络传输协议</title>
-    <link href="http://yoursite.com/2019/09/03/web/html6/"/>
-    <id>http://yoursite.com/2019/09/03/web/html6/</id>
-    <published>2019-09-03T09:55:00.000Z</published>
-    <updated>2019-09-03T09:51:52.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;HTTP协议&quot;&gt;&lt;a href=&quot;#HTTP协议&quot; class=&quot;headerlink&quot; title=&quot;HTTP协议&quot;&gt;&lt;/a&gt;HTTP协议&lt;/h3&gt;&lt;p&gt;HTTP协议（HyperText Transfer
-        
-      
-    
-    </summary>
-    
-      <category term="网络传输" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93/"/>
-    
-    
-      <category term="TCP/IP" scheme="http://yoursite.com/tags/TCP-IP/"/>
-    
-      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
     
   </entry>
   
