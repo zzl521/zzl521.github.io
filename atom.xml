@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-15T09:11:00.174Z</updated>
+  <updated>2019-11-15T11:57:36.314Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>安卓权限</title>
+    <link href="http://yoursite.com/2019/11/15/as/aspower/"/>
+    <id>http://yoursite.com/2019/11/15/as/aspower/</id>
+    <published>2019-11-15T15:40:00.000Z</published>
+    <updated>2019-11-15T11:57:36.314Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Znnnnnnnn/article/details/89356803&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;json数据获取&lt;/a&gt;&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="AS" scheme="http://yoursite.com/categories/AS/"/>
+    
+    
+      <category term="AS" scheme="http://yoursite.com/tags/AS/"/>
+    
+      <category term="权限" scheme="http://yoursite.com/tags/%E6%9D%83%E9%99%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>日记</title>
     <link href="http://yoursite.com/2019/11/15/draiy/wherecanigo/"/>
     <id>http://yoursite.com/2019/11/15/draiy/wherecanigo/</id>
     <published>2019-11-15T09:57:00.000Z</published>
-    <updated>2019-11-15T09:11:00.174Z</updated>
+    <updated>2019-11-15T09:15:03.891Z</updated>
     
     <summary type="html">
     
@@ -299,7 +327,7 @@
     <link href="http://yoursite.com/2019/10/15/framework/system/"/>
     <id>http://yoursite.com/2019/10/15/framework/system/</id>
     <published>2019-10-15T14:59:00.000Z</published>
-    <updated>2019-11-15T07:37:08.785Z</updated>
+    <updated>2019-11-15T11:58:08.562Z</updated>
     
     <summary type="html">
     
@@ -324,8 +352,8 @@
   
   <entry>
     <title>安卓安装</title>
-    <link href="http://yoursite.com/2019/10/15/framework/asset/"/>
-    <id>http://yoursite.com/2019/10/15/framework/asset/</id>
+    <link href="http://yoursite.com/2019/10/15/as/asset/"/>
+    <id>http://yoursite.com/2019/10/15/as/asset/</id>
     <published>2019-10-15T14:40:00.000Z</published>
     <updated>2019-10-15T02:41:41.625Z</updated>
     
@@ -544,34 +572,6 @@
       <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
     
       <category term="三级" scheme="http://yoursite.com/tags/%E4%B8%89%E7%BA%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oracle安装与连接</title>
-    <link href="http://yoursite.com/2019/09/11/web/mysql4/"/>
-    <id>http://yoursite.com/2019/09/11/web/mysql4/</id>
-    <published>2019-09-11T08:25:00.000Z</published>
-    <updated>2019-09-12T02:40:50.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Oracle数据库简介&quot;&gt;&lt;a href=&quot;#Oracle数据库简介&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Oracle" scheme="http://yoursite.com/categories/Oracle/"/>
-    
-    
-      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
-    
-      <category term="Oracle" scheme="http://yoursite.com/tags/Oracle/"/>
     
   </entry>
   
