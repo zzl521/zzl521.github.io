@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-16T16:37:41.181Z</updated>
+  <updated>2019-11-17T11:12:11.581Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>eclipse驱动报错</title>
+    <link href="http://yoursite.com/2019/11/17/java/eclipseerror/"/>
+    <id>http://yoursite.com/2019/11/17/java/eclipseerror/</id>
+    <published>2019-11-17T04:59:00.000Z</published>
+    <updated>2019-11-17T11:12:11.581Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h3&gt;&lt;h4
+        
+      
+    
+    </summary>
+    
+      <category term="eclipse" scheme="http://yoursite.com/categories/eclipse/"/>
+    
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="eclipse" scheme="http://yoursite.com/tags/eclipse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA报错</title>
+    <link href="http://yoursite.com/2019/11/17/framework/ideaerror/"/>
+    <id>http://yoursite.com/2019/11/17/framework/ideaerror/</id>
+    <published>2019-11-16T17:59:00.000Z</published>
+    <updated>2019-11-17T11:02:30.600Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;解决&quot;&gt;&lt;a href=&quot;#解决&quot; class=&quot;headerlink&quot; title=&quot;解决&quot;&gt;&lt;/a&gt;解决&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/malz_zh/article/details/85098356&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
+    
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+  </entry>
   
   <entry>
     <title>关于IDEA无选项创建的问题</title>
@@ -515,63 +571,6 @@
       <category term="web" scheme="http://yoursite.com/tags/web/"/>
     
       <category term="安全" scheme="http://yoursite.com/tags/%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开学总结</title>
-    <link href="http://yoursite.com/2019/10/04/draiy/mind/"/>
-    <id>http://yoursite.com/2019/10/04/draiy/mind/</id>
-    <published>2019-10-04T08:50:00.000Z</published>
-    <updated>2019-10-04T08:49:08.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;不知不觉，日子过的很快，转眼间就到了国庆，暑假带给我的浮躁，并没有因此结束，我想着是不是我经不起失败，我内心一旦焦虑，很长一段时间内，都在彷徨的阴影下度过，我常常借酒消愁，一天到晚游戏，睡觉来麻痹自己，我不知道是怎么了，有时的我表现的特别积极，有时候特别消沉，间接性自律，对
-        
-      
-    
-    </summary>
-    
-      <category term="日记" scheme="http://yoursite.com/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-      <category term="生活" scheme="http://yoursite.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Layui</title>
-    <link href="http://yoursite.com/2019/10/01/framework/layui/"/>
-    <id>http://yoursite.com/2019/10/01/framework/layui/</id>
-    <published>2019-10-01T04:15:00.000Z</published>
-    <updated>2019-10-13T13:24:55.756Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;时常听老师讲做后端开发的多少都得会点前端，但是写前端的话框架又不能太丑，这时候使用框架让我们在开发上如虎添翼。&lt;/p&gt;
-&lt;h3 id=&quot;layui框架概述&quot;&gt;&lt;a href=&quot;#layui框架概述&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="Layui" scheme="http://yoursite.com/tags/Layui/"/>
     
   </entry>
   
