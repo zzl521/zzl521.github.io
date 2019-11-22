@@ -4,6 +4,222 @@
   
     
     <entry>
+      <title>Spring MVC注解报错</title>
+      <link href="/2019/11/23/ssm/springbean/"/>
+      <url>/2019/11/23/ssm/springbean/</url>
+      
+        <content type="html"><![CDATA[<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><img src="http://img.ahdy.top/2019-11-22_140009.png" alt></p><h4 id="翻译后"><a href="#翻译后" class="headerlink" title="翻译后"></a>翻译后</h4><p>创建名称为“XXXXXXX”的bean时出错:自动连接依赖项的注入失败;嵌套异常是无法自动连接字段:com.zyxx. egg.dao。MachineDao com.zyxx.eggs.controller.DataTransferController.machineDao;嵌套异常是org.springframe .beans.factory。NoSuchBeanDefinitionException:没有匹配类型的bean [com.zyxx. egg.dao]。为依赖项找到的MachineDao]:期望至少有一个bean符合此依赖项的自动连接候选。依赖注释:<a href="mailto:{@org.springframework.beans.factory.annotation.Autowired" target="_blank" rel="noopener">{@org.springframework.beans.factory.annotation.Autowired</a>(要求= true)}</p><pre><code>//解决Java Spring Mvc框架 ，Spring框架如果出现这个 autowired 一般都是注解问题，就要检查，service层，dao层的注解如果出现这个情况请检查  新建的dao实现类  是否加了 @Repository注解  或者新建的service实现类  是否加了 @Service注解</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Session </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Spring </tag>
+            
+            <tag> 注解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Session会话</title>
+      <link href="/2019/11/23/ssm/session/"/>
+      <url>/2019/11/23/ssm/session/</url>
+      
+        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Session </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Session </tag>
+            
+            <tag> EL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iframe标签</title>
+      <link href="/2019/11/23/ssm/ifream/"/>
+      <url>/2019/11/23/ssm/ifream/</url>
+      
+        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 子页面加载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 子页面 </tag>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA修改</title>
+      <link href="/2019/11/23/ssm/idea8080/"/>
+      <url>/2019/11/23/ssm/idea8080/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当你用了一段时间IDEA后你就会发现，它强大的地方也是它的弱点，它强大了代码的索引，但是失去了eclipse的轻便。</p><h3 id="修改默认访问项目路径为8080"><a href="#修改默认访问项目路径为8080" class="headerlink" title="修改默认访问项目路径为8080"></a>修改默认访问项目路径为8080</h3><p>以lochost://8080直接访问项目<br><img src="http://img.ahdy.top/2019-11-23_004527.png" alt="tomcat-&gt;Edit configuration"><br><img src="http://img.ahdy.top/2019-11-23_004456.png" alt="改成这样就OK"></p><h3 id="修改idea软件端口号"><a href="#修改idea软件端口号" class="headerlink" title="修改idea软件端口号"></a>修改idea软件端口号</h3><p>为什么要修改软件端口号呢，这个可能有时候会出现端口占用，概率极低<br>知道了解一下就好。<br>file -&gt;settings<br><img src="http://img.ahdy.top/2019-11-23_004712.png" alt></p><h3 id="修改字符集编码"><a href="#修改字符集编码" class="headerlink" title="修改字符集编码"></a>修改字符集编码</h3><p><img src="http://img.ahdy.top/2019-11-23_004610.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IDEA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> IDEA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MD5加密</title>
+      <link href="/2019/11/23/ssm/md5/"/>
+      <url>/2019/11/23/ssm/md5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>MD5是一种加密算法，据说这种加密不可能通过逆向解算来破解，但是由于其对密码字典加密的结果都是固定的，于是出现了撞库解密的方式，原理很简单，拿大量的数据去使用MD5加密，将加密过后的哈希值存入到数据库当中，然后就能通过明文来查询到加密过后的哈希值。</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在项目开发过程中使用，详情百度相关jar包  </p><pre><code>password = DigestUtils.md5Hex(password);md5不会影响sql执行的结果，前提是数据库当中的密码也是哈希值</code></pre><p>这其实是一个坑，就是你数据库当中的密码不能是明文，只有与字符串加密过后的哈希值一样才能查询到相关数据，这也验证了撞库破解，MD5加密大大增加了安全性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MD5 </tag>
+            
+            <tag> 加密 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring jdbcTemplate</title>
+      <link href="/2019/11/22/ssm/jdbc/"/>
+      <url>/2019/11/22/ssm/jdbc/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>这里的空意思是一个异常，通常如果不知道哪里出错了，还是避免自定义异常，系统自动捕获的异常更有利于我们发现bug。</p><pre><code>//验证登录@Overridepublic Students  getUser(String name, String password) {RowMapper&lt;Students&gt; rowMapper=new BeanPropertyRowMapper&lt;Students&gt;(Students.class);String sql = &quot;select * from students where name=? and password=?&quot;;Students students ;try {        students= jdbcTemplate.queryForObject(sql, rowMapper, name, password);        System.out.println(students);    } catch (Exception e) {        return null;    }    System.out.println(&quot;user:&quot;+students);    return students;}</code></pre><p>数据库中可能存在了相同用户名及密码的情况，造成查询结果不唯一，查询到多个用户。将sql放在数据库里跑一下，发现有无重复数据。  </p><p>Spring中使用JdbcTemplate的queryForObject方法，当查不到数据时会抛出如下异常</p><pre><code>org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0org.springframework.dao.support.DataAccessUtils.(DataAccessUtils.java:71)org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:729)</code></pre><p>使用Debug进行调试时，发现是在DataAccessUtils的requiredSingleResult()方法中抛出的异常。<br>源码如下：</p><pre><code>public static &lt;T&gt; T requiredSingleResult(Collection&lt;T&gt; results) throws IncorrectResultSizeDataAccessException {      int size = (results != null ? results.size() : 0);      if (size == 0) {          throw new EmptyResultDataAccessException(1);      }      if (results.size() &gt; 1) {          throw new IncorrectResultSizeDataAccessException(1, size);      }      return results.iterator().next();  } </code></pre><p>可以看出，当results为空时，就会抛出EmptyResultDataAccessException异常，Spring这样做的目的是为了防止程序员不对空值进行判断，保证了程序的健壮性。另外，当results的size大于1时，还会<br>当results的size大于1时，还会抛出IncorrectResultSizeDataAccessException异常，以保证返回的记录只有一条。<br>如果我们想查询结果为空时，返回null而不是抛出异常，该怎么办呢？<br>很简单，只需要在捕获EmptyResultDataAccessException，然后返回null，代码如下：</p><pre><code>Object object = null;  try {  object = jdbcTemplate.queryForObject();  } catch (EmptyResultDataAccessException e) {  return null;  }  return object;  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 框架 </tag>
+            
+            <tag> Spring </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA解决maven创建过长</title>
+      <link href="/2019/11/19/framework/ideaproblem/"/>
+      <url>/2019/11/19/framework/ideaproblem/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题的发生"><a href="#问题的发生" class="headerlink" title="问题的发生"></a>问题的发生</h3><p>如果你用了一段时间的idea你就会发现，它创建maven项目的时间实在是太久了，网络好的情况下还可能快点，但是它要上网去下载maven所需要的jar包，而且这些jar包的下载地址都在境外，所以造成了maven创建极为费时。</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><pre><code> 配置 archetypeCatalog = internal 第一次从网络下载,之后就会选择本地已经下载好的文件</code></pre><p><img src="http://img.ahdy.top/2019-11-19_001029.png" alt><br><img src="http://img.ahdy.top/2019-11-19_001249.png" alt="此处点击加号按钮设置"><br>这样配置好了之后，几秒就能完成maven项目创建。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IDEA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> IDEA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>eclipse报错</title>
       <link href="/2019/11/18/java/eclipseoor/"/>
       <url>/2019/11/18/java/eclipseoor/</url>
@@ -1017,36 +1233,9 @@
       
         <tags>
             
+            <tag> SQL </tag>
+            
             <tag> JBDC </tag>
-            
-            <tag> SQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL入门</title>
-      <link href="/2019/08/06/web/mysql2/"/>
-      <url>/2019/08/06/web/mysql2/</url>
-      
-        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> MySQL </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-            <tag> SQL </tag>
             
         </tags>
       
@@ -1074,6 +1263,33 @@
             <tag> 服务器 </tag>
             
             <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL入门</title>
+      <link href="/2019/08/06/web/mysql2/"/>
+      <url>/2019/08/06/web/mysql2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
