@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-22T18:02:16.169Z</updated>
+  <updated>2019-11-27T15:14:57.154Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,90 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简单的页面跳转</title>
+    <link href="http://yoursite.com/2019/11/27/ssm/forward/"/>
+    <id>http://yoursite.com/2019/11/27/ssm/forward/</id>
+    <published>2019-11-27T14:59:00.000Z</published>
+    <updated>2019-11-27T15:14:57.154Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;HTML方式&quot;&gt;&lt;a href=&quot;#HTML方式&quot; class=&quot;headerlink&quot; title=&quot;HTML方式&quot;&gt;&lt;/a&gt;HTML方式&lt;/h3&gt;&lt;h4 id=&quot;复制即用&quot;&gt;&lt;a href=&quot;#复制即用&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="页面跳转" scheme="http://yoursite.com/categories/%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC/"/>
+    
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+    
+      <category term="跳转" scheme="http://yoursite.com/tags/%E8%B7%B3%E8%BD%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQLErrorCodes</title>
+    <link href="http://yoursite.com/2019/11/26/ssm/springsqlerror/"/>
+    <id>http://yoursite.com/2019/11/26/ssm/springsqlerror/</id>
+    <published>2019-11-25T19:59:00.000Z</published>
+    <updated>2019-11-27T14:53:30.924Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;使用Spring 的JDBCtemplate
+        
+      
+    
+    </summary>
+    
+      <category term="Spring" scheme="http://yoursite.com/categories/Spring/"/>
+    
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+      <category term="Sql" scheme="http://yoursite.com/tags/Sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;c:foreach&gt;无法迭代链表</title>
+    <link href="http://yoursite.com/2019/11/25/ssm/cforech/"/>
+    <id>http://yoursite.com/2019/11/25/ssm/cforech/</id>
+    <published>2019-11-24T19:59:00.000Z</published>
+    <updated>2019-11-27T14:53:30.923Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;问题详情&quot;&gt;&lt;a href=&quot;#问题详情&quot; class=&quot;headerlink&quot; title=&quot;问题详情&quot;&gt;&lt;/a&gt;问题详情&lt;/h3&gt;&lt;p&gt;java.lang.NumberFormatException: For input string:
+        
+      
+    
+    </summary>
+    
+      <category term="JSTL" scheme="http://yoursite.com/categories/JSTL/"/>
+    
+    
+      <category term="传递" scheme="http://yoursite.com/tags/%E4%BC%A0%E9%80%92/"/>
+    
+      <category term="JSTL" scheme="http://yoursite.com/tags/JSTL/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring MVC注解报错</title>
@@ -46,11 +130,40 @@
   </entry>
   
   <entry>
+    <title>Session无法获取</title>
+    <link href="http://yoursite.com/2019/11/23/ssm/sessionnull/"/>
+    <id>http://yoursite.com/2019/11/23/ssm/sessionnull/</id>
+    <published>2019-11-22T19:59:00.000Z</published>
+    <updated>2019-11-25T07:22:58.913Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;解决&quot;&gt;&lt;a href=&quot;#解决&quot; class=&quot;headerlink&quot; title=&quot;解决&quot;&gt;&lt;/a&gt;解决&lt;/h3&gt;&lt;p&gt;暂时的解决方法有两种，亲测有效：&lt;/p&gt;
+&lt;p&gt;方法一： 
+        
+      
+    
+    </summary>
+    
+      <category term="Session" scheme="http://yoursite.com/categories/Session/"/>
+    
+    
+      <category term="Session" scheme="http://yoursite.com/tags/Session/"/>
+    
+      <category term="传递" scheme="http://yoursite.com/tags/%E4%BC%A0%E9%80%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Session会话</title>
     <link href="http://yoursite.com/2019/11/23/ssm/session/"/>
     <id>http://yoursite.com/2019/11/23/ssm/session/</id>
     <published>2019-11-22T19:59:00.000Z</published>
-    <updated>2019-11-22T17:52:25.074Z</updated>
+    <updated>2019-11-22T18:08:25.829Z</updated>
     
     <summary type="html">
     
@@ -461,118 +574,6 @@
     
     
       <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>各种JAR包</title>
-    <link href="http://yoursite.com/2019/11/15/framework/mysqljar/"/>
-    <id>http://yoursite.com/2019/11/15/framework/mysqljar/</id>
-    <published>2019-11-15T07:59:00.000Z</published>
-    <updated>2019-11-15T12:38:33.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;下载地址&quot;&gt;&lt;a href=&quot;#下载地址&quot; class=&quot;headerlink&quot; title=&quot;下载地址&quot;&gt;&lt;/a&gt;下载地址&lt;/h3&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Mysql" scheme="http://yoursite.com/categories/Mysql/"/>
-    
-    
-      <category term="驱动" scheme="http://yoursite.com/tags/%E9%A9%B1%E5%8A%A8/"/>
-    
-      <category term="JAR包" scheme="http://yoursite.com/tags/JAR%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>百度地图API</title>
-    <link href="http://yoursite.com/2019/11/12/framework/baidumap/"/>
-    <id>http://yoursite.com/2019/11/12/framework/baidumap/</id>
-    <published>2019-11-12T14:59:00.000Z</published>
-    <updated>2019-11-12T13:58:49.787Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;地图API&quot;&gt;&lt;a href=&quot;#地图API&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="地图" scheme="http://yoursite.com/categories/%E5%9C%B0%E5%9B%BE/"/>
-    
-    
-      <category term="API" scheme="http://yoursite.com/tags/API/"/>
-    
-      <category term="地图" scheme="http://yoursite.com/tags/%E5%9C%B0%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mybatis集成</title>
-    <link href="http://yoursite.com/2019/11/08/framework/mybatis-druid/"/>
-    <id>http://yoursite.com/2019/11/08/framework/mybatis-druid/</id>
-    <published>2019-11-08T15:59:00.000Z</published>
-    <updated>2019-11-08T10:24:55.429Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Mybatis&quot;&gt;&lt;a href=&quot;#Mybatis&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Mybatis" scheme="http://yoursite.com/categories/Mybatis/"/>
-    
-    
-      <category term="Mybatis" scheme="http://yoursite.com/tags/Mybatis/"/>
-    
-      <category term="Durid" scheme="http://yoursite.com/tags/Durid/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA激活码</title>
-    <link href="http://yoursite.com/2019/11/06/framework/ideacoad/"/>
-    <id>http://yoursite.com/2019/11/06/framework/ideacoad/</id>
-    <published>2019-11-05T16:59:00.000Z</published>
-    <updated>2019-11-08T10:32:04.618Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;http://idea.medeming.com/jetbrains/&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
-    
-    
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
-      <category term="激活码" scheme="http://yoursite.com/tags/%E6%BF%80%E6%B4%BB%E7%A0%81/"/>
     
   </entry>
   

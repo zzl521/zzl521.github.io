@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>简单的页面跳转</title>
+      <link href="/2019/11/27/ssm/forward/"/>
+      <url>/2019/11/27/ssm/forward/</url>
+      
+        <content type="html"><![CDATA[<h3 id="HTML方式"><a href="#HTML方式" class="headerlink" title="HTML方式"></a>HTML方式</h3><h4 id="复制即用"><a href="#复制即用" class="headerlink" title="复制即用"></a>复制即用</h4><pre><code>&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;&lt;meta http-equiv=&quot;refresh&quot; content=&quot;4;url=&#39;http://localhost:7002/&#39;;&quot;&gt; //cotent  中数字是跳转的时间  URL是跳转的路径&lt;title&gt;用户注册&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {     background: #555}.loading {     -webkit-animation: fadein 2s;     -moz-animation: fadein 2s;     -o-animation: fadein 2s;     animation: fadein 2s}@-moz-keyframes fadein {     from {          opacity: 0     }     to {          opacity: 1     }}@-webkit-keyframes fadein {     from {          opacity: 0     }     to {          opacity: 1     }}@-o-keyframes fadein {     from {          opacity: 0     }     to {          opacity: 1     }}@keyframes fadein {     from {          opacity: 0     }     to {          opacity: 1     }}.spinner-wrapper {     position: absolute;     top: 0;     left: 0;     z-index: 300;               height: 100%;     min-width: 100%;     min-height: 100%;     background: rgba(255,255,255,0.93)}.spinner-text {     position: absolute;     top: 45%;     left: 50%;     margin-left: -100px;     margin-top: 2px;     //调整文字的位置     color: #000;     letter-spacing: 1px;     font-size: 20px;     font-family: Arial}.spinner {     position: absolute;     top: 45%;     left: 50%;     display: block;     margin-left: -160px;     width: 1px;     height: 1px;     //调整转圈的位置     border: 30px solid rgba(255,0,0,1);     -webkit-border-radius: 50px;     -moz-border-radius: 50px;     border-radius: 50px;     border-left-color: transparent;     border-right-color: transparent;     -webkit-animation: spin 1.5s infinite;     -moz-animation: spin 1.5s infinite;     animation: spin 1.5s infinite}@-webkit-keyframes spin {     0%,100% {          -webkit-transform: rotate(0deg) scale(1)     }     50% {          -webkit-transform: rotate(720deg) scale(0.6)     }}@-moz-keyframes spin {     0%,100% {          -moz-transform: rotate(0deg) scale(1)     }     50% {          -moz-transform: rotate(720deg) scale(0.6)     }}@-o-keyframes spin {     0%,100% {          -o-transform: rotate(0deg) scale(1)     }     50% {          -o-transform: rotate(720deg) scale(0.6)     }}@keyframes spin {     0%,100% {          transform: rotate(0deg) scale(1)     }     50% {          transform: rotate(720deg) scale(0.6)     }}&lt;/style&gt;&lt;script&gt;        var count = 3;        var interval = window.setInterval(&quot;timeout()&quot;,1000);        function timeout() {          var s=document.getElementById(&quot;spinner&quot;);          s.innerHTML=&quot;注册成功，页面将在&quot;+count+&quot;秒后跳转&quot;;      //定时器控制跳转          count--;      }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;loading&quot;&gt;  &lt;div class=&quot;spinner-wrapper&quot;&gt;    &lt;span class=&quot;spinner-text&quot; &gt;&lt;h2 id=&quot;spinner&quot;&gt;注册成功，页面将在3秒后跳转&lt;/h2&gt;&lt;/span&gt;     &lt;span class=&quot;spinner&quot;&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;&lt;/body&gt;</code></pre><h3 id="js方式"><a href="#js方式" class="headerlink" title="js方式"></a>js方式</h3><pre><code>    &lt;script type=&quot;text/javascript&quot;&gt;    Location.href=&quot;1.html&quot;;    &lt;/script&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 页面跳转 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+            <tag> 跳转 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SQLErrorCodes</title>
+      <link href="/2019/11/26/ssm/springsqlerror/"/>
+      <url>/2019/11/26/ssm/springsqlerror/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用Spring 的JDBCtemplate 调用数据库的时候</p><p>出现了如下的问题</p><p>SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]</p><p>这个一般是因为SQL语句出错  会报这样的错误</p><p>这个时候关注Sql 语句的格式  以及字段长度 的问题</p><p>可以先在Sqlyog上先试运行一下。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Spring </tag>
+            
+            <tag> Sql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>&lt;c:foreach&gt;无法迭代链表</title>
+      <link href="/2019/11/25/ssm/cforech/"/>
+      <url>/2019/11/25/ssm/cforech/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题详情"><a href="#问题详情" class="headerlink" title="问题详情"></a>问题详情</h3><p>java.lang.NumberFormatException: For input string: “name”<br>背景：action中查询出list数据需要在前台进行显示，但根据主键在数据库中查询出的数据list中含有熟悉alist属性为配置表，且支持用户多选，前端通过el表达式显示</p><p>前台界面为：</p><pre><code>&lt;c:forEach items=&quot;${list}&quot; var=&quot;visit&quot; varStatus=&quot;vstatus&quot;&gt;                   ${visit.alist.Name}                  &lt;/c:forEach&gt;</code></pre><p>此时运行程序会出现java.lang.NumberFormatException: For input string: “name”错误，原因为${visit.alist}是一个list不是一个单一属性</p><p>解决方法：</p><p>笨方法：</p><pre><code>&lt;c:forEach items=&quot;${list}&quot; var=&quot;visit&quot; varStatus=&quot;vstatus&quot;&gt;${visit.alist[0].Name}${visit.alist[1].Name}${visit.alist[2].Name}${visit.alist[3].Name}&lt;/c:forEach&gt;</code></pre><p>页面会显示用户在多选时勾选的数据，假设alist中有4项，，用户全部勾选则可全部显示，用户单一勾选则仅显示单一量</p><p>for循环方法</p><pre><code>&lt;c:forEach items=&quot;${visit.alist}&quot; var=&quot;a&quot; varStatus=&quot;vstatus&quot;&gt;${a.Name }&lt;/c:forEach&gt;</code></pre><p> 注意，items前不可有空格</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JSTL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 传递 </tag>
+            
+            <tag> JSTL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring MVC注解报错</title>
       <link href="/2019/11/23/ssm/springbean/"/>
       <url>/2019/11/23/ssm/springbean/</url>
@@ -31,11 +112,38 @@
     
     
     <entry>
+      <title>Session无法获取</title>
+      <link href="/2019/11/23/ssm/sessionnull/"/>
+      <url>/2019/11/23/ssm/sessionnull/</url>
+      
+        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Session </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Session </tag>
+            
+            <tag> 传递 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Session会话</title>
       <link href="/2019/11/23/ssm/session/"/>
       <url>/2019/11/23/ssm/session/</url>
       
-        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
       
       
       <categories>
