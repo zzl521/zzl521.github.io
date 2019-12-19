@@ -4,25 +4,25 @@
   
     
     <entry>
-      <title>How to use vue.js</title>
-      <link href="/2019/12/11/framework/vue/"/>
-      <url>/2019/12/11/framework/vue/</url>
+      <title>踩点(一)</title>
+      <link href="/2019/12/17/websafety/webmseeage/"/>
+      <url>/2019/12/17/websafety/webmseeage/</url>
       
-        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>时隔许久，已经很久没有写过关于web渗透的东西了，闲暇之余自学，希望以后有机会能往这方面发展，但愿现实不要那么残酷，会开发，又会运维看起来是一种非常牛批的双修大神。</p><h3 id="whois查询"><a href="#whois查询" class="headerlink" title="whois查询"></a>whois查询</h3><p><a href="http://whois.chinaz.com/" target="_blank" rel="noopener">web域名查询网址</a><br><a href="http://beian.miit.gov.cn/publish/query/indexFirst.action" target="_blank" rel="noopener">ICP备案信息查询</a><br>使用Kali自带的脚本查询<br><img src="http://img.ahdy.top/2019-12-17_184832.png" alt></p><h3 id="子域名爆破"><a href="#子域名爆破" class="headerlink" title="子域名爆破"></a>子域名爆破</h3><p>关于查询子域名的方法有很多，比如使用第三方网站，第三方工具<br>下面演示常用的方法<br>1.<br><a href="http://tool.chinaz.com/subdomain/" target="_blank" rel="noopener">子域名查询网</a><br>2.使用第三方工具<br><a href="https://github.com/ring04h/wydomain" target="_blank" rel="noopener">wydomain下载</a><br>在仓库下方有相关使用文档的介绍<br>演示:<br> 查看官方文档进行文件配置<br><img src="http://img.ahdy.top/2019-12-17_182722.png" alt><br>配置成功信息<br>Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from -r requirements.txt (line 1)) (2.21.0)<br>Requirement already satisfied: dnspython in /usr/lib/python3/dist-packages (from -r requirements.txt (line 2)) (1.16.0)  </p><p>安装好之后需要对脚本进行shell提权，绿色脚本即为提权脚本</p><pre><code>pip install -r requirements.txt如果电脑上没有配置pip的话，这个命令是无法执行的解决办法:在终端当中执行下面三条命令，命令执行完之后，再去执行安装wydomain命令一般就没有什么问题了。wget https://bootstrap.pypa.io/get-pip.pypython3 get-pip.pypip3 -V</code></pre><p>爆破命令：</p><pre><code>./dnsburte.py -d aliyun.com -f dnspod.csv -o message.txt</code></pre><p>查看：</p><pre><code>cat message.txt</code></pre><p>使用API查询目标的子域名:</p><pre><code>./wydomain.py -d ahdy.top -o andy.log</code></pre><p>显示样例</p><pre><code>oot@kali:~/Desktop/wydomain# ./wydomain.py -d baidu.com -o andy.log2019-12-17 00:44:49,894 [INFO] starting alexa fetcher...2019-12-17 00:44:50,322 [INFO] sign_fetch_is_failed2019-12-17 00:44:50,323 [INFO] alexa fetcher subdomains(22) successfully...2019-12-17 00:44:50,323 [INFO] starting threatminer fetcher...2019-12-17 00:44:53,139 [INFO] threatminer fetcher subdomains(0) successfully...2019-12-17 00:44:53,139 [INFO] starting threatcrowd fetcher...2019-12-17 00:44:55,187 [INFO] No JSON object could be decoded2019-12-17 00:44:55,187 [INFO] threatcrowd fetcher subdomains(0) successfully...2019-12-17 00:44:55,188 [INFO] starting sitedossier fetcher...2019-12-17 00:44:55,188 [INFO] request: http://www.sitedossier.com/parentdomain/baidu.com2019-12-17 00:44:57,185 [INFO] request: http://www.sitedossier.com/parentdomain/baidu.com/1012019-12-17 00:44:57,795 [INFO] request: http://www.sitedossier.com/parentdomain/baidu.com/2012019-12-17 00:45:00,199 [INFO] request: http://www.sitedossier.com/parentdomain/baidu.com/3012019-12-17 00:45:05,813 [INFO] sitedossier fetcher subdomains(300) successfully...2019-12-17 00:45:05,813 [INFO] starting netcraft fetcher...2019-12-17 00:45:17,687 [INFO] netcraft fetcher subdomains(0) successfully...2019-12-17 00:45:17,687 [INFO] starting ilinks fetcher...2019-12-17 00:45:22,707 [INFO] ilinks fetcher subdomains(0) successfully...2019-12-17 00:45:22,707 [INFO] starting chaxunla fetcher...2019-12-17 00:45:37,737 [INFO] HTTPConnectionPool(host=&#39;api.chaxun.la&#39;, port=80): Max retries exceeded with url: /toolsAPI/getDomain/?0.1576561522.71&amp;callback=&amp;k=baidu.com&amp;page=1&amp;order=default&amp;sort=desc&amp;action=moreson&amp;_=1576561522.71&amp;verify= (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7f044169d9d0&gt;: Failed to establish a new connection: [Errno -2] Name or service not known&#39;,))2019-12-17 00:45:37,738 [INFO] chaxunla fetcher subdomains(0) successfully...2019-12-17 00:45:37,738 [INFO] starting google TransparencyReport fetcher...2019-12-17 00:45:42,760 [INFO] &#39;NoneType&#39; object has no attribute &#39;__getitem__&#39;2019-12-17 00:45:42,761 [INFO] google TransparencyReport fetcher subdomains(0) successfully...2019-12-17 00:45:42,765 [INFO] baidu.com 485 subdomains save to /root/Desktop/wydomain/andy.logroot@kali:~/Desktop/wydomain# cat message.txt[&quot;0.baidu.com&quot;, &quot;1.baidu.com&quot;, &quot;01.baidu.com&quot;, &quot;11.baidu.com&quot;, &quot;1111.baidu.com&quot;, &quot;123.baidu.com&quot;, &quot;2012.baidu.com&quot;, &quot;2014.baidu.com&quot;, &quot;360.baidu.com&quot;, &quot;3g.baidu.com&quot;, &quot;8.baidu.com&quot;, &quot;IN.baidu.com&quot;, &quot;a.baidu.com&quot;, &quot;ab.baidu.com&quot;, &quot;abc.baidu.com&quot;, &quot;act.baidu.com&quot;, &quot;activity.baidu.com&quot;, &quot;ac.baidu.com&quot;, &quot;access.baidu.com&quot;, &quot;ad.baidu.com&quot;, &quot;admin.baidu.com&quot;, &quot;ads.baidu.com&quot;, &quot;ag.baidu.com&quot;, &quot;adm.baidu.com&quot;, &quot;ai.baidu.com&quot;, &quot;api.baidu.com&quot;, &quot;ap.baidu.com&quot;, &quot;app.baidu.com&quot;, &quot;ar.baidu.com&quot;, &quot;aq.baidu.com&quot;, &quot;as.baidu.com&quot;, &quot;ask.baidu.com&quot;, &quot;auth.baidu.com&quot;, &quot;auto.baidu.com&quot;, &quot;avatar.baidu.com&quot;, &quot;asp.baidu.com&quot;, &quot;b.baidu.com&quot;, &quot;b2b.baidu.com&quot;, &quot;bai.baidu.com&quot;, &quot;backup.baidu.com&quot;, &quot;baike.baidu.com&quot;, &quot;bao.baidu.com&quot;, &quot;bbs.baidu.com&quot;, &quot;bc.baidu.com&quot;, &quot;beian.baidu.com&quot;, &quot;beta.baidu.com&quot;, &quot;bh.baidu.com&quot;, &quot;bit.baidu.com&quot;, &quot;bk.baidu.com&quot;, &quot;box.baidu.com&quot;, &quot;book.baidu.com&quot;, &quot;brand.baidu.com&quot;, &quot;bx.baidu.com&quot;, &quot;cache.baidu.com&quot;, &quot;ca.baidu.com&quot;, &quot;cas.baidu.com&quot;, &quot;cb.baidu.com&quot;, &quot;ce.baidu.com&quot;, &quot;cdn.baidu.com&quot;, &quot;cc.baidu.com&quot;, &quot;ceshi.baidu.com&quot;, &quot;cf.baidu.com&quot;, &quot;cha.baidu.com&quot;, &quot;check.baidu.com&quot;, &quot;ci.baidu.com&quot;, &quot;city.baidu.com&quot;, &quot;ck.baidu.com&quot;, &quot;cloud.baidu.com&quot;, &quot;autodiscover.baidu.com&quot;, &quot;client.baidu.com&quot;, &quot;cm.baidu.com&quot;, &quot;code.baidu.com&quot;, &quot;com.baidu.com&quot;, &quot;company.baidu.com&quot;, &quot;credit.baidu.com&quot;, &quot;cs.baidu.com&quot;, &quot;cp.baidu.com&quot;, &quot;crm.baidu.com&quot;, &quot;d.baidu.com&quot;, &quot;daohang.baidu.com&quot;, &quot;db.baidu.com&quot;, &quot;dc.baidu.com&quot;, &quot;demo.baidu.com&quot;, &quot;desk.baidu.com&quot;, &quot;dev.baidu.com&quot;, &quot;df.baidu.com&quot;, &quot;dh.baidu.com&quot;, &quot;diy.baidu.com&quot;, &quot;disk.baidu.com&quot;, &quot;dj.baidu.com&quot;, &quot;dm.baidu.com&quot;, &quot;dns1.baidu.com&quot;, &quot;dn.baidu.com&quot;, &quot;doc.baidu.com&quot;, &quot;docs.baidu.com&quot;, &quot;dp.baidu.com&quot;, &quot;dq.baidu.com&quot;, &quot;ds.baidu.com&quot;, &quot;dx.baidu.com&quot;, &quot;du.baidu.com&quot;, &quot;dy.baidu.com&quot;, &quot;edm.baidu.com&quot;, &quot;e.baidu.com&quot;, &quot;edu.baidu.com&quot;, &quot;ee.baidu.com&quot;, &quot;em.baidu.com&quot;, &quot;email.baidu.com&quot;, &quot;ent.baidu.com&quot;, &quot;er.baidu.com&quot;, &quot;fang.baidu.com&quot;, &quot;f.baidu.com&quot;, &quot;fb.baidu.com&quot;, &quot;fashion.baidu.com&quot;, &quot;fc.baidu.com&quot;, &quot;feed.baidu.com&quot;, &quot;fff.baidu.com&quot;, &quot;file.baidu.com&quot;, &quot;finance.baidu.com&quot;, &quot;flash.baidu.com&quot;, &quot;fk.baidu.com&quot;, &quot;fm.baidu.com&quot;, &quot;focus.baidu.com&quot;, &quot;forum.baidu.com&quot;, &quot;fun.baidu.com&quot;, &quot;fund.baidu.com&quot;, &quot;g.baidu.com&quot;, &quot;g1.baidu.com&quot;, &quot;fz.baidu.com&quot;, &quot;g2.baidu.com&quot;, &quot;g3.baidu.com&quot;, &quot;g5.baidu.com&quot;, &quot;game.baidu.com&quot;, &quot;games.baidu.com&quot;, &quot;gb.baidu.com&quot;, &quot;gd.baidu.com&quot;, &quot;gh.baidu.com&quot;, &quot;git.baidu.com&quot;, &quot;gitlab.baidu.com&quot;, &quot;gl.baidu.com&quot;, &quot;gk.baidu.com&quot;, &quot;gongyi.baidu.com&quot;, &quot;go.baidu.com&quot;, &quot;gp.baidu.com&quot;, &quot;gps.baidu.com&quot;, &quot;gx.baidu.com&quot;, &quot;gy.baidu.com&quot;, &quot;h5.baidu.com&quot;, &quot;hao123.baidu.com&quot;, &quot;hao.baidu.com&quot;, &quot;health.baidu.com&quot;, &quot;hb.baidu.com&quot;, &quot;hd.baidu.com&quot;, &quot;help.baidu.com&quot;, &quot;hf.baidu.com&quot;, &quot;hi.baidu.com&quot;, &quot;hk.baidu.com&quot;, &quot;history.baidu.com&quot;, &quot;hm.baidu.com&quot;, &quot;home.baidu.com&quot;, &quot;house.baidu.com&quot;, &quot;hotel.baidu.com&quot;, &quot;houtai.baidu.com&quot;, &quot;hr.baidu.com&quot;, &quot;hot.baidu.com&quot;, &quot;ht.baidu.com&quot;, &quot;huodong.baidu.com&quot;, &quot;i.baidu.com&quot;, &quot;i1.baidu.com&quot;, &quot;hx.baidu.com&quot;, &quot;i2.baidu.com&quot;, &quot;hz.baidu.com&quot;, &quot;hy.baidu.com&quot;, &quot;id.baidu.com&quot;, &quot;im.baidu.com&quot;, &quot;global.baidu.com&quot;, &quot;images.baidu.com&quot;, &quot;ie.baidu.com&quot;, &quot;image.baidu.com&quot;, &quot;img.baidu.com&quot;, &quot;index.baidu.com&quot;, &quot;info.baidu.com&quot;, &quot;ip.baidu.com&quot;, &quot;ipv6.baidu.com&quot;, &quot;j.baidu.com&quot;, &quot;item.baidu.com&quot;, &quot;jia.baidu.com&quot;, &quot;jian.baidu.com&quot;, &quot;jiankang.baidu.com&quot;, &quot;jira.baidu.com&quot;, &quot;jj.baidu.com&quot;, &quot;job.baidu.com&quot;, &quot;jn.baidu.com&quot;, &quot;jq.baidu.com&quot;, &quot;js.baidu.com&quot;, &quot;ka.baidu.com&quot;, &quot;kb.baidu.com&quot;, &quot;kefu.baidu.com&quot;, &quot;kk.baidu.com&quot;, &quot;kl.baidu.com&quot;, &quot;km.baidu.com&quot;, &quot;ks.baidu.com&quot;, &quot;kr.baidu.com&quot;, &quot;lab.baidu.com&quot;, &quot;la.baidu.com&quot;, &quot;l.baidu.com&quot;</code></pre><h3 id="关于文中shell脚本的解释"><a href="#关于文中shell脚本的解释" class="headerlink" title="关于文中shell脚本的解释"></a>关于文中shell脚本的解释</h3><p>使用shell 命令对脚本提权<br>chmod +x 加上脚本名称(或者脚本的绝对路径)</p><p>进行提权后脚本会在目录当中以绿色显示<br>cd 目录<br>ls 显示当前文件夹路径</p><p>注意，一定要写成 ./test.sh，而不是 test.sh，运行其它二进制的程序也一样，直接写 test.sh，linux 系统会去 PATH 里寻找有没有叫 test.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 PATH 里，所以写成 test.sh 是会找不到命令的，要用 ./test.sh 告诉系统说，就在当前目录找。</p><p>2、作为解释器参数</p><p>这种运行方式是，直接运行解释器，其参数就是 shell 脚本的文件名，如：</p><pre><code>/bin/sh test.sh/bin/php test.php</code></pre>]]></content>
       
       
       <categories>
           
-          <category> 环境 </category>
+          <category> 域名 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 环境 </tag>
+            <tag> 域名 </tag>
             
-            <tag> vue </tag>
+            <tag> web </tag>
             
         </tags>
       
@@ -50,6 +50,33 @@
             <tag> Java </tag>
             
             <tag> Socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to use vue.js</title>
+      <link href="/2019/12/11/framework/vue/"/>
+      <url>/2019/12/11/framework/vue/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> vue </tag>
             
         </tags>
       
@@ -828,9 +855,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -882,9 +909,9 @@
       
         <tags>
             
-            <tag> MAC </tag>
-            
             <tag> windows </tag>
+            
+            <tag> MAC </tag>
             
         </tags>
       
@@ -1433,33 +1460,6 @@
     
     
     <entry>
-      <title>Tomcat与服务器</title>
-      <link href="/2019/08/06/web/tomcat/"/>
-      <url>/2019/08/06/web/tomcat/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tomcat </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Tomcat </tag>
-            
-            <tag> 服务器 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL入门</title>
       <link href="/2019/08/06/web/mysql2/"/>
       <url>/2019/08/06/web/mysql2/</url>
@@ -1479,6 +1479,33 @@
             <tag> MySQL </tag>
             
             <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tomcat与服务器</title>
+      <link href="/2019/08/06/web/tomcat/"/>
+      <url>/2019/08/06/web/tomcat/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -1622,33 +1649,6 @@
     
     
     <entry>
-      <title>域名</title>
-      <link href="/2019/07/22/yuming/"/>
-      <url>/2019/07/22/yuming/</url>
-      
-        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 域名 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 域名 </tag>
-            
-            <tag> 二级域名 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java难点</title>
       <link href="/2019/07/22/java/java5/"/>
       <url>/2019/07/22/java/java5/</url>
@@ -1668,6 +1668,33 @@
             <tag> 抽象类|接口 </tag>
             
             <tag> 访问控制符 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>域名</title>
+      <link href="/2019/07/22/yuming/"/>
+      <url>/2019/07/22/yuming/</url>
+      
+        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 域名 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+            <tag> 二级域名 </tag>
             
         </tags>
       
