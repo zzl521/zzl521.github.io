@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>JSP的归隐</title>
+      <link href="/2019/12/21/draiy/lossjsp/"/>
+      <url>/2019/12/21/draiy/lossjsp/</url>
+      
+        <content type="html"><![CDATA[<h3 id="关于JSP的淘汰问题（转）"><a href="#关于JSP的淘汰问题（转）" class="headerlink" title="关于JSP的淘汰问题（转）"></a>关于JSP的淘汰问题（转）</h3><p>来源：<a href="https://www.cnblogs.com/BobHuang/p/11220251.html" target="_blank" rel="noopener">https://www.cnblogs.com/BobHuang/p/11220251.html</a></p><p>大中型公司需要专业人才，小公司需要全才，但是对于个人职业发展来说，我建议是分开。你要是这辈子就吃java这碗饭，就不要去研究什么css，js等等。</p><p>把你的精力专注在java，jvm原理，spring原理，mysql锁，事务，多线程，大并发，分布式架构，微服务，以及相关的项目管理等等，这样你的核心竞争力才会越来越高，正所谓你往生活中投入什么，生活就会反馈给你什么。</p><p>几曾何时，我们的java web项目都是使用了若干后台框架，springmvc/struts + spring + spring jdbc/hibernate/mybatis 等等</p><p>大多数项目在java后端都是分了三层，控制层（controller/action），业务层（service/manage），持久层（dao）。</p><p>控制层负责接收参数，调用相关业务层，封装数据，以及路由到jsp页面。然后jsp页面上使用各种标签（jstl/el）或者手写java（&lt;%=%&gt;）将后台的数据展现出来</p><p>你需要用maven或者eclipse等工具把你的代码打成一个war包，然后把这个war包发布到你的生产环境下的web容器（tomcat/jboss/weblogic/websphere/jetty/resin）里，对吧？</p><p>发布完了之后，你要启动你的web容器，开始提供服务，这时候你通过配置域名，dns等等相关，你的网站就可以访问了（假设你是个网站）。 </p><p>那我们来看，你的前后端代码是不是全都在那个war包里？包括你的js，css，图片，各种第三方的库，对吧？</p><p>浏览器中输入你的网站域名（<a href="http://www.xxx.com），之后发生了什么？" target="_blank" rel="noopener">www.xxx.com），之后发生了什么？</a></p><p>浏览器在通过ip路由到你的服务，在tcp3次握手之后，通过tcp协议开始访问你的web服务器，你的web服务器得到请求后，开始提供服务，接收请求，之后通过response返回你的应答给浏览器。 </p><p>那么我们来看，我们先假设你的首页中有100张图片，以及一个单表的查询，此时，用户的看似一次http请求，其实并不是一次，用户在第一次访问的时候，浏览器中不会有缓存，你的100张图片，浏览器要连着请求100次http请求（有人会跟我说http长链短链的问题，不在这里讨论），你的web服务器接收这些请求，都需要耗费内存去创建socket来玩tcp传输。 </p><p>重点来了，这样的话，你的web服务器的压力会非常大，因为页面中的所有请求都是只请求到你这台服务器上，如果1个人还好，如果10000个人并发访问呢（先不聊web服务器集群，这里就说是单实例web服务器），那你的服务器能扛住多少个tcp链接？你的服务器的内存有多大？你能抗住多少IO？你给web服务器分的内存有多大？会不会宕机？</p><p>这就是为什么，越是大中型的web应用，他们越是要解耦。</p><p>理论上你可以把你的数据库+应用服务+消息队列+缓存+用户上传的文件+日志+等等都扔在一台主机上，但是这样就好像是你把鸡蛋都放在一个篮子里，隐患非常大。</p><p>正常的分布式架构，是都要拆开的，你的应用服务器集群（前，后）+文件服务器集群+数据库服务器集群+消息队列集群+缓存集群等等。</p><h3 id="使用jsp的痛点："><a href="#使用jsp的痛点：" class="headerlink" title="使用jsp的痛点："></a>使用jsp的痛点：</h3><p>1.<br>动态资源和静态资源全部耦合在一起，无法做到真正的动静分离。服务器压力大，因为服务器会收到各种http请求，例如css的http请求，js的，图片的，动态代码的等等。一旦服务器出现状况，前后台一起玩完，用户体验极差。  </p><p>2.<br>前端工程师做好html后，需要由java工程师来将html修改成jsp页面，出错率较高（因为页面中经常会出现大量的js代码），修改问题时需要双方协同开发，效率低下。</p><p>3.<br>jsp必须要在支持java的web服务器里运行（例如tomcat等），无法使用nginx等（nginx据说单实例http并发高达5w，这个优势要用上），性能提不上来。</p><p>4.<br>第一次请求jsp，必须要在web服务器中编译成servlet，第一次运行会较慢。</p><p>5.<br>每次请求jsp都是访问servlet再用输出流输出的html页面，效率没有直接使用html高。</p><p>6.<br>jsp内有较多标签和表达式，前端工程师在修改页面时会捉襟见肘，遇到很多痛点。</p><p>7.<br>如果jsp中的内容很多，页面响应会很慢，因为是同步加载。</p><p>基于上述的一些痛点，我们应该把整个项目的开发权重往前移，实现前后端真正的解耦！</p><h4 id="以前老的方式是："><a href="#以前老的方式是：" class="headerlink" title="以前老的方式是："></a>以前老的方式是：</h4><p>1.<br>客户端请求</p><p>2.<br>服务端的servlet或controller接收请求（路由规则由后端制定，整个项目开发的权重大部分在后端）</p><p>3.<br>调用service,dao代码完成业务逻辑</p><p>4.<br>返回jsp</p><p>5.<br>jsp展现一些动态的代码</p><h4 id="新的方式是："><a href="#新的方式是：" class="headerlink" title="新的方式是："></a>新的方式是：</h4><p>1.<br>浏览器发送请求</p><p>2.<br>直接到达html页面（路由规则由前端制定，整个项目开发的权重前移）</p><p>3.<br>html页面负责调用服务端接口产生数据（通过ajax等等）</p><p>4.<br>填充html，展现动态效果。</p><p>（有兴趣的童鞋可以访问一下阿里巴巴等大型网站，然后按一下F12，监控一下你刷新一次页面，他的http是怎么玩的，大多数都是单独请求后台数据，使用json传输数据，而不是一个大而全的http请求把整个页面包括动+静全部返回过来）</p><h4 id="这样做的好处是："><a href="#这样做的好处是：" class="headerlink" title="这样做的好处是："></a>这样做的好处是：</h4><p>1.<br>可以实现真正的前后端解耦，前端服务器使用nginx。前端服务器放的是css，js，图片等等一系列静态资源（甚至你还可以css，js，图片等资源放到特定的文件服务器，例如阿里云的oss，并使用cdn加速），前端服务器负责控制页面引用，跳转，调用后端的接口，后端服务器使用tomcat。（这里需要使用一些前端工程化的框架比如nodejs，react，router，react，redux，webpack）</p><p>2.<br>发现bug，可以快速定位是谁的问题，不会出现互相踢皮球的现象。页面逻辑，跳转错误，浏览器兼容性问题，脚本错误，页面样式等问题，全部由前端工程师来负责。接口数据出错，数据没有提交成功，应答超时等问题，全部由后端工程师来解决。</p><p>3.<br>双方互不干扰，前端与后端是相亲相爱的一家人。</p><p>4.<br>在大并发情况下，我可以同时水平扩展前后端服务器，比如淘宝的一个首页就需要2000台前端服务器做集群来抗住日均多少亿+的日均pv。（去参加阿里的技术峰会，听他们说他们的web容器都是自己写的，就算他单实例抗10万http并发，2000台是2亿http并发，并且他们还可以根据预知洪峰来无限拓展，很恐怖，就一个首页。。。）</p><p>5.<br>减少后端服务器的并发压力，除了接口以外的其他所有http请求全部转移到前端nginx上。</p><p>6.<br>即使后端服务暂时超时或者宕机了，前端页面也会正常访问，只不过数据刷不出来而已。</p><p>7.<br>也许你也需要有微信相关的轻应用，那样你的接口完全可以共用，如果也有app相关的服务，那么只要通过一些代码重构，也可以大量复用接口，提升效率。</p><p>8.<br>页面显示的东西再多也不怕，因为是异步加载。</p><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>1.<br>在开需求会议的时候，前后端工程师必须全部参加，并且需要制定好接口文档，后端工程师要写好测试用例，不要让前端工程师充当你的组专职测试，推荐使用chrome的插件postman，service层的测试用例拿junit写。</p><p>2.<br>上述的接口并不是java里的interface，说白了调用接口就是调用你controler里的方法。</p><p>3.<br>加重了前端团队的工作量，减轻了后端团队的工作量，提高了性能和可扩展性。</p><p>4.<br>我们需要一些前端的框架来解决类似于页面嵌套，分页，页面跳转控制等功能。（上面提到的那些前端框架）。</p><p>5.<br>如果你的项目很小，或者是一个单纯的内网项目，那你大可放心，不用任何架构而言，但是如果你的项目是外网项目，呵呵哒。</p><p>6.<br>以前还有人在使用类似于velocity/freemarker等模板框架来生成静态页面，现在这种做法也被淘汰掉了。</p><p>7.<br>这篇文章主要的目的是说jsp在大型外网java web项目中被淘汰掉，可没说jsp可以完全不学，对于一些学生朋友来说，jsp/servlet等相关的java web基础还是要掌握牢的，不然你以为springmvc这种框架是基于什么来写的？</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JSP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+            <tag> JSP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>XSS注入</title>
+      <link href="/2019/12/21/websafety/xss/"/>
+      <url>/2019/12/21/websafety/xss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="XSS简介"><a href="#XSS简介" class="headerlink" title="XSS简介"></a>XSS简介</h3><p>XSS攻击通常指的是通过利用网页开发时留下的漏洞，通过巧妙的方法注入恶意指令代码到网页，使用户加载并执行攻击者恶意制造的网页程序。这些恶意网页程序通常是JavaScript，但实际上也可以包括Java、 VBScript、ActiveX、 Flash 或者甚至是普通的HTML。攻击成功后，攻击者可能得到包括但不限于更高的权限（如执行一些操作）、私密网页内容、会话和cookie等各种内容。</p><h3 id="XSS注入"><a href="#XSS注入" class="headerlink" title="XSS注入"></a>XSS注入</h3><pre><code>&lt;script&gt;alert(1)&lt;/script&gt;</code></pre><p>通过这段js代码，弹个框来证明存在xss漏洞。<br>弹框只是为了证明存在此漏洞。而此漏洞的利用方式由很多种。<br>比如，可以使用xss平台：<br><a href="http://xsspt.com/index.php" target="_blank" rel="noopener">平台地址</a><br><a href="https://blog.csdn.net/qq_17046291/article/details/99336431" target="_blank" rel="noopener">平台使用教程</a><br><img src="http://img.ahdy.top/2019-12-21_013951.png" alt></p><pre><code>当某人进入带有脚本的页面时，js脚本会获取他的cookie并发往xss平台。你只需要登录xss平台等待即可，拿到cookie后，可以不需要密码登录他的账号。</code></pre><p>对于存储型xss漏洞的表现形式，比较经典的是留言板。但是我们都是遵纪守法的好学生，不能对外面的网站进行测试，所以我拿了我自己的web项目做了一波操作。<br>发现存在xss注入，虽然Java的预处理查询有着防御sql注入的功能，但是针对于xss注入，还需要做很多防范措施。<br><img src="http://img.ahdy.top/QQ%E5%9B%BE%E7%89%8720191221014304.png" alt><br>选择平台生成的一些脚本注入之后，接收到了cookie，ip等相关信息<br><img src="http://img.ahdy.top/2019-12-21_014511.png" alt><br>同理任何访问被xss注入后的用户都会被收集信息。<br>其实在注入成功之后，你会发现留言内容和留言者的部分都为空，因为插入的js代码已经被浏览器解析执行了！</p><pre><code>这时我们按F12，打开浏览器的开发者工具，就能发现嵌入的js脚本。</code></pre><h3 id="XSS攻防"><a href="#XSS攻防" class="headerlink" title="XSS攻防"></a>XSS攻防</h3><p>作为一个开发，我们要保证项目的抗压能力。  </p><h3 id="如何防范xss？"><a href="#如何防范xss？" class="headerlink" title="如何防范xss？"></a>如何防范xss？</h3><p>1.<br>    在input标签里面加上maxlength属性</p><pre><code>&lt;input type=&quot;text&quot; name=&quot;nickname&quot; placeholder=&quot;留言者昵称&quot; maxlength=&quot;10&quot;&gt; 至于原理，就是因为js脚本的形式为&lt;script&gt;&lt;/script&gt;长度为17，所以只要我们在前端对长度进行限制，就可以阻止黑客进行xss攻击了可是！开发可没这么好做！作为攻击者，我们同样可以修改前端代码，具体的操作是使用浏览器的F12（开发者工具）我们可以直接进行长度的修改。另外，还可以用抓包的方法，在包里面直接写，也是不受长度限制的。所以这种方式只能针对&quot;脚本小子&quot;，并不切合实际</code></pre><p>2.<br>    对关键字script进行过滤</p><pre><code>很容易发现，要想进行xss攻击，必须插入一段js脚本，而js脚本的特征是很明显的，脚本中包含script关键字，那么我们只需要进行script过滤即可。但是js脚本是一种弱类型语言，不区分大小写，所以只需要对某一字母大小写切换，就可以实现绕过屏蔽。例：&lt;sCrIPt&gt;alert(1)&lt;/ScripT&gt; 这时候你可能会说，那把大小写一起屏蔽了不久行了？其实不然，因为语言特性，可以使用双写script的方式再次进行绕过  例：&lt;Sscriptcript&gt;alert(1)&lt;/Sscriptcript&gt; 原因，前面的S和后面的cript组合在一起，构成了新的Script关键字。</code></pre><p>3.<br>    使用正则表达式过滤</p><pre><code>攻击者如何再一次绕过？答案是：用img标签的oneerror属性&lt;img src=x onerror=alert(1)&gt; </code></pre><p>4.<br>    过滤alert关键字</p><pre><code>那么，攻击者该怎么办呢？答案是：编码绕过&lt;a href=&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;#115;&amp;#99;&amp;#114;&amp;#105;&amp;#112;&amp;#116;&amp;#58;&amp;#97;&amp;#108;&amp;#101;&amp;#114;&amp;#116;&amp;#40;&amp;#49;&amp;#41;&gt;a&lt;/a&gt; 这种编码方式为字符编码字符编码：十进制、十六进制ASCII码或unicode 字符编码，样式为“&amp;#数值;”, 例如“j”可以编码为“&amp;#106;”或“&amp;#x6a;”上述代码解码之后如下：&lt;a href=javascript:alert(1)&gt;a&lt;/a&gt; 你能明显感觉到限制：由于使用到了a标签，所以只有点击时，才会弹框。能不能让所有进入这个页面的人都弹框？当然可以了：用iframe标签编码&lt;iframe src=&amp;#106;&amp;#97;&amp;#118;&amp;#97;&amp;#115;&amp;#99;&amp;#114;&amp;#105;&amp;#112;&amp;#116;&amp;#58;&amp;#97;&amp;#108;&amp;#101;&amp;#114;&amp;#116;&amp;#40;&amp;#49;&amp;#41;&gt; 这种写法，同样既没有script关键字，又没有alert关键字。由于使用了iframe标签，留言板的样式会发生变形。实战中尽量不要用。</code></pre><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>其实关于xss的注入方法数不胜数，学习的道路坎坎坷坷，只能一步一个坑的慢慢填。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> XSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> XSS </tag>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>踩点(一)</title>
       <link href="/2019/12/17/websafety/webmseeage/"/>
       <url>/2019/12/17/websafety/webmseeage/</url>
@@ -31,33 +85,6 @@
     
     
     <entry>
-      <title>简易版聊天室</title>
-      <link href="/2019/12/11/java/socket/"/>
-      <url>/2019/12/11/java/socket/</url>
-      
-        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Socket </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>How to use vue.js</title>
       <link href="/2019/12/11/framework/vue/"/>
       <url>/2019/12/11/framework/vue/</url>
@@ -77,6 +104,33 @@
             <tag> 环境 </tag>
             
             <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>简易版聊天室</title>
+      <link href="/2019/12/11/java/socket/"/>
+      <url>/2019/12/11/java/socket/</url>
+      
+        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Socket </tag>
             
         </tags>
       
@@ -220,33 +274,6 @@
     
     
     <entry>
-      <title>Session无法获取</title>
-      <link href="/2019/11/23/ssm/sessionnull/"/>
-      <url>/2019/11/23/ssm/sessionnull/</url>
-      
-        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> 传递 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session会话</title>
       <link href="/2019/11/23/ssm/session/"/>
       <url>/2019/11/23/ssm/session/</url>
@@ -274,25 +301,25 @@
     
     
     <entry>
-      <title>iframe标签</title>
-      <link href="/2019/11/23/ssm/ifream/"/>
-      <url>/2019/11/23/ssm/ifream/</url>
+      <title>Session无法获取</title>
+      <link href="/2019/11/23/ssm/sessionnull/"/>
+      <url>/2019/11/23/ssm/sessionnull/</url>
       
-        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
       
       
       <categories>
           
-          <category> 子页面加载 </category>
+          <category> Session </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 子页面 </tag>
+            <tag> Session </tag>
             
-            <tag> CSS </tag>
+            <tag> 传递 </tag>
             
         </tags>
       
@@ -317,9 +344,36 @@
       
         <tags>
             
+            <tag> JS </tag>
+            
             <tag> CSS </tag>
             
-            <tag> JS </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iframe标签</title>
+      <link href="/2019/11/23/ssm/ifream/"/>
+      <url>/2019/11/23/ssm/ifream/</url>
+      
+        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 子页面加载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> 子页面 </tag>
             
         </tags>
       
@@ -855,9 +909,9 @@
       
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> windows </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
       
@@ -909,9 +963,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> MAC </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -1503,9 +1557,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> Tomcat </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       

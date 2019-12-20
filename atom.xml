@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-17T11:09:53.611Z</updated>
+  <updated>2019-12-20T18:29:45.913Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSP的归隐</title>
+    <link href="http://yoursite.com/2019/12/21/draiy/lossjsp/"/>
+    <id>http://yoursite.com/2019/12/21/draiy/lossjsp/</id>
+    <published>2019-12-20T18:50:00.000Z</published>
+    <updated>2019-12-20T18:29:45.913Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;关于JSP的淘汰问题（转）&quot;&gt;&lt;a href=&quot;#关于JSP的淘汰问题（转）&quot; class=&quot;headerlink&quot; title=&quot;关于JSP的淘汰问题（转）&quot;&gt;&lt;/a&gt;关于JSP的淘汰问题（转）&lt;/h3&gt;&lt;p&gt;来源：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="JSP" scheme="http://yoursite.com/categories/JSP/"/>
+    
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+    
+      <category term="JSP" scheme="http://yoursite.com/tags/JSP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XSS注入</title>
+    <link href="http://yoursite.com/2019/12/21/websafety/xss/"/>
+    <id>http://yoursite.com/2019/12/21/websafety/xss/</id>
+    <published>2019-12-20T18:37:00.000Z</published>
+    <updated>2019-12-20T18:18:42.809Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;XSS简介&quot;&gt;&lt;a href=&quot;#XSS简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="XSS" scheme="http://yoursite.com/categories/XSS/"/>
+    
+    
+      <category term="XSS" scheme="http://yoursite.com/tags/XSS/"/>
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>踩点(一)</title>
@@ -45,34 +101,6 @@
   </entry>
   
   <entry>
-    <title>简易版聊天室</title>
-    <link href="http://yoursite.com/2019/12/11/java/socket/"/>
-    <id>http://yoursite.com/2019/12/11/java/socket/</id>
-    <published>2019-12-11T13:59:00.000Z</published>
-    <updated>2019-12-16T13:47:36.533Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;随笔&quot;&gt;&lt;a href=&quot;#随笔&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Socket" scheme="http://yoursite.com/tags/Socket/"/>
-    
-  </entry>
-  
-  <entry>
     <title>How to use vue.js</title>
     <link href="http://yoursite.com/2019/12/11/framework/vue/"/>
     <id>http://yoursite.com/2019/12/11/framework/vue/</id>
@@ -97,6 +125,34 @@
       <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
     
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简易版聊天室</title>
+    <link href="http://yoursite.com/2019/12/11/java/socket/"/>
+    <id>http://yoursite.com/2019/12/11/java/socket/</id>
+    <published>2019-12-11T13:59:00.000Z</published>
+    <updated>2019-12-16T13:47:36.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;随笔&quot;&gt;&lt;a href=&quot;#随笔&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Socket" scheme="http://yoursite.com/tags/Socket/"/>
     
   </entry>
   
@@ -242,35 +298,6 @@
   </entry>
   
   <entry>
-    <title>Session无法获取</title>
-    <link href="http://yoursite.com/2019/11/23/ssm/sessionnull/"/>
-    <id>http://yoursite.com/2019/11/23/ssm/sessionnull/</id>
-    <published>2019-11-22T19:59:00.000Z</published>
-    <updated>2019-11-25T07:22:58.913Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;解决&quot;&gt;&lt;a href=&quot;#解决&quot; class=&quot;headerlink&quot; title=&quot;解决&quot;&gt;&lt;/a&gt;解决&lt;/h3&gt;&lt;p&gt;暂时的解决方法有两种，亲测有效：&lt;/p&gt;
-&lt;p&gt;方法一： 
-        
-      
-    
-    </summary>
-    
-      <category term="Session" scheme="http://yoursite.com/categories/Session/"/>
-    
-    
-      <category term="Session" scheme="http://yoursite.com/tags/Session/"/>
-    
-      <category term="传递" scheme="http://yoursite.com/tags/%E4%BC%A0%E9%80%92/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Session会话</title>
     <link href="http://yoursite.com/2019/11/23/ssm/session/"/>
     <id>http://yoursite.com/2019/11/23/ssm/session/</id>
@@ -300,11 +327,11 @@
   </entry>
   
   <entry>
-    <title>iframe标签</title>
-    <link href="http://yoursite.com/2019/11/23/ssm/ifream/"/>
-    <id>http://yoursite.com/2019/11/23/ssm/ifream/</id>
-    <published>2019-11-22T18:59:00.000Z</published>
-    <updated>2019-11-22T17:44:45.935Z</updated>
+    <title>Session无法获取</title>
+    <link href="http://yoursite.com/2019/11/23/ssm/sessionnull/"/>
+    <id>http://yoursite.com/2019/11/23/ssm/sessionnull/</id>
+    <published>2019-11-22T19:59:00.000Z</published>
+    <updated>2019-11-25T07:22:58.913Z</updated>
     
     <summary type="html">
     
@@ -312,18 +339,19 @@
       
         
         
-          &lt;h3 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot;
+          &lt;h3 id=&quot;解决&quot;&gt;&lt;a href=&quot;#解决&quot; class=&quot;headerlink&quot; title=&quot;解决&quot;&gt;&lt;/a&gt;解决&lt;/h3&gt;&lt;p&gt;暂时的解决方法有两种，亲测有效：&lt;/p&gt;
+&lt;p&gt;方法一： 
         
       
     
     </summary>
     
-      <category term="子页面加载" scheme="http://yoursite.com/categories/%E5%AD%90%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD/"/>
+      <category term="Session" scheme="http://yoursite.com/categories/Session/"/>
     
     
-      <category term="子页面" scheme="http://yoursite.com/tags/%E5%AD%90%E9%A1%B5%E9%9D%A2/"/>
+      <category term="Session" scheme="http://yoursite.com/tags/Session/"/>
     
-      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+      <category term="传递" scheme="http://yoursite.com/tags/%E4%BC%A0%E9%80%92/"/>
     
   </entry>
   
@@ -349,9 +377,37 @@
       <category term="样式" scheme="http://yoursite.com/categories/%E6%A0%B7%E5%BC%8F/"/>
     
     
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
     
-      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+  </entry>
+  
+  <entry>
+    <title>iframe标签</title>
+    <link href="http://yoursite.com/2019/11/23/ssm/ifream/"/>
+    <id>http://yoursite.com/2019/11/23/ssm/ifream/</id>
+    <published>2019-11-22T18:59:00.000Z</published>
+    <updated>2019-11-22T17:44:45.935Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="子页面加载" scheme="http://yoursite.com/categories/%E5%AD%90%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="子页面" scheme="http://yoursite.com/tags/%E5%AD%90%E9%A1%B5%E9%9D%A2/"/>
     
   </entry>
   
@@ -520,62 +576,6 @@
       <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
     
       <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据查询</title>
-    <link href="http://yoursite.com/2019/11/18/framework/findjson/"/>
-    <id>http://yoursite.com/2019/11/18/framework/findjson/</id>
-    <published>2019-11-18T06:59:00.000Z</published>
-    <updated>2019-11-18T06:33:15.456Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;JSON数据格式检测&quot;&gt;&lt;a href=&quot;#JSON数据格式检测&quot; class=&quot;headerlink&quot; title=&quot;JSON数据格式检测&quot;&gt;&lt;/a&gt;JSON数据格式检测&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.bejson.com/&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数据" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE/"/>
-    
-    
-      <category term="JSON" scheme="http://yoursite.com/tags/JSON/"/>
-    
-      <category term="MD5" scheme="http://yoursite.com/tags/MD5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>eclipse驱动报错</title>
-    <link href="http://yoursite.com/2019/11/17/java/eclipseerror/"/>
-    <id>http://yoursite.com/2019/11/17/java/eclipseerror/</id>
-    <published>2019-11-17T04:59:00.000Z</published>
-    <updated>2019-11-17T11:12:11.581Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h3&gt;&lt;h4
-        
-      
-    
-    </summary>
-    
-      <category term="eclipse" scheme="http://yoursite.com/categories/eclipse/"/>
-    
-    
-      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
-    
-      <category term="eclipse" scheme="http://yoursite.com/tags/eclipse/"/>
     
   </entry>
   
