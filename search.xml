@@ -8,7 +8,7 @@
       <link href="/2020/01/01/framework/alimessageinterface/"/>
       <url>/2020/01/01/framework/alimessageinterface/</url>
       
-        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>随着互联网的发展，信息安全显得尤为重要，在保证互联网环境稳定运行的情况下，为了不让一些人在网上搞破坏，采取实名认证的方式去约束其行为，不要觉得网络就是法外之地，短信验证码注册的作用，一定程度上保证信息真实性，也规范了用户的使用行为。</p><h3 id="阿里云短信服务接口使用方式"><a href="#阿里云短信服务接口使用方式" class="headerlink" title="阿里云短信服务接口使用方式"></a>阿里云短信服务接口使用方式</h3><p>这篇文档将用最快速的方式去让读者学会接口使用<br>1.注册阿里云账号  </p><p>2.实名认证</p><p>3.使用短信服务API接口，注册短信模板，注册签名，注册AccessKey，三者缺一不可。<br><a href="https://help.aliyun.com/product/44282.html?spm=5176.12207334.0.0.50c41cbei0gcBM" target="_blank" rel="noopener">官方文档</a><br>4.将下面给出代码中的模板，签名，key值替换掉你的即可实现短信验证码接收（一条短信大概四分五）</p><h4 id="maven包导入"><a href="#maven包导入" class="headerlink" title="maven包导入"></a>maven包导入</h4><p>添加到pom.xml中</p><pre><code>    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-core&lt;/artifactId&gt;      &lt;version&gt;4.0.8&lt;/version&gt;    &lt;/dependency&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-dysmsapi&lt;/artifactId&gt;      &lt;version&gt;1.1.0&lt;/version&gt;    &lt;/dependency&gt;    &lt;!-- https://mvnrepository.com/artifact/com.google.code.gson/gson --&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;      &lt;artifactId&gt;gson&lt;/artifactId&gt;      &lt;version&gt;2.8.4&lt;/version&gt;    &lt;/dependency&gt;</code></pre><h4 id="类1，接口配置信息"><a href="#类1，接口配置信息" class="headerlink" title="类1，接口配置信息"></a>类1，接口配置信息</h4><pre><code>package com.Message;//package com.Message;public class StaticPeram {    final static String defaultConnectTimeout  = &quot;sun.net.client.defaultConnectTimeout&quot;;    final static String defaultReadTimeout = &quot;sun.net.client.defaultReadTimeout&quot;;    final static String Timeout = &quot;10000&quot;;    // 初始化ascClient需要的几个参数    final static String product = &quot;Dysmsapi&quot;;// 短信API产品名称（短信产品名固定，无需修改）    final static String domain = &quot;dysmsapi.aliyuncs.com&quot;;// 短信API产品域名（接口地址固定，无需修改）    // 替换成你的AK (产品密)    final static String accessKeyId = &quot;LTAI4Fh6yLyaquuDZXuBDRnj&quot;;// 你的accessKeyId,填你自己的 上文配置所得  自行配置    final static String accessKeySecret = &quot;6Oy68vMwouFf4gCjeoafOf8tGGNUNS&quot;;// 你的accessKeySecret,填你自己的 上文配置所得 自行配置    // 必填:短信签名-可在短信控制台中找到    final static String SignName = &quot;ahdy6&quot;; // 阿里云配置你自己的短信签名填入    // 必填:短信模板-可在短信控制台中找到    final static String TemplateCode = &quot;SMS_181545008&quot;; // 阿里云配置你自己的短信模板填入}</code></pre><h4 id="类2，API-jar包方法执行"><a href="#类2，API-jar包方法执行" class="headerlink" title="类2，API,jar包方法执行"></a>类2，API,jar包方法执行</h4><pre><code>package com.Message;//package com.Message;import com.aliyuncs.DefaultAcsClient;import com.aliyuncs.IAcsClient;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsRequest;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;import com.aliyuncs.exceptions.ClientException;import com.aliyuncs.exceptions.ServerException;import com.aliyuncs.http.MethodType;import com.aliyuncs.profile.DefaultProfile;import com.aliyuncs.profile.IClientProfile;import com.google.gson.Gson;import org.springframework.expression.common.TemplateParserContext;public class PhoneCode {    private static String code ;//    public static void main(String[] args) {//        String phone = &quot;16655072520&quot;; //此处可输入你的手机号码进行测试//        System.out.println(vcode());//        getPhonemsg(phone);//////    }    /**     * 阿里云短信服务配置     * @param mobile     * @return     */    public static String getPhonemsg(String mobile) {        /**         * 进行正则关系校验         */        System.out.println(mobile);        if (mobile == null || mobile == &quot;&quot;) {            System.out.println(&quot;手机号为空&quot;);            return &quot;&quot;;        }        /**         * 短信验证---阿里大于工具         */        // 设置超时时间-可自行调整        System.setProperty(StaticPeram.defaultConnectTimeout, StaticPeram.Timeout);        System.setProperty(StaticPeram.defaultReadTimeout, StaticPeram.Timeout);        // 初始化ascClient需要的几个参数        final String product = StaticPeram.product;// 短信API产品名称（短信产品名固定，无需修改）        final String domain = StaticPeram.domain;// 短信API产品域名（接口地址固定，无需修改）        // 替换成你的AK        final String accessKeyId = StaticPeram.accessKeyId;// 你的accessKeyId,参考本文档步骤2        final String accessKeySecret = StaticPeram.accessKeySecret;// 你的accessKeySecret，参考本文档步骤2        // 初始化ascClient,暂时不支持多region        IClientProfile profile = DefaultProfile.getProfile(&quot;cn-hangzhou&quot;,                accessKeyId, accessKeySecret);        try {            DefaultProfile.addEndpoint(&quot;cn-hangzhou&quot;, &quot;cn-hangzhou&quot;, product,                    domain);        } catch (ClientException e1) {            e1.printStackTrace();        }        //获取验证码        code = vcode();        IAcsClient acsClient = new DefaultAcsClient(profile);        // 组装请求对象        SendSmsRequest request = new SendSmsRequest();        // 使用post提交        request.setMethod(MethodType.POST);        // 必填:待发送手机号。支持以逗号分隔的形式进行批量调用，批量上限为1000个手机号码,批量调用相对于单条调用及时性稍有延迟,验证码类型的短信推荐使用单条调用的方式        request.setPhoneNumbers(mobile);        // 必填:短信签名-可在短信控制台中找到        request.setSignName(StaticPeram.SignName);        // 必填:短信模板-可在短信控制台中找到        request.setTemplateCode(StaticPeram.TemplateCode);        // 可选:模板中的变量替换JSON串,如模板内容为&quot;亲爱的${name},您的验证码为${code}&quot;时,此处的值为        // 友情提示:如果JSON中需要带换行符,请参照标准的JSON协议对换行符的要求,比如短信内容中包含\r\n的情况在JSON中需要表示成\\r\\n,否则会导致JSON在服务端解析失败        request.setTemplateParam(&quot;{ \&quot;code\&quot;:\&quot;&quot;+code+&quot;\&quot;}&quot;);        // 可选-上行短信扩展码(无特殊需求用户请忽略此字段)        // request.setSmsUpExtendCode(&quot;90997&quot;);        // 可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者        request.setOutId(&quot;yourOutId&quot;);        // 请求失败这里会抛ClientException异常        SendSmsResponse sendSmsResponse;        try {            sendSmsResponse = acsClient.getAcsResponse(request);            if (sendSmsResponse.getCode() != null                    &amp;&amp; sendSmsResponse.getCode().equals(&quot;OK&quot;)) {                // 请求成功                System.out.println(&quot;获取验证码成功！！！&quot;);            } else {                //如果验证码出错，会输出错误码告诉你具体原因                System.out.println(sendSmsResponse.getCode());                System.out.println(&quot;获取验证码失败...&quot;);            }        } catch (ServerException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        } catch (ClientException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        }        return &quot;true&quot;;    }    /**     * 生成6位随机数验证码     * @return     */    public static String vcode(){        String vcode = &quot;&quot;;        for (int i = 0; i &lt; 6; i++) {            vcode = vcode + (int)(Math.random() * 9);        }//        Gson gson = new Gson();//        String code = gson.toJson(vcode);        return vcode;    }}</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>${“此处值应与模板中一致，比如模板中为code,此处即为code”,code}；<br>遇到API错误码可参考<br><a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.11186623.4.4.2e036edfKqCLZR" target="_blank" rel="noopener">官方文档解决方法</a></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>随着互联网的发展，信息安全显得尤为重要，在保证互联网环境稳定运行的情况下，为了不让一些人在网上搞破坏，采取实名认证的方式去约束其行为，不要觉得网络就是法外之地，短信验证码注册的作用，一定程度上保证信息真实性，也规范了用户的使用行为。</p><h3 id="阿里云短信服务接口使用方式"><a href="#阿里云短信服务接口使用方式" class="headerlink" title="阿里云短信服务接口使用方式"></a>阿里云短信服务接口使用方式</h3><p>这篇文档将用最快速的方式去让读者学会接口使用<br>1.注册阿里云账号  </p><p>2.实名认证</p><p>3.使用短信服务API接口，注册短信模板，注册签名，注册AccessKey，三者缺一不可。<br><a href="https://help.aliyun.com/product/44282.html?spm=5176.12207334.0.0.50c41cbei0gcBM" target="_blank" rel="noopener">官方文档</a><br>4.将下面给出代码中的模板，签名，key值替换掉你的即可实现短信验证码接收（一条短信大概四分五）</p><h4 id="maven包导入"><a href="#maven包导入" class="headerlink" title="maven包导入"></a>maven包导入</h4><p>添加到pom.xml中</p><pre><code>    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-core&lt;/artifactId&gt;      &lt;version&gt;4.0.8&lt;/version&gt;    &lt;/dependency&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-dysmsapi&lt;/artifactId&gt;      &lt;version&gt;1.1.0&lt;/version&gt;    &lt;/dependency&gt;    &lt;!-- https://mvnrepository.com/artifact/com.google.code.gson/gson --&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;      &lt;artifactId&gt;gson&lt;/artifactId&gt;      &lt;version&gt;2.8.4&lt;/version&gt;    &lt;/dependency&gt;</code></pre><h4 id="类1，接口配置信息"><a href="#类1，接口配置信息" class="headerlink" title="类1，接口配置信息"></a>类1，接口配置信息</h4><pre><code>package com.Message;//package com.Message;public class StaticPeram {    final static String defaultConnectTimeout  = &quot;sun.net.client.defaultConnectTimeout&quot;;    final static String defaultReadTimeout = &quot;sun.net.client.defaultReadTimeout&quot;;    final static String Timeout = &quot;10000&quot;;    // 初始化ascClient需要的几个参数    final static String product = &quot;Dysmsapi&quot;;// 短信API产品名称（短信产品名固定，无需修改）    final static String domain = &quot;dysmsapi.aliyuncs.com&quot;;// 短信API产品域名（接口地址固定，无需修改）    // 替换成你的AK (产品密)    final static String accessKeyId = &quot;&quot;;// 你的accessKeyId,填你自己的 上文配置所得  自行配置    final static String accessKeySecret = &quot;&quot;;// 你的accessKeySecret,填你自己的 上文配置所得 自行配置    // 必填:短信签名-可在短信控制台中找到    final static String SignName = &quot;ahdy6&quot;; // 阿里云配置你自己的短信签名填入    // 必填:短信模板-可在短信控制台中找到    final static String TemplateCode = &quot;SMS_181545008&quot;; // 阿里云配置你自己的短信模板填入}</code></pre><h4 id="类2，API-jar包方法执行"><a href="#类2，API-jar包方法执行" class="headerlink" title="类2，API,jar包方法执行"></a>类2，API,jar包方法执行</h4><pre><code>package com.Message;//package com.Message;import com.aliyuncs.DefaultAcsClient;import com.aliyuncs.IAcsClient;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsRequest;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;import com.aliyuncs.exceptions.ClientException;import com.aliyuncs.exceptions.ServerException;import com.aliyuncs.http.MethodType;import com.aliyuncs.profile.DefaultProfile;import com.aliyuncs.profile.IClientProfile;import com.google.gson.Gson;import org.springframework.expression.common.TemplateParserContext;public class PhoneCode {    private static String code ;//    public static void main(String[] args) {//        String phone = &quot;16655072520&quot;; //此处可输入你的手机号码进行测试//        System.out.println(vcode());//        getPhonemsg(phone);//////    }    /**     * 阿里云短信服务配置     * @param mobile     * @return     */    public static String getPhonemsg(String mobile) {        /**         * 进行正则关系校验         */        System.out.println(mobile);        if (mobile == null || mobile == &quot;&quot;) {            System.out.println(&quot;手机号为空&quot;);            return &quot;&quot;;        }        /**         * 短信验证---阿里大于工具         */        // 设置超时时间-可自行调整        System.setProperty(StaticPeram.defaultConnectTimeout, StaticPeram.Timeout);        System.setProperty(StaticPeram.defaultReadTimeout, StaticPeram.Timeout);        // 初始化ascClient需要的几个参数        final String product = StaticPeram.product;// 短信API产品名称（短信产品名固定，无需修改）        final String domain = StaticPeram.domain;// 短信API产品域名（接口地址固定，无需修改）        // 替换成你的AK        final String accessKeyId = StaticPeram.accessKeyId;// 你的accessKeyId,参考本文档步骤2        final String accessKeySecret = StaticPeram.accessKeySecret;// 你的accessKeySecret，参考本文档步骤2        // 初始化ascClient,暂时不支持多region        IClientProfile profile = DefaultProfile.getProfile(&quot;cn-hangzhou&quot;,                accessKeyId, accessKeySecret);        try {            DefaultProfile.addEndpoint(&quot;cn-hangzhou&quot;, &quot;cn-hangzhou&quot;, product,                    domain);        } catch (ClientException e1) {            e1.printStackTrace();        }        //获取验证码        code = vcode();        IAcsClient acsClient = new DefaultAcsClient(profile);        // 组装请求对象        SendSmsRequest request = new SendSmsRequest();        // 使用post提交        request.setMethod(MethodType.POST);        // 必填:待发送手机号。支持以逗号分隔的形式进行批量调用，批量上限为1000个手机号码,批量调用相对于单条调用及时性稍有延迟,验证码类型的短信推荐使用单条调用的方式        request.setPhoneNumbers(mobile);        // 必填:短信签名-可在短信控制台中找到        request.setSignName(StaticPeram.SignName);        // 必填:短信模板-可在短信控制台中找到        request.setTemplateCode(StaticPeram.TemplateCode);        // 可选:模板中的变量替换JSON串,如模板内容为&quot;亲爱的${name},您的验证码为${code}&quot;时,此处的值为        // 友情提示:如果JSON中需要带换行符,请参照标准的JSON协议对换行符的要求,比如短信内容中包含\r\n的情况在JSON中需要表示成\\r\\n,否则会导致JSON在服务端解析失败        request.setTemplateParam(&quot;{ \&quot;code\&quot;:\&quot;&quot;+code+&quot;\&quot;}&quot;);        // 可选-上行短信扩展码(无特殊需求用户请忽略此字段)        // request.setSmsUpExtendCode(&quot;90997&quot;);        // 可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者        request.setOutId(&quot;yourOutId&quot;);        // 请求失败这里会抛ClientException异常        SendSmsResponse sendSmsResponse;        try {            sendSmsResponse = acsClient.getAcsResponse(request);            if (sendSmsResponse.getCode() != null                    &amp;&amp; sendSmsResponse.getCode().equals(&quot;OK&quot;)) {                // 请求成功                System.out.println(&quot;获取验证码成功！！！&quot;);            } else {                //如果验证码出错，会输出错误码告诉你具体原因                System.out.println(sendSmsResponse.getCode());                System.out.println(&quot;获取验证码失败...&quot;);            }        } catch (ServerException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        } catch (ClientException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        }        return &quot;true&quot;;    }    /**     * 生成6位随机数验证码     * @return     */    public static String vcode(){        String vcode = &quot;&quot;;        for (int i = 0; i &lt; 6; i++) {            vcode = vcode + (int)(Math.random() * 9);        }//        Gson gson = new Gson();//        String code = gson.toJson(vcode);        return vcode;    }}</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>${“此处值应与模板中一致，比如模板中为code,此处即为code”,code}；<br>遇到API错误码可参考<br><a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.11186623.4.4.2e036edfKqCLZR" target="_blank" rel="noopener">官方文档解决方法</a></p>]]></content>
       
       
       <categories>
@@ -274,33 +274,6 @@
     
     
     <entry>
-      <title>How to use vue.js</title>
-      <link href="/2019/12/11/framework/vue/"/>
-      <url>/2019/12/11/framework/vue/</url>
-      
-        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 环境 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 环境 </tag>
-            
-            <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>简易版聊天室</title>
       <link href="/2019/12/11/java/socket/"/>
       <url>/2019/12/11/java/socket/</url>
@@ -320,6 +293,33 @@
             <tag> Java </tag>
             
             <tag> Socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to use vue.js</title>
+      <link href="/2019/12/11/framework/vue/"/>
+      <url>/2019/12/11/framework/vue/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> vue </tag>
             
         </tags>
       
@@ -463,33 +463,6 @@
     
     
     <entry>
-      <title>Session无法获取</title>
-      <link href="/2019/11/23/ssm/sessionnull/"/>
-      <url>/2019/11/23/ssm/sessionnull/</url>
-      
-        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> 传递 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session会话</title>
       <link href="/2019/11/23/ssm/session/"/>
       <url>/2019/11/23/ssm/session/</url>
@@ -517,25 +490,25 @@
     
     
     <entry>
-      <title>布局样式失效</title>
-      <link href="/2019/11/23/ssm/missimgcss/"/>
-      <url>/2019/11/23/ssm/missimgcss/</url>
+      <title>Session无法获取</title>
+      <link href="/2019/11/23/ssm/sessionnull/"/>
+      <url>/2019/11/23/ssm/sessionnull/</url>
       
-        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
       
       
       <categories>
           
-          <category> 样式 </category>
+          <category> Session </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CSS </tag>
+            <tag> Session </tag>
             
-            <tag> JS </tag>
+            <tag> 传递 </tag>
             
         </tags>
       
@@ -563,6 +536,33 @@
             <tag> 子页面 </tag>
             
             <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> JS </tag>
             
         </tags>
       
@@ -1098,9 +1098,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -1152,9 +1152,9 @@
       
         <tags>
             
-            <tag> MAC </tag>
-            
             <tag> windows </tag>
+            
+            <tag> MAC </tag>
             
         </tags>
       
@@ -2124,9 +2124,9 @@
       
         <tags>
             
-            <tag> 建站 </tag>
-            
             <tag> 概述 </tag>
+            
+            <tag> 建站 </tag>
             
         </tags>
       
