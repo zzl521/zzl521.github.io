@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-28T17:03:34.246Z</updated>
+  <updated>2020-01-01T14:29:37.871Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>短信服务API</title>
+    <link href="http://yoursite.com/2020/01/01/framework/alimessageinterface/"/>
+    <id>http://yoursite.com/2020/01/01/framework/alimessageinterface/</id>
+    <published>2020-01-01T13:41:00.000Z</published>
+    <updated>2020-01-01T14:29:37.871Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="短信服务" scheme="http://yoursite.com/categories/%E7%9F%AD%E4%BF%A1%E6%9C%8D%E5%8A%A1/"/>
+    
+    
+      <category term="API" scheme="http://yoursite.com/tags/API/"/>
+    
+      <category term="短信服务" scheme="http://yoursite.com/tags/%E7%9F%AD%E4%BF%A1%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>kali生成安卓木马</title>
     <link href="http://yoursite.com/2019/12/29/attark/as/"/>
     <id>http://yoursite.com/2019/12/29/attark/as/</id>
     <published>2019-12-29T09:59:00.000Z</published>
-    <updated>2019-12-28T17:03:34.246Z</updated>
+    <updated>2020-01-01T14:26:50.733Z</updated>
     
     <summary type="html">
     
@@ -234,9 +262,9 @@
       <category term="XSS" scheme="http://yoursite.com/categories/XSS/"/>
     
     
-      <category term="web" scheme="http://yoursite.com/tags/web/"/>
-    
       <category term="XSS" scheme="http://yoursite.com/tags/XSS/"/>
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
     
   </entry>
   
@@ -524,34 +552,6 @@
   </entry>
   
   <entry>
-    <title>iframe标签</title>
-    <link href="http://yoursite.com/2019/11/23/ssm/ifream/"/>
-    <id>http://yoursite.com/2019/11/23/ssm/ifream/</id>
-    <published>2019-11-22T18:59:00.000Z</published>
-    <updated>2019-11-22T17:44:45.935Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="子页面加载" scheme="http://yoursite.com/categories/%E5%AD%90%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD/"/>
-    
-    
-      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
-    
-      <category term="子页面" scheme="http://yoursite.com/tags/%E5%AD%90%E9%A1%B5%E9%9D%A2/"/>
-    
-  </entry>
-  
-  <entry>
     <title>布局样式失效</title>
     <link href="http://yoursite.com/2019/11/23/ssm/missimgcss/"/>
     <id>http://yoursite.com/2019/11/23/ssm/missimgcss/</id>
@@ -573,9 +573,9 @@
       <category term="样式" scheme="http://yoursite.com/categories/%E6%A0%B7%E5%BC%8F/"/>
     
     
-      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
-    
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
     
   </entry>
   

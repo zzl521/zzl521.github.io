@@ -630,24 +630,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/08/06/web/mysql2/">
+                <a href="/2019/08/12/web/mysql3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL入门">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL进阶">
                         
-                        <span class="card-title">MySQL入门</span>
+                        <span class="card-title">MySQL进阶</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL入门
+                            JBDC连接MySQL进行增删改查
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-06
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-12
                         </span>
                         <span class="publish-author">
                             
@@ -668,8 +668,8 @@
                         <span class="chip bg-color">SQL</span>
                     </a>
                     
-                    <a href="/tags/MySQL/" target="_blank">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/JBDC/" target="_blank">
+                        <span class="chip bg-color">JBDC</span>
                     </a>
                     
                 </div>
@@ -683,23 +683,24 @@
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/01/web/mysql/">
+                <a href="/2019/08/06/web/mysql2/">
                     <div class="card-image">
                         
-                        <img src="http://img.ahdy.top/mysql.png" class="responsive-img" alt="MySQL安装">
                         
-                        <span class="card-title">MySQL安装</span>
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL入门">
+                        
+                        <span class="card-title">MySQL入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL安装
+                            MySQL入门
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-01
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-06
                             </span>
                         <span class="publish-author">
                             
@@ -716,12 +717,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/环境/" target="_blank">
-                        <span class="chip bg-color">环境</span>
-                    </a>
-                    
                     <a href="/tags/MySQL/" target="_blank">
                         <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/tags/SQL/" target="_blank">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
                 </div>
@@ -733,43 +734,6 @@
 </article>
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + 'From: Joker<br />'
-            + 'Author: 子龙<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，转载请注明出处----。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
     </div>
@@ -878,7 +842,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">52.1k</span>
+                <span class="white-color">53.5k</span>
             
 
             

@@ -692,7 +692,7 @@ meterpreter &gt; 到此完成木马生成及植入
     wakelock  启用/禁用Wakelock
 
     可以输入?查看更多命令
-</code></pre><h3 id="常见问题解决"><a href="#常见问题解决" class="headerlink" title="常见问题解决"></a>常见问题解决</h3><h4 id="jarsigner命令找不到"><a href="#jarsigner命令找不到" class="headerlink" title="jarsigner命令找不到"></a>jarsigner命令找不到</h4><p>原因:没有安装Java jdk，改命令基于Java jdk执行，解决需要给kali配置Java jdk环境。<br><a href="https://www.gworg.com/problems/901.html" target="_blank" rel="noopener">jarsigner签名使用</a><br><a href="https://blog.csdn.net/weixin_41732074/article/details/84679138" target="_blank" rel="noopener">推荐jdk安装文档</a></p>
+</code></pre><h3 id="常见问题解决"><a href="#常见问题解决" class="headerlink" title="常见问题解决"></a>常见问题解决</h3><h4 id="jarsigner命令找不到"><a href="#jarsigner命令找不到" class="headerlink" title="jarsigner命令找不到"></a>jarsigner命令找不到</h4><p>原因:没有安装Java jdk，命令基于Java jdk执行，解决需要给kali配置Java jdk环境。<br><a href="https://www.gworg.com/problems/901.html" target="_blank" rel="noopener">jarsigner签名使用</a><br><a href="https://blog.csdn.net/weixin_41732074/article/details/84679138" target="_blank" rel="noopener">推荐jdk安装文档</a></p>
 <h4 id="Zipalign无法下载"><a href="#Zipalign无法下载" class="headerlink" title="Zipalign无法下载"></a>Zipalign无法下载</h4><p><img src="http://img.ahdy.top/QQ%E5%9B%BE%E7%89%8720191228215934.png" alt><br>可能跟你当前的网络环境有关系，换数据试一下，如果行不通参考以下<br><a href="https://www.fujieace.com/kali-linux/update-source.html" target="_blank" rel="noopener">kali源更新</a><br>参考其中的更新命令，更新源之后再尝试是否能下载成功插件。</p>
 <h4 id="木马生成后监视窗口无响应"><a href="#木马生成后监视窗口无响应" class="headerlink" title="木马生成后监视窗口无响应"></a>木马生成后监视窗口无响应</h4><p>显示Started reverse TCP handler on “IP：端口”<br>但是不管怎么点击手机上的app msf里都没反应呢？</p>
 <p>答:<br>服务器这边没反应是没建立起连接。先ping一下查看电脑能否ping通手机，如果可以那可能是端口问题，telnet一下就知道了，有可能端口被防火墙屏蔽了，有可能是端口被其他服务占用了。当然也不排除手机的问题，比如一些安全软件之类的问题，最好在虚拟机内测试避免木马造成不可逆的破坏。</p>
@@ -885,49 +885,47 @@ meterpreter &gt; 到此完成木马生成及植入
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/12/29/attark/as/">
+                <a href="/2020/01/01/framework/alimessageinterface/">
                     <div class="card-image">
                         
-                        <img src="http://img.ahdy.top/171113.jpg" class="responsive-img" alt="kali生成安卓木马">
+                        <img src="http://img.ahdy.top/131900-1577164740d488.jpg" class="responsive-img" alt="短信服务API">
                         
-                        <span class="card-title">kali生成安卓木马</span>
+                        <span class="card-title">短信服务API</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            kali下使用msfvenom工具生成安卓木马
+                            阿里云短信服务API接口使用
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Kali/" class="post-category" target="_blank">
-                                    Kali
+                            <a href="/categories/短信服务/" class="post-category" target="_blank">
+                                    短信服务
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Kali/" target="_blank">
-                        <span class="chip bg-color">Kali</span>
+                    <a href="/tags/API/" target="_blank">
+                        <span class="chip bg-color">API</span>
                     </a>
                     
-                    <a href="/tags/木马/" target="_blank">
-                        <span class="chip bg-color">木马</span>
+                    <a href="/tags/短信服务/" target="_blank">
+                        <span class="chip bg-color">短信服务</span>
                     </a>
                     
                 </div>
@@ -991,43 +989,6 @@ meterpreter &gt; 到此完成木马生成及植入
 </article>
 </div>
 
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + 'From: Joker<br />'
-            + 'Author: 子龙<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，转载请注明出处----。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
 
 
     </div>
@@ -1136,7 +1097,7 @@ meterpreter &gt; 到此完成木马生成及植入
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">52.1k</span>
+                <span class="white-color">53.5k</span>
             
 
             
