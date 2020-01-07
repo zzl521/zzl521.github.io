@@ -255,6 +255,19 @@
 </header>
 
 
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -783,49 +796,47 @@ public class PhoneCode {
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/01/01/framework/alimessageinterface/">
+                <a href="/2020/01/07/draiy/love/">
                     <div class="card-image">
                         
-                        <img src="http://img.ahdy.top/131900-1577164740d488.jpg" class="responsive-img" alt="短信服务API">
+                        <img src="http://img.ahdy.top/193708-15779650288588.jpg" class="responsive-img" alt="爱而不得">
                         
-                        <span class="card-title">短信服务API</span>
+                        <span class="card-title">爱而不得</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            阿里云短信服务API接口使用
+                            喜欢一个人是什么感觉
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/短信服务/" class="post-category" target="_blank">
-                                    短信服务
+                            <a href="/categories/diary/" class="post-category" target="_blank">
+                                    diary
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/API/" target="_blank">
-                        <span class="chip bg-color">API</span>
+                    <a href="/tags/日记/" target="_blank">
+                        <span class="chip bg-color">日记</span>
                     </a>
                     
-                    <a href="/tags/短信服务/" target="_blank">
-                        <span class="chip bg-color">短信服务</span>
+                    <a href="/tags/Message/" target="_blank">
+                        <span class="chip bg-color">Message</span>
                     </a>
                     
                 </div>
@@ -997,7 +1008,7 @@ public class PhoneCode {
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">53.5k</span>
+                <span class="white-color">54.7k</span>
             
 
             

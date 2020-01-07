@@ -257,6 +257,19 @@ HTML 元素选取HTML 元素操作CSS 操作HTML 事件函数Ja">
 </header>
 
 
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -838,7 +851,7 @@ HTML 元素选取HTML 元素操作CSS 操作HTML 事件函数Ja">
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">53.5k</span>
+                <span class="white-color">54.7k</span>
             
 
             

@@ -256,6 +256,19 @@
 </header>
 
 
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -663,18 +676,18 @@ ALT标签是一种图片标签，它将图片的信息以文本的形式展现�
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/12/11/framework/vue/">
+                <a href="/2019/12/11/java/socket/">
                     <div class="card-image">
                         
-                        <img src="http://img.ahdy.top/b849.jpg" class="responsive-img" alt="How to use vue.js">
+                        <img src="http://img.ahdy.top/2054514.jpg" class="responsive-img" alt="简易版聊天室">
                         
-                        <span class="card-title">How to use vue.js</span>
+                        <span class="card-title">简易版聊天室</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            vue环境搭建
+                            Java网络编程
                         
                     </div>
                     <div class="publish-info">
@@ -685,8 +698,8 @@ ALT标签是一种图片标签，它将图片的信息以文本的形式展现�
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/环境/" class="post-category" target="_blank">
-                                    环境
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
                             
@@ -696,12 +709,12 @@ ALT标签是一种图片标签，它将图片的信息以文本的形式展现�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/环境/" target="_blank">
-                        <span class="chip bg-color">环境</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/vue/" target="_blank">
-                        <span class="chip bg-color">vue</span>
+                    <a href="/tags/Socket/" target="_blank">
+                        <span class="chip bg-color">Socket</span>
                     </a>
                     
                 </div>
@@ -873,7 +886,7 @@ ALT标签是一种图片标签，它将图片的信息以文本的形式展现�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">53.5k</span>
+                <span class="white-color">54.7k</span>
             
 
             

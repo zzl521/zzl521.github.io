@@ -4,9 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="数据查询, Joker">
+    <meta name="keywords" content="加密解密, Joker">
     <meta name="description" content="JSON数据格式检测检测地址将json数据放入
 MD5哈希值解析解析地址
+算法加密加密地址  
+
 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +17,7 @@ MD5哈希值解析解析地址
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>数据查询 | Joker</title>
+    <title>加密解密 | Joker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -256,6 +258,19 @@ MD5哈希值解析解析地址
 </header>
 
 
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -265,7 +280,7 @@ MD5哈希值解析解析地址
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        数据查询
+                        加密解密
                     </div>
                 </div>
             </div>
@@ -411,7 +426,7 @@ MD5哈希值解析解析地址
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        26
+                        34
                     </div>
                     
 
@@ -436,6 +451,8 @@ MD5哈希值解析解析地址
             <div id="articleContent">
                 <h3 id="JSON数据格式检测"><a href="#JSON数据格式检测" class="headerlink" title="JSON数据格式检测"></a>JSON数据格式检测</h3><p><a href="https://www.bejson.com/" target="_blank" rel="noopener">检测地址</a><br>将json数据放入<br><img src="http://img.ahdy.top/2019-11-18_143234.png" alt></p>
 <h3 id="MD5哈希值解析"><a href="#MD5哈希值解析" class="headerlink" title="MD5哈希值解析"></a>MD5哈希值解析</h3><p><a href="https://www.cmd5.com/" target="_blank" rel="noopener">解析地址</a><br><img src="http://img.ahdy.top/2019-11-18_143008.png" alt></p>
+<h3 id="算法加密"><a href="#算法加密" class="headerlink" title="算法加密"></a>算法加密</h3><p><a href="http://www.jsons.cn/sha/" target="_blank" rel="noopener">加密地址</a>  </p>
+<p><img src="http://img.ahdy.top/2020-01-07_233146.png" alt></p>
 
             </div>
             <hr>
@@ -833,7 +850,7 @@ MD5哈希值解析解析地址
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">53.5k</span>
+                <span class="white-color">54.7k</span>
             
 
             
