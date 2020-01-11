@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>GitHub仓库文件上传</title>
+      <link href="/2020/01/12/boke/githud/"/>
+      <url>/2020/01/12/boke/githud/</url>
+      
+        <content type="html"><![CDATA[<h3 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h3><p> 一：Git是什么？</p><pre><code>Git是目前世界上最先进的分布式版本控制系统。</code></pre><p>二：SVN与Git的最主要的区别？</p><p>SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而干活的时候，用的都是自己的电脑，所以首先要从中央服务器哪里得到最新的版本，然后干活，干完后，需要把自己做完的活推送到中央服务器。</p><p>集中式版本控制系统是必须联网才能工作，如果在局域网还可以，带宽够大，速度够快，如果在互联网下，如果网速慢的话，就纳闷了。  </p><p>Git是分布式版本控制系统，那么它就没有中央服务器的，每个人的电脑就是一个完整的版本库，这样，工作的时候就不需要联网了，因为版本都是在自己的电脑上。</p><p>既然每个人的电脑都有一个完整的版本库，那多个人如何协作呢？比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。</p><h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>1.下载GitHub管理工具  </p><p><a href="https://gitforwindows.org/" target="_blank" rel="noopener">Git下载</a></p><p>2.安装成功后设置用户名和邮箱地址</p><pre><code>$ git config --global user.name &quot;runoob&quot;$ git config --global user.email test@runoob.com如果你使用了github仓库那么请设置成你的github用户名和注册github账号的邮箱。</code></pre><p>注意：git config  –global 参数，有了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然你也可以对某个仓库指定的不同的用户名和邮箱。</p><p>3.创建仓库  </p><p>你可以自定义一个文件夹，右键-&gt;get Bash here进入cmd窗口。  </p><p>使用pwd可以查看当前文件夹路径。</p><pre><code>使用 git init 使文件夹变为仓库。  </code></pre><p><img src="http://img.ahdy.top/2020-01-11_232733.png" alt><br>之后你会发现文件夹内多了一个.git文件夹，不要手动乱改这个目录里面的文件，否则，会把git仓库给破坏了。<br><img src="http://img.ahdy.top/2020-01-11_233023.png" alt></p><p>4.关联到远程库</p><pre><code>git remote add origin 你的远程库地址</code></pre><p>如：</p><pre><code>git remote add origin https://github.com/githubusername/demo.git</code></pre><p>5.用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明</p><pre><code>git commit -m &#39;first commit&#39;</code></pre><p>6、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）</p><pre><code>git pull --rebase origin master</code></pre><p>6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。</p><pre><code>git push -u origin master*、状态查询命令git status</code></pre><p><img src="http://img.ahdy.top/2020-01-11_233805.png" alt><br><img src="http://img.ahdy.top/2020-01-11_233839.png" alt="正在上传文件"><br>如果github仓库没有内容可能是数据没过来，国外网站你懂的，就是比较慢！<br>GitHub仓库可以解析静态HTML页面，后面的博客也是利用到了这一点，GitHub仓库充当了一个静态服务器加数据库的角色。</p><h3 id="上传成功效果图"><a href="#上传成功效果图" class="headerlink" title="上传成功效果图"></a>上传成功效果图</h3><p><img src="http://img.ahdy.top/2020-01-12_001310.png" alt="仓库内会有内容"></p><h3 id="下载仓库内容"><a href="#下载仓库内容" class="headerlink" title="下载仓库内容"></a>下载仓库内容</h3><p>使用命令</p><pre><code>git clone 加上仓库地址</code></pre><p>例如 </p><pre><code>git clone https://github.com/zzl521/system.git</code></pre><p>前提你要找个空文件夹brash，不然会搞得乱七八糟。</p><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p><img src="http://img.ahdy.top/1074438610.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 上传 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>个人网上信息挖掘</title>
       <link href="/2020/01/07/attark/search/"/>
       <url>/2020/01/07/attark/search/</url>
@@ -1152,9 +1179,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -1206,9 +1233,9 @@
       
         <tags>
             
-            <tag> MAC </tag>
-            
             <tag> windows </tag>
+            
+            <tag> MAC </tag>
             
         </tags>
       
