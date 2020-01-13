@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-11T16:23:29.177Z</updated>
+  <updated>2020-01-13T11:36:09.863Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用hexo框架搭建博客</title>
+    <link href="http://yoursite.com/2020/01/14/boke/hexobk/"/>
+    <id>http://yoursite.com/2020/01/14/boke/hexobk/</id>
+    <published>2020-01-13T18:35:00.000Z</published>
+    <updated>2020-01-13T11:36:09.863Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub仓库文件上传</title>
@@ -545,35 +573,6 @@
       <category term="传递" scheme="http://yoursite.com/tags/%E4%BC%A0%E9%80%92/"/>
     
       <category term="JSTL" scheme="http://yoursite.com/tags/JSTL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring MVC注解报错</title>
-    <link href="http://yoursite.com/2019/11/23/ssm/springbean/"/>
-    <id>http://yoursite.com/2019/11/23/ssm/springbean/</id>
-    <published>2019-11-22T20:59:00.000Z</published>
-    <updated>2019-11-22T18:02:16.169Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;注意&quot;&gt;&lt;a href=&quot;#注意&quot; class=&quot;headerlink&quot; title=&quot;注意&quot;&gt;&lt;/a&gt;注意&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://img.ahdy.top/2019-11-22_140009.png&quot; alt&gt;&lt;/p&gt;
-&lt;h4
-        
-      
-    
-    </summary>
-    
-      <category term="Session" scheme="http://yoursite.com/categories/Session/"/>
-    
-    
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
-    
-      <category term="注解" scheme="http://yoursite.com/tags/%E6%B3%A8%E8%A7%A3/"/>
     
   </entry>
   
