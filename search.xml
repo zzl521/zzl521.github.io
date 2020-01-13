@@ -5,8 +5,8 @@
     
     <entry>
       <title>使用hexo框架搭建博客</title>
-      <link href="/2020/01/14/boke/hexobk/"/>
-      <url>/2020/01/14/boke/hexobk/</url>
+      <link href="/2020/01/13/boke/hexobk/"/>
+      <url>/2020/01/13/boke/hexobk/</url>
       
         <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><a href="https://baijiahao.baidu.com/s?id=1611049563250507911&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">来源百度</a></p><h3 id="hexo框架使用"><a href="#hexo框架使用" class="headerlink" title="hexo框架使用"></a>hexo框架使用</h3><h4 id="步骤一"><a href="#步骤一" class="headerlink" title="步骤一"></a>步骤一</h4><p>该框架依赖git执行脚本，node.js为运行库，所以需要将二者下载下来，缺一不可！<br><img src="http://img.ahdy.top/2020-01-12_004952.png" alt="参考下面官方文档去下载必要的组件"><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>  </p><p>安装好之后检查node.js环境<br><img src="http://img.ahdy.top/2020-01-12_005251.png" alt>  </p><p>安装好之后检查Git环境</p><pre><code>右键文件或者桌面夹出现Git brash / Git Gui即可</code></pre><h4 id="步骤二"><a href="#步骤二" class="headerlink" title="步骤二"></a>步骤二</h4><p>安装hexo框架。  </p><p>1.自定义一个文件夹/如果不会cmd命令也可以直接git brash here  </p><pre><code>输入npm install hexo -g开始安装Hexo</code></pre><p>2.检查hexo是否安装成功</p><pre><code>输入hexo -v  </code></pre><p>3.初始化该文件夹</p><pre><code>输入hexo init（有点漫长的等待。。。）</code></pre><p>4.出现Start blogging with Hexo！初始化成功！</p><p>5.安装所需要的组件</p><pre><code>输入npm install</code></pre><p>6.创建静态文件</p><pre><code>输入hexo g，首次体验Hexo</code></pre><p>7.开启服务器，访问该网址</p><pre><code>hexo s</code></pre><p><img src="http://img.ahdy.top/1108615-20171021232413224-1288183746.png" alt="如图所示安装成功"></p><h3 id="将Hexo与Github-page联系起来"><a href="#将Hexo与Github-page联系起来" class="headerlink" title="将Hexo与Github page联系起来"></a>将Hexo与Github page联系起来</h3><p><a href="https://github.com" target="_blank" rel="noopener">Github官网</a></p><p>如果是第一次，选中你的配置好的hexo框架文件夹，标右键，点击Git Base Here，设置用户名和邮箱地址。  </p><pre><code>$ git config --global user.name &quot;runoob&quot;$ git config --global user.email &quot;test@runoob.com&quot;</code></pre><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>请修改双引号当中的内容，其中name为你github用户名，邮箱为注册github账户时的邮箱，避免出现差错！</p><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><pre><code>Github账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README</code></pre><p><img src="http://img.ahdy.top/1108615-20171021223639881-1998790649.png" alt><br>(请务必按照此格式来命名仓库！)<br>之后参考博客<a href="https://blog.csdn.net/u013778905/article/details/83501204" target="_blank" rel="noopener">Github SSH key配置</a>  确保SSH key配置完成</p><h3 id="仓库地址配置"><a href="#仓库地址配置" class="headerlink" title="仓库地址配置"></a>仓库地址配置</h3><p>当配置好了ssh key基本上已经算结束了，你只需要打开这个博客项目，修改hexo框架内的_config.yml<br><img src="http://img.ahdy.top/2020-01-13_185114.png" alt><br>其中repo为你自己的仓库地址</p><h3 id="主题更换"><a href="#主题更换" class="headerlink" title="主题更换"></a>主题更换</h3><p>同样在_config.yml进行设置<br><img src="http://img.ahdy.top/2020-01-13_191037.png" alt><br>前提是需要将你下载好的主题放在themes文件夹下<br><img src="http://img.ahdy.top/2020-01-13_191237.png" alt>   </p><p>主题可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官方文档</a>下载</p><h3 id="上传命令"><a href="#上传命令" class="headerlink" title="上传命令"></a>上传命令</h3><pre><code>生成以及部署文章之前，需要安装一个扩展：npm install hexo-deployer-git --save只需安装一次，以后不用再安装  </code></pre><h4 id="更新博客步骤"><a href="#更新博客步骤" class="headerlink" title="更新博客步骤"></a>更新博客步骤</h4><pre><code>hexo cleanhexo ghexo d后两步可简写成 hexo g -d</code></pre><h4 id="上传仓库成功截图"><a href="#上传仓库成功截图" class="headerlink" title="上传仓库成功截图"></a>上传仓库成功截图</h4><p><img src="http://img.ahdy.top/2020-01-13_191833.png" alt="类似信息说明上传成功"></p><pre><code>成功后访问你的地址：http://用户名.github.io，那么将可以通过浏览器访问到你部署的web界面。</code></pre><h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>部署博客有些细节非常重要，切记不能省略配置文件前的空格：<br>建议选择有主题配置及介绍的博客下载。</p><h3 id="如何编写文档"><a href="#如何编写文档" class="headerlink" title="如何编写文档"></a>如何编写文档</h3><p>一般文档都是放在</p><pre><code>Blog\source\_posts\文件夹内</code></pre><p>你可以直接将md文件放入，框架就会自动解析成静态的web界面</p><h5 id="md文档可以使用markdown来编写"><a href="#md文档可以使用markdown来编写" class="headerlink" title="md文档可以使用markdown来编写"></a>md文档可以使用markdown来编写</h5><p>可以花几分钟学一下markdown的语法，什么菜鸟，自学，csdn应该都会有教程。<br><a href="http://z.ahdy.top/2019/07/23/markdown/" target="_blank" rel="noopener">如果不嫌弃可以看一下我总结，但是只仅限于写文档用</a></p><h3 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h3><p>关于图床我用的是七牛云的对象云储，其实也是因为它免费。<br>你可以这样理解，图床就是一个存放图片外链的容器，当然也可以存放视频，音频的外链；</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>简单概括了搭建博客的方式，我估计只有我自己能看懂吧，哈哈，毕竟这些东西当时我搞了两天。出了很多bug！就很egg 疼。</p>]]></content>
       
@@ -571,33 +571,6 @@
     
     
     <entry>
-      <title>Session会话</title>
-      <link href="/2019/11/23/ssm/session/"/>
-      <url>/2019/11/23/ssm/session/</url>
-      
-        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> EL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session无法获取</title>
       <link href="/2019/11/23/ssm/sessionnull/"/>
       <url>/2019/11/23/ssm/sessionnull/</url>
@@ -625,25 +598,25 @@
     
     
     <entry>
-      <title>布局样式失效</title>
-      <link href="/2019/11/23/ssm/missimgcss/"/>
-      <url>/2019/11/23/ssm/missimgcss/</url>
+      <title>Session会话</title>
+      <link href="/2019/11/23/ssm/session/"/>
+      <url>/2019/11/23/ssm/session/</url>
       
-        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
       
       
       <categories>
           
-          <category> 样式 </category>
+          <category> Session </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CSS </tag>
+            <tag> Session </tag>
             
-            <tag> JS </tag>
+            <tag> EL </tag>
             
         </tags>
       
@@ -671,6 +644,33 @@
             <tag> 子页面 </tag>
             
             <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> JS </tag>
             
         </tags>
       
