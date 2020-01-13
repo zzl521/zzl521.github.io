@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-13T13:35:52.935Z</updated>
+  <updated>2020-01-13T17:49:54.782Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上书城(电商)管理系统</title>
+    <link href="http://yoursite.com/2020/01/14/java/javaprogect/"/>
+    <id>http://yoursite.com/2020/01/14/java/javaprogect/</id>
+    <published>2020-01-13T19:16:00.000Z</published>
+    <updated>2020-01-13T17:49:54.782Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;项目简介&quot;&gt;&lt;a href=&quot;#项目简介&quot; class=&quot;headerlink&quot; title=&quot;项目简介&quot;&gt;&lt;/a&gt;项目简介&lt;/h3&gt;&lt;p&gt;Spring+Spring Mvc 
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="项目" scheme="http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>使用hexo框架搭建博客</title>
@@ -385,7 +413,7 @@
     <link href="http://yoursite.com/2019/12/17/websafety/webmseeage/"/>
     <id>http://yoursite.com/2019/12/17/websafety/webmseeage/</id>
     <published>2019-12-17T11:59:00.000Z</published>
-    <updated>2019-12-17T11:09:53.611Z</updated>
+    <updated>2020-01-13T16:19:01.573Z</updated>
     
     <summary type="html">
     
@@ -545,34 +573,6 @@
       <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
     
       <category term="Sql" scheme="http://yoursite.com/tags/Sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>&lt;c:foreach&gt;无法迭代链表</title>
-    <link href="http://yoursite.com/2019/11/25/ssm/cforech/"/>
-    <id>http://yoursite.com/2019/11/25/ssm/cforech/</id>
-    <published>2019-11-24T19:59:00.000Z</published>
-    <updated>2019-11-27T14:53:30.923Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;问题详情&quot;&gt;&lt;a href=&quot;#问题详情&quot; class=&quot;headerlink&quot; title=&quot;问题详情&quot;&gt;&lt;/a&gt;问题详情&lt;/h3&gt;&lt;p&gt;java.lang.NumberFormatException: For input string:
-        
-      
-    
-    </summary>
-    
-      <category term="JSTL" scheme="http://yoursite.com/categories/JSTL/"/>
-    
-    
-      <category term="传递" scheme="http://yoursite.com/tags/%E4%BC%A0%E9%80%92/"/>
-    
-      <category term="JSTL" scheme="http://yoursite.com/tags/JSTL/"/>
     
   </entry>
   
