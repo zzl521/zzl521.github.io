@@ -35,7 +35,7 @@
       <link href="/2020/02/29/draiy/btc/"/>
       <url>/2020/02/29/draiy/btc/</url>
       
-        <content type="html"><![CDATA[<h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>本以为，我不会这么早接触到比特币这个东西，但实际我不但接触到了它，而且挖掘了它。  </p><p>我和我的服务器愉快的生活着，突然有一天，我想远程连接连接数据库，于是，我试了很久没有成功，最后发现是服务器安全组没有放行端口，我不知怎么操作的，一键开放了很多端口，造成了我的服务器被矿。<br>我突然收到了阿里云的短信<br><img src="http://img.ahdy.top/mmexport1583383440322.jpg" alt><br>嗯，然后我上去一看，cpu内存爆满。 发现后台有一个Xm？？什么挖矿程序，干掉它之后，我对挖矿产生了兴趣。</p><h3 id="关于挖矿"><a href="#关于挖矿" class="headerlink" title="关于挖矿"></a>关于挖矿</h3><p>日本一个叫中本聪的人制定的游戏规则(比特币系统)，系统内有数学题，看谁家挖矿设备先有解，看过刀剑神域的人可能更容易理解些，如果你足够幸运，挖到一个区块，并获得12.5个比特币奖励，顺带那个区块里所有交易的手续费。这是广大矿工废寝忘食的源动力。</p><p>简单来说，挖矿就是用电脑上的CPU和GPU资源进行hash计算， 并通过计算获取到区块奖励，区块奖励就是相应的电子虚拟货币。拥有更大算力计算机／挖矿机的矿工，获得的收益越大。</p><p>算力跟计算机硬件配置有很大关系。</p><p>了解了一些资料之后，发现挖矿走过了三个历程，即CPU挖矿，GPU挖矿，一直到今天的专业矿机挖矿和矿池挖矿。</p><h3 id="挖矿需要什么？"><a href="#挖矿需要什么？" class="headerlink" title="挖矿需要什么？"></a>挖矿需要什么？</h3><p>一台电脑，一个收钱的钱包，一个挖矿软件。<br>从软硬件来看就只要这几样东西，但是这其中没有考虑电能消耗，电脑硬件寿命消耗。</p><p>因为进行挖矿电脑会处于一个超频工作的状态，各项功耗达到峰值。</p><h3 id="挖矿有什么价值？"><a href="#挖矿有什么价值？" class="headerlink" title="挖矿有什么价值？"></a>挖矿有什么价值？</h3><p>谈到比特币，往往人们往往都会想起区块链，比特币是区块链第一个应用</p><p>就我研究了一天的结果来看不能说清它的价值在哪，btc本身就是个虚无缥缈的东西。</p><p>说它浪费电?污染环境？还是说它促进网络交易，推动了社会发展？这就是人们常说的那句话，事务的发展往往具有多面性。</p><h3 id="如何挖矿？"><a href="#如何挖矿？" class="headerlink" title="如何挖矿？"></a>如何挖矿？</h3><h4 id="傻瓜式挖矿软件"><a href="#傻瓜式挖矿软件" class="headerlink" title="傻瓜式挖矿软件"></a>傻瓜式挖矿软件</h4><p><a href="http://hashfish.net/pg.html?sc=122171" target="_blank" rel="noopener">哈鱼矿工</a></p><p>省了设置什么钱包地址，配置挖矿软件，翻墙注册账号，产看收益，提现等各种难题，如果你只是想挖着玩玩，建议用这个。</p><h4 id="NiceHash"><a href="#NiceHash" class="headerlink" title="NiceHash"></a>NiceHash</h4><p><a href="https://www.nicehash.com" target="_blank" rel="noopener">nicehashi官网</a></p><p>这官网我也不知道为啥不能注册账号，但是却可以进去浏览很多东西，据说是没有梯子,现在梯子教程都被屏蔽掉了….</p><h4 id="ViaBic"><a href="#ViaBic" class="headerlink" title="ViaBic"></a>ViaBic</h4><p><a href="https://www.viabtc.com/" target="_blank" rel="noopener">官网</a></p><p>这是个国产的，但是操作比较麻烦，而且抽成高，提现要手续费，不建议用。</p><h4 id="长沙矿工"><a href="#长沙矿工" class="headerlink" title="长沙矿工"></a>长沙矿工</h4><p><a href="http://www.csminer.com/" target="_blank" rel="noopener">官网</a></p><p>自行查看相关文档学习挖矿！</p><h3 id="挖矿经验"><a href="#挖矿经验" class="headerlink" title="挖矿经验"></a>挖矿经验</h3><p>经过我一番折腾，最后选择了哈鱼，毕竟操作简单,软件当中你可以选择双挖，或者单独使用CUP，GPU挖矿，其中显卡占收益的80%左右，在设置中可以修改算法。</p><p><img src="http://img.ahdy.top/mmexport1583383443969.jpg" alt="我的服务器的收益"></p><p>没错，一天八分收益感人！</p><p>用自己的笔记本电脑估算一天三块钱左右，其实连电费都不够。</p><pre><code>电脑配置仅供参考:1060ti  2元i7 8750H  0.5元</code></pre><h3 id="哈鱼矿工使用"><a href="#哈鱼矿工使用" class="headerlink" title="哈鱼矿工使用"></a>哈鱼矿工使用</h3><p><img src="http://img.ahdy.top/2020-03-06_085428.png" alt="此时挂机就可以进行挖矿了"></p><p>看了下软件其实只占用了60%的显卡资源,由于CUP挖矿收益比较低，所以我只用了显卡…</p><p><img src="http://img.ahdy.top/2020-03-06_085753.png" alt>    </p><h4 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h4><p>去官网下载一个app就能提现，需要满0.0001比特币才能提现(大概人民币五六块样子)，提现到支付宝需要2%抽成，体现到比特币钱包有1%抽成。这个抽成相比较很多5%的挖矿软件其实是算低的…</p><p><a href="http://hashfish.net/app.html" target="_blank" rel="noopener">哈鱼官方app</a></p><p><img src="http://img.ahdy.top/2020-03-06_090444.png" alt></p><h4 id="如何提现到BTC钱包"><a href="#如何提现到BTC钱包" class="headerlink" title="如何提现到BTC钱包"></a>如何提现到BTC钱包</h4><p>国内比较好用的钱包。这个钱包不仅能收取其它矿池挖取的比特币，还能在线买卖比特币,其他币种(虚拟货币交易价格取决于当时市场价)</p><p><a href="https://bitpie.com/#/" target="_blank" rel="noopener">比特派app下载</a></p><p><img src="http://img.ahdy.top/2020-03-06_091122.png" alt="下载注册好后选择收款"></p><p><img src="http://img.ahdy.top/2020-03-06_091445.png" alt="此时它会给你一个钱包地址，将二维码下的钱包地址粘贴到哈鱼app钱包提现处就能将电脑挖取的比特币转入比特币钱包"></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>本以为，我不会这么早接触到比特币这个东西，但实际我不但接触到了它，而且挖掘了它。  </p><p>我和我的服务器愉快的生活着，突然有一天，我想远程连接连接数据库，于是，我试了很久没有成功，最后发现是服务器安全组没有放行端口，我不知怎么操作的，一键开放了很多端口，造成了我的服务器被矿。<br>我突然收到了阿里云的短信<br><img src="http://img.ahdy.top/mmexport1583383440322.jpg" alt><br>嗯，然后我上去一看，cpu内存爆满。 发现后台有一个Xm？？什么挖矿程序，干掉它之后，我对挖矿产生了兴趣。</p><h3 id="关于挖矿"><a href="#关于挖矿" class="headerlink" title="关于挖矿"></a>关于挖矿</h3><p>日本一个叫中本聪的人制定的游戏规则(比特币系统)，系统内有数学题，看谁家挖矿设备先有解，看过刀剑神域的人可能更容易理解些，如果你足够幸运，挖到一个区块，并获得12.5个比特币奖励，顺带那个区块里所有交易的手续费。这是广大矿工废寝忘食的源动力。</p><p>简单来说，挖矿就是用电脑上的CPU和GPU资源进行hash计算， 并通过计算获取到区块奖励，区块奖励就是相应的电子虚拟货币。拥有更大算力计算机／挖矿机的矿工，获得的收益越大。</p><p>算力跟计算机硬件配置有很大关系。</p><p>了解了一些资料之后，发现挖矿走过了三个历程，即CPU挖矿，GPU挖矿，一直到今天的专业矿机挖矿和矿池挖矿。</p><h3 id="挖矿需要什么？"><a href="#挖矿需要什么？" class="headerlink" title="挖矿需要什么？"></a>挖矿需要什么？</h3><p>一台电脑，一个收钱的钱包，一个挖矿软件。<br>从软硬件来看就只要这几样东西，但是这其中没有考虑电能消耗，电脑硬件寿命消耗。</p><p>因为进行挖矿电脑会处于一个超频工作的状态，各项功耗达到峰值。</p><h3 id="挖矿有什么价值？"><a href="#挖矿有什么价值？" class="headerlink" title="挖矿有什么价值？"></a>挖矿有什么价值？</h3><p>谈到比特币，往往人们往往都会想起区块链，比特币是区块链第一个应用</p><p>就我研究了一天的结果来看不能说清它的价值在哪，btc本身就是个虚无缥缈的东西。</p><p>说它浪费电?污染环境？还是说它促进网络交易，推动了社会发展？这就是人们常说的那句话，事务的发展往往具有多面性。</p><h3 id="如何挖矿？"><a href="#如何挖矿？" class="headerlink" title="如何挖矿？"></a>如何挖矿？</h3><h4 id="傻瓜式挖矿软件"><a href="#傻瓜式挖矿软件" class="headerlink" title="傻瓜式挖矿软件"></a>傻瓜式挖矿软件</h4><p><a href="http://hashfish.net/pg.html?sc=122171" target="_blank" rel="noopener">哈鱼矿工</a></p><p>省了设置什么钱包地址，配置挖矿软件，翻墙注册账号，产看收益，提现等各种难题，如果你只是想挖着玩玩，建议用这个。</p><h4 id="NiceHash"><a href="#NiceHash" class="headerlink" title="NiceHash"></a>NiceHash</h4><p><a href="https://www.nicehash.com" target="_blank" rel="noopener">nicehashi官网</a></p><p>这官网我也不知道为啥不能注册账号，但是却可以进去浏览很多东西，据说是没有梯子,现在梯子教程都被屏蔽掉了….</p><h4 id="ViaBic"><a href="#ViaBic" class="headerlink" title="ViaBic"></a>ViaBic</h4><p><a href="https://www.viabtc.com/" target="_blank" rel="noopener">官网</a></p><p>这是个国产的，但是操作比较麻烦，而且抽成高，提现要手续费，不建议用。</p><h4 id="长沙矿工"><a href="#长沙矿工" class="headerlink" title="长沙矿工"></a>长沙矿工</h4><p><a href="http://www.csminer.com/" target="_blank" rel="noopener">官网</a></p><p>自行查看相关文档学习挖矿！</p><h3 id="挖矿经验"><a href="#挖矿经验" class="headerlink" title="挖矿经验"></a>挖矿经验</h3><p>经过我一番折腾，最后选择了哈鱼，毕竟操作简单,软件当中你可以选择双挖，或者单独使用CUP，GPU挖矿，其中显卡占收益的80%左右，在设置中可以修改算法。</p><p><img src="http://img.ahdy.top/mmexport1583383443969.jpg" alt="我的服务器的收益"></p><p>没错，一天八分收益感人！</p><p>用自己的笔记本电脑估算一天三块钱左右，其实连电费都不够。</p><pre><code>电脑配置仅供参考:GTX1060  2元i7 8750H  0.5元</code></pre><h3 id="哈鱼矿工使用"><a href="#哈鱼矿工使用" class="headerlink" title="哈鱼矿工使用"></a>哈鱼矿工使用</h3><p><img src="http://img.ahdy.top/2020-03-06_085428.png" alt="此时挂机就可以进行挖矿了"></p><p>看了下软件其实只占用了60%的显卡资源,由于CUP挖矿收益比较低，所以我只用了显卡…</p><p><img src="http://img.ahdy.top/2020-03-06_085753.png" alt>    </p><h4 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h4><p>去官网下载一个app就能提现，需要满0.0001比特币才能提现(大概人民币五六块样子)，提现到支付宝需要2%抽成，体现到比特币钱包有1%抽成。这个抽成相比较很多5%的挖矿软件其实是算低的…</p><p><a href="http://hashfish.net/app.html" target="_blank" rel="noopener">哈鱼官方app</a></p><p><img src="http://img.ahdy.top/2020-03-06_090444.png" alt></p><h4 id="如何提现到BTC钱包"><a href="#如何提现到BTC钱包" class="headerlink" title="如何提现到BTC钱包"></a>如何提现到BTC钱包</h4><p>国内比较好用的钱包。这个钱包不仅能收取其它矿池挖取的比特币，还能在线买卖比特币,其他币种(虚拟货币交易价格取决于当时市场价)</p><p><a href="https://bitpie.com/#/" target="_blank" rel="noopener">比特派app下载</a></p><p><img src="http://img.ahdy.top/2020-03-06_091122.png" alt="下载注册好后选择收款"></p><p><img src="http://img.ahdy.top/2020-03-06_091445.png" alt="此时它会给你一个钱包地址，将二维码下的钱包地址粘贴到哈鱼app钱包提现处就能将电脑挖取的比特币转入比特币钱包"></p>]]></content>
       
       
       <categories>
@@ -668,9 +668,9 @@
       
         <tags>
             
-            <tag> JSP </tag>
-            
             <tag> web </tag>
+            
+            <tag> JSP </tag>
             
         </tags>
       
@@ -695,9 +695,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> XSS </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -733,33 +733,6 @@
     
     
     <entry>
-      <title>简易版聊天室</title>
-      <link href="/2019/12/11/java/socket/"/>
-      <url>/2019/12/11/java/socket/</url>
-      
-        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Socket </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>How to use vue.js</title>
       <link href="/2019/12/11/framework/vue/"/>
       <url>/2019/12/11/framework/vue/</url>
@@ -779,6 +752,33 @@
             <tag> 环境 </tag>
             
             <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>简易版聊天室</title>
+      <link href="/2019/12/11/java/socket/"/>
+      <url>/2019/12/11/java/socket/</url>
+      
+        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Socket </tag>
             
         </tags>
       
@@ -976,33 +976,6 @@
     
     
     <entry>
-      <title>iframe标签</title>
-      <link href="/2019/11/23/ssm/ifream/"/>
-      <url>/2019/11/23/ssm/ifream/</url>
-      
-        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 子页面加载 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 子页面 </tag>
-            
-            <tag> CSS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>布局样式失效</title>
       <link href="/2019/11/23/ssm/missimgcss/"/>
       <url>/2019/11/23/ssm/missimgcss/</url>
@@ -1022,6 +995,33 @@
             <tag> CSS </tag>
             
             <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iframe标签</title>
+      <link href="/2019/11/23/ssm/ifream/"/>
+      <url>/2019/11/23/ssm/ifream/</url>
+      
+        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 子页面加载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 子页面 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -1557,9 +1557,9 @@
       
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> windows </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
       
@@ -1611,9 +1611,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> MAC </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -2162,33 +2162,6 @@
     
     
     <entry>
-      <title>Tomcat与服务器</title>
-      <link href="/2019/08/06/web/tomcat/"/>
-      <url>/2019/08/06/web/tomcat/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tomcat </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 服务器 </tag>
-            
-            <tag> Tomcat </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL入门</title>
       <link href="/2019/08/06/web/mysql2/"/>
       <url>/2019/08/06/web/mysql2/</url>
@@ -2208,6 +2181,33 @@
             <tag> MySQL </tag>
             
             <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tomcat与服务器</title>
+      <link href="/2019/08/06/web/tomcat/"/>
+      <url>/2019/08/06/web/tomcat/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -2351,33 +2351,6 @@
     
     
     <entry>
-      <title>Java难点</title>
-      <link href="/2019/07/22/java/java5/"/>
-      <url>/2019/07/22/java/java5/</url>
-      
-        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 抽象类|接口 </tag>
-            
-            <tag> 访问控制符 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>域名</title>
       <link href="/2019/07/22/yuming/"/>
       <url>/2019/07/22/yuming/</url>
@@ -2397,6 +2370,33 @@
             <tag> 域名 </tag>
             
             <tag> 二级域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java难点</title>
+      <link href="/2019/07/22/java/java5/"/>
+      <url>/2019/07/22/java/java5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抽象类|接口 </tag>
+            
+            <tag> 访问控制符 </tag>
             
         </tags>
       
