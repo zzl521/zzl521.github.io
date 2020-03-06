@@ -4,6 +4,330 @@
   
     
     <entry>
+      <title>手机挖矿</title>
+      <link href="/2020/03/01/draiy/pi/"/>
+      <url>/2020/03/01/draiy/pi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="关于Pi币的解释"><a href="#关于Pi币的解释" class="headerlink" title="关于Pi币的解释"></a>关于Pi币的解释</h3><p><a href="https://www.bilibili.com/video/av93060633?from=search&amp;seid=4991965819975324555" target="_blank" rel="noopener">b站</a></p><p><a href="https://www.zhihu.com/question/354032748?page=1&amp;sort=created" target="_blank" rel="noopener">知乎</a></p><h3 id="pi币官网"><a href="#pi币官网" class="headerlink" title="pi币官网"></a>pi币官网</h3><p><a href="https://piex.info/index.html" target="_blank" rel="noopener">官方地址</a></p><h3 id="pi币挖矿-注册教程"><a href="#pi币挖矿-注册教程" class="headerlink" title="pi币挖矿/注册教程"></a>pi币挖矿/注册教程</h3><p><a href="https://jingyan.baidu.com/article/ce436649c72b7a7673afd3a9.html" target="_blank" rel="noopener">地址</a></p><p><a href="http://119.29.6.96/pi" target="_blank" rel="noopener">地址2</a></p><p><a href="https://blog.csdn.net/weixin_41855029/article/details/104224677" target="_blank" rel="noopener">地址3</a></p><h3 id="博主的邀请码"><a href="#博主的邀请码" class="headerlink" title="博主的邀请码"></a>博主的邀请码</h3><pre><code>zzl667936建议熟人使用，当然你能看到我的博客就算我们是熟人了！</code></pre><p>反正是免费的，抱着玩的心态就好，屯点币说不定以后有价值了呢！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Pi币 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 挖矿 </tag>
+            
+            <tag> Pi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电脑挖矿</title>
+      <link href="/2020/02/29/draiy/btc/"/>
+      <url>/2020/02/29/draiy/btc/</url>
+      
+        <content type="html"><![CDATA[<h3 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h3><p>本以为，我不会这么早接触到比特币这个东西，但实际我不但接触到了它，而且挖掘了它。  </p><p>我和我的服务器愉快的生活着，突然有一天，我想远程连接连接数据库，于是，我试了很久没有成功，最后发现是服务器安全组没有放行端口，我不知怎么操作的，一键开放了很多端口，造成了我的服务器被矿。<br>我突然收到了阿里云的短信<br><img src="http://img.ahdy.top/mmexport1583383440322.jpg" alt><br>嗯，然后我上去一看，cpu内存爆满。 发现后台有一个Xm？？什么挖矿程序，干掉它之后，我对挖矿产生了兴趣。</p><h3 id="关于挖矿"><a href="#关于挖矿" class="headerlink" title="关于挖矿"></a>关于挖矿</h3><p>日本一个叫中本聪的人制定的游戏规则(比特币系统)，系统内有数学题，看谁家挖矿设备先有解，看过刀剑神域的人可能更容易理解些，如果你足够幸运，挖到一个区块，并获得12.5个比特币奖励，顺带那个区块里所有交易的手续费。这是广大矿工废寝忘食的源动力。</p><p>简单来说，挖矿就是用电脑上的CPU和GPU资源进行hash计算， 并通过计算获取到区块奖励，区块奖励就是相应的电子虚拟货币。拥有更大算力计算机／挖矿机的矿工，获得的收益越大。</p><p>算力跟计算机硬件配置有很大关系。</p><p>了解了一些资料之后，发现挖矿走过了三个历程，即CPU挖矿，GPU挖矿，一直到今天的专业矿机挖矿和矿池挖矿。</p><h3 id="挖矿需要什么？"><a href="#挖矿需要什么？" class="headerlink" title="挖矿需要什么？"></a>挖矿需要什么？</h3><p>一台电脑，一个收钱的钱包，一个挖矿软件。<br>从软硬件来看就只要这几样东西，但是这其中没有考虑电能消耗，电脑硬件寿命消耗。</p><p>因为进行挖矿电脑会处于一个超频工作的状态，各项功耗达到峰值。</p><h3 id="挖矿有什么价值？"><a href="#挖矿有什么价值？" class="headerlink" title="挖矿有什么价值？"></a>挖矿有什么价值？</h3><p>谈到比特币，往往人们往往都会想起区块链，比特币是区块链第一个应用</p><p>就我研究了一天的结果来看不能说清它的价值在哪，btc本身就是个虚无缥缈的东西。</p><p>说它浪费电?污染环境？还是说它促进网络交易，推动了社会发展？这就是人们常说的那句话，事务的发展往往具有多面性。</p><h3 id="如何挖矿？"><a href="#如何挖矿？" class="headerlink" title="如何挖矿？"></a>如何挖矿？</h3><h4 id="傻瓜式挖矿软件"><a href="#傻瓜式挖矿软件" class="headerlink" title="傻瓜式挖矿软件"></a>傻瓜式挖矿软件</h4><p><a href="http://hashfish.net/pg.html?sc=122171" target="_blank" rel="noopener">哈鱼矿工</a></p><p>省了设置什么钱包地址，配置挖矿软件，翻墙注册账号，产看收益，提现等各种难题，如果你只是想挖着玩玩，建议用这个。</p><h4 id="NiceHash"><a href="#NiceHash" class="headerlink" title="NiceHash"></a>NiceHash</h4><p><a href="https://www.nicehash.com" target="_blank" rel="noopener">nicehashi官网</a></p><p>这官网我也不知道为啥不能注册账号，但是却可以进去浏览很多东西，据说是没有梯子,现在梯子教程都被屏蔽掉了….</p><h4 id="ViaBic"><a href="#ViaBic" class="headerlink" title="ViaBic"></a>ViaBic</h4><p><a href="https://www.viabtc.com/" target="_blank" rel="noopener">官网</a></p><p>这是个国产的，但是操作比较麻烦，而且抽成高，提现要手续费，不建议用。</p><h4 id="长沙矿工"><a href="#长沙矿工" class="headerlink" title="长沙矿工"></a>长沙矿工</h4><p><a href="http://www.csminer.com/" target="_blank" rel="noopener">官网</a></p><p>自行查看相关文档学习挖矿！</p><h3 id="挖矿经验"><a href="#挖矿经验" class="headerlink" title="挖矿经验"></a>挖矿经验</h3><p>经过我一番折腾，最后选择了哈鱼，毕竟操作简单,软件当中你可以选择双挖，或者单独使用CUP，GPU挖矿，其中显卡占收益的80%左右，在设置中可以修改算法。</p><p><img src="http://img.ahdy.top/mmexport1583383443969.jpg" alt="我的服务器的收益"></p><p>没错，一天八分收益感人！</p><p>用自己的笔记本电脑估算一天三块钱左右，其实连电费都不够。</p><pre><code>电脑配置仅供参考:1060ti  2元i7 8750H  0.5元</code></pre><h3 id="哈鱼矿工使用"><a href="#哈鱼矿工使用" class="headerlink" title="哈鱼矿工使用"></a>哈鱼矿工使用</h3><p><img src="http://img.ahdy.top/2020-03-06_085428.png" alt="此时挂机就可以进行挖矿了"></p><p>看了下软件其实只占用了60%的显卡资源,由于CUP挖矿收益比较低，所以我只用了显卡…</p><p><img src="http://img.ahdy.top/2020-03-06_085753.png" alt>    </p><h4 id="收益"><a href="#收益" class="headerlink" title="收益"></a>收益</h4><p>去官网下载一个app就能提现，需要满0.0001比特币才能提现(大概人民币五六块样子)，提现到支付宝需要2%抽成，体现到比特币钱包有1%抽成。这个抽成相比较很多5%的挖矿软件其实是算低的…</p><p><a href="http://hashfish.net/app.html" target="_blank" rel="noopener">哈鱼官方app</a></p><p><img src="http://img.ahdy.top/2020-03-06_090444.png" alt></p><h4 id="如何提现到BTC钱包"><a href="#如何提现到BTC钱包" class="headerlink" title="如何提现到BTC钱包"></a>如何提现到BTC钱包</h4><p>国内比较好用的钱包。这个钱包不仅能收取其它矿池挖取的比特币，还能在线买卖比特币,其他币种(虚拟货币交易价格取决于当时市场价)</p><p><a href="https://bitpie.com/#/" target="_blank" rel="noopener">比特派app下载</a></p><p><img src="http://img.ahdy.top/2020-03-06_091122.png" alt="下载注册好后选择收款"></p><p><img src="http://img.ahdy.top/2020-03-06_091445.png" alt="此时它会给你一个钱包地址，将二维码下的钱包地址粘贴到哈鱼app钱包提现处就能将电脑挖取的比特币转入比特币钱包"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 比特币 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BTC </tag>
+            
+            <tag> 挖矿 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java网络编程-爬虫</title>
+      <link href="/2020/02/28/java/spider/"/>
+      <url>/2020/02/28/java/spider/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>其实我深知Java的爬虫比python要复杂很多，原因python先天的优势加上其丰富的第三方库，而就目前我的水平来看，只能用Java</p><pre><code>思路:用HttpClient模拟请求html 获取html源码；用jsoup方法抓取解析网页数据用HttpClient模拟请求html 获取html源码；用正则抓取解析网页数据补充:jsoup是一款Java的HTML解析器,可直接解析某个URL地址、HTML文本内容。</code></pre><p>因为学校让在家搞个项目，我实在是想不出来有什么比较新颖的东西，就觉得爬虫这东西比较神奇，于是就报了一个项目，不管有什么结果，我还是想把它做完善，其实是我写项目介绍的时候写过了，说我的爬虫能爬音频，视频，文本，图片，HTML响应，尽管项目很小但bug层出不穷，所以我决定边做，边写….</p><h4 id="数据的作用"><a href="#数据的作用" class="headerlink" title="数据的作用"></a>数据的作用</h4><p>网上很多人说爬虫违法，其实我们只要以学习为目的，不损害他人利益就不会触碰到法律。  </p><p>其实不然，爬虫的作用很多，百度就是一个爬虫，当你做了一个个人网站，或者博客，当你的站点有一定的流量的时候，你会发现你的网站在百度一下当中可以被搜索到，这就是因为，百度爬取了你的站点信息，并且把信息收录到了它的搜索引擎库内。</p><p>身处大数据的影响下，数据就是金钱。</p><p>金融，做市场分析，电商，做产品调研，很多东西的排名都离不开数据分析，而获取数据的工具就是爬虫。</p><h3 id="项目截图"><a href="#项目截图" class="headerlink" title="项目截图"></a>项目截图</h3><p><img src="http://img.ahdy.top/2020-03-03_082937.png" alt></p><p><img src="http://img.ahdy.top/2020-03-03_083028.png" alt><br>界面使用的是FX，目前对于FX依然很懵…项目后面会打包发布，双击.exe文件就能启动，与源码一并放入网盘，附在文档结尾处,我会将项目当中功能逐一分解，以便单独需要时使用</p><h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>URL是统一资源定位符的简称，它表示Internet上某资源的地址。通过URL我们可以访问网络上的各种资源。</p><p>URL对象是一个绝对的URL地址，但URL对象可用绝对URL、相对URL和部分URL来构建。</p><h4 id="使用Java程序上网"><a href="#使用Java程序上网" class="headerlink" title="使用Java程序上网"></a>使用Java程序上网</h4><pre><code>import java.io.BufferedReader;import java.io.InputStreamReader;import java.net.URL;import java.net.URLConnection;public class t {public static void main(String[] args) throws Exception{    URL url = new URL(&quot;http://www.baidu.com/&quot;);    //拿到UrL地址    URLConnection connection = url.openConnection();    //打开连接    connection.connect();    //访问资源，下面就是IO流取回信息    BufferedReader br = new BufferedReader(new InputStreamReader(            url.openStream(),&quot;UTF-8&quot;));    String line = null;    while (null != (line = br.readLine())) {        System.out.println(line);    }    br.close();}}</code></pre><p>使用URL可以远程访问资源，URL有openConnection()方法，用此来创建一个URLConnection对象，与调用URL对象相关，它返回一个URLConnection对象。但是它可能会发生I/O异常。</p><p><img src="http://img.ahdy.top/2020-03-03_081916.png" alt></p><h3 id="获取网页上的文字信息"><a href="#获取网页上的文字信息" class="headerlink" title="获取网页上的文字信息"></a>获取网页上的文字信息</h3><pre><code>import java.io.BufferedReader;import java.io.InputStreamReader;import java.net.HttpURLConnection;import java.net.URL;import java.util.List;import java.util.Scanner;import org.jsoup.Jsoup;import org.jsoup.nodes.Document;import org.jsoup.nodes.Node;import org.jsoup.nodes.TextNode;/** * 抓取网页数据工具类 * @author asus-pc * */public class GrabUrl {public static String getUrlText(String url) throws Exception{    URL getUrl=new URL(url);    HttpURLConnection connection=(HttpURLConnection)getUrl.openConnection();    connection.connect();    BufferedReader reader=new BufferedReader(new InputStreamReader(connection.getInputStream(),&quot;utf-8&quot;));    StringBuffer buffer=new StringBuffer();    String lines=null;    while ((lines=reader.readLine())!=null){        lines=new String(lines.getBytes(),&quot;utf-8&quot;);        buffer=buffer.append(lines+&quot;\n&quot;);    }    reader.close();    connection.disconnect();    return buffer.toString();}private static String extractText(Node node){    if(node instanceof TextNode){            return ((TextNode) node).text();      }     List&lt;Node&gt; children = node.childNodes();       StringBuffer buffer = new StringBuffer();        for (Node child: children) {           buffer.append(extractText(child));     }       return buffer.toString();}public static String html2Str(String html){       Document doc = Jsoup.parse(html);        return extractText(doc);}/**测试*/public static void main(String[] args) {    try {        System.out.println(&quot;请输入网址：&quot;);        Scanner scanner=new Scanner(System.in);        String urlString=scanner.next();        String aString=getUrlText(urlString);        String aSt=html2Str(aString);        System.out.println(aSt);    } catch (Exception e) {        // TODO Auto-generated catch block        e.printStackTrace();    }}}</code></pre><p>——————————————————————————————————</p><pre><code>jar包依赖:&lt;dependency&gt;  &lt;groupId&gt;org.jsoup&lt;/groupId&gt;  &lt;artifactId&gt;jsoup&lt;/artifactId&gt;  &lt;version&gt;1.8.3&lt;/version&gt;&lt;/dependency&gt;</code></pre><h3 id="获取网站响应信息"><a href="#获取网站响应信息" class="headerlink" title="获取网站响应信息"></a>获取网站响应信息</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 爬虫 </tag>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java IO流</title>
+      <link href="/2020/02/27/java/javaio/"/>
+      <url>/2020/02/27/java/javaio/</url>
+      
+        <content type="html"><![CDATA[<h3 id="java-IO流"><a href="#java-IO流" class="headerlink" title="java IO流"></a>java IO流</h3><p>数据是怎么存储到磁盘当中的？<br>内存起到了什么作用？</p><pre><code>内存和内存之间，内存和网络的其它内存，内存和硬盘文件，内存和数据库文件之间的数据是通过流进行传递的。以数据的流向分类，能够读取字节的序列的API对象成为输入流（InputStream），能够写入字节序列的成为输出流（OutputStream）。字节是计算机数据的存储的形式，任何数据都可以使用字节流进行读写。读取来源和写入目标可以是文件，内存，网络，数据库和文件。InputStream和OutputStream两个抽象类构成了读写IO体系的框架基础。字节流虽然可以操作任何的数据形式，但是对于占用多个字节的字符却不是很方便。  需要知道，所以在JAVA中有专门提供了对于字符流的两个抽象类Reader和Writer</code></pre><p>  分类：</p><p>  IO流按照操作对象：字节流和字符流</p><p>  按照流的方向分：输入流和输出流</p><p>  这些流就像流动的血液，在内存和数据存储媒介间来回的流动<br><img src="http://img.ahdy.top/156766362.png" alt><br><img src="http://img.ahdy.top/6359987487114764407472214.png" alt></p><h4 id="获取项目路径"><a href="#获取项目路径" class="headerlink" title="获取项目路径"></a>获取项目路径</h4><p>String path=FileReader.class.getResource(“/“).getFile();</p><p>//获取当前项目运行时所在根目录</p><p>System.out.println(path);</p><h3 id="FileInputStream"><a href="#FileInputStream" class="headerlink" title="FileInputStream"></a>FileInputStream</h3><pre><code>InputStream f = new FileInputStream(&quot;C:/java/hello&quot;);File f = new File(&quot;C:/java/hello&quot;);InputStream out = new FileInputStream(f);</code></pre><h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><pre><code>    import java.io.*;public class fileStreamTest {    public static void main(String args[]) {        try {            byte bWrite[] = { 11, 21, 3, 40, 5 };            OutputStream os = new FileOutputStream(&quot;test.txt&quot;);            for (int x = 0; x &lt; bWrite.length; x++) {                os.write(bWrite[x]); // writes the bytes            }            os.close();            InputStream is = new FileInputStream(&quot;test.txt&quot;);            int size = is.available();            for (int i = 0; i &lt; size; i++) {                System.out.print((char) is.read() + &quot;  &quot;);            }            is.close();        } catch (IOException e) {            System.out.print(&quot;Exception&quot;);        }    }}</code></pre><h3 id="FileOutputStream"><a href="#FileOutputStream" class="headerlink" title="FileOutputStream"></a>FileOutputStream</h3><pre><code>OutputStream f = new FileOutputStream(&quot;C:/java/hello&quot;);File f = new File(&quot;C:/java/hello&quot;);OutputStream f = new FileOutputStream(f);</code></pre><h4 id="基本用法-1"><a href="#基本用法-1" class="headerlink" title="基本用法"></a>基本用法</h4><pre><code>import java.io.*;public class fileStreamTest2 {    public static void main(String[] args) throws IOException {        File f = new File(&quot;a.txt&quot;);        FileOutputStream fop = new FileOutputStream(f);        // 构建FileOutputStream对象,文件不存在会自动新建        OutputStreamWriter writer = new OutputStreamWriter(fop, &quot;UTF-8&quot;);        // 构建OutputStreamWriter对象,参数可以指定编码,默认为操作系统默认编码,windows上是gbk        writer.append(&quot;中文输入&quot;);        // 写入到缓冲区        writer.append(&quot;\r\n&quot;);        // 换行        writer.append(&quot;English&quot;);        // 刷新缓存冲,写入到文件,如果下面已经没有写入的内容了,直接close也会写入        writer.close();        // 关闭写入流,同时会把缓冲区内容写入文件,所以上面的注释掉        fop.close();        // 关闭输出流,释放系统资源        FileInputStream fip = new FileInputStream(f);        // 构建FileInputStream对象        InputStreamReader reader = new InputStreamReader(fip, &quot;UTF-8&quot;);        // 构建InputStreamReader对象,编码与写入相同        StringBuffer sb = new StringBuffer();        while (reader.ready()) {            sb.append((char) reader.read());            // 转成char加到StringBuffer对象中        }        System.out.println(sb.toString());        reader.close();        // 关闭读取流        fip.close();        // 关闭输入流,释放系统资源    }}</code></pre><h3 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h3><p>File可以让我们创建一个文件夹，这个对象便利了我们对文件的操作。  </p><h4 id="创建文件夹及路径"><a href="#创建文件夹及路径" class="headerlink" title="创建文件夹及路径"></a>创建文件夹及路径</h4><pre><code>public static void main(String[] args) {    String path =&quot;F:\\testcode\\Index&quot;; //所创建文件目录    File f = new File(path);     if(!f.exists()){        f.mkdirs(); //创建目录    }    String fileName = &quot;abc.txt&quot;; //文件名及类型    File file = new File(path,fileName);    if(!file.exists()){ //surround with try/catch        try {             file.createNewFile();        } catch (IOException e) {            // TODO Auto-generated catch block            e.printStackTrace();        }    }}</code></pre><h3 id="文件写入"><a href="#文件写入" class="headerlink" title="文件写入"></a>文件写入</h3><pre><code>    方式一    String str=&quot;hello world!&quot;;        FileWriter writer;        try {            writer = new FileWriter(&quot;E:/token.txt&quot;);            write.write(&quot;&quot;);//清空原文件内容            writer.write(str);            writer.flush();            writer.close();        } catch (IOException e) {            e.printStackTrace();        }    方式二    File txt=new File(&quot;E:/log1.txt&quot;);         if(!txt.exists()){               txt.createNewFile();          }           byte bytes[]=new byte[512];            bytes=str.getBytes();           int b=bytes.length;   //是字节的长度，不是字符串的长度         FileOutputStream fos=new FileOutputStream(txt);          fos.write(bytes,0,b);          fos.write(bytes);         fos.close;    方式三    FileOutputStream fos = new FileOutputStream(&quot;E:/log.txt&quot;,true);    //true表示在文件末尾追加      fos.write(log.getBytes());      fos.close();</code></pre><h4 id="路径创建与写入联合使用"><a href="#路径创建与写入联合使用" class="headerlink" title="路径创建与写入联合使用"></a>路径创建与写入联合使用</h4><pre><code>      String result=extractText(doc);    FileWriter fileWriter=null;    File file =new File(&quot;D:\\work&quot;);    if (!file.exists()){        file.mkdirs();//创建    }    file=new File(file+&quot;\\&quot;+&quot;txt&quot;+&quot;.txt&quot;);    try {        fileWriter = new FileWriter(file, true);        fileWriter.write(result+&quot;\n&quot;);    } catch (IOException e) {        e.printStackTrace();    }finally {        try {            fileWriter.flush();            fileWriter.close();        }catch (Exception e){            e.printStackTrace();        }    }</code></pre><h3 id="FileReader"><a href="#FileReader" class="headerlink" title="FileReader"></a>FileReader</h3><p>FileReader类从InputStreamReader类继承而来。该类按字符读取流中数据。可以通过以下几种构造方法创建需要的对象。</p><p>在给定从中读取数据的 File 的情况下创建一个新 FileReader。</p><p>FileReader(File file)<br>在给定从中读取数据的 FileDescriptor 的情况下创建一个新 FileReader。</p><p>FileReader(FileDescriptor fd)<br>在给定从中读取数据的文件名的情况下创建一个新 FileReader。</p><p>FileReader(String fileName) </p><pre><code>import java.io.*;public class FileRead {    public static void main(String args[]) throws IOException {        File file = new File(&quot;Hello1.txt&quot;);        // 创建文件        file.createNewFile();        // creates a FileWriter Object        FileWriter writer = new FileWriter(file);        // 向文件写入内容        writer.write(&quot;This\n is\n an\n example\n&quot;);        writer.flush();        writer.close();        // 创建 FileReader 对象        FileReader fr = new FileReader(file);        char[] a = new char[50];        fr.read(a); // 读取数组中的内容        for (char c : a)            System.out.print(c); // 一个一个打印字符        fr.close();    }}</code></pre><h3 id="FileWriter"><a href="#FileWriter" class="headerlink" title="FileWriter"></a>FileWriter</h3><p>FileWriter 类从 OutputStreamWriter 类继承而来。该类按字符向流中写入数据。可以通过以下几种构造方法创建需要的对象。</p><p>在给出 File 对象的情况下构造一个 FileWriter 对象。</p><p>FileWriter(File file)<br>在给出 File 对象的情况下构造一个 FileWriter 对象。</p><p> FileWriter(File file, boolean append)<br>file：要写入数据的 File 对象。</p><p>append：如果 append 参数为 true，则将字节写入文件末尾处，相当于追加信息。如果 append 参数为 false, 则写入文件开始处。</p><pre><code>import java.io.*;public class FileRead {    public static void main(String args[]) throws IOException {        File file = new File(&quot;Hello1.txt&quot;);        // 创建文件        file.createNewFile();        // creates a FileWriter Object        FileWriter writer = new FileWriter(file);        // 向文件写入内容        writer.write(&quot;This\n is\n an\n example\n&quot;);        writer.flush();        writer.close();        // 创建 FileReader 对象        FileReader fr = new FileReader(file);        char[] a = new char[50];        fr.read(a); // 从数组中读取内容        for (char c : a)            System.out.print(c); // 一个个打印字符        fr.close();    }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> IO </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> IO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA集成scene builder</title>
+      <link href="/2020/02/26/idea/sencebuilder/"/>
+      <url>/2020/02/26/idea/sencebuilder/</url>
+      
+        <content type="html"><![CDATA[<h3 id="什么是JavaFX-Scene-Builder"><a href="#什么是JavaFX-Scene-Builder" class="headerlink" title="什么是JavaFX Scene Builder?"></a>什么是JavaFX Scene Builder?</h3><p>JavaFX Scene Builder是一种可视布局工具，允许用户快速设计JavaFX应用程序用户界面，而无需编码。用户可以将UI组件拖放到工作区，修改其属性，应用样式表，并且它们正在创建的布局的FXML代码将在后台自动生成。它的结果是一个FXML文件，然后可以通过绑定到应用程序的逻辑与Java项目组合。</p><p>类似于C#拖拽式开发GUI界面</p><h3 id="下载Scene-Builder"><a href="#下载Scene-Builder" class="headerlink" title="下载Scene Builder"></a>下载Scene Builder</h3><p><a href="https://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-1x-archive-2199384.html" target="_blank" rel="noopener">官方地址</a><br><img src="http://img.ahdy.top/2020-02-29_053440.png" alt="选择最新版本-如果你别的系统就选你用的系统版本"></p><p>这期间会让你登录Oracle账号，注册账号才能下载它的产品，<br>下载好后桌面会出现手指样图标。    </p><h3 id="IDEA引用sencebuilder插件"><a href="#IDEA引用sencebuilder插件" class="headerlink" title="IDEA引用sencebuilder插件"></a>IDEA引用sencebuilder插件</h3><p>1.打开settings，选择plugins，启用FX插件，打勾即可<br><img src="http://img.ahdy.top/2020-02-29_053946.png" alt><br>2.在settings中找到，Languages and Framework，选择FX,将sencebuilder的启动地址(.exe文件)设置进去。<br><img src="http://img.ahdy.top/2020-02-29_054125.png" alt></p><h3 id="新建FX项目，调用插件"><a href="#新建FX项目，调用插件" class="headerlink" title="新建FX项目，调用插件"></a>新建FX项目，调用插件</h3><p><img src="http://img.ahdy.top/2020-02-29_054601.png" alt="右键FXML文件"><br>在此调用插件，打开工具，配置完成。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IDEA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> FX </tag>
+            
+            <tag> GUI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java算法</title>
+      <link href="/2020/02/25/java/javamath/"/>
+      <url>/2020/02/25/java/javamath/</url>
+      
+        <content type="html"><![CDATA[<h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><p>compareTo是String类自带的方法，Integer也适用，比较两个字符串，并返回字符串中第一个字母ASCII的差值，当碰到不一样的字符串的时候就会立刻返回当前Ascll码差值。</p><pre><code>public static void main(String[] args) throws Exception {    String string =&quot;123&quot;;    String string2 =&quot;124&quot;;    Object object=string;    System.out.println(string.compareTo(object.toString()));    System.out.println(string.compareToIgnoreCase(string2));//忽略大小写    System.out.println(string.compareTo(string2));}</code></pre><h3 id="字符串出现的位置"><a href="#字符串出现的位置" class="headerlink" title="字符串出现的位置"></a>字符串出现的位置</h3><pre><code>   String string=&quot;4545465454654123&quot;;   int intenger=string.lastIndexOf(&quot;123&quot;);   int intenger=string.lastIndexOf(123);    //同样使用于数字，若找不到则会返回-1   System.out.println(intenger);    //打印结果为:13</code></pre><h3 id="删除字符串当中的字符"><a href="#删除字符串当中的字符" class="headerlink" title="删除字符串当中的字符"></a>删除字符串当中的字符</h3><p>我写了一个简单的方法，基于前面的基础，可以删除掉一个字符串内单个字符，或者是一个字符串。str.substring可以截取一段字符串。</p><pre><code>public static void main(String[] args) throws Exception {   String string=&quot;4545465454654123&quot;;   String string2=&quot;123&quot;;   int intenger=string.lastIndexOf(string2);   int strlength=string2.length();   System.out.println(intenger);   System.out.println(ss(string,intenger,strlength));}public static String ss(String str, int number,int number2){    return str.substring(0,number)+str.substring(number+number2);}输出结果:134545465454654</code></pre><h3 id="替换字串当中的字符"><a href="#替换字串当中的字符" class="headerlink" title="替换字串当中的字符"></a>替换字串当中的字符</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> String </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机三级数据库备考资源</title>
+      <link href="/2020/02/24/database/note2/"/>
+      <url>/2020/02/24/database/note2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="认知"><a href="#认知" class="headerlink" title="认知"></a>认知</h3><p>干什么能容易呢？干什么都不容易，我们学习专项知识时必定要下一番功夫。我只喜欢白嫖，并且善于白嫖，为啥用微云呢，因为百度盘的连接经常莫名其妙失效。</p><h3 id="刷题软件"><a href="#刷题软件" class="headerlink" title="刷题软件"></a>刷题软件</h3><p>软件是2017年的学习版，懂就好。<br><a href="https://share.weiyun.com/5Sk02hc" target="_blank" rel="noopener">微云连接</a><br><img src="http://img.ahdy.top/2020-02-29_060902.png" alt><br><a href="https://share.weiyun.com/5vJF9ed" target="_blank" rel="noopener">2018数据库专项题库</a></p><p><a href="https://share.weiyun.com/5I087gW" target="_blank" rel="noopener">手机刷题软件（年代久远，介意慎下）</a></p><h3 id="数据库全程班视频"><a href="#数据库全程班视频" class="headerlink" title="数据库全程班视频"></a>数据库全程班视频</h3><p>原价199课程，720p，2020年新出的全程班教程，讲解全部考点。</p><p><a href="https://share.weiyun.com/5PsNum1" target="_blank" rel="noopener">微云连接</a></p><h2 id="加油！"><a href="#加油！" class="headerlink" title="加油！"></a>加油！</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 国三 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+            <tag> Note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据库笔记</title>
+      <link href="/2020/02/23/database/note/"/>
+      <url>/2020/02/23/database/note/</url>
+      
+        <content type="html"><![CDATA[<h3 id="数据库应用系统生命周期"><a href="#数据库应用系统生命周期" class="headerlink" title="数据库应用系统生命周期"></a>数据库应用系统生命周期</h3><pre><code>DMS 数据库系统(概念最大的系统)DBAS 数据库应用系统DBMS 数据库管理系统DBA 数据库管理员</code></pre><p>1.掌握DBAS生命周期，生命周期模型</p><p>2.掌握系统规划与定义内容</p><p>3.掌握数据,功能，性能，需求分析</p><p>4.理解，概念设计（ER），逻辑（3NF），物理设计</p><p>5.熟悉数据库实现与部署</p><h4 id="软件工程与软件开发方法"><a href="#软件工程与软件开发方法" class="headerlink" title="软件工程与软件开发方法"></a>软件工程与软件开发方法</h4><p>DBS包含软件工程思想<br>软件工程开发的目的，提高软件质量，开发速度，降低开发成本</p><p>软件开发方法：瀑布模型，螺旋模型，快速原型模型。</p><h4 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h4><p>该模型分为六个阶段:</p><pre><code>项目规划系统分析总体设计详细设计编码调式与集成测试运行维护阶段</code></pre><p><img src="http://img.ahdy.top/2020-02-26_153750.png" alt="从上到下依次执行"><br>缺点:难以进行修改，难以满足用户需求</p><h4 id="快速原型模型"><a href="#快速原型模型" class="headerlink" title="快速原型模型"></a>快速原型模型</h4><p>弥补了瀑布模型难以修改的缺点。<br><img src="http://img.ahdy.top/2020-02-26_154004.png" alt><br>缺点:需要收集大量用户需求后开发</p><h4 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h4><p><img src="http://img.ahdy.top/2020-02-26_154127.png" alt><br>融合了前两个模型的优点。有效降低开发风险，但对开发人员风险评估能力要求较高</p><h4 id="数据库系统生命周期模型"><a href="#数据库系统生命周期模型" class="headerlink" title="数据库系统生命周期模型"></a>数据库系统生命周期模型</h4><p><img src="http://img.ahdy.top/2020-02-26_154416.png" alt></p><h3 id="规划与分析"><a href="#规划与分析" class="headerlink" title="规划与分析"></a>规划与分析</h3><p><img src="http://img.ahdy.top/2020-02-26_155134.png" alt></p><h4 id="可行性分析"><a href="#可行性分析" class="headerlink" title="可行性分析"></a>可行性分析</h4><p><img src="http://img.ahdy.top/2020-02-26_155554.png" alt></p><h4 id="DMAS成本"><a href="#DMAS成本" class="headerlink" title="DMAS成本"></a>DMAS成本</h4><p>1.系统软硬件购置</p><p>2.人工费用</p><p>3.系统安装，运行，维护等费用</p><h4 id="项目规划"><a href="#项目规划" class="headerlink" title="项目规划"></a>项目规划</h4><p>项目规划在进行可行性分析之后<br>1.我们需要确定项目目标和范围</p><p>2.根据DBAS软件开发模型，分解整个项目用和工作活动任务</p><p>3.估算项目所需的各种资源</p><p>4.指定合理的DBMS项目计划，包括进度，成本，质量等方面的预测和控制方案 </p><h3 id="需求分析-软件开发中极为重要的阶段"><a href="#需求分析-软件开发中极为重要的阶段" class="headerlink" title="需求分析(软件开发中极为重要的阶段)"></a>需求分析(软件开发中极为重要的阶段)</h3><p>从对数据库进行组织与储存角度，用户视图出发，分辨辨识应用领域所管理的各类数据项和数据结构，是形成数据字典的主要内容。</p><p>数据字典包括:数据项，数据结构，数据流，数据存储，处理过程。</p><h4 id="功能需求分析"><a href="#功能需求分析" class="headerlink" title="功能需求分析"></a>功能需求分析</h4><p>对DBAS因该具有的功能进行分析，DBAS需求分析的核心环节，描述了一个系统应该做什么。</p><h4 id="数据处理需求分析"><a href="#数据处理需求分析" class="headerlink" title="数据处理需求分析"></a>数据处理需求分析</h4><p>从数据访问和处理角度，明确对各类数据项所需进行时的数据访问操作。</p><h4 id="性能需求分析"><a href="#性能需求分析" class="headerlink" title="性能需求分析"></a>性能需求分析</h4><p>描述系统应当做到什么程度</p><p>DBAS包括以下指标<br>数据操作响应时间，系统吞吐量，允许并发访问的最大用户数<br>TPS代价值:衡量系统性价比的指标。</p><p>影响TPS值的因素:系统硬件资源，网络通信设备性能，数据库逻辑设计，物理设计质量，DBMS配置和性能，数据库应用系统自身设定</p><h4 id="其他需求分析"><a href="#其他需求分析" class="headerlink" title="其他需求分析"></a>其他需求分析</h4><p>存储需求分析，安全性需求分析，备份和回复需求分析<br><img src="http://img.ahdy.top/2020-02-26_161742.png" alt></p><h4 id="需求分析方法"><a href="#需求分析方法" class="headerlink" title="需求分析方法"></a>需求分析方法</h4><p>结构化与功能建模方法:DFD IDEFO  </p><p><img src="http://img.ahdy.top/2020-02-26_165530.png" alt></p><h3 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h3><p>概念设计，逻辑设计，物理设计，按顺序进行。</p><p>概念设计:数据库概念模型设计，系统总体设计(ER图)</p><h4 id="系统总图设计"><a href="#系统总图设计" class="headerlink" title="系统总图设计"></a>系统总图设计</h4><p>dbas是由硬件和软件组成的复杂系统，在设计上应用语句自上而下，由简到繁，逐步求精。</p><h4 id="逻辑设计"><a href="#逻辑设计" class="headerlink" title="逻辑设计"></a>逻辑设计</h4><p>1.逻辑结构设计</p><p>2.应用程序概要设计</p><p>3.事务概要设计的任务</p><p><img src="http://img.ahdy.top/2020-02-26_162436.png" alt></p><h4 id="物理设计"><a href="#物理设计" class="headerlink" title="物理设计"></a>物理设计</h4><p>1.数据库物理结构设计</p><p>2.数据库事务详细设计</p><p>3.应用程序详细设计<br><img src="http://img.ahdy.top/2020-02-26_162612.png" alt></p><h3 id="实现和部署"><a href="#实现和部署" class="headerlink" title="实现和部署"></a>实现和部署</h3><p><img src="http://img.ahdy.top/2020-02-26_162933.png" alt="交互使用阶段"></p><h3 id="运行管理与维护"><a href="#运行管理与维护" class="headerlink" title="运行管理与维护"></a>运行管理与维护</h3><p><img src="http://img.ahdy.top/2020-02-26_163221.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 国三 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Computer </tag>
+            
+            <tag> Note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java GUI程序</title>
+      <link href="/2020/02/22/fx/fx1/"/>
+      <url>/2020/02/22/fx/fx1/</url>
+      
+        <content type="html"><![CDATA[<h3 id="FX简介"><a href="#FX简介" class="headerlink" title="FX简介"></a>FX简介</h3><p>Sun公司已于2008年12月05日发布了JavaFX技术的正式版，它使您能利用 JavaFX 编程语言开发互联网应用程序(RIA）。该产品于2007年5月在JavaOne大会上首次对外公布。JavaFX技术主要应用于创建Rich Internet Applications（RIAs）。当前的JavaFX包括JavaFX脚本和JavaFX Mobile（一种运营于行动装置的操作系统），今后JavaFX将包括更多的产品。JavaFX Script编程语言（以下称为JavaFX）是一种declarative, statically typed（声明性的、静态类型）脚本语言。<br>——————————简单来说fx弥补了Java GUI 开发的不足</p><h3 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h3><p>fx是一个独立的库，在eclipse当中需要对其集成插件，在idea当中就省去了这些操作，because idea already be ready<br><img src="http://img.ahdy.top/2020-02-17_133927.png" alt="初始页面"><br>运行当前页面代码，将会得到一个空白的窗口程序，当然它比swing有着卓越，显著的特性。</p><h3 id="设置按钮及事件响应"><a href="#设置按钮及事件响应" class="headerlink" title="设置按钮及事件响应"></a>设置按钮及事件响应</h3><p><img src="http://img.ahdy.top/2020-02-17_140435.png" alt></p><h4 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h4><pre><code>package sample;import javafx.application.Application;import javafx.event.ActionEvent;import javafx.event.EventHandler;import javafx.fxml.FXMLLoader;import javafx.scene.Parent;import javafx.scene.Scene;import javafx.scene.control.Button;import javafx.scene.layout.BorderPane;import javafx.stage.Stage;import java.awt.*;public class Main extends Application {    @Override    public void start(Stage primaryStage) throws Exception{        try{//          Parent root = FXMLLoader.load(getClass().getResource(&quot;sample.fxml&quot;));            BorderPane rt=new BorderPane();            //创建根容器            primaryStage.setTitle(&quot;Super web spider-Writer mailbox:2503963481@qq.com&quot;);            //设置标题内容            primaryStage.setScene(new Scene(rt, 650, 375));            //放入root容器并设置其布局            Button btn=new Button(&quot;click&quot;);            //设置按钮及按钮文字            rt.setCenter(btn);            //设置按钮居中            btn.setOnAction(new EventHandler&lt;ActionEvent&gt;(){            //匿名内部类写法                @Override                public void handle(ActionEvent event) {                    System.out.println(&quot;事件触发！&quot;);                }            });            primaryStage.show();            //布局显现        }catch (Exception e){        }    }    public static void main(String[] args) {        launch(args);    }}</code></pre><h3 id="设置图片"><a href="#设置图片" class="headerlink" title="设置图片"></a>设置图片</h3><p>美化GUI自然少不了图片的装饰<br><img src="http://img.ahdy.top/2020-02-17_141752.png" alt></p><h4 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h4><pre><code>package sample;import javafx.application.Application;import javafx.scene.Scene;import javafx.scene.image.Image;import javafx.scene.image.ImageView;import javafx.scene.layout.BorderPane;import javafx.stage.Stage;import java.awt.*;public class Main extends Application {    @Override    public void start(Stage primaryStage) throws Exception{        try{//          Parent root = FXMLLoader.load(getClass().getResource(&quot;sample.fxml&quot;));            BorderPane rt=new BorderPane();            //创建根容器            primaryStage.setTitle(&quot;Super web spider-Writer mailbox:2503963481@qq.com&quot;);            //设置标题内容            primaryStage.setScene(new Scene(rt, 650, 375));            //放入root容器并设置其布局            Image img=new Image(&quot;http://pic.netbian.com/uploads/allimg/180803/084010-15332568109b5b.jpg&quot;);            //url路径            ImageView imageView =new ImageView();            //设置控件用于显示            imageView.setImage(img);            rt.setCenter(imageView);            //放入容器            primaryStage.show();            //布局显现        }catch (Exception e){        }    }    public static void main(String[] args) {        launch(args);    }}</code></pre><h3 id="设置图片大小"><a href="#设置图片大小" class="headerlink" title="设置图片大小"></a>设置图片大小</h3><pre><code>    double with =image.getWidth();    double hight=imge.getHeiget();    primaryStage.setScene(new Scene(rt, 宽, 高));</code></pre><h3 id="加载本地图片"><a href="#加载本地图片" class="headerlink" title="加载本地图片"></a>加载本地图片</h3><pre><code>        File file =new File(&quot;file:&quot;);        String url =file.toURI().toString();</code></pre><p> 图片也可放在项目内，称为资源文件</p><h3 id="容器布局"><a href="#容器布局" class="headerlink" title="容器布局"></a>容器布局</h3><h4 id="水平布局"><a href="#水平布局" class="headerlink" title="水平布局"></a>水平布局</h4><p>HBOX:该布局使控件水平排放并且具有拉伸作用<br><img src="http://img.ahdy.top/2020-02-19_003151.png" alt></p><pre><code>        相关代码-已优化布局        HBox hBox=new HBox();        hBox.setPadding(new Insets(10));        hBox.setAlignment(Pos.CENTER);        TextField textField =new TextField(&quot;请选择文件内容&quot;);        Button select =new Button(&quot;选择文件&quot;);        Button upload =new Button(&quot;上传文件&quot;);        hBox.getChildren().addAll(textField,select,upload);        HBox.setHgrow(textField, Priority.ALWAYS);</code></pre><p><img src="http://img.ahdy.top/2020-02-19_003737.png" alt="加入根容器语法"></p><h4 id="边缘布局"><a href="#边缘布局" class="headerlink" title="边缘布局"></a>边缘布局</h4><p>BorderPane:使控件按照上下左右中的位置摆放</p><h3 id="控件尺寸设置"><a href="#控件尺寸设置" class="headerlink" title="控件尺寸设置"></a>控件尺寸设置</h3><p><img src="http://img.ahdy.top/2020-02-19_004051.png" alt><br><img src="http://img.ahdy.top/2020-02-19_004148.png" alt><br><img src="http://img.ahdy.top/2020-02-19_004751.png" alt></p><p>控件的大小有些时候不是自己能决定的，很大程度取决于使用的容器，当设置控件大小失效时，属于正常显现</p><h3 id="控件布局"><a href="#控件布局" class="headerlink" title="控件布局"></a>控件布局</h3><p><img src="http://img.ahdy.top/2020-02-19_005320.png" alt></p><h3 id="布局嵌套"><a href="#布局嵌套" class="headerlink" title="布局嵌套"></a>布局嵌套</h3><p>布局可以嵌套使用</p><pre><code>import javafx.application.Application;import javafx.event.ActionEvent;import javafx.event.EventHandler;import javafx.scene.Scene;import javafx.scene.control.Button;import javafx.scene.control.TextArea;import javafx.scene.control.TextField;import javafx.scene.image.Image;import javafx.scene.image.ImageView;import javafx.scene.layout.BorderPane;import javafx.scene.layout.HBox;import javafx.scene.layout.Priority;import javafx.stage.Stage;public class Main extends Application {    HBox hbox = new HBox();    TextField textField = new TextField(&quot;Please use URL&quot;);    Button button = new Button(&quot;检测站点&quot;);    javafx.scene.control.TextArea textArea = new TextArea();    @Override    public void start(Stage primaryStage) throws Exception{        try{            //创建根容器            hbox.getChildren().addAll(textField, button);            HBox.setHgrow(textField, Priority.ALWAYS);            // BorderPane里嵌套HBox            BorderPane root = new BorderPane();            root.setTop(hbox);            root.setCenter(textArea);            //布局设置            HBox.setHgrow(textField, Priority.ALWAYS);            primaryStage.setTitle(&quot;Super web spider-Writer mailbox:2503963481@qq.com&quot;);            //设置标题内容            primaryStage.setScene(new Scene(root, 650, 500));            //放入root容器并设置其布局            Image img=new Image(&quot;http://pic.netbian.com/uploads/allimg/180803/084010-15332568109b5b.jpg&quot;);            ImageView imageView =new ImageView();            imageView.setImage(img);//            rt.setCenter(imageView);            primaryStage.show();            button.setOnAction(new EventHandler&lt;ActionEvent&gt;() {            //匿名内部类按钮事件响应                @Override                public void handle(ActionEvent event)                {                    onAdd();                }            });            //布局显现        }catch (Exception e){        }    }    public void onAdd()    {        String str = textField.getText();           //获取用户输入的字符串        textArea.appendText(str + &quot;\n&quot;);            //将用户输入的字符串放入到textArea    }    public static void main(String[] args) {        launch(args);    }}</code></pre><h3 id="CSS引入及样式设置"><a href="#CSS引入及样式设置" class="headerlink" title="CSS引入及样式设置"></a>CSS引入及样式设置</h3><p><a href="https://link.fobshanghai.com/rgbcolor.htm" target="_blank" rel="noopener">RGB工具</a><br>与web界面类似，FX提供了css样式来优化界面，</p><pre><code>读入css后，对场景scene插入css条目scene.getStylesheets().add(getClass().getResource(&quot;Login.css&quot;).toExternalForm());也可以改变某个具体节点node.setStyle(&quot;font-size:15px&quot;); //设置具体风格node.setStyleClass(&quot;title_class&quot;);//设置风格类</code></pre><p>将css与Main.java处于同一路径下</p><h4 id="点号与警号命名的作用"><a href="#点号与警号命名的作用" class="headerlink" title="点号与警号命名的作用"></a>点号与警号命名的作用</h4><pre><code>.xxx{}//通用样式#xxxx{}//特定样式，单独样式如何引用: 控件.getStyleClass().add(&quot;通用名&quot;); 控件.setId(&quot;特定样式名&quot;);</code></pre><h4 id="常用样式设置"><a href="#常用样式设置" class="headerlink" title="常用样式设置"></a>常用样式设置</h4><p>-fx-background-color: #00000;</p><p>设置背景颜色</p><p>设置边界(边缘线颜色)</p><p>-fx-border-radius: 4;</p><p>设置边界圆滑度</p><p>-fx-text-fill: #fff;</p><p>设置字体颜色</p><p>-fx-font-size 16;</p><p>设置字体大小</p><h4 id="关于默认样式的修改"><a href="#关于默认样式的修改" class="headerlink" title="关于默认样式的修改"></a>关于默认样式的修改</h4><p>在Fx当中每个控件其实都有一个默认的样式<br>当你不想使用默认控件的样式的时候你可在css中重新定义，此时原有的默认样式将会被覆盖掉。</p><p>可以使用:</p><pre><code>System.out.println(a.getClassStyle().toString());</code></pre><p>来查看默认样式。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> FX </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> FX </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA项目转换</title>
+      <link href="/2020/02/21/idea/problem2/"/>
+      <url>/2020/02/21/idea/problem2/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq920447939/article/details/80981525?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">csdn</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Maven </tag>
+            
+            <tag> IDEA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA JAR包自动下载</title>
+      <link href="/2020/02/20/idea/problem/"/>
+      <url>/2020/02/20/idea/problem/</url>
+      
+        <content type="html"><![CDATA[<h3 id="IDEA-jar包自动搜索下载"><a href="#IDEA-jar包自动搜索下载" class="headerlink" title="IDEA jar包自动搜索下载"></a>IDEA jar包自动搜索下载</h3><p>我们的项目未必采用Maven构建，那么需要下载jar包时该怎么办？</p><pre><code>流程右键项目名称，点击Open Module Settings，转到Dependencies点击右侧绿色的加号，并选择 Library在弹出页面选择下面的New Library中的Frome Maven</code></pre><p><img src="http://img.ahdy.top/2020-02-25_235249.png" alt></p><pre><code>在弹出页面输入jar包名字，点击搜索，然后选择对应的版本。之后，注意选择该Library的级别为Project即可选完一定要点Add Selected最后，查看dependencies，我们发现jar已经被添加到项目</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Maven </tag>
+            
+            <tag> IDEA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>视频加速</title>
+      <link href="/2020/02/19/framework/vidofast/"/>
+      <url>/2020/02/19/framework/vidofast/</url>
+      
+        <content type="html"><![CDATA[<h3 id="HTML5加速"><a href="#HTML5加速" class="headerlink" title="HTML5加速"></a>HTML5加速</h3><p>本身自带加速功能  </p><pre><code>document.querySelector(‘video’) 筛选出播放视频的组件，然后直接设置播放速率就搞定了。视频用的是 html5 的原生 video 组件播放视频，不是 flash，我们就可以进行操作。</code></pre><p>在开发者模式控制台下运行</p><pre><code>document.querySelector(&#39;video&#39;).playbackRate = 5;</code></pre><p>示例:</p><pre><code>/* play video twice as fast */document.querySelector(&#39;video&#39;).defaultPlaybackRate = 2.0;//默认两倍速播放document.querySelector(&#39;video&#39;).play();/* now play three times as fast just for the heck of it */document.querySelector(&#39;video&#39;).playbackRate = 3.0;  //修改此值设置当前的播放倍数</code></pre><h3 id="Flash加速"><a href="#Flash加速" class="headerlink" title="Flash加速"></a>Flash加速</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>对于普通格式的视频，可以用 video 标签的 playbackrate 属性实现 2X 两倍速度播放，<br>flash 用的是 object 标签，如何设置播放速度呢？</p><p>这个比较头疼，因为它本身不自带加速功能。<br>如果想用js控制Flash可以参考<a href="https://blog.csdn.net/lzkkevin/article/details/6789593" target="_blank" rel="noopener">csdn文档</a></p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>使用一款软件，Enounce MySpeed 适用于32位浏览器</p><p><a href="https://share.weiyun.com/5OvCCfl" target="_blank" rel="noopener">腾讯微云</a></p><p>先打开 Enounce MySpeed，再打开浏览器播放视频</p><p>如何显示没有视频播放，可以刷新页面或者换一个浏览器试试，因为Flsh跟浏览器存在一定兼容问题导致</p><p>Enounce MySpeed亲测在IE上有效果！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vido </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Flash </tag>
+            
+            <tag> HTML5 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网上书城(电商)管理系统</title>
       <link href="/2020/01/14/java/javaprogect/"/>
       <url>/2020/01/14/java/javaprogect/</url>
@@ -143,7 +467,7 @@
       <link href="/2020/01/01/framework/alimessageinterface/"/>
       <url>/2020/01/01/framework/alimessageinterface/</url>
       
-        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>随着互联网的发展，信息安全显得尤为重要，在保证互联网环境稳定运行的情况下，为了不让一些人在网上搞破坏，采取实名认证的方式去约束其行为，不要觉得网络就是法外之地，短信验证码注册的作用，一定程度上保证信息真实性，也规范了用户的使用行为。</p><h3 id="阿里云短信服务接口使用方式"><a href="#阿里云短信服务接口使用方式" class="headerlink" title="阿里云短信服务接口使用方式"></a>阿里云短信服务接口使用方式</h3><p>这篇文档将用最快速的方式去让读者学会接口使用<br>1.注册阿里云账号  </p><p>2.实名认证</p><p>3.使用短信服务API接口，注册短信模板，注册签名，注册AccessKey，三者缺一不可。<br><a href="https://help.aliyun.com/product/44282.html?spm=5176.12207334.0.0.50c41cbei0gcBM" target="_blank" rel="noopener">官方文档</a><br>4.将下面给出代码中的模板，签名，key值替换掉你的即可实现短信验证码接收（一条短信大概四分五）</p><h4 id="maven包导入"><a href="#maven包导入" class="headerlink" title="maven包导入"></a>maven包导入</h4><p>添加到pom.xml中</p><pre><code>    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-core&lt;/artifactId&gt;      &lt;version&gt;4.0.8&lt;/version&gt;    &lt;/dependency&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-dysmsapi&lt;/artifactId&gt;      &lt;version&gt;1.1.0&lt;/version&gt;    &lt;/dependency&gt;    &lt;!-- https://mvnrepository.com/artifact/com.google.code.gson/gson --&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;      &lt;artifactId&gt;gson&lt;/artifactId&gt;      &lt;version&gt;2.8.4&lt;/version&gt;    &lt;/dependency&gt;</code></pre><h4 id="类1，接口配置信息"><a href="#类1，接口配置信息" class="headerlink" title="类1，接口配置信息"></a>类1，接口配置信息</h4><pre><code>package com.Message;//package com.Message;public class StaticPeram {    final static String defaultConnectTimeout  = &quot;sun.net.client.defaultConnectTimeout&quot;;    final static String defaultReadTimeout = &quot;sun.net.client.defaultReadTimeout&quot;;    final static String Timeout = &quot;10000&quot;;    // 初始化ascClient需要的几个参数    final static String product = &quot;Dysmsapi&quot;;// 短信API产品名称（短信产品名固定，无需修改）    final static String domain = &quot;dysmsapi.aliyuncs.com&quot;;// 短信API产品域名（接口地址固定，无需修改）    // 替换成你的AK (产品密)    final static String accessKeyId = &quot;&quot;;// 你的accessKeyId,填你自己的 上文配置所得  自行配置    final static String accessKeySecret = &quot;&quot;;// 你的accessKeySecret,填你自己的 上文配置所得 自行配置    // 必填:短信签名-可在短信控制台中找到    final static String SignName = &quot;ahdy6&quot;; // 阿里云配置你自己的短信签名填入    // 必填:短信模板-可在短信控制台中找到    final static String TemplateCode = &quot;SMS_181545008&quot;; // 阿里云配置你自己的短信模板填入}</code></pre><h4 id="类2，API-jar包方法执行"><a href="#类2，API-jar包方法执行" class="headerlink" title="类2，API,jar包方法执行"></a>类2，API,jar包方法执行</h4><pre><code>package com.Message;//package com.Message;import com.aliyuncs.DefaultAcsClient;import com.aliyuncs.IAcsClient;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsRequest;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;import com.aliyuncs.exceptions.ClientException;import com.aliyuncs.exceptions.ServerException;import com.aliyuncs.http.MethodType;import com.aliyuncs.profile.DefaultProfile;import com.aliyuncs.profile.IClientProfile;import com.google.gson.Gson;import org.springframework.expression.common.TemplateParserContext;public class PhoneCode {    private static String code ;//    public static void main(String[] args) {//        String phone = &quot;16655072520&quot;; //此处可输入你的手机号码进行测试//        System.out.println(vcode());//        getPhonemsg(phone);//////    }    /**     * 阿里云短信服务配置     * @param mobile     * @return     */    public static String getPhonemsg(String mobile) {        /**         * 进行正则关系校验         */        System.out.println(mobile);        if (mobile == null || mobile == &quot;&quot;) {            System.out.println(&quot;手机号为空&quot;);            return &quot;&quot;;        }        /**         * 短信验证---阿里大于工具         */        // 设置超时时间-可自行调整        System.setProperty(StaticPeram.defaultConnectTimeout, StaticPeram.Timeout);        System.setProperty(StaticPeram.defaultReadTimeout, StaticPeram.Timeout);        // 初始化ascClient需要的几个参数        final String product = StaticPeram.product;// 短信API产品名称（短信产品名固定，无需修改）        final String domain = StaticPeram.domain;// 短信API产品域名（接口地址固定，无需修改）        // 替换成你的AK        final String accessKeyId = StaticPeram.accessKeyId;// 你的accessKeyId,参考本文档步骤2        final String accessKeySecret = StaticPeram.accessKeySecret;// 你的accessKeySecret，参考本文档步骤2        // 初始化ascClient,暂时不支持多region        IClientProfile profile = DefaultProfile.getProfile(&quot;cn-hangzhou&quot;,                accessKeyId, accessKeySecret);        try {            DefaultProfile.addEndpoint(&quot;cn-hangzhou&quot;, &quot;cn-hangzhou&quot;, product,                    domain);        } catch (ClientException e1) {            e1.printStackTrace();        }        //获取验证码        code = vcode();        IAcsClient acsClient = new DefaultAcsClient(profile);        // 组装请求对象        SendSmsRequest request = new SendSmsRequest();        // 使用post提交        request.setMethod(MethodType.POST);        // 必填:待发送手机号。支持以逗号分隔的形式进行批量调用，批量上限为1000个手机号码,批量调用相对于单条调用及时性稍有延迟,验证码类型的短信推荐使用单条调用的方式        request.setPhoneNumbers(mobile);        // 必填:短信签名-可在短信控制台中找到        request.setSignName(StaticPeram.SignName);        // 必填:短信模板-可在短信控制台中找到        request.setTemplateCode(StaticPeram.TemplateCode);        // 可选:模板中的变量替换JSON串,如模板内容为&quot;亲爱的${name},您的验证码为${code}&quot;时,此处的值为        // 友情提示:如果JSON中需要带换行符,请参照标准的JSON协议对换行符的要求,比如短信内容中包含\r\n的情况在JSON中需要表示成\\r\\n,否则会导致JSON在服务端解析失败        request.setTemplateParam(&quot;{ \&quot;code\&quot;:\&quot;&quot;+code+&quot;\&quot;}&quot;);        // 可选-上行短信扩展码(无特殊需求用户请忽略此字段)        // request.setSmsUpExtendCode(&quot;90997&quot;);        // 可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者        request.setOutId(&quot;yourOutId&quot;);        // 请求失败这里会抛ClientException异常        SendSmsResponse sendSmsResponse;        try {            sendSmsResponse = acsClient.getAcsResponse(request);            if (sendSmsResponse.getCode() != null                    &amp;&amp; sendSmsResponse.getCode().equals(&quot;OK&quot;)) {                // 请求成功                System.out.println(&quot;获取验证码成功！！！&quot;);            } else {                //如果验证码出错，会输出错误码告诉你具体原因                System.out.println(sendSmsResponse.getCode());                System.out.println(&quot;获取验证码失败...&quot;);            }        } catch (ServerException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        } catch (ClientException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        }        return &quot;true&quot;;    }    /**     * 生成6位随机数验证码     * @return     */    public static String vcode(){        String vcode = &quot;&quot;;        for (int i = 0; i &lt; 6; i++) {            vcode = vcode + (int)(Math.random() * 9);        }//        Gson gson = new Gson();//        String code = gson.toJson(vcode);        return vcode;    }}</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>${“此处值应与模板中一致，比如模板中为code,此处即为code”,code}；<br>遇到API错误码可参考<br><a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.11186623.4.4.2e036edfKqCLZR" target="_blank" rel="noopener">官方文档解决方法</a></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>随着互联网的发展，信息安全显得尤为重要，在保证互联网环境稳定运行的情况下，为了不让一些人在网上搞破坏，采取实名认证的方式去约束其行为，不要觉得网络就是法外之地，短信验证码注册的作用，一定程度上保证信息真实性，也规范了用户的使用行为。</p><h3 id="阿里云短信服务接口使用方式"><a href="#阿里云短信服务接口使用方式" class="headerlink" title="阿里云短信服务接口使用方式"></a>阿里云短信服务接口使用方式</h3><p>这篇文档将用最快速的方式去让读者学会接口使用<br>1.注册阿里云账号  </p><p>2.实名认证</p><p>3.使用短信服务API接口，注册短信模板，注册签名，注册AccessKey，三者缺一不可。<br><a href="https://help.aliyun.com/product/44282.html?spm=5176.12207334.0.0.50c41cbei0gcBM" target="_blank" rel="noopener">官方文档</a><br>4.将下面给出代码中的模板，签名，key值替换掉你的即可实现短信验证码接收（一条短信大概四分五）</p><h4 id="maven包导入"><a href="#maven包导入" class="headerlink" title="maven包导入"></a>maven包导入</h4><p>添加到pom.xml中</p><pre><code>    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-core&lt;/artifactId&gt;      &lt;version&gt;4.0.8&lt;/version&gt;    &lt;/dependency&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.aliyun&lt;/groupId&gt;      &lt;artifactId&gt;aliyun-java-sdk-dysmsapi&lt;/artifactId&gt;      &lt;version&gt;1.1.0&lt;/version&gt;    &lt;/dependency&gt;    &lt;!-- https://mvnrepository.com/artifact/com.google.code.gson/gson --&gt;    &lt;dependency&gt;      &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;      &lt;artifactId&gt;gson&lt;/artifactId&gt;      &lt;version&gt;2.8.4&lt;/version&gt;    &lt;/dependency&gt;</code></pre><h4 id="类1，接口配置信息"><a href="#类1，接口配置信息" class="headerlink" title="类1，接口配置信息"></a>类1，接口配置信息</h4><pre><code>package com.Message;//package com.Message;public class StaticPeram {    final static String defaultConnectTimeout  = &quot;sun.net.client.defaultConnectTimeout&quot;;    final static String defaultReadTimeout = &quot;sun.net.client.defaultReadTimeout&quot;;    final static String Timeout = &quot;10000&quot;;    // 初始化ascClient需要的几个参数    final static String product = &quot;Dysmsapi&quot;;// 短信API产品名称（短信产品名固定，无需修改）    final static String domain = &quot;dysmsapi.aliyuncs.com&quot;;// 短信API产品域名（接口地址固定，无需修改）    // 替换成你的AK (产品密)    final static String accessKeyId = &quot;&quot;;// 你的accessKeyId,填你自己的 上文配置所得  自行配置    final static String accessKeySecret = &quot;&quot;;// 你的accessKeySecret,填你自己的 上文配置所得 自行配置    // 必填:短信签名-可在短信控制台中找到    final static String SignName = &quot;ahdy6&quot;; // 阿里云配置你自己的短信签名填入    // 必填:短信模板-可在短信控制台中找到    final static String TemplateCode = &quot;&quot;; // 阿里云配置你自己的短信模板填入}</code></pre><h4 id="类2，API-jar包方法执行"><a href="#类2，API-jar包方法执行" class="headerlink" title="类2，API,jar包方法执行"></a>类2，API,jar包方法执行</h4><pre><code>package com.Message;//package com.Message;import com.aliyuncs.DefaultAcsClient;import com.aliyuncs.IAcsClient;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsRequest;import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;import com.aliyuncs.exceptions.ClientException;import com.aliyuncs.exceptions.ServerException;import com.aliyuncs.http.MethodType;import com.aliyuncs.profile.DefaultProfile;import com.aliyuncs.profile.IClientProfile;import com.google.gson.Gson;import org.springframework.expression.common.TemplateParserContext;public class PhoneCode {    private static String code ;//    public static void main(String[] args) {//        String phone = &quot;16655072520&quot;; //此处可输入你的手机号码进行测试//        System.out.println(vcode());//        getPhonemsg(phone);//////    }    /**     * 阿里云短信服务配置     * @param mobile     * @return     */    public static String getPhonemsg(String mobile) {        /**         * 进行正则关系校验         */        System.out.println(mobile);        if (mobile == null || mobile == &quot;&quot;) {            System.out.println(&quot;手机号为空&quot;);            return &quot;&quot;;        }        /**         * 短信验证---阿里大于工具         */        // 设置超时时间-可自行调整        System.setProperty(StaticPeram.defaultConnectTimeout, StaticPeram.Timeout);        System.setProperty(StaticPeram.defaultReadTimeout, StaticPeram.Timeout);        // 初始化ascClient需要的几个参数        final String product = StaticPeram.product;// 短信API产品名称（短信产品名固定，无需修改）        final String domain = StaticPeram.domain;// 短信API产品域名（接口地址固定，无需修改）        // 替换成你的AK        final String accessKeyId = StaticPeram.accessKeyId;// 你的accessKeyId,参考本文档步骤2        final String accessKeySecret = StaticPeram.accessKeySecret;// 你的accessKeySecret，参考本文档步骤2        // 初始化ascClient,暂时不支持多region        IClientProfile profile = DefaultProfile.getProfile(&quot;cn-hangzhou&quot;,                accessKeyId, accessKeySecret);        try {            DefaultProfile.addEndpoint(&quot;cn-hangzhou&quot;, &quot;cn-hangzhou&quot;, product,                    domain);        } catch (ClientException e1) {            e1.printStackTrace();        }        //获取验证码        code = vcode();        IAcsClient acsClient = new DefaultAcsClient(profile);        // 组装请求对象        SendSmsRequest request = new SendSmsRequest();        // 使用post提交        request.setMethod(MethodType.POST);        // 必填:待发送手机号。支持以逗号分隔的形式进行批量调用，批量上限为1000个手机号码,批量调用相对于单条调用及时性稍有延迟,验证码类型的短信推荐使用单条调用的方式        request.setPhoneNumbers(mobile);        // 必填:短信签名-可在短信控制台中找到        request.setSignName(StaticPeram.SignName);        // 必填:短信模板-可在短信控制台中找到        request.setTemplateCode(StaticPeram.TemplateCode);        // 可选:模板中的变量替换JSON串,如模板内容为&quot;亲爱的${name},您的验证码为${code}&quot;时,此处的值为        // 友情提示:如果JSON中需要带换行符,请参照标准的JSON协议对换行符的要求,比如短信内容中包含\r\n的情况在JSON中需要表示成\\r\\n,否则会导致JSON在服务端解析失败        request.setTemplateParam(&quot;{ \&quot;code\&quot;:\&quot;&quot;+code+&quot;\&quot;}&quot;);        // 可选-上行短信扩展码(无特殊需求用户请忽略此字段)        // request.setSmsUpExtendCode(&quot;90997&quot;);        // 可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者        request.setOutId(&quot;yourOutId&quot;);        // 请求失败这里会抛ClientException异常        SendSmsResponse sendSmsResponse;        try {            sendSmsResponse = acsClient.getAcsResponse(request);            if (sendSmsResponse.getCode() != null                    &amp;&amp; sendSmsResponse.getCode().equals(&quot;OK&quot;)) {                // 请求成功                System.out.println(&quot;获取验证码成功！！！&quot;);            } else {                //如果验证码出错，会输出错误码告诉你具体原因                System.out.println(sendSmsResponse.getCode());                System.out.println(&quot;获取验证码失败...&quot;);            }        } catch (ServerException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        } catch (ClientException e) {            e.printStackTrace();            return &quot;由于系统维护，暂时无法注册！！！&quot;;        }        return &quot;true&quot;;    }    /**     * 生成6位随机数验证码     * @return     */    public static String vcode(){        String vcode = &quot;&quot;;        for (int i = 0; i &lt; 6; i++) {            vcode = vcode + (int)(Math.random() * 9);        }//        Gson gson = new Gson();//        String code = gson.toJson(vcode);        return vcode;    }}</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>${“此处值应与模板中一致，比如模板中为code,此处即为code”,code}；<br>遇到API错误码可参考<br><a href="https://help.aliyun.com/document_detail/101346.html?spm=a2c4g.11186623.4.4.2e036edfKqCLZR" target="_blank" rel="noopener">官方文档解决方法</a></p>]]></content>
       
       
       <categories>
@@ -344,9 +668,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> JSP </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -371,9 +695,9 @@
       
         <tags>
             
-            <tag> XSS </tag>
-            
             <tag> web </tag>
+            
+            <tag> XSS </tag>
             
         </tags>
       
@@ -409,33 +733,6 @@
     
     
     <entry>
-      <title>How to use vue.js</title>
-      <link href="/2019/12/11/framework/vue/"/>
-      <url>/2019/12/11/framework/vue/</url>
-      
-        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 环境 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 环境 </tag>
-            
-            <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>简易版聊天室</title>
       <link href="/2019/12/11/java/socket/"/>
       <url>/2019/12/11/java/socket/</url>
@@ -455,6 +752,33 @@
             <tag> Java </tag>
             
             <tag> Socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to use vue.js</title>
+      <link href="/2019/12/11/framework/vue/"/>
+      <url>/2019/12/11/framework/vue/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> vue </tag>
             
         </tags>
       
@@ -598,33 +922,6 @@
     
     
     <entry>
-      <title>Session无法获取</title>
-      <link href="/2019/11/23/ssm/sessionnull/"/>
-      <url>/2019/11/23/ssm/sessionnull/</url>
-      
-        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> 传递 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session会话</title>
       <link href="/2019/11/23/ssm/session/"/>
       <url>/2019/11/23/ssm/session/</url>
@@ -652,25 +949,25 @@
     
     
     <entry>
-      <title>布局样式失效</title>
-      <link href="/2019/11/23/ssm/missimgcss/"/>
-      <url>/2019/11/23/ssm/missimgcss/</url>
+      <title>Session无法获取</title>
+      <link href="/2019/11/23/ssm/sessionnull/"/>
+      <url>/2019/11/23/ssm/sessionnull/</url>
       
-        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
       
       
       <categories>
           
-          <category> 样式 </category>
+          <category> Session </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CSS </tag>
+            <tag> Session </tag>
             
-            <tag> JS </tag>
+            <tag> 传递 </tag>
             
         </tags>
       
@@ -698,6 +995,33 @@
             <tag> 子页面 </tag>
             
             <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> JS </tag>
             
         </tags>
       
@@ -1179,9 +1503,9 @@
       
         <tags>
             
-            <tag> IDEA </tag>
-            
             <tag> Maven </tag>
+            
+            <tag> IDEA </tag>
             
         </tags>
       
@@ -1275,7 +1599,7 @@
       <link href="/2019/10/15/framework/system/"/>
       <url>/2019/10/15/framework/system/</url>
       
-        <content type="html"><![CDATA[<h3 id="事故的发生"><a href="#事故的发生" class="headerlink" title="事故的发生"></a>事故的发生</h3><p>本以为我的电脑永远不会发生意外，重装系统这种事情永远也不会轮到我身上，也有可能是前有因后有果，前者git仓库坏了修复不了，于是我就想着重装系统能不能修好！于是有了新大陆的发现。</p><h3 id="资源地址"><a href="#资源地址" class="headerlink" title="资源地址"></a>资源地址</h3><p><a href="https://zhutix.com/tools/mydock/" target="_blank" rel="noopener">Mac系统集成</a><br><a href="https://zhutix.com/tools/" target="_blank" rel="noopener">win10主题替换</a></p><h3 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h3><p>在使用这些插件一定要系统备份，因为这些插件有可能会导致系统异常无法恢复的状态。</p><h3 id="壁纸下载"><a href="#壁纸下载" class="headerlink" title="壁纸下载"></a>壁纸下载</h3><p><a href="http://pic.netbian.com/" target="_blank" rel="noopener">下在地址</a><br>网站上壁纸图片的质量都不错，但是一天只能下载一张图片。<br><a href="http://www.win4000.com/" target="_blank" rel="noopener">下载地址</a><br>这个下了几个好像是免费的。质量也挺好</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="事故的发生"><a href="#事故的发生" class="headerlink" title="事故的发生"></a>事故的发生</h3><p>本以为我的电脑永远不会发生意外，重装系统这种事情永远也不会轮到我身上，也有可能是前有因后有果，前者git仓库坏了修复不了，于是我就想着重装系统能不能修好！于是有了新大陆的发现。</p><h3 id="资源地址"><a href="#资源地址" class="headerlink" title="资源地址"></a>资源地址</h3><p><a href="https://zhutix.com/tools/mydock/" target="_blank" rel="noopener">Mac系统集成</a><br><a href="https://zhutix.com/tools/" target="_blank" rel="noopener">win10主题替换</a></p><h3 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h3><p>在使用这些插件一定要系统备份，因为这些插件有可能会导致系统异常无法恢复的状态。</p><h3 id="壁纸下载"><a href="#壁纸下载" class="headerlink" title="壁纸下载"></a>壁纸下载</h3><p><a href="http://pic.netbian.com/" target="_blank" rel="noopener">下在地址</a><br>网站上壁纸图片的质量都不错，但是一天只能下载一张图片。<br><a href="http://www.win4000.com/" target="_blank" rel="noopener">下载地址</a><br>这个下了几个好像是免费的。质量也挺好</p><h3 id="美女壁纸"><a href="#美女壁纸" class="headerlink" title="美女壁纸"></a>美女壁纸</h3><p><a href="https://www.vmgirls.com/" target="_blank" rel="noopener">下载地址</a></p>]]></content>
       
       
       <categories>
@@ -2027,33 +2351,6 @@
     
     
     <entry>
-      <title>域名</title>
-      <link href="/2019/07/22/yuming/"/>
-      <url>/2019/07/22/yuming/</url>
-      
-        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 域名 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 域名 </tag>
-            
-            <tag> 二级域名 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java难点</title>
       <link href="/2019/07/22/java/java5/"/>
       <url>/2019/07/22/java/java5/</url>
@@ -2073,6 +2370,33 @@
             <tag> 抽象类|接口 </tag>
             
             <tag> 访问控制符 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>域名</title>
+      <link href="/2019/07/22/yuming/"/>
+      <url>/2019/07/22/yuming/</url>
+      
+        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 域名 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+            <tag> 二级域名 </tag>
             
         </tags>
       
