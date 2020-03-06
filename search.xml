@@ -139,11 +139,11 @@
     
     
     <entry>
-      <title>Java算法</title>
+      <title>Java算法-API</title>
       <link href="/2020/02/25/java/javamath/"/>
       <url>/2020/02/25/java/javamath/</url>
       
-        <content type="html"><![CDATA[<h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><p>compareTo是String类自带的方法，Integer也适用，比较两个字符串，并返回字符串中第一个字母ASCII的差值，当碰到不一样的字符串的时候就会立刻返回当前Ascll码差值。</p><pre><code>public static void main(String[] args) throws Exception {    String string =&quot;123&quot;;    String string2 =&quot;124&quot;;    Object object=string;    System.out.println(string.compareTo(object.toString()));    System.out.println(string.compareToIgnoreCase(string2));//忽略大小写    System.out.println(string.compareTo(string2));}</code></pre><h3 id="字符串出现的位置"><a href="#字符串出现的位置" class="headerlink" title="字符串出现的位置"></a>字符串出现的位置</h3><pre><code>   String string=&quot;4545465454654123&quot;;   int intenger=string.lastIndexOf(&quot;123&quot;);   int intenger=string.lastIndexOf(123);    //同样使用于数字，若找不到则会返回-1   System.out.println(intenger);    //打印结果为:13</code></pre><h3 id="删除字符串当中的字符"><a href="#删除字符串当中的字符" class="headerlink" title="删除字符串当中的字符"></a>删除字符串当中的字符</h3><p>我写了一个简单的方法，基于前面的基础，可以删除掉一个字符串内单个字符，或者是一个字符串。str.substring可以截取一段字符串。</p><pre><code>public static void main(String[] args) throws Exception {   String string=&quot;4545465454654123&quot;;   String string2=&quot;123&quot;;   int intenger=string.lastIndexOf(string2);   int strlength=string2.length();   System.out.println(intenger);   System.out.println(ss(string,intenger,strlength));}public static String ss(String str, int number,int number2){    return str.substring(0,number)+str.substring(number+number2);}输出结果:134545465454654</code></pre><h3 id="替换字串当中的字符"><a href="#替换字串当中的字符" class="headerlink" title="替换字串当中的字符"></a>替换字串当中的字符</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h3><p>compareTo是String类自带的方法，Integer也适用，比较两个字符串，并返回字符串中第一个字母ASCII的差值，当碰到不一样的字符串的时候就会立刻返回当前Ascll码差值。</p><pre><code>public static void main(String[] args) throws Exception {    String string =&quot;123&quot;;    String string2 =&quot;124&quot;;    Object object=string;    System.out.println(string.compareTo(object.toString()));    System.out.println(string.compareToIgnoreCase(string2));//忽略大小写    System.out.println(string.compareTo(string2));}</code></pre><h3 id="字符串出现的位置"><a href="#字符串出现的位置" class="headerlink" title="字符串出现的位置"></a>字符串出现的位置</h3><pre><code>   String string=&quot;4545465454654123&quot;;   int intenger=string.lastIndexOf(&quot;123&quot;);   int intenger=string.lastIndexOf(123);    //同样使用于数字，若找不到则会返回-1   System.out.println(intenger);    //打印结果为:13</code></pre><h3 id="删除字符串当中的字符"><a href="#删除字符串当中的字符" class="headerlink" title="删除字符串当中的字符"></a>删除字符串当中的字符</h3><p>我写了一个简单的方法，基于前面的基础，可以删除掉一个字符串内单个字符，或者是一个字符串。str.substring可以截取一段字符串。</p><pre><code>public static void main(String[] args) throws Exception {   String string=&quot;4545465454654123&quot;;   String string2=&quot;123&quot;;   int intenger=string.lastIndexOf(string2);   int strlength=string2.length();   System.out.println(intenger);   System.out.println(ss(string,intenger,strlength));}public static String ss(String str, int number,int number2){    return str.substring(0,number)+str.substring(number+number2);}输出结果:134545465454654</code></pre><h3 id="替换字串当中的字符"><a href="#替换字串当中的字符" class="headerlink" title="替换字串当中的字符"></a>替换字串当中的字符</h3><pre><code>public static void main(String[] args) throws Exception {    String str=&quot;hello hello&quot;;    String string=str.replace(&quot;l&quot;,&quot;0&quot;);//替换掉字符串当中所有的L   //String string=str.replaceFirst(&quot;l&quot;,&quot;0&quot;); 替换字符串当出现的第一个字符    //String string=str.replaceAll(&quot;l&quot;,&quot;0&quot;); 替换字符串当中所有字符，类似replace方法    System.out.println(string);}</code></pre><h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h3><p>reverse() 可将字符串反转：</p><pre><code>  public static void main(String[] args) throws Exception {    String str=&quot;hello hello&quot;;    String str2=new StringBuffer(str).reverse().toString();    System.out.println(str2);}打印结果:olleh olleh</code></pre><h3 id="字符串查找"><a href="#字符串查找" class="headerlink" title="字符串查找"></a>字符串查找</h3><pre><code>public static void main(String[] args) {  String strOrig = &quot;Google Runoob Taobao&quot;;  int intIndex = strOrig.indexOf(&quot;Runoob&quot;);  if(intIndex == - 1){     System.out.println(&quot;没有找到字符串 Runoob&quot;);  }else{     System.out.println(&quot;Runoob 字符串位置 &quot; + intIndex);  }}</code></pre><h3 id="字符串分割"><a href="#字符串分割" class="headerlink" title="字符串分割"></a>字符串分割</h3><p>split(string) 方法通过指定分隔符将字符串分割为数组</p><pre><code>public static void main(String args[]){      String str = &quot;www-runoob-com&quot;;      String[] temp;      String delimeter = &quot;-&quot;;  // 指定分割字符      temp = str.split(delimeter); // 分割字符串      // 普通 for 循环      for(int i =0; i &lt; temp.length ; i++){         System.out.println(temp[i]);         System.out.println(&quot;&quot;);      }      System.out.println(&quot;------java for each循环输出的方法-----&quot;);      String str1 = &quot;www.runoob.com&quot;;      String[] temp1;      String delimeter1 = &quot;\\.&quot;;  // 指定分割字符， . 号需要转义      temp1 = str1.split(delimeter1); // 分割字符串      for(String x :  temp1){         System.out.println(x);         System.out.println(&quot;&quot;);      }   }方式二：Java 中我们可以使用 StringTokennizer 设置不同分隔符来分隔字符串，默认的分隔符是：空格、制表符（\t）、换行符(\n）、回车符（\r）import java.util.StringTokenizer;public class Main {public static void main(String[] args) {    String str = &quot;This is String , split by StringTokenizer, created by runoob&quot;;    StringTokenizer st = new StringTokenizer(str);    System.out.println(&quot;----- 通过空格分隔 ------&quot;);    while (st.hasMoreElements()) {        System.out.println(st.nextElement());    }    System.out.println(&quot;----- 通过逗号分隔 ------&quot;);    StringTokenizer st2 = new StringTokenizer(str, &quot;,&quot;);    while (st2.hasMoreElements()) {        System.out.println(st2.nextElement());    }}}</code></pre><h3 id="字符串大小写转换"><a href="#字符串大小写转换" class="headerlink" title="字符串大小写转换"></a>字符串大小写转换</h3><pre><code> String strUpper = str.toUpperCase();//小转大String strLower = str.toLowerCase();//大转小</code></pre><h3 id="字符串区域是否相等"><a href="#字符串区域是否相等" class="headerlink" title="字符串区域是否相等"></a>字符串区域是否相等</h3><p>以下实例使用了 regionMatches() 方法测试两个字符串区域是否相等：</p><pre><code> public static void main(String[] args){    String first_str = &quot;Welcome to Microsoft&quot;;    String second_str = &quot;I work with microsoft&quot;;    boolean match1 = first_str.            regionMatches(11, second_str, 12, 9);    boolean match2 = first_str.            regionMatches(true, 11, second_str, 12, 9); //第一个参数 true 表示忽略大小写区别    System.out.println(&quot;区分大小写返回值：&quot; + match1);    System.out.println(&quot;不区分大小写返回值：&quot; + match2);}</code></pre><h3 id="字符串创建的性能"><a href="#字符串创建的性能" class="headerlink" title="字符串创建的性能"></a>字符串创建的性能</h3><pre><code>    public class StringComparePerformance{   public static void main(String[] args){            long startTime = System.currentTimeMillis();      for(int i=0;i&lt;50000;i++){         String s1 = &quot;hello&quot;;         String s2 = &quot;hello&quot;;       }      long endTime = System.currentTimeMillis();      System.out.println(&quot;通过 String 关键词创建字符串&quot;       + &quot; : &quot;+ (endTime - startTime)       + &quot; 毫秒&quot; );             long startTime1 = System.currentTimeMillis();      for(int i=0;i&lt;50000;i++){         String s3 = new String(&quot;hello&quot;);         String s4 = new String(&quot;hello&quot;);      }      long endTime1 = System.currentTimeMillis();      System.out.println(&quot;通过 String 对象创建字符串&quot;       + &quot; : &quot; + (endTime1 - startTime1)      + &quot; 毫秒&quot;);   }}</code></pre><h3 id="字符串优化"><a href="#字符串优化" class="headerlink" title="字符串优化"></a>字符串优化</h3><p>String.intern() 方法来优化字符串：</p><pre><code>    public class StringOptimization {    public static void main(String[] args){        String variables[] = new String[50000];              for( int i=0;i &lt;50000;i++){            variables[i] = &quot;s&quot;+i;        }        long startTime0 = System.currentTimeMillis();        for(int i=0;i&lt;50000;i++){            variables[i] = &quot;hello&quot;;        }        long endTime0 = System.currentTimeMillis();        System.out.println(&quot;直接使用字符串： &quot;+ (endTime0 - startTime0)  + &quot; ms&quot; );        long startTime1 = System.currentTimeMillis();            for(int i=0;i&lt;50000;i++){            variables[i] = new String(&quot;hello&quot;);        }        long endTime1 = System.currentTimeMillis();        System.out.println(&quot;使用 new 关键字：&quot; + (endTime1 - startTime1) + &quot; ms&quot;);        long startTime2 = System.currentTimeMillis();        for(int i=0;i&lt;50000;i++){            variables[i] = new String(&quot;hello&quot;);            variables[i] = variables[i].intern();                  }        long endTime2 = System.currentTimeMillis();        System.out.println(&quot;使用字符串对象的 intern() 方法: &quot;         + (endTime2 - startTime2)        + &quot; ms&quot;);    }}</code></pre><h3 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h3><pre><code>import java.util.*;public class StringFormat {    public static void main(String[] args){        double e = Math.E;        System.out.format(&quot;%f%n&quot;, e);        System.out.format(Locale.CHINA  , &quot;%-10.4f%n%n&quot;, e);  //指定本地为中国（CHINA）    }}</code></pre><h4 id="小数精度"><a href="#小数精度" class="headerlink" title="小数精度"></a>小数精度</h4><pre><code>    Java当中如果想对数据的精度进行约束  DecimalFormat df = new DecimalFormat(&quot;#0.0000000&quot;);//精度定义，小数点后几个0，表示保留几位小数      System.out.print(df.format(area));将变量的值加入到df.fromat方法当中。加入你想查看算法是否超超时可以用以下方法来获取程序运行的毫秒数  long a=System.currentTimeMillis();      System.out.println(a);</code></pre><h3 id="字符串拼接效率"><a href="#字符串拼接效率" class="headerlink" title="字符串拼接效率"></a>字符串拼接效率</h3><pre><code>    public class StringConcatenate {    public static void main(String[] args){        long startTime = System.currentTimeMillis();        for(int i=0;i&lt;5000;i++){            String result = &quot;This is&quot;            + &quot;testing the&quot;            + &quot;difference&quot;+ &quot;between&quot;            + &quot;String&quot;+ &quot;and&quot;+ &quot;StringBuffer&quot;;        }        long endTime = System.currentTimeMillis();        System.out.println(&quot;字符串连接&quot;         + &quot; - 使用 + 操作符 : &quot;         + (endTime - startTime)+ &quot; ms&quot;);        long startTime1 = System.currentTimeMillis();        for(int i=0;i&lt;5000;i++){            StringBuffer result = new StringBuffer();            result.append(&quot;This is&quot;);            result.append(&quot;testing the&quot;);            result.append(&quot;difference&quot;);            result.append(&quot;between&quot;);            result.append(&quot;String&quot;);            result.append(&quot;and&quot;);            result.append(&quot;StringBuffer&quot;);        }        long endTime1 = System.currentTimeMillis();        System.out.println(&quot;字符串连接&quot;         + &quot; - 使用 StringBuffer : &quot;        + (endTime1 - startTime1)+ &quot; ms&quot;);    }}</code></pre>]]></content>
       
       
       <categories>
@@ -263,9 +263,9 @@
       
         <tags>
             
-            <tag> Maven </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> Maven </tag>
             
         </tags>
       
@@ -290,9 +290,9 @@
       
         <tags>
             
-            <tag> Maven </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> Maven </tag>
             
         </tags>
       
@@ -409,33 +409,6 @@
     
     
     <entry>
-      <title>个人网上信息挖掘</title>
-      <link href="/2020/01/07/attark/search/"/>
-      <url>/2020/01/07/attark/search/</url>
-      
-        <content type="html"><![CDATA[<h3 id="获取一个人的地理位置"><a href="#获取一个人的地理位置" class="headerlink" title="获取一个人的地理位置"></a>获取一个人的地理位置</h3><p>可以参考<a href="http://z.ahdy.top/2019/10/11/attark/findip/" target="_blank" rel="noopener">ip定位</a><br>内容补充<a href="https://www.opengps.cn/" target="_blank" rel="noopener">高精度IP定位</a><br>进站后选择定位技术-&gt;高精度定位。  </p><p><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">百度地图开放平台</a></p><p><a href="https://lbs.amap.com" target="_blank" rel="noopener">高德地图开放平台</a>  </p><p><a href="http://www.net.cn/static/customercare/yourip.asp" target="_blank" rel="noopener">本地公网IP地址获取</a>  </p><p><a href="http://www.ip138.com/" target="_blank" rel="noopener">多功能查询地址</a></p><h3 id="人肉思路"><a href="#人肉思路" class="headerlink" title="人肉思路"></a>人肉思路</h3><p>首先可以百度QQ号，看看能不能利用搜索引擎搜索到他在网上的痕迹，一般的如果对方玩过贴吧，将会进一步为信息采集提供便利，如果能找到对方百度贴吧的ID那么就能通过找回密码的方式对对方进行骚扰，当然以前QQ也是这种，后来QQ改了，让自己给服务器发送编码，发送完成后选择我已经发送才可以修改密码，利用百度贴吧ID找回密码的信息，可以通过暴力的方式去获取对方手机号码，比如在找回密码的时候你会看到有这样一条信息请输入186<strong>**</strong>08收到验证码后输入验证码完成修改密码，这时候如果你知道对方的家在哪（IP定位），就能够根据区域号知道他中间四位数字，然后使用枚举，暴力出缺失的两位，其中必定有一个是目标的手机号，俗话所错杀一千不能放过一个你可以对暴力出的所有号码进行短信轰炸。<br>其实真正挖掘信息是非常困难的一件事情，这种方式只局限于QQ好友，微信好友等。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> diary </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Message </tag>
-            
-            <tag> 人肉 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>爱而不得</title>
       <link href="/2020/01/07/draiy/love/"/>
       <url>/2020/01/07/draiy/love/</url>
@@ -455,6 +428,33 @@
             <tag> 日记 </tag>
             
             <tag> Message </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人网上信息挖掘</title>
+      <link href="/2020/01/07/attark/search/"/>
+      <url>/2020/01/07/attark/search/</url>
+      
+        <content type="html"><![CDATA[<h3 id="获取一个人的地理位置"><a href="#获取一个人的地理位置" class="headerlink" title="获取一个人的地理位置"></a>获取一个人的地理位置</h3><p>可以参考<a href="http://z.ahdy.top/2019/10/11/attark/findip/" target="_blank" rel="noopener">ip定位</a><br>内容补充<a href="https://www.opengps.cn/" target="_blank" rel="noopener">高精度IP定位</a><br>进站后选择定位技术-&gt;高精度定位。  </p><p><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">百度地图开放平台</a></p><p><a href="https://lbs.amap.com" target="_blank" rel="noopener">高德地图开放平台</a>  </p><p><a href="http://www.net.cn/static/customercare/yourip.asp" target="_blank" rel="noopener">本地公网IP地址获取</a>  </p><p><a href="http://www.ip138.com/" target="_blank" rel="noopener">多功能查询地址</a></p><h3 id="人肉思路"><a href="#人肉思路" class="headerlink" title="人肉思路"></a>人肉思路</h3><p>首先可以百度QQ号，看看能不能利用搜索引擎搜索到他在网上的痕迹，一般的如果对方玩过贴吧，将会进一步为信息采集提供便利，如果能找到对方百度贴吧的ID那么就能通过找回密码的方式对对方进行骚扰，当然以前QQ也是这种，后来QQ改了，让自己给服务器发送编码，发送完成后选择我已经发送才可以修改密码，利用百度贴吧ID找回密码的信息，可以通过暴力的方式去获取对方手机号码，比如在找回密码的时候你会看到有这样一条信息请输入186<strong>**</strong>08收到验证码后输入验证码完成修改密码，这时候如果你知道对方的家在哪（IP定位），就能够根据区域号知道他中间四位数字，然后使用枚举，暴力出缺失的两位，其中必定有一个是目标的手机号，俗话所错杀一千不能放过一个你可以对暴力出的所有号码进行短信轰炸。<br>其实真正挖掘信息是非常困难的一件事情，这种方式只局限于QQ好友，微信好友等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> diary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Message </tag>
+            
+            <tag> 人肉 </tag>
             
         </tags>
       
@@ -695,9 +695,9 @@
       
         <tags>
             
-            <tag> XSS </tag>
-            
             <tag> web </tag>
+            
+            <tag> XSS </tag>
             
         </tags>
       
@@ -922,33 +922,6 @@
     
     
     <entry>
-      <title>Session会话</title>
-      <link href="/2019/11/23/ssm/session/"/>
-      <url>/2019/11/23/ssm/session/</url>
-      
-        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> EL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session无法获取</title>
       <link href="/2019/11/23/ssm/sessionnull/"/>
       <url>/2019/11/23/ssm/sessionnull/</url>
@@ -976,25 +949,25 @@
     
     
     <entry>
-      <title>布局样式失效</title>
-      <link href="/2019/11/23/ssm/missimgcss/"/>
-      <url>/2019/11/23/ssm/missimgcss/</url>
+      <title>Session会话</title>
+      <link href="/2019/11/23/ssm/session/"/>
+      <url>/2019/11/23/ssm/session/</url>
       
-        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
       
       
       <categories>
           
-          <category> 样式 </category>
+          <category> Session </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CSS </tag>
+            <tag> Session </tag>
             
-            <tag> JS </tag>
+            <tag> EL </tag>
             
         </tags>
       
@@ -1022,6 +995,33 @@
             <tag> 子页面 </tag>
             
             <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> JS </tag>
             
         </tags>
       
@@ -1503,9 +1503,9 @@
       
         <tags>
             
-            <tag> Maven </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> Maven </tag>
             
         </tags>
       
@@ -2162,33 +2162,6 @@
     
     
     <entry>
-      <title>MySQL入门</title>
-      <link href="/2019/08/06/web/mysql2/"/>
-      <url>/2019/08/06/web/mysql2/</url>
-      
-        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> MySQL </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-            <tag> SQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Tomcat与服务器</title>
       <link href="/2019/08/06/web/tomcat/"/>
       <url>/2019/08/06/web/tomcat/</url>
@@ -2208,6 +2181,33 @@
             <tag> 服务器 </tag>
             
             <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL入门</title>
+      <link href="/2019/08/06/web/mysql2/"/>
+      <url>/2019/08/06/web/mysql2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
@@ -2351,33 +2351,6 @@
     
     
     <entry>
-      <title>域名</title>
-      <link href="/2019/07/22/yuming/"/>
-      <url>/2019/07/22/yuming/</url>
-      
-        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 域名 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 域名 </tag>
-            
-            <tag> 二级域名 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java难点</title>
       <link href="/2019/07/22/java/java5/"/>
       <url>/2019/07/22/java/java5/</url>
@@ -2397,6 +2370,33 @@
             <tag> 抽象类|接口 </tag>
             
             <tag> 访问控制符 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>域名</title>
+      <link href="/2019/07/22/yuming/"/>
+      <url>/2019/07/22/yuming/</url>
+      
+        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 域名 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+            <tag> 二级域名 </tag>
             
         </tags>
       

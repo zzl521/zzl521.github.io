@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Java算法, Joker">
+    <meta name="keywords" content="Java算法-API, Joker">
     <meta name="description" content="字符串比较compareTo是String类自带的方法，Integer也适用，比较两个字符串，并返回字符串中第一个字母ASCII的差值，当碰到不一样的字符串的时候就会立刻返回当前Ascll码差值。
 public static void ma">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@ public static void ma">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java算法 | Joker</title>
+    <title>Java算法-API | Joker</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -277,7 +277,7 @@ public static void ma">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Java算法
+                        Java算法-API
                     </div>
                 </div>
             </div>
@@ -423,14 +423,14 @@ public static void ma">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        294
+                        1.5k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        7 Min
                     </div>
                     
                 
@@ -483,7 +483,195 @@ public static String ss(String str, int number,int number2){
 
 13
 4545465454654
-</code></pre><h3 id="替换字串当中的字符"><a href="#替换字串当中的字符" class="headerlink" title="替换字串当中的字符"></a>替换字串当中的字符</h3>
+</code></pre><h3 id="替换字串当中的字符"><a href="#替换字串当中的字符" class="headerlink" title="替换字串当中的字符"></a>替换字串当中的字符</h3><pre><code>public static void main(String[] args) throws Exception {
+
+    String str=&quot;hello hello&quot;;
+    String string=str.replace(&quot;l&quot;,&quot;0&quot;);//替换掉字符串当中所有的L
+   //String string=str.replaceFirst(&quot;l&quot;,&quot;0&quot;); 替换字符串当出现的第一个字符
+    //String string=str.replaceAll(&quot;l&quot;,&quot;0&quot;); 替换字符串当中所有字符，类似replace方法
+    System.out.println(string);
+}
+</code></pre><h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h3><p>reverse() 可将字符串反转：</p>
+<pre><code>  public static void main(String[] args) throws Exception {
+
+    String str=&quot;hello hello&quot;;
+    String str2=new StringBuffer(str).reverse().toString();
+    System.out.println(str2);
+}
+打印结果:olleh olleh
+</code></pre><h3 id="字符串查找"><a href="#字符串查找" class="headerlink" title="字符串查找"></a>字符串查找</h3><pre><code>public static void main(String[] args) {
+  String strOrig = &quot;Google Runoob Taobao&quot;;
+  int intIndex = strOrig.indexOf(&quot;Runoob&quot;);
+  if(intIndex == - 1){
+     System.out.println(&quot;没有找到字符串 Runoob&quot;);
+  }else{
+     System.out.println(&quot;Runoob 字符串位置 &quot; + intIndex);
+  }
+}
+</code></pre><h3 id="字符串分割"><a href="#字符串分割" class="headerlink" title="字符串分割"></a>字符串分割</h3><p>split(string) 方法通过指定分隔符将字符串分割为数组</p>
+<pre><code>public static void main(String args[]){
+
+      String str = &quot;www-runoob-com&quot;;
+      String[] temp;
+      String delimeter = &quot;-&quot;;  // 指定分割字符
+      temp = str.split(delimeter); // 分割字符串
+      // 普通 for 循环
+      for(int i =0; i &lt; temp.length ; i++){
+         System.out.println(temp[i]);
+         System.out.println(&quot;&quot;);
+      }
+
+      System.out.println(&quot;------java for each循环输出的方法-----&quot;);
+      String str1 = &quot;www.runoob.com&quot;;
+      String[] temp1;
+      String delimeter1 = &quot;\\.&quot;;  // 指定分割字符， . 号需要转义
+      temp1 = str1.split(delimeter1); // 分割字符串
+      for(String x :  temp1){
+         System.out.println(x);
+         System.out.println(&quot;&quot;);
+      }
+   }
+
+方式二：
+Java 中我们可以使用 StringTokennizer 设置不同分隔符来分隔字符串，默认的分隔符是：空格、制表符（\t）、换行符(\n）、回车符（\r）
+
+
+import java.util.StringTokenizer;
+
+public class Main {
+public static void main(String[] args) {
+
+    String str = &quot;This is String , split by StringTokenizer, created by runoob&quot;;
+    StringTokenizer st = new StringTokenizer(str);
+
+    System.out.println(&quot;----- 通过空格分隔 ------&quot;);
+    while (st.hasMoreElements()) {
+        System.out.println(st.nextElement());
+    }
+
+    System.out.println(&quot;----- 通过逗号分隔 ------&quot;);
+    StringTokenizer st2 = new StringTokenizer(str, &quot;,&quot;);
+
+    while (st2.hasMoreElements()) {
+        System.out.println(st2.nextElement());
+    }
+}
+}
+</code></pre><h3 id="字符串大小写转换"><a href="#字符串大小写转换" class="headerlink" title="字符串大小写转换"></a>字符串大小写转换</h3><pre><code> String strUpper = str.toUpperCase();
+//小转大
+String strLower = str.toLowerCase();
+//大转小
+</code></pre><h3 id="字符串区域是否相等"><a href="#字符串区域是否相等" class="headerlink" title="字符串区域是否相等"></a>字符串区域是否相等</h3><p>以下实例使用了 regionMatches() 方法测试两个字符串区域是否相等：</p>
+<pre><code> public static void main(String[] args){
+    String first_str = &quot;Welcome to Microsoft&quot;;
+    String second_str = &quot;I work with microsoft&quot;;
+    boolean match1 = first_str.
+            regionMatches(11, second_str, 12, 9);
+    boolean match2 = first_str.
+            regionMatches(true, 11, second_str, 12, 9); //第一个参数 true 表示忽略大小写区别
+    System.out.println(&quot;区分大小写返回值：&quot; + match1);
+    System.out.println(&quot;不区分大小写返回值：&quot; + match2);
+}
+</code></pre><h3 id="字符串创建的性能"><a href="#字符串创建的性能" class="headerlink" title="字符串创建的性能"></a>字符串创建的性能</h3><pre><code>    public class StringComparePerformance{
+   public static void main(String[] args){      
+      long startTime = System.currentTimeMillis();
+      for(int i=0;i&lt;50000;i++){
+         String s1 = &quot;hello&quot;;
+         String s2 = &quot;hello&quot;; 
+      }
+      long endTime = System.currentTimeMillis();
+      System.out.println(&quot;通过 String 关键词创建字符串&quot; 
+      + &quot; : &quot;+ (endTime - startTime) 
+      + &quot; 毫秒&quot; );       
+      long startTime1 = System.currentTimeMillis();
+      for(int i=0;i&lt;50000;i++){
+         String s3 = new String(&quot;hello&quot;);
+         String s4 = new String(&quot;hello&quot;);
+      }
+      long endTime1 = System.currentTimeMillis();
+      System.out.println(&quot;通过 String 对象创建字符串&quot; 
+      + &quot; : &quot; + (endTime1 - startTime1)
+      + &quot; 毫秒&quot;);
+   }
+}
+</code></pre><h3 id="字符串优化"><a href="#字符串优化" class="headerlink" title="字符串优化"></a>字符串优化</h3><p>String.intern() 方法来优化字符串：</p>
+<pre><code>    public class StringOptimization {
+    public static void main(String[] args){
+        String variables[] = new String[50000];      
+        for( int i=0;i &lt;50000;i++){
+            variables[i] = &quot;s&quot;+i;
+        }
+        long startTime0 = System.currentTimeMillis();
+        for(int i=0;i&lt;50000;i++){
+            variables[i] = &quot;hello&quot;;
+        }
+        long endTime0 = System.currentTimeMillis();
+        System.out.println(&quot;直接使用字符串： &quot;+ (endTime0 - startTime0)  + &quot; ms&quot; );
+        long startTime1 = System.currentTimeMillis();
+            for(int i=0;i&lt;50000;i++){
+            variables[i] = new String(&quot;hello&quot;);
+        }
+        long endTime1 = System.currentTimeMillis();
+        System.out.println(&quot;使用 new 关键字：&quot; + (endTime1 - startTime1) + &quot; ms&quot;);
+        long startTime2 = System.currentTimeMillis();
+        for(int i=0;i&lt;50000;i++){
+            variables[i] = new String(&quot;hello&quot;);
+            variables[i] = variables[i].intern();          
+        }
+        long endTime2 = System.currentTimeMillis();
+        System.out.println(&quot;使用字符串对象的 intern() 方法: &quot; 
+        + (endTime2 - startTime2)
+        + &quot; ms&quot;);
+    }
+}
+</code></pre><h3 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h3><pre><code>import java.util.*;
+
+public class StringFormat {
+    public static void main(String[] args){
+        double e = Math.E;
+        System.out.format(&quot;%f%n&quot;, e);
+        System.out.format(Locale.CHINA  , &quot;%-10.4f%n%n&quot;, e);  //指定本地为中国（CHINA）
+    }
+}
+</code></pre><h4 id="小数精度"><a href="#小数精度" class="headerlink" title="小数精度"></a>小数精度</h4><pre><code>    Java当中如果想对数据的精度进行约束
+  DecimalFormat df = new DecimalFormat(&quot;#0.0000000&quot;);//精度定义，小数点后几个0，表示保留几位小数
+      System.out.print(df.format(area));
+将变量的值加入到df.fromat方法当中。
+
+加入你想查看算法是否超超时可以用以下方法来获取程序运行的毫秒数
+  long a=System.currentTimeMillis();
+      System.out.println(a);
+</code></pre><h3 id="字符串拼接效率"><a href="#字符串拼接效率" class="headerlink" title="字符串拼接效率"></a>字符串拼接效率</h3><pre><code>    public class StringConcatenate {
+    public static void main(String[] args){
+        long startTime = System.currentTimeMillis();
+        for(int i=0;i&lt;5000;i++){
+            String result = &quot;This is&quot;
+            + &quot;testing the&quot;
+            + &quot;difference&quot;+ &quot;between&quot;
+            + &quot;String&quot;+ &quot;and&quot;+ &quot;StringBuffer&quot;;
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println(&quot;字符串连接&quot; 
+        + &quot; - 使用 + 操作符 : &quot; 
+        + (endTime - startTime)+ &quot; ms&quot;);
+        long startTime1 = System.currentTimeMillis();
+        for(int i=0;i&lt;5000;i++){
+            StringBuffer result = new StringBuffer();
+            result.append(&quot;This is&quot;);
+            result.append(&quot;testing the&quot;);
+            result.append(&quot;difference&quot;);
+            result.append(&quot;between&quot;);
+            result.append(&quot;String&quot;);
+            result.append(&quot;and&quot;);
+            result.append(&quot;StringBuffer&quot;);
+        }
+        long endTime1 = System.currentTimeMillis();
+        System.out.println(&quot;字符串连接&quot; 
+        + &quot; - 使用 StringBuffer : &quot;
+        + (endTime1 - startTime1)+ &quot; ms&quot;);
+    }
+}
+</code></pre>
             </div>
             <hr>
 
@@ -880,7 +1068,7 @@ public static String ss(String str, int number,int number2){
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">63.8k</span>
+                <span class="white-color">65k</span>
             
 
             
