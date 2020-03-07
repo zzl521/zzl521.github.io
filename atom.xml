@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-06T04:36:59.773Z</updated>
+  <updated>2020-03-07T08:59:18.003Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux服务器</title>
+    <link href="http://yoursite.com/2020/03/02/linux/weblinux/"/>
+    <id>http://yoursite.com/2020/03/02/linux/weblinux/</id>
+    <published>2020-03-02T14:59:00.000Z</published>
+    <updated>2020-03-07T08:59:18.003Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;宝塔简介&quot;&gt;&lt;a href=&quot;#宝塔简介&quot; class=&quot;headerlink&quot; title=&quot;宝塔简介&quot;&gt;&lt;/a&gt;宝塔简介&lt;/h3&gt;&lt;p&gt;一个很好用的Linux管理工具。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bt.cn/&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="宝塔" scheme="http://yoursite.com/tags/%E5%AE%9D%E5%A1%94/"/>
+    
+  </entry>
   
   <entry>
     <title>手机挖矿</title>
@@ -439,34 +468,6 @@ DBAS
   </entry>
   
   <entry>
-    <title>爱而不得</title>
-    <link href="http://yoursite.com/2020/01/07/draiy/love/"/>
-    <id>http://yoursite.com/2020/01/07/draiy/love/</id>
-    <published>2020-01-06T17:59:00.000Z</published>
-    <updated>2020-01-07T15:12:58.434Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;喜欢一个人是什么感觉&quot;&gt;&lt;a href=&quot;#喜欢一个人是什么感觉&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="diary" scheme="http://yoursite.com/categories/diary/"/>
-    
-    
-      <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
-    
-      <category term="Message" scheme="http://yoursite.com/tags/Message/"/>
-    
-  </entry>
-  
-  <entry>
     <title>个人网上信息挖掘</title>
     <link href="http://yoursite.com/2020/01/07/attark/search/"/>
     <id>http://yoursite.com/2020/01/07/attark/search/</id>
@@ -491,6 +492,34 @@ DBAS
       <category term="Message" scheme="http://yoursite.com/tags/Message/"/>
     
       <category term="人肉" scheme="http://yoursite.com/tags/%E4%BA%BA%E8%82%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爱而不得</title>
+    <link href="http://yoursite.com/2020/01/07/draiy/love/"/>
+    <id>http://yoursite.com/2020/01/07/draiy/love/</id>
+    <published>2020-01-06T17:59:00.000Z</published>
+    <updated>2020-01-07T15:12:58.434Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;喜欢一个人是什么感觉&quot;&gt;&lt;a href=&quot;#喜欢一个人是什么感觉&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="diary" scheme="http://yoursite.com/categories/diary/"/>
+    
+    
+      <category term="日记" scheme="http://yoursite.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="Message" scheme="http://yoursite.com/tags/Message/"/>
     
   </entry>
   
@@ -547,34 +576,6 @@ DBAS
       <category term="Kali" scheme="http://yoursite.com/tags/Kali/"/>
     
       <category term="木马" scheme="http://yoursite.com/tags/%E6%9C%A8%E9%A9%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VMware安装安卓虚拟机</title>
-    <link href="http://yoursite.com/2019/12/28/as/asvmware/"/>
-    <id>http://yoursite.com/2019/12/28/as/asvmware/</id>
-    <published>2019-12-28T14:59:00.000Z</published>
-    <updated>2019-12-28T15:43:38.668Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;操作步骤&quot;&gt;&lt;a href=&quot;#操作步骤&quot; class=&quot;headerlink&quot; title=&quot;操作步骤&quot;&gt;&lt;/a&gt;操作步骤&lt;/h3&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="VMware" scheme="http://yoursite.com/categories/VMware/"/>
-    
-    
-      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
-    
-      <category term="VMware" scheme="http://yoursite.com/tags/VMware/"/>
     
   </entry>
   

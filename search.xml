@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Linux服务器</title>
+      <link href="/2020/03/02/linux/weblinux/"/>
+      <url>/2020/03/02/linux/weblinux/</url>
+      
+        <content type="html"><![CDATA[<h3 id="宝塔简介"><a href="#宝塔简介" class="headerlink" title="宝塔简介"></a>宝塔简介</h3><p>一个很好用的Linux管理工具。</p><p><a href="https://www.bt.cn/" target="_blank" rel="noopener">宝塔官网</a></p><p>首先需要去执行命令挂载。</p><p><a href="https://www.bilibili.com/video/av83562606?from=search&amp;seid=12788850207292369452" target="_blank" rel="noopener">b站教程</a></p><p><a href="https://blog.csdn.net/qq_42549792/article/details/96630332" target="_blank" rel="noopener">csdn部署Java web</a></p><h3 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h3><p><img src="http://img.ahdy.top/2020-03-07_155019.png" alt></p><p>以前我再Windows上时更新静态页面都是手动去打包覆盖，现在这工具不仅能在线编辑代码生效，最重要的是它还有代码提示功能。可以说功能非常强了。</p><h3 id="关于创建站点提示请先安装Web服务器问题的解决"><a href="#关于创建站点提示请先安装Web服务器问题的解决" class="headerlink" title="关于创建站点提示请先安装Web服务器问题的解决"></a>关于创建站点提示请先安装Web服务器问题的解决</h3><p>使用终端运行</p><pre><code>yum install lua-devel</code></pre><p>将原有的web容器卸载重装一般即可解决</p><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>服务器上缺少lua模块，没有真正下载配置成功</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 宝塔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>手机挖矿</title>
       <link href="/2020/03/01/draiy/pi/"/>
       <url>/2020/03/01/draiy/pi/</url>
@@ -409,33 +436,6 @@
     
     
     <entry>
-      <title>爱而不得</title>
-      <link href="/2020/01/07/draiy/love/"/>
-      <url>/2020/01/07/draiy/love/</url>
-      
-        <content type="html"><![CDATA[<h3 id="喜欢一个人是什么感觉"><a href="#喜欢一个人是什么感觉" class="headerlink" title="喜欢一个人是什么感觉"></a>喜欢一个人是什么感觉</h3><p>我就讲讲自己吧，见到她会显得有些惊慌，有些不知所措，两手无处安放，心跳加快，会脸红，显得很不自然，眼睛会躲避她的目光，显得我毫不在意她，但有时又会偷看她，注视她的一举一动。遇到漂亮女生我最多多看两眼，但是这种感觉很特别，可能这就是喜欢，就是心动感觉吧。我比较特别，我从来不会因为一个女生的外表就去喜欢她，我喜欢的女孩一定是因为她比较优秀。</p><h3 id="我喜欢一个人"><a href="#我喜欢一个人" class="headerlink" title="我喜欢一个人"></a>我喜欢一个人</h3><p>今年我19岁，从来没有过的迷茫，焦虑伴随着我，我喜欢上一个人，我深知可能得不到她，但我却情愿一错再错，她网上和我聊的很多，现实她可能比较羞涩，当她叫我大哥的那一刻起，我就应该明白她只想和我做朋友，但是我又怎能甘心做朋友，正应验了那句，在最无能为力的时候，遇到了想要照顾一生的人，强大的自尊心和自卑心在作祟，我要是能许下她一个未来该多好！<br>我明白现在办不到，可是等我办到的时候，她还在吗？那应该是等不到了，我现在不是一个值得托付的人，我只能知耻而后勇,知弱而图强。<br>这次回家，父亲给我谈了很多，他对我期望值很高，也更加确定了一点，我不得不放手。这样对我和她都好！  </p><h3 id="喜欢一个人是自私的"><a href="#喜欢一个人是自私的" class="headerlink" title="喜欢一个人是自私的"></a>喜欢一个人是自私的</h3><p>真正喜欢一个人的时候，你会发现你对她的一切都变得敏感，默默关注着她，我是一个很多事都能放下的人，但是唯独喜欢这件事，我是自私的，我想得到她的一切，我利用所学的东西挖掘了她在网上的信息，想多了解她一点，想着能聊进她的爱好，能有谈论的话题。<br>以为蒙上了眼睛，就可以看不见这个世界；以为捂住了耳朵，就可以听不到所有的烦恼；以为脚步停了下来，心就可以不再远行；以为我需要的爱情，只是一个拥抱。<br>喜欢一个人是藏不住，尽管是单相思，相信大多数人心甘情愿。<br>多少次又多少次，回忆把生活划成一个圈，而我在原地转了无数次，无法解脱。  </p><h3 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h3><p>人生最难过的事，莫过于你遇上一个特别爱的人，却又明白，可能永远不会在一起，但心中那份爱恋，终将难以忘却。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> diary </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 日记 </tag>
-            
-            <tag> Message </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>个人网上信息挖掘</title>
       <link href="/2020/01/07/attark/search/"/>
       <url>/2020/01/07/attark/search/</url>
@@ -455,6 +455,33 @@
             <tag> Message </tag>
             
             <tag> 人肉 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>爱而不得</title>
+      <link href="/2020/01/07/draiy/love/"/>
+      <url>/2020/01/07/draiy/love/</url>
+      
+        <content type="html"><![CDATA[<h3 id="喜欢一个人是什么感觉"><a href="#喜欢一个人是什么感觉" class="headerlink" title="喜欢一个人是什么感觉"></a>喜欢一个人是什么感觉</h3><p>我就讲讲自己吧，见到她会显得有些惊慌，有些不知所措，两手无处安放，心跳加快，会脸红，显得很不自然，眼睛会躲避她的目光，显得我毫不在意她，但有时又会偷看她，注视她的一举一动。遇到漂亮女生我最多多看两眼，但是这种感觉很特别，可能这就是喜欢，就是心动感觉吧。我比较特别，我从来不会因为一个女生的外表就去喜欢她，我喜欢的女孩一定是因为她比较优秀。</p><h3 id="我喜欢一个人"><a href="#我喜欢一个人" class="headerlink" title="我喜欢一个人"></a>我喜欢一个人</h3><p>今年我19岁，从来没有过的迷茫，焦虑伴随着我，我喜欢上一个人，我深知可能得不到她，但我却情愿一错再错，她网上和我聊的很多，现实她可能比较羞涩，当她叫我大哥的那一刻起，我就应该明白她只想和我做朋友，但是我又怎能甘心做朋友，正应验了那句，在最无能为力的时候，遇到了想要照顾一生的人，强大的自尊心和自卑心在作祟，我要是能许下她一个未来该多好！<br>我明白现在办不到，可是等我办到的时候，她还在吗？那应该是等不到了，我现在不是一个值得托付的人，我只能知耻而后勇,知弱而图强。<br>这次回家，父亲给我谈了很多，他对我期望值很高，也更加确定了一点，我不得不放手。这样对我和她都好！  </p><h3 id="喜欢一个人是自私的"><a href="#喜欢一个人是自私的" class="headerlink" title="喜欢一个人是自私的"></a>喜欢一个人是自私的</h3><p>真正喜欢一个人的时候，你会发现你对她的一切都变得敏感，默默关注着她，我是一个很多事都能放下的人，但是唯独喜欢这件事，我是自私的，我想得到她的一切，我利用所学的东西挖掘了她在网上的信息，想多了解她一点，想着能聊进她的爱好，能有谈论的话题。<br>以为蒙上了眼睛，就可以看不见这个世界；以为捂住了耳朵，就可以听不到所有的烦恼；以为脚步停了下来，心就可以不再远行；以为我需要的爱情，只是一个拥抱。<br>喜欢一个人是藏不住，尽管是单相思，相信大多数人心甘情愿。<br>多少次又多少次，回忆把生活划成一个圈，而我在原地转了无数次，无法解脱。  </p><h3 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h3><p>人生最难过的事，莫过于你遇上一个特别爱的人，却又明白，可能永远不会在一起，但心中那份爱恋，终将难以忘却。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> diary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 日记 </tag>
+            
+            <tag> Message </tag>
             
         </tags>
       
@@ -695,9 +722,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> XSS </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -733,33 +760,6 @@
     
     
     <entry>
-      <title>How to use vue.js</title>
-      <link href="/2019/12/11/framework/vue/"/>
-      <url>/2019/12/11/framework/vue/</url>
-      
-        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 环境 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 环境 </tag>
-            
-            <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>简易版聊天室</title>
       <link href="/2019/12/11/java/socket/"/>
       <url>/2019/12/11/java/socket/</url>
@@ -779,6 +779,33 @@
             <tag> Java </tag>
             
             <tag> Socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to use vue.js</title>
+      <link href="/2019/12/11/framework/vue/"/>
+      <url>/2019/12/11/framework/vue/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> vue </tag>
             
         </tags>
       
@@ -976,33 +1003,6 @@
     
     
     <entry>
-      <title>iframe标签</title>
-      <link href="/2019/11/23/ssm/ifream/"/>
-      <url>/2019/11/23/ssm/ifream/</url>
-      
-        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 子页面加载 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 子页面 </tag>
-            
-            <tag> CSS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>布局样式失效</title>
       <link href="/2019/11/23/ssm/missimgcss/"/>
       <url>/2019/11/23/ssm/missimgcss/</url>
@@ -1022,6 +1022,33 @@
             <tag> CSS </tag>
             
             <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iframe标签</title>
+      <link href="/2019/11/23/ssm/ifream/"/>
+      <url>/2019/11/23/ssm/ifream/</url>
+      
+        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 子页面加载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 子页面 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -2162,33 +2189,6 @@
     
     
     <entry>
-      <title>Tomcat与服务器</title>
-      <link href="/2019/08/06/web/tomcat/"/>
-      <url>/2019/08/06/web/tomcat/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tomcat </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 服务器 </tag>
-            
-            <tag> Tomcat </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL入门</title>
       <link href="/2019/08/06/web/mysql2/"/>
       <url>/2019/08/06/web/mysql2/</url>
@@ -2208,6 +2208,33 @@
             <tag> MySQL </tag>
             
             <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tomcat与服务器</title>
+      <link href="/2019/08/06/web/tomcat/"/>
+      <url>/2019/08/06/web/tomcat/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
