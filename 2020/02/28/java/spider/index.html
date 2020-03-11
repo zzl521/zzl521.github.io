@@ -186,71 +186,11 @@
         </li>
         
         
-        <li><div class="divider"></div></li>
-        <li>
-            <a href="https://github.com" class="waves-effect waves-light" target="_blank">
-                <i class="fa fa-github-square fa-fw"></i>Fork Me
-            </a>
-        </li>
-        
     </ul>
 </div>
 
         </div>
 
-        
-            <style>
-    .nav-transparent .github-corner {
-        display: none !important;
-    }
-
-    .github-corner {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        right: 0;
-        border: 0;
-        transform: scale(1.1);
-    }
-
-    .github-corner svg {
-        color: #0f9d58;
-        fill: #fff;
-        height: 64px;
-        width: 64px;
-    }
-
-    .github-corner:hover .octo-arm {
-        animation: a 0.56s ease-in-out;
-    }
-
-    .github-corner .octo-arm {
-        animation: none;
-    }
-
-    @keyframes a {
-        0%,
-        to {
-            transform: rotate(0);
-        }
-        20%,
-        60% {
-            transform: rotate(-25deg);
-        }
-        40%,
-        80% {
-            transform: rotate(10deg);
-        }
-    }
-</style>
-
-<a href="https://github.com" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
-    <svg viewbox="0 0 250 250" aria-hidden="true">
-        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
-        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
-        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
-    </svg>
-</a>
         
     </nav>
 
@@ -425,14 +365,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        1k
+                        2.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        4 Min
+                        11 Min
                     </div>
                     
                 
@@ -455,7 +395,7 @@
 补充:
 jsoup是一款Java的HTML解析器,可直接解析某个URL地址、HTML文本内容。
 </code></pre><p>因为学校让在家搞个项目，我实在是想不出来有什么比较新颖的东西，就觉得爬虫这东西比较神奇，于是就报了一个项目，不管有什么结果，我还是想把它做完善，其实是我写项目介绍的时候写过了，说我的爬虫能爬音频，视频，文本，图片，HTML响应，尽管项目很小但bug层出不穷，所以我决定边做，边写….</p>
-<h4 id="数据的作用"><a href="#数据的作用" class="headerlink" title="数据的作用"></a>数据的作用</h4><p>网上很多人说爬虫违法，其实我们只要以学习为目的，不损害他人利益就不会触碰到法律。  </p>
+<h4 id="数据的作用"><a href="#数据的作用" class="headerlink" title="数据的作用"></a>数据的作用</h4><p>网上很多人说爬虫违法，其实我们只要以学习为目的，不损害他人利益就不会触碰到法律,毕竟技术无罪，人有罪。  </p>
 <p>其实不然，爬虫的作用很多，百度就是一个爬虫，当你做了一个个人网站，或者博客，当你的站点有一定的流量的时候，你会发现你的网站在百度一下当中可以被搜索到，这就是因为，百度爬取了你的站点信息，并且把信息收录到了它的搜索引擎库内。</p>
 <p>身处大数据的影响下，数据就是金钱。</p>
 <p>金融，做市场分析，电商，做产品调研，很多东西的排名都离不开数据分析，而获取数据的工具就是爬虫。</p>
@@ -569,7 +509,286 @@ public static void main(String[] args) {
   &lt;artifactId&gt;jsoup&lt;/artifactId&gt;
   &lt;version&gt;1.8.3&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre><h3 id="获取网站响应信息"><a href="#获取网站响应信息" class="headerlink" title="获取网站响应信息"></a>获取网站响应信息</h3>
+</code></pre><h3 id="获取网站响应信息"><a href="#获取网站响应信息" class="headerlink" title="获取网站响应信息"></a>获取网站响应信息</h3><h3 id="获取网站图片"><a href="#获取网站图片" class="headerlink" title="获取网站图片"></a>获取网站图片</h3><p><a href="https://blog.csdn.net/dashan_1200/article/details/101286268?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">致谢!</a></p>
+<pre><code>package GetImg;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import org.jsoup.Jsoup;
+import org.jsoup.helper.StringUtil;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+/**
+ *
+ * @ClassName: ImgTool
+ * @Description:IMG tool ，请先赋值URL 获取指定ULR的某个网页里面
+ *                  1.返回所有图像url list
+ *                  2.图像文件夹路径.txt
+ *                  3.所有图像保存在img文件夹里面
+ * @author penny
+ * @date 2020年3月7日 下午13:07:49
+ *
+ */
+public class ImgTool {
+    // 参数域
+    /** 指定URL */
+    public static String URL = &quot;http://z.ahdy.top/&quot;;
+    private int imgNumbs = 0;
+    public static List&lt;String&gt; downloadMsg=new ArrayList&lt;String&gt;();
+    public String imgUrlTxt = &quot;imgURLs.txt&quot;;
+    public static String regex= &quot;^((https|http|ftp|rtsp|mms)?://)&quot;
+            + &quot;?(([0-9a-z_!~*&#39;().&amp;=+$%-]+: )?[0-9a-z_!~*&#39;().&amp;=+$%-]+@)?&quot; //ftp的user@
+            + &quot;(([0-9].)[0-9]&quot; // IP形式的URL- 199.194.52.184
+            + &quot;|&quot; // 允许IP和DOMAIN（域名）
+            + &quot;([0-9a-z_!~*&#39;()-]+.)*&quot; // 域名-
+            + &quot;([0-9a-z][0-9a-z-])?[0-9a-z].&quot; // 二级域名
+            + &quot;[a-z])&quot; // first level domain- .com or .museum
+            + &quot;(:[0-9])?&quot; // 端口- :80
+            + &quot;((/?)|&quot; // a slash isn&#39;t required if there is no file name
+            + &quot;(/[0-9a-z_!~*&#39;().;?:@&amp;=+$,%#-]+)+/?)$&quot;;
+    private ImgTool() {
+    };
+
+    private static ImgTool instance = new ImgTool();
+
+    /** 获取ImgTool 单例 */
+    public static ImgTool getInstance() {
+        return instance;
+    }
+
+    public List&lt;String&gt; getURLs() {
+        return getURLs(null);
+    }
+    public boolean isURL(String str) {
+        if(StringUtil.isBlank(str)){
+            return false;
+        }else{
+//      String regex = &quot;^(?:https?://)?[\\w]{1,}(?:\\.?[\\w]{1,})+[\\w-_/?&amp;=#%:]*$&quot;;
+//      String regex = &quot;^([hH][tT]{2}[pP]:/*|[hH][tT]{2}[pP][sS]:/*|[fF][tT][pP]:/*)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+(\\?{0,1}(([A-Za-z0-9-~]+\\={0,1})([A-Za-z0-9-~]*)\\&amp;{0,1})*)$&quot;;
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(str);
+            if(matcher.matches()){
+                return true;
+            }else{
+                return false;
+            }
+        }};
+    /***
+     * @Title: getURLs
+     * @Description: 给定cssQuery对象
+     * @param @param cssQuery HTML中的CSS(或者 JQuery)选择器语法，更多详细用法见Jsoup介绍 &lt; a
+     *        href=&quot;https://jsoup.org/apidocs/org/jsoup/select/Selector.html&quot;
+     *        &gt;&lt;/a&gt;
+     * @param @return List
+     * @throws
+     *
+     */
+    public List&lt;String&gt; getURLs(String cssQuery) {
+        List&lt;String&gt; urls = null;
+        Document doc;
+        Elements imgElements ;
+        if (!isURL(URL)) {
+            return null;
+        }
+        if(StringUtil.isBlank(cssQuery)){
+            cssQuery=&quot;img&quot;;
+        }
+        try {
+            doc = Jsoup.connect(URL).get();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        if(doc==null)return null;
+        imgElements = doc.select(cssQuery);
+        urls = new ArrayList&lt;String&gt;();
+        for (Object eleObj : imgElements) {
+            //&quot;(https?|ftp|http)://[-A-Za-z0-9+&amp;@#/%?=~_|!:,.;]+[-A-Za-z0-9+&amp;@#/%=~_|]&quot;
+            Pattern pattern = Pattern.compile(&quot;(https?|http)://[-A-Za-z0-9+&amp;@#/%?=~_|!:,.;]+[-A-Za-z0-9+&amp;@#/%=~_|]&quot;);
+            Matcher matcher = pattern.matcher(eleObj.toString());
+            if (matcher.find()) {
+                String url = matcher.group();
+                urls.add(url);
+            }
+        }
+        imgNumbs = imgElements.size();
+        return urls;
+    }
+
+
+    /**
+     *
+     * @Title: createImgURLTxt
+     * @Description:
+     * @param @param cssQuery：默认使用img HTML中的CSS(或者 JQuery)选择器语法，更多详细用法见Jsoup介绍 &lt;
+     *        a href=&quot;https://jsoup.org/apidocs/org/jsoup/select/Selector.html&quot;&gt;
+     *        &lt;/a&gt;
+     * @throws
+     */
+    public String createImgURLTxt(String cssQuery) {
+        long start = System.currentTimeMillis();
+        List&lt;String&gt; urls;
+        urls = getURLs(cssQuery);
+        BufferedWriter os = null;
+        File urlsFiles = new File(&quot;D:\\work\\imgURLs.txt&quot;);
+        if(urlsFiles.exists()){
+            try {
+                urlsFiles.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        try {
+            os = new BufferedWriter(new FileWriter(urlsFiles));
+            if(urls==null)return null;
+            for (int i = 0; i &lt; urls.size(); i++) {
+                os.write(urls.get(i) + &quot;\n&quot;);
+            }
+            String result = &quot;执行完毕,生成imgURLs.txt,耗时&quot;
+                    + (System.currentTimeMillis() - start) / 1000 + &quot;s&quot;;
+            System.out.println(result);
+            return result;
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (os != null)
+                    os.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @Title: createImgs
+     * @Description:
+     * @param @param cssQuery
+     * @param @throws IOException
+     * @throws
+     */
+    public void createImgs(String cssQuery) throws IOException {
+        long startTime = System.currentTimeMillis();
+        downloadMsg.add(&quot;Your images is downloading &quot;);
+        BufferedReader br = null;
+        OutputStream out = null;
+        InputStream in = null;
+        ArrayList&lt;String&gt; imgList = null;
+        HttpURLConnection con = null;
+
+        String url;             //待下载文件url
+        int fileSize = 0;       //单个文件大小
+        int totalFileNum=0;     //总文件数
+        int downLoadFileNum=0;  //已下载文件
+        long totalTime=0;       //总耗时/s
+        long singleTime=0;      //单个文件耗时/ms
+
+        br = new BufferedReader(new FileReader(imgUrlTxt));
+        imgList = new ArrayList&lt;String&gt;();
+        while ((url = br.readLine()) != null) {
+            imgList.add(url);
+        }
+        downLoadFileNum=totalFileNum= imgList.size();
+        downloadMsg.add(&quot;总文件数&quot;+(totalFileNum));
+        for (String listUrl : imgList) {
+            startTime = System.currentTimeMillis();
+            String fileName = listUrl.substring(listUrl.lastIndexOf(&#39;/&#39;) + 1);// 截取文件名
+            URL imgUrl = new URL(listUrl.trim());
+            if (con != null)
+                con.disconnect();
+            con = (HttpURLConnection) imgUrl.openConnection();
+            con.setRequestMethod(&quot;GET&quot;);
+            con.setDoInput(true);
+            con.setConnectTimeout(1000 * 30);
+            con.setReadTimeout(1000 * 30);
+            fileSize = con.getContentLength();
+            con.connect();
+            try {
+                in = con.getInputStream();
+                File file = new File(&quot;D:\\work\\img&quot; + File.separator, fileName);
+                if (!file.exists()) {
+                    file.getParentFile().mkdirs();
+                    file.createNewFile();
+                }
+                out = new BufferedOutputStream(new FileOutputStream(file));
+                int len = 0;
+                byte[] buff = new byte[1024 * 1024];
+                while ((len = new BufferedInputStream(in).read(buff)) != -1) {
+                    out.write(buff, 0, len);
+                }
+                out.flush();
+                downLoadFileNum--;
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (br != null)
+                    try {
+                        br.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                if (in != null)
+                    try {
+                        in.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                if (out != null)
+                    try {
+                        out.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                singleTime=System.currentTimeMillis() - startTime;
+                totalTime+=singleTime;
+                downloadMsg.add(&quot;文件名&quot; + fileName + &quot;  文件大小&quot; + fileSize
+                        +&quot;  未下载文件数&quot;+(downLoadFileNum)
+                        +&quot;  下载耗时&quot;+ singleTime + &quot;ms&quot; );
+                System.out.println(downloadMsg.get(downloadMsg.size()-1));
+            }
+        }
+        downloadMsg.add(&quot;总耗时&quot;+totalTime/1000+&quot;s&quot;);
+    }
+
+    /**
+     * @throws IOException
+     *
+     * @Title: main
+     * @Description: test
+     * @param @param args
+     * @throws
+     */
+    public static void main(String[] args) throws IOException {
+        ImgTool img = ImgTool.getInstance();
+        img.createImgURLTxt(&quot;img&quot;);
+        List&lt;String&gt; urls = img.getURLs(&quot;img&quot;);
+        for (Object str : urls) {
+
+            System.out.println(str.toString());
+        }
+        img.createImgs(null);
+    }
+}
+</code></pre>
             </div>
             <hr>
 
@@ -966,7 +1185,7 @@ public static void main(String[] args) {
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">65.2k</span>
+                <span class="white-color">66.4k</span>
             
 
             
@@ -981,7 +1200,10 @@ public static void main(String[] args) {
                 
                 <span id="busuanzi_container_site_uv">
                     <i class="fa fa-users"></i>
-                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人——
+                </span>
+                <span id="busuanzi_container_site_uv">
+                	<a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action">皖ICP备19012643号-1</a>       
                 </span>
                 
             
@@ -1062,8 +1284,6 @@ $(function () {
 </script>
 
 
-
-    <script src="/libs/others/clicklove.js"></script>
 
 
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
