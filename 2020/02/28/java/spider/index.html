@@ -365,14 +365,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        2.2k
+                        4.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        11 Min
+                        21 Min
                     </div>
                     
                 
@@ -509,7 +509,51 @@ public static void main(String[] args) {
   &lt;artifactId&gt;jsoup&lt;/artifactId&gt;
   &lt;version&gt;1.8.3&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre><h3 id="获取网站响应信息"><a href="#获取网站响应信息" class="headerlink" title="获取网站响应信息"></a>获取网站响应信息</h3><h3 id="获取网站图片"><a href="#获取网站图片" class="headerlink" title="获取网站图片"></a>获取网站图片</h3><p><a href="https://blog.csdn.net/dashan_1200/article/details/101286268?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">致谢!</a></p>
+</code></pre><h3 id="获取网站响应信息"><a href="#获取网站响应信息" class="headerlink" title="获取网站响应信息"></a>获取网站响应信息</h3><pre><code>   import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Map;
+import java.util.Set;
+
+public class GetHttpHead {
+    public static String HeadMessage(String Url)  {
+        URL url = null;         //创建一个URL对象，赋值为空；
+        String result;
+        result = &quot;非正常的响应信息！&quot;;           //返回结果集
+        try {
+            url = new URL(Url);         //实例化url
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            System.out.println(&quot;非正常访问的URL&quot;);
+        }
+        URLConnection conn = null;
+        try {
+            conn = url.openConnection();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println(&quot;系统抛出了异常信息&quot;);
+        }
+        Map headers = conn.getHeaderFields();
+        Set&lt;String&gt; keys = headers.keySet();
+        for( String key : keys ){
+            String val = conn.getHeaderField(key);
+            result+=key+&quot;    &quot;+val+&quot;\n&quot;;
+           if (val.equals(&quot;HTTP/1.1 200 OK&quot;)){
+               result=&quot;站点可以正常访问\n响应信息：&quot;;}
+           }
+
+        System.out.println( conn.getLastModified() );
+
+        return result;
+    }
+
+//    public static void main(String[] args) throws IOException {
+//
+//        System.out.println( HeadMessage(&quot;http://z.ahdy.top&quot;));
+//    }
+}
+</code></pre><h3 id="获取网站图片"><a href="#获取网站图片" class="headerlink" title="获取网站图片"></a>获取网站图片</h3><p><a href="https://blog.csdn.net/dashan_1200/article/details/101286268?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">致谢!</a></p>
 <pre><code>package GetImg;
 
 import java.io.BufferedInputStream;
@@ -788,7 +832,324 @@ public class ImgTool {
         img.createImgs(null);
     }
 }
-</code></pre>
+</code></pre><h3 id="获取HTML"><a href="#获取HTML" class="headerlink" title="获取HTML"></a>获取HTML</h3><pre><code>import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+public class GetPage {
+    public static String getPage(String url){
+        File file =new File(&quot;D:\\work&quot;);
+        FileWriter fwriter=null;
+        HttpClientBuilder httpClientBuilder= HttpClients.custom();
+        CloseableHttpClient client =httpClientBuilder.build();
+        HttpGet request=new HttpGet(url);
+        String content=null;
+        String IoMessage=&quot;&quot;;
+        try {
+            CloseableHttpResponse response = client.execute(request);
+            HttpEntity entity=response.getEntity();
+            content = EntityUtils.toString(entity);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            if(!file.exists()){
+                file.mkdirs(); //创建目录
+            }
+            // true表示不覆盖原来的内容，而是加到文件的后面。若要覆盖原来的内容，直接省略这个参数就好
+            file=new File(file+&quot;\\&quot;+&quot;page&quot;+&quot;.txt&quot;); //若文件夹已经存在，不会重复创建和覆盖原有内容
+            fwriter = new FileWriter(file, true);
+            fwriter.write(content);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                fwriter.flush();
+                fwriter.close();
+                IoMessage=&quot;\n数据已抓取:内容写入至D:\\work\\page.txt\n&quot;;
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return IoMessage+content ;
+    }
+
+//    public static void main(String[] args) {
+//
+//        System.out.println( getPage(&quot;https://study.163.com&quot;));
+//    }
+}
+</code></pre><h3 id="获取视频"><a href="#获取视频" class="headerlink" title="获取视频"></a>获取视频</h3><pre><code>import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+public class TencentVideo {
+   static FileWriter fileWrite=null;
+    public static void getTencentVideoName(String url) {
+        List&lt;Map&lt;String,String&gt;&gt; resultList = new ArrayList&lt;Map&lt;String,String&gt;&gt;();
+        File file=new File(&quot;D:\\work&quot;);
+        if (!file.exists()){
+            file.mkdirs();
+        }
+        file=new File(file+File.separator+&quot;MoveMessage&quot;+&quot;.txt&quot;);
+
+        try {
+           fileWrite= new FileWriter(file, true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        Document document = null;
+        int pageSize = 30;
+        int index = 1;
+        try {
+            for(int i = 0 ; i &lt; 167; i ++) {
+                String urlget =  url + (i*pageSize);
+                Thread.sleep(1000);
+                System.out.println(&quot;URL:&quot; + urlget.toString());
+                document = Jsoup.connect(urlget).userAgent(&quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&quot;)
+                        //加上cookie信息
+                        .cookie(&quot;auth&quot;, &quot;token&quot;)
+                        //设置超时
+                        .timeout(30000)
+                        //用get()方式请求网址，也可以post()方式
+                        .get();
+                Elements elements = document.select(&quot;li.list_item&quot;);
+                if(elements == null || &quot;&quot;.equals(elements.toString())) {
+                    break;
+                }
+                for (Element ele : elements) {
+                    Map&lt;String,String&gt; obj = new HashMap&lt;String,String&gt;();
+                    Elements name = ele.select(&quot;strong.figure_title&quot;);
+                    String nameStr = name.select(&quot;a&quot;).attr(&quot;title&quot;);
+                    String leader  = ele.select(&quot;div.figure_desc&quot;).text();
+                    String count  = ele.select(&quot;div.figure_count&quot;).text();
+                    String remark = ele.select(&quot;span.figure_info&quot;).text();
+                    String score = ele.select(&quot;div.figure_score&quot;).text();
+                    System.out.println(&quot;================== &quot; + index + &quot; =====================&quot;);
+                    System.out.println(&quot;名称：&quot; + nameStr.toString());
+                    System.out.println(&quot;主演：&quot; + leader.toString());
+                    System.out.println(&quot;评分：&quot; + score.toString());
+                    System.out.println(&quot;描述：&quot; + remark.toString());
+                    System.out.println(&quot;点播量：&quot; + count.toString());
+                    obj.put(&quot;name&quot;, nameStr);
+                    obj.put(&quot;lead&quot;, leader);
+                    obj.put(&quot;desc&quot;, remark);
+                    obj.put(&quot;score&quot;, score);
+                    obj.put(&quot;dianbo&quot;, count);
+                    resultList.add(obj);
+                    fileWrite.write(String.valueOf(obj)+&quot;\n&quot;);
+                    index ++;
+                }
+            }
+            //new ExportExcel().exportTencentExcle(resultList);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }catch (Exception ae) {
+            ae.printStackTrace();
+        }finally {
+            try {
+                fileWrite.flush();
+                fileWrite.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+        //电影
+        //getTencentVideoName(&quot;http://v.qq.com/x/list/movie?itype=-1&amp;offset=&quot;);
+        //电视剧
+//        getTencentVideoName(&quot;http://v.qq.com/x/list/tv?feature=-1&amp;offset=&quot;);
+        //动漫
+//        getTencentVideoName(&quot;http://v.qq.com/x/list/cartoon?itype=-1&amp;offset=&quot;);
+        //少儿
+//        getTencentVideoName(&quot;http://v.qq.com/x/list/child?iarea=-1&amp;offset=&quot;);
+        //综艺
+//        getTencentVideoName(&quot;http://v.qq.com/x/list/variety?exclusive=-1&amp;offset=&quot;);
+        //演唱会
+//        getTencentVideoName(&quot;http://v.qq.com/x/list/music?istate=2&amp;offset=&quot;);
+        //纪录片
+//        getTencentVideoName(&quot;http://v.qq.com/x/list/doco?itrailer=-1&amp;offset=&quot;);
+        //电影独播
+//        getTencentVideoName(&quot;https://v.qq.com/x/list/movie?characteristic=5&amp;offset=&quot;);
+        //电视剧独播
+        getTencentVideoName(&quot;https://v.qq.com/x/list/tv?feature=44&amp;offset=&quot;);
+    }
+}
+</code></pre><h3 id="获取站点所有连接"><a href="#获取站点所有连接" class="headerlink" title="获取站点所有连接"></a>获取站点所有连接</h3><pre><code>import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class WebCrawlerDemo {
+
+    public static void main(String[] args) throws IOException {
+        WebCrawlerDemo webCrawlerDemo = new WebCrawlerDemo();
+        webCrawlerDemo.myPrint(&quot;https://v.qq.com&quot;);
+    }
+
+    public String myPrint(String baseUrl) throws IOException {
+        Map&lt;String, Boolean&gt; oldMap = new LinkedHashMap&lt;String, Boolean&gt;(); // 存储链接-是否被遍历
+        // 键值对
+        FileWriter fileWriter=null;
+        String oldLinkHost = &quot;&quot;;  //host
+        File file=new File(&quot;D:\\work&quot;);
+        if (!file.exists()){
+          file.mkdirs();
+        }
+        file=new File(file+File.separator+&quot;LinkUrl&quot;+&quot;.txt&quot;);
+         fileWriter=new FileWriter(file,true);
+        Pattern p = Pattern.compile(&quot;(https?://)?[^/\\s]*&quot;); //比如：http://www.zifangsky.cn
+        Matcher m = p.matcher(baseUrl);
+        if (m.find()) {
+            oldLinkHost = m.group();
+        }
+
+        oldMap.put(baseUrl, false);
+        try {
+            oldMap = crawlLinks(oldLinkHost, oldMap);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        StringBuffer stringBuffer=new StringBuffer();
+        for (Map.Entry&lt;String, Boolean&gt; mapping : oldMap.entrySet()) {
+            stringBuffer.append(&quot;链接：&quot; + mapping.getKey()+&quot;\n&quot;);
+            System.out.println(&quot;链接：&quot; + mapping.getKey());
+
+
+        }
+        fileWriter.write(stringBuffer.toString());
+        fileWriter.flush();
+        fileWriter.close();
+
+        return stringBuffer.toString();
+    }
+
+    /**
+     * 抓取一个网站所有可以抓取的网页链接，在思路上使用了广度优先算法
+     * 对未遍历过的新链接不断发起GET请求，一直到遍历完整个集合都没能发现新的链接
+     * 则表示不能发现新的链接了，任务结束
+     *
+     * @param oldLinkHost 域名，如：http://www.zifangsky.cn
+     * @param oldMap      待遍历的链接集合
+     * @return 返回所有抓取到的链接集合
+     */
+    private Map&lt;String, Boolean&gt; crawlLinks(String oldLinkHost,
+                                            Map&lt;String, Boolean&gt; oldMap) throws IOException {
+        Map&lt;String, Boolean&gt; newMap = new LinkedHashMap&lt;String, Boolean&gt;();
+        String oldLink = &quot;&quot;;
+
+        for (Map.Entry&lt;String, Boolean&gt; mapping : oldMap.entrySet()) {
+            System.out.println(&quot;link:&quot; + mapping.getKey() + &quot;--------check:&quot;
+                    + mapping.getValue());
+
+            // 如果没有被遍历过
+            if (!mapping.getValue()) {
+                oldLink = mapping.getKey();
+                // 发起GET请求
+                try {
+                    URL url = new URL(oldLink);
+                    HttpURLConnection connection = (HttpURLConnection) url
+                            .openConnection();
+                    connection.setRequestMethod(&quot;GET&quot;);
+                    connection.setConnectTimeout(2000);
+                    connection.setReadTimeout(2000);
+
+                    if (connection.getResponseCode() == 200) {
+                        InputStream inputStream = connection.getInputStream();
+                        BufferedReader reader = new BufferedReader(
+                                new InputStreamReader(inputStream, &quot;UTF-8&quot;));
+                        String line = &quot;&quot;;
+                        Pattern pattern = Pattern
+                                .compile(&quot;&lt;a.*?href=[\&quot;&#39;]?((https?://)?/?[^\&quot;&#39;]+)[\&quot;&#39;]?.*?&gt;(.+)&lt;/a&gt;&quot;);
+                        Matcher matcher = null;
+                        while ((line = reader.readLine()) != null) {
+                            matcher = pattern.matcher(line);
+                            if (matcher.find()) {
+                                String newLink = matcher.group(1).trim(); // 链接
+                                // String title = matcher.group(3).trim(); //标题
+                                // 判断获取到的链接是否以http开头
+                                if (!newLink.startsWith(&quot;http&quot;)) {
+                                    if (newLink.startsWith(&quot;/&quot;))
+                                        newLink = oldLinkHost + newLink;
+                                    else
+                                        newLink = oldLinkHost + &quot;/&quot; + newLink;
+                                }
+                                //去除链接末尾的 /
+                                if (newLink.endsWith(&quot;/&quot;))
+                                    newLink = newLink.substring(0, newLink.length() - 1);
+                                //去重，并且丢弃其他网站的链接
+                                if (!oldMap.containsKey(newLink)
+                                        &amp;&amp; !newMap.containsKey(newLink)
+                                        &amp;&amp; newLink.startsWith(oldLinkHost)) {
+                                    // System.out.println(&quot;temp2: &quot; + newLink);
+                                    newMap.put(newLink, false);
+                                }
+                            }
+                        }
+                    }
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                oldMap.replace(oldLink, false, true);
+            }
+        }
+        //有新链接，继续遍历
+        if (!newMap.isEmpty()) {
+            oldMap.putAll(newMap);
+            oldMap.putAll(crawlLinks(oldLinkHost, oldMap));  //由于Map的特性，不会导致出现重复的键值对
+        }
+        return oldMap;
+    }
+
+}
+</code></pre><h3 id="最终截图"><a href="#最终截图" class="headerlink" title="最终截图"></a>最终截图</h3><p><img src="http://img.ahdy.top/2020-03-12%20130421.png" alt></p>
+<h3 id="项目下载"><a href="#项目下载" class="headerlink" title="项目下载"></a>项目下载</h3><p>网盘当中包含了，我打包好的运行程序，和项目源码。<br><a href="https://share.weiyun.com/5wpvOl0" target="_blank" rel="noopener">腾讯微云</a></p>
+<h3 id="FX程序打包"><a href="#FX程序打包" class="headerlink" title="FX程序打包"></a>FX程序打包</h3><p>打包有什么用呢？假如你的朋友不会编程那么他也想使用你开发的程序那么该怎么办，他的电脑上也没有下载jdk，这时候我们项目打包，经过打包发布的程序在每台电脑上都能够运行起来。</p>
+<h4 id="以IDEA为例子"><a href="#以IDEA为例子" class="headerlink" title="以IDEA为例子"></a>以IDEA为例子</h4><p><a href="https://blog.csdn.net/njxiaoxiao79/article/details/85679992?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">详情参考此处</a></p>
+<h4 id="启动jar程序"><a href="#启动jar程序" class="headerlink" title="启动jar程序"></a>启动jar程序</h4><p><img src="http://img.ahdy.top/2020-03-12_155414.png" alt="随便创建一个文件夹，文件夹内包含这三样东西"><br>1.你需要将jdk子目录当中的jre文件夹。也就是Java程序运行时需要的环境拿过来。</p>
+<p>2.再把打包好的jar包放进来</p>
+<p>3.最后一步，也是关键的一步，创建批处理命令(.bat)文件，使用工具编辑该文件，在文件内写入脚本</p>
+<pre><code>start  jre\bin\java.exe  -jar  Web_Spider.jar
+</code></pre><p>注意:最后等待.jar文件以你所打包的报名为准，代码中的jar名不是固定的。</p>
+<p>其中 java.exe为带有doc命令的窗口程序，如果不需要则可以修改为Javaw.exe。</p>
+<h3 id="关于打包成-exe可执行文件问题"><a href="#关于打包成-exe可执行文件问题" class="headerlink" title="关于打包成.exe可执行文件问题"></a>关于打包成.exe可执行文件问题</h3><p>fx程序可以打包成.exe执行程序，详情参考网络教程。</p>
+
             </div>
             <hr>
 
@@ -1008,12 +1369,12 @@ public class ImgTool {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/BTC/" target="_blank">
-                        <span class="chip bg-color">BTC</span>
-                    </a>
-                    
                     <a href="/tags/挖矿/" target="_blank">
                         <span class="chip bg-color">挖矿</span>
+                    </a>
+                    
+                    <a href="/tags/BTC/" target="_blank">
+                        <span class="chip bg-color">BTC</span>
                     </a>
                     
                 </div>
@@ -1185,7 +1546,7 @@ public class ImgTool {
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">66.4k</span>
+                <span class="white-color">68.4k</span>
             
 
             
