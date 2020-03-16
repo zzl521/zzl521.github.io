@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>IDEA-web项目导入</title>
+      <link href="/2020/03/14/idea/problem3/"/>
+      <url>/2020/03/14/idea/problem3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我们学校让在疫情期间去搞一个个人项目，然而我却报了两个项目，而且项目工程还不小，我搞完了一个之后实在是不想再去弄这些东西了(毕竟人的精力是有限的，我还有很多别的事情对吧!)，于是我想到了再GitHub上去找一个源码项目。so 我碰到了项目导入无法运行的问题。所以简单的记录一下。</p><h3 id="项目导入"><a href="#项目导入" class="headerlink" title="项目导入"></a>项目导入</h3><p>这一步呢!相信大家都会，只要选择File—&gt;Open即可用IDEA去打开一个项目，但是如果你打开的项目是Maven工程，那么也就意味着它需要花费大量时间去访问外网下载jar包。这其中的Jar包可能是某某某框架，也可能是某某工具类。</p><h3 id="问题出现"><a href="#问题出现" class="headerlink" title="问题出现"></a>问题出现</h3><p>当你的ide下载好了这些依赖之后，这时候你导入的项目其实是无法运行的。要做一定的修改才可以!</p><p>首先要让你的文件夹变色。<br><img src="http://img.ahdy.top/2020-03-16_130829.png" alt="右键文件夹，找到mark directory as即可修改"></p><p>这里要强调的是webapp这个文件夹</p><p>要在File—&gt;Progect Structrue当中设置路径</p><p><img src="http://img.ahdy.top/2020-03-16_131029.png" alt></p><p>然后要保证你的Artfacts当中添加该类型war包</p><p><img src="http://img.ahdy.top/2020-03-16_131203.png" alt="没有就选择上方加号添加进来"></p><p>之后配置tomcat。</p><p><img src="http://img.ahdy.top/2020-03-16_131502.png" alt="必须在Artfacts添加war包不然会报红"></p><p><img src="http://img.ahdy.top/2020-03-16_131805.png" alt="build处如果没有war包药将其添加进来"></p><p>这样tom才能完全加载，并运行你的项目，不然很有可能，tom空转，或者启动页面404!!!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IDEA </tag>
+            
+            <tag> 项目 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux服务器</title>
       <link href="/2020/03/02/linux/weblinux/"/>
       <url>/2020/03/02/linux/weblinux/</url>
@@ -47,9 +74,9 @@
       
         <tags>
             
-            <tag> Pi </tag>
-            
             <tag> 挖矿 </tag>
+            
+            <tag> Pi </tag>
             
         </tags>
       
@@ -74,9 +101,9 @@
       
         <tags>
             
-            <tag> 挖矿 </tag>
-            
             <tag> BTC </tag>
+            
+            <tag> 挖矿 </tag>
             
         </tags>
       
@@ -263,9 +290,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> FX </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -371,9 +398,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> 项目 </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -722,9 +749,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> XSS </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -760,33 +787,6 @@
     
     
     <entry>
-      <title>简易版聊天室</title>
-      <link href="/2019/12/11/java/socket/"/>
-      <url>/2019/12/11/java/socket/</url>
-      
-        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Socket </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>How to use vue.js</title>
       <link href="/2019/12/11/framework/vue/"/>
       <url>/2019/12/11/framework/vue/</url>
@@ -806,6 +806,33 @@
             <tag> 环境 </tag>
             
             <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>简易版聊天室</title>
+      <link href="/2019/12/11/java/socket/"/>
+      <url>/2019/12/11/java/socket/</url>
+      
+        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Socket </tag>
             
         </tags>
       
@@ -949,33 +976,6 @@
     
     
     <entry>
-      <title>Session会话</title>
-      <link href="/2019/11/23/ssm/session/"/>
-      <url>/2019/11/23/ssm/session/</url>
-      
-        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> EL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session无法获取</title>
       <link href="/2019/11/23/ssm/sessionnull/"/>
       <url>/2019/11/23/ssm/sessionnull/</url>
@@ -1003,25 +1003,25 @@
     
     
     <entry>
-      <title>iframe标签</title>
-      <link href="/2019/11/23/ssm/ifream/"/>
-      <url>/2019/11/23/ssm/ifream/</url>
+      <title>Session会话</title>
+      <link href="/2019/11/23/ssm/session/"/>
+      <url>/2019/11/23/ssm/session/</url>
       
-        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
       
       
       <categories>
           
-          <category> 子页面加载 </category>
+          <category> Session </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CSS </tag>
+            <tag> Session </tag>
             
-            <tag> 子页面 </tag>
+            <tag> EL </tag>
             
         </tags>
       
@@ -1049,6 +1049,33 @@
             <tag> CSS </tag>
             
             <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iframe标签</title>
+      <link href="/2019/11/23/ssm/ifream/"/>
+      <url>/2019/11/23/ssm/ifream/</url>
+      
+        <content type="html"><![CDATA[<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>当你写一个后台管理的时候，子页面加载显得尤为重要，它能在不加载整个页面的情况下实现页面刷新，嗯，跟ajax很像，但是Ajax需要的参数就多了，而这里要说的子页面加载只需要一个标签就可以搞定。</p><pre><code>&lt;iframe runat=&quot;server&quot; src=&quot;you page&#39;s url&quot; width=&quot;750&quot; height=&quot;30&quot; frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; allowtransparency=&quot;yes&quot;&gt;&lt;/iframe&gt;</code></pre><p>runat=”server” 这个最好加上Iframe跳转 asp.net 可在当前iframe中跳转</p><p>src 链接到的地址URl</p><p>frameborder 是否显示边框（0无边框 1有边框）</p><p>scrolling 是否有滚动条（yes有滚动条 no无滚动条）</p><p>allowtransparency 背景是否透明（yes透明 no不透明）</p><h3 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h3><h4 id="主页面"><a href="#主页面" class="headerlink" title="主页面"></a>主页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head lang=&quot;en&quot;&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;title&gt;iframe的应用&lt;/title&gt;&lt;script type=&quot;text/javascript&quot;&gt;    function fun1(){        document.getElementById(&quot;iframes&quot;).src=&quot;2.html&quot;;    }    function fun3(){        document.getElementById(&quot;iframes&quot;).src=&quot;3.html&quot;;    }&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;ul&gt;&lt;li id=&quot;p1&quot; onclick=&quot;fun1()&quot;&gt;page1&lt;/li&gt;&lt;li id=&quot;p2&quot;&gt;page2&lt;/li&gt;&lt;li id=&quot;p3&quot; onclick=&quot;fun3()&quot;&gt;page3&lt;/li&gt;&lt;li id=&quot;p4&quot;&gt;page4&lt;/li&gt;&lt;/ul&gt;&lt;iframe id=&quot;iframes&quot; src=&quot;1.html&quot; height=&quot;80%&quot; width=&quot;100%&quot; runat=&quot;server&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h4><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    231321&lt;/body&gt;&lt;/html&gt;</code></pre><p>子页面随便写！</p><h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p><img src="http://img.ahdy.top/iframes.gif" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 子页面加载 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 子页面 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -1584,9 +1611,9 @@
       
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> windows </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
       
@@ -1638,9 +1665,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> MAC </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -1665,9 +1692,9 @@
       
         <tags>
             
-            <tag> 环境 </tag>
-            
             <tag> AS </tag>
+            
+            <tag> 环境 </tag>
             
         </tags>
       
@@ -2205,9 +2232,9 @@
       
         <tags>
             
-            <tag> Tomcat </tag>
-            
             <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -2378,33 +2405,6 @@
     
     
     <entry>
-      <title>域名</title>
-      <link href="/2019/07/22/yuming/"/>
-      <url>/2019/07/22/yuming/</url>
-      
-        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 域名 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 域名 </tag>
-            
-            <tag> 二级域名 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java难点</title>
       <link href="/2019/07/22/java/java5/"/>
       <url>/2019/07/22/java/java5/</url>
@@ -2424,6 +2424,33 @@
             <tag> 抽象类|接口 </tag>
             
             <tag> 访问控制符 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>域名</title>
+      <link href="/2019/07/22/yuming/"/>
+      <url>/2019/07/22/yuming/</url>
+      
+        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 域名 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+            <tag> 二级域名 </tag>
             
         </tags>
       
