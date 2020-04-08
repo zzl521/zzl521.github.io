@@ -749,9 +749,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> JSP </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -814,33 +814,6 @@
     
     
     <entry>
-      <title>How to use vue.js</title>
-      <link href="/2019/12/11/framework/vue/"/>
-      <url>/2019/12/11/framework/vue/</url>
-      
-        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 环境 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 环境 </tag>
-            
-            <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>简易版聊天室</title>
       <link href="/2019/12/11/java/socket/"/>
       <url>/2019/12/11/java/socket/</url>
@@ -860,6 +833,33 @@
             <tag> Java </tag>
             
             <tag> Socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to use vue.js</title>
+      <link href="/2019/12/11/framework/vue/"/>
+      <url>/2019/12/11/framework/vue/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> vue </tag>
             
         </tags>
       
@@ -965,9 +965,9 @@
       
         <tags>
             
-            <tag> 传递 </tag>
-            
             <tag> JSTL </tag>
+            
+            <tag> 传递 </tag>
             
         </tags>
       
@@ -1003,33 +1003,6 @@
     
     
     <entry>
-      <title>Session无法获取</title>
-      <link href="/2019/11/23/ssm/sessionnull/"/>
-      <url>/2019/11/23/ssm/sessionnull/</url>
-      
-        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> 传递 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session会话</title>
       <link href="/2019/11/23/ssm/session/"/>
       <url>/2019/11/23/ssm/session/</url>
@@ -1049,6 +1022,33 @@
             <tag> Session </tag>
             
             <tag> EL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Session无法获取</title>
+      <link href="/2019/11/23/ssm/sessionnull/"/>
+      <url>/2019/11/23/ssm/sessionnull/</url>
+      
+        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Session </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Session </tag>
+            
+            <tag> 传递 </tag>
             
         </tags>
       
@@ -1100,9 +1100,9 @@
       
         <tags>
             
-            <tag> 子页面 </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> 子页面 </tag>
             
         </tags>
       
@@ -2004,7 +2004,7 @@
       <link href="/2019/09/02/web/html5/"/>
       <url>/2019/09/02/web/html5/</url>
       
-        <content type="html"><![CDATA[<h3 id="什么是jQuery？"><a href="#什么是jQuery？" class="headerlink" title="什么是jQuery？"></a>什么是jQuery？</h3><p>jQuery是一个JavaScript函数库。</p><p>jQuery是一个轻量级的”写的少，做的多”的JavaScript库。</p><p>jQuery库包含以下功能：</p><p>HTML 元素选取<br>HTML 元素操作<br>CSS 操作<br>HTML 事件函数<br>JavaScript 特效和动画<br>HTML DOM 遍历和修改<br>AJAX<br>Utilities<br>提示： 除此之外，Jquery还提供了大量的插件。<br>目前网络上有大量开源的 JS 框架, 但是 jQuery 是目前最流行的 JS 框架，而且提供了大量的扩展。</p><p>很多大公司都在使用 jQuery</p><h3 id="jQuery安装"><a href="#jQuery安装" class="headerlink" title="jQuery安装"></a>jQuery安装</h3><p><a href="https://jquery.com/download/" target="_blank" rel="noopener">jQuery官网</a><br>下载比较特殊，你可以选择第一个精简版的下载，不要左键点击（会出现一堆乱码），右键选择将连接另存为到本地就可以下载下来了！下载到本地之后，将js文件引入到web项目当中就可以使用jQuery了！<br>当然也可以不下载官网的jQuery文件，使用URL的方式对jQuery进行响应式加载，例如：使用 Staticfile CDN、百度、又拍云、新浪、谷歌或微软的 jQuery，有一个很大的优势：<br>许多用户在访问其他站点时，已经从百度、又拍云、新浪、谷歌或微软加载过 jQuery。所以结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p><h3 id="jQuery引入"><a href="#jQuery引入" class="headerlink" title="jQuery引入"></a>jQuery引入</h3>]]></content>
+        <content type="html"><![CDATA[<h3 id="什么是jQuery？"><a href="#什么是jQuery？" class="headerlink" title="什么是jQuery？"></a>什么是jQuery？</h3><p>随着web2.0的兴起，JavaScript越来越受到重视，一些列JavaScript程序库也蓬勃发展起来。从早期的Prototype,Dojo到2006年的jQuery，再到2007年的ExtJS，互联网正在掀起一场JavaScript风暴。jQuery以其独特优雅的姿态，始终处于这场风暴的中心，受到越来越多的人的追捧。</p><p>jQuery，顾名思义，也就是JavaScript和查询（Query），即是辅助JavaScript开发的库。jQuery是继Prototype之后又一个优秀的JavaScript库，是一个由John Resig创建于2006年1月的开源项目。jQuery凭借简介的语法与跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档，操作DOM，处理事件，执行动画和开发Ajax的操作。其独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。总之，无论是网页设计师，后台开发者，业余爱好者还是项目管理者，也无论是JavaScript初学者还是JavaScript高手，都有足够多的理由去学习jQuery。</p><p>jQuery是一个JavaScript函数库。</p><p>jQuery是一个轻量级的”写的少，做的多”的JavaScript库。</p><p>jQuery库包含以下功能：</p><p>HTML 元素选取<br>HTML 元素操作<br>CSS 操作<br>HTML 事件函数<br>JavaScript 特效和动画<br>HTML DOM 遍历和修改<br>AJAX<br>Utilities<br>提示： 除此之外，Jquery还提供了大量的插件。<br>目前网络上有大量开源的 JS 框架, 但是 jQuery 是目前最流行的 JS 框架，而且提供了大量的扩展。</p><p>很多大公司都在使用 jQuery</p><p>如今开发，更多的是利用第三方框架，这些框架极大的缩短了开发周期，使软件开发更加高效。</p><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>）jQuery是一个兼容多浏览器的javascript库，核心理念是write less,do more(写得更少,做得更多)。</p><p>2）jQuery是免费、开源的，使用MIT许可协议。</p><p>3）jQuery的语法设计可以使开发更加便捷，例如操作文档对象、选择DOM元素、制作动画效果、事件处理、使用Ajax以及其他功能。</p><p>4）除此以外，jQuery提供API让开发者编写插件。其模块化的使用方式使开发者可以很轻松的开发出功能强大的静态或动态网页。 </p><h3 id="jQuery安装"><a href="#jQuery安装" class="headerlink" title="jQuery安装"></a>jQuery安装</h3><p><a href="https://jquery.com/download/" target="_blank" rel="noopener">jQuery官网</a></p><pre><code> jQuery的官方API文档地址是：http://api.jquery.com/</code></pre><p>下载比较特殊，你可以选择第一个精简版的下载，不要左键点击（会出现一堆乱码），右键选择将连接另存为到本地就可以下载下来了！下载到本地之后，将js文件引入到web项目当中就可以使用jQuery了！<br>当然也可以不下载官网的jQuery文件，使用URL的方式对jQuery进行响应式加载，例如：使用 Staticfile CDN、百度、又拍云、新浪、谷歌或微软的 jQuery，有一个很大的优势：<br>许多用户在访问其他站点时，已经从百度、又拍云、新浪、谷歌或微软加载过 jQuery。所以结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p><h3 id="jQuery引入"><a href="#jQuery引入" class="headerlink" title="jQuery引入"></a>jQuery引入</h3><pre><code>&lt;script src=&quot;https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre><p>这种方式可引入URL，也可以引入下载好的本地文件path。</p><h3 id="标识符含义"><a href="#标识符含义" class="headerlink" title="$标识符含义"></a>$标识符含义</h3><p>jQuery中$也只是一个普通的变量而已。</p><p>在此处函数$()接受一个字符串参数：</p><pre><code>    $(&#39;#parent&#39;)</code></pre><p>前面提到过，函数$()是完全支持querySelector()的功能的，也就是说$(‘#parent’)会去查找到DOM中id为parent的那个DOM对象，然后将其包装成为一个jQuery对象</p><p>将DOM对象包装成jQuery对象，我们已经见到两种了：</p><p>  1）第一种是直接将一个DOM对象作为参数传递给$()：</p><pre><code>    $(window)</code></pre><p>这样函数$()会将window对象包装成一个jQuery对象然后返回。</p><p>  2）第二种则是传递一个选择器的参数给$()：</p><pre><code>    $(&#39;#parent&#39;)</code></pre><p>这样函数$()首先会根据传入的字符串参数去DOM树中找到这个这一些对象，然后将其包装成jQuery对象。</p><p>在将普通的DOM对象包装成jQuery对象之后，这个jQuery对象就拥有了jQuery框架提供的众多的功能可以给我们使用了。也就是说jQuery通过变量$来暴露出一个对象，来为我们提供服务</p><h4 id="获取jQuery对象"><a href="#获取jQuery对象" class="headerlink" title="获取jQuery对象"></a>获取jQuery对象</h4><pre><code>$(window).load(function(){    var div = $(&quot;#parent&quot;);    var lis = $(&quot;.list&quot;);    var inps = $(&quot;input&quot;)});</code></pre><h4 id="DOM对象与jQuery对象之间的转换"><a href="#DOM对象与jQuery对象之间的转换" class="headerlink" title="DOM对象与jQuery对象之间的转换"></a>DOM对象与jQuery对象之间的转换</h4><p>  1）给构造函数$()传入一个选择器，然后它会找到这个选择器所匹配的DOM对象，并将其包装成jQuery对象：</p><pre><code>    $(&quot;#parent&quot;)</code></pre><p>  2）直接将一个DOM对象传递给$()，然后这个构造函数会将其包装成jQuery对象：</p><pre><code>    $(window)</code></pre><p># </p><pre><code>  var lis = $(&quot;.list&quot;);        var origDOM = [];         for(var i = 0; i &lt; lis.length; i++) {            origDOM[i] = lis[i];        }将jQuery当成一个数组读取，就能获取原始的DOM对象。</code></pre><h3 id="jQuery使用"><a href="#jQuery使用" class="headerlink" title="jQuery使用"></a>jQuery使用</h3><p>在使用纯JS编程的阶段，我们要查找节点可以有两种方式，一种是通过DOM标准提供的几个方法，例如getElementById、getElementsByTagName等；另一种则是CSS标准中提供的选择器的方法，如querySelector、querySelectorAll。</p><p>jQuery中的选择器兼容了CSS中的选择器，也就是说，可以像使用querySelector和querySelectorAll方法那样去使用jQuery选择器，除此之外，jQuery还对选择器进行了进一步的扩展，能够更方便的根据更精细的条件查找节点。</p><h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><pre><code>var parEl, trEls, listEls;$(window).load(function() {    // 获取 id 为 parent 的 div 元素    parEl = $(&#39;#parent&#39;);    // 获取所有 tr 标签元素    trEls = $(&#39;tr&#39;);    // 获取所有 class 为 list 的元素    listEls = $(&#39;.list&#39;);    //    console.log(parEl[0].tagName + &quot;+&quot; + trEls.length + &quot;+&quot; +listEls.length);}); </code></pre><h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><p>如果是前端AJAX目前是一项核心技术，如果是后端那也得会用，如果是全栈那更不用说了。</p><p>AJAX其实是几个单词的缩写，也就是异步的JavaScript和XML请求。</p><p>Ajax的核心是XMLHttpRequest对象，它是Ajax实现的关键——发送异步请求、接收响应及执行回调都是通过它来完成的。XMLHttpRequest对象最早是在Microsoft Internet Explorer 5.0 ActiveX组件中被引入的，之后各大浏览器厂商都以JavaScript内置对象的方式来实现XMLHttpRequest对象。虽然大家对它的实现方式有所区别，但是绝大多数浏览器都提供类似的属性和方法，而且在实际脚本编写方法上的区别也不大，实现得到的效果也基本相同。目前W3C组织正致力于制定一个各浏览器厂商可以统一遵照执行的XMLHttpRequest对象标准，用来推进Ajax技术的推广与发展。</p><h4 id="AJAX优点"><a href="#AJAX优点" class="headerlink" title="AJAX优点"></a>AJAX优点</h4><p>既然要学Ajax，那它的优势还是有必要了解一下的。</p><p>1、不需要插件支持</p><p>Ajax不需要任何浏览器插件，就可以被绝大多数主流浏览器所支持，用户只需要允许JavaScript在浏览器上执行即可。</p><p>2、优秀的用户体验</p><p>这是Ajax技术的最大优点，能在不刷新整个页面的前提下更新数据，这使得web应用程序能更为迅速地回应用户的操作。</p><p>3、提高web程序的性能</p><p>与传统模式相比，Ajax模式在性能上的最大区别就在于传输数据的方式，在传统模式中，数据提交是通过表单（Form）来实现的，而数据获取是靠全页面刷新来重新获取整页的内容。Ajax模式只是通过XMLHttpRequest对象向服务器端提交希望提交的数据，即按需发送。</p><p>4、减轻服务器和带宽的负担</p><p>Ajax的工作原理相当于在用户和服务器之间加了一个中间层，使用户操作与服务器响应异步化。它在客户端创建Ajax引擎，把传统方式下的一些服务器负担的工作转移到客户端，便于客户端资源来处理，减轻服务器和带宽的负担。</p><h4 id="原生js-AJAX使用"><a href="#原生js-AJAX使用" class="headerlink" title="原生js-AJAX使用"></a>原生js-AJAX使用</h4><pre><code>$(window).load(function() {    var xhr = new XMLHttpRequest();    var url = &quot;http://wthrcdn.etouch.cn/weather_mini?city=北京&quot;;    xhr.onreadystatechange = function() {        if (xhr.readyState == 4 &amp;&amp; xhr.status==200) {                $(&#39;body&#39;).text(xhr.responseText);                console.log(xhr.responseText);        }         else {          console.log(&quot;error&quot;);         }    };    xhr.open(&quot;get&quot;, url, true);    xhr.send(null);});</code></pre><p>AJAX功能通过浏览器提供的XMLHttpRequest对象实现，所以首先创建一个XMLHttpRequest对象。</p><pre><code>var xhr = new XMLHttpRequest();</code></pre><p>然后为xhr设置一个事件回调函数：</p><pre><code>xhr.onreadystatechange = function() {}</code></pre><p>我们之前说过使用AJAX来加载数据是异步的，也就是说，当我们的请求发送出去之后，会继续做别的事情，不会等待响应。那么等响应回来了由谁去处理呢？</p><p>因此，我们为这个响应事件设置一个回调函数，当响应回来之后，触发这个事件，然后就调用相应的函数来处理。</p><p>然后再设置这个xhr对象的请求方式，请求路径：</p><pre><code>xhr.open(&quot;get&quot;, url, true);</code></pre><p>然后最关键的一步是将构造好的这个请求，发送出去：</p><pre><code>xhr.send(null);</code></pre><p>然后看看这个onreadystatechange事件处理函数：当响应返回时，响应信息仍然在我们之前创建的这个xhr对象中，我们通过解析这个对象，来获取响应的相关信息。</p><p>在这个事件处理函数中，我们根据响应的状态码来判断响应是成功还是失败，如果成功则解析数据，进行后续处理，如果失败，则给出错误信息。</p><h4 id="jQuery下Ajax使用"><a href="#jQuery下Ajax使用" class="headerlink" title="jQuery下Ajax使用"></a>jQuery下Ajax使用</h4><pre><code>$(window).load(function() {    var aj = $.ajax( {          url: &#39;http://wthrcdn.etouch.cn/weather_mini?city=北京&#39;,          type:&#39;get&#39;,          dataType:&#39;json&#39;,          success:function(data) {            $(&#39;body&#39;).text(data);            console.log(data);        },          error : function() {                alert(&quot;异常！&quot;);           }      });});</code></pre><p><img src="http://img.ahdy.top/6367140817073399342412211.png" alt></p>]]></content>
       
       
       <categories>
