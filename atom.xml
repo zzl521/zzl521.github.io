@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-15T16:02:05.173Z</updated>
+  <updated>2020-04-15T16:12:44.405Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2020/04/16/draiy/hobby/"/>
     <id>http://yoursite.com/2020/04/16/draiy/hobby/</id>
     <published>2020-04-15T17:59:00.000Z</published>
-    <updated>2020-04-15T16:02:05.173Z</updated>
+    <updated>2020-04-15T16:12:44.405Z</updated>
     
     <summary type="html">
     
@@ -377,9 +377,9 @@ DBAS
       <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
     
     
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
       <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
     
   </entry>
   
@@ -405,9 +405,9 @@ DBAS
       <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
     
     
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
       <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
     
   </entry>
   
