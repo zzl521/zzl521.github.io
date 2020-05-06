@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>Java-QQ邮箱发送邮件</title>
+      <link href="/2020/05/06/framework/qqemail/"/>
+      <url>/2020/05/06/framework/qqemail/</url>
+      
+        <content type="html"><![CDATA[<h3 id="steps"><a href="#steps" class="headerlink" title="steps"></a>steps</h3><p>When we register an account, we often see the way to send email verification code to verify, so how is this function achieved?</p><p>The first step is to log into your QQ email<br><img src="http://img.ahdy.top/2020-05-06_144841.png" alt></p><p><img src="http://img.ahdy.top/2020-05-06_131507.png" alt="Find the account and open the first service"></p><p><img src="http://img.ahdy.top/2020-05-06_144548.png" alt="发送会消耗一毛钱"></p><pre><code>After successful opening, you will get the authorization codeThis authorization code is critical,please save now.</code></pre><h3 id="I’ve-already-written-the-code-for-qqEmail"><a href="#I’ve-already-written-the-code-for-qqEmail" class="headerlink" title="I’ve already written the code for qqEmail"></a>I’ve already written the code for qqEmail</h3><pre><code>package Demo;import com.sun.deploy.util.StringUtils;import org.apache.commons.mail.HtmlEmail;import java.util.*;/*    writer：zzl    date: 2020-5.5    function: send QQEmail interface */public class QEmail {    public static void main(String[] args) {        String Email=&quot;860786071@qq.com&quot;;        sendEamilCode(Email);    }    public static String sendEamilCode(String eamil) {        // 创建HtmlEmail对象        HtmlEmail send = new HtmlEmail();        // 获取验证码        String achieveCode = achieveCode();        try {            send.setHostName(&quot;smtp.qq.com&quot;);// 服务器名称 smtp.qq.com            send.setSmtpPort(465);// 端口号           /* send.setSSL(true);              send.setTLS(true);*/            send.setSSLOnConnect(true);// 开启SSL服务            send.setCharset(&quot;utf-8&quot;);// 设置字符集            System.out.println(&quot;receiver : &quot;+eamil);            send.addTo(eamil); // 接收者的QQEamil pxkryqrpxxhkcaaj            send.setFrom(&quot;2503963481@qq.com&quot;, &quot;GRE-ZZL&quot;);// 第一个参数是发送者的QQEamil   第二个参数是发送者QQ昵称            send.setAuthentication(&quot;2503963481@qq.com&quot;, &quot;&quot;);// 第一个参数是发送者的QQEamil   第二个参数是授权码            send.setSubject(&quot;&quot;); // 主题            send.setMsg(&quot;功能测试\t验证码：&quot; + achieveCode + &quot;\t&quot;); // 设置内容            send.send();// 发送信息            System.out.println(&quot;发送成功&quot;);        } catch (Exception e) {            e.printStackTrace();        }        return achieveCode;    }    private static String achieveCode() {        Set&lt;String&gt;set=new HashSet&lt;String&gt;();        Random random=new Random();        for (int i=0;i&lt;=10;i++){            int change=random.nextInt(10);            String string=String.valueOf(change);            set.add(string);            if (set.size()==5)break;        }        List&lt;String&gt;StringList=new ArrayList&lt;String&gt;(set);        String s=StringUtils.join(StringList,&quot;&quot;);        System.out.println(s);        return s;    }}</code></pre><h3 id="import-pom-xml-settings"><a href="#import-pom-xml-settings" class="headerlink" title="import pom.xml settings"></a>import pom.xml settings</h3><pre><code> &lt;!-- https://mvnrepository.com/artifact/activation/activation --&gt;&lt;dependency&gt;  &lt;groupId&gt;activation&lt;/groupId&gt;  &lt;artifactId&gt;activation&lt;/artifactId&gt;  &lt;version&gt;1.0.2&lt;/version&gt;&lt;/dependency&gt;&lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email --&gt;&lt;dependency&gt;  &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;  &lt;artifactId&gt;commons-email&lt;/artifactId&gt;  &lt;version&gt;1.5&lt;/version&gt;&lt;/dependency&gt;&lt;!-- https://mvnrepository.com/artifact/mail/mail --&gt;&lt;dependency &gt;  &lt;groupId &gt;javax.mail &lt;/groupId &gt;  &lt;artifactId &gt;mail &lt;/artifactId &gt;  &lt;version &gt;1.4.6 &lt;/version &gt;&lt;/dependency &gt;&lt;dependency &gt;  &lt;groupId &gt;com.sun.mail &lt;/groupId &gt;  &lt;artifactId &gt;javax.mail &lt;/artifactId &gt;  &lt;version &gt;1.5.5 &lt;/version &gt;&lt;/dependency &gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Email </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> QQ </tag>
+            
+            <tag> Email </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>QQ超链接推广</title>
+      <link href="/2020/05/04/draiy/addqq/"/>
+      <url>/2020/05/04/draiy/addqq/</url>
+      
+        <content type="html"><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><pre><code>电脑端：代码1：tencent //message/?uin=QQ号码&amp;Site=&amp;Menu=yes代码2：https://wpa.qq.com/msgrd?v=3&amp;uin=QQ号码&amp;site=qqq&amp;menu=yes手机端：代码1： mqqwpa //im/chat?chat_type=wpa&amp;uin=QQ号码&amp;version=1&amp;src_type=web代码2：http //webpresence.qq.com/getonline?Type=1&amp;QQ号码1:QQ号码2</code></pre><h3 id="加群"><a href="#加群" class="headerlink" title="加群"></a>加群</h3><p><a href="https://qun.qq.com/join.html" target="_blank" rel="noopener">官方api</a><br><img src="http://img.ahdy.top/2020-05-04_072233.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> QQ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 推广 </tag>
+            
+            <tag> 好友 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA 项目导出WAR包</title>
+      <link href="/2020/05/02/idea/buildwar/"/>
+      <url>/2020/05/02/idea/buildwar/</url>
+      
+        <content type="html"><![CDATA[<h3 id="How-to-pack？"><a href="#How-to-pack？" class="headerlink" title="How to pack？"></a>How to pack？</h3><p>First, open the file and find ProjectStructure</p><p>Next，find artifacts-&gt;create web application  archive</p><p><img src="http://img.ahdy.top/2020-05-04_070453.png" alt></p><p><img src="http://img.ahdy.top/2020-05-04_070419.png" alt></p><p>In the end Build—&gt;Build Artifacts xxx:war—&gt;Build</p><p>The generated war package is in the output directory</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IDE </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IDEA </tag>
+            
+            <tag> WAR </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>php环境快速搭建</title>
       <link href="/2020/05/01/php/usephp/"/>
       <url>/2020/05/01/php/usephp/</url>
@@ -309,9 +390,9 @@
       
         <tags>
             
-            <tag> GUI </tag>
-            
             <tag> FX </tag>
+            
+            <tag> GUI </tag>
             
         </tags>
       
@@ -633,9 +714,9 @@
       
         <tags>
             
-            <tag> 人肉 </tag>
-            
             <tag> Message </tag>
+            
+            <tag> 人肉 </tag>
             
         </tags>
       
@@ -914,33 +995,6 @@
     
     
     <entry>
-      <title>简易版聊天室</title>
-      <link href="/2019/12/11/java/socket/"/>
-      <url>/2019/12/11/java/socket/</url>
-      
-        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Socket </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>How to use vue.js</title>
       <link href="/2019/12/11/framework/vue/"/>
       <url>/2019/12/11/framework/vue/</url>
@@ -960,6 +1014,33 @@
             <tag> 环境 </tag>
             
             <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>简易版聊天室</title>
+      <link href="/2019/12/11/java/socket/"/>
+      <url>/2019/12/11/java/socket/</url>
+      
+        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Socket </tag>
             
         </tags>
       
@@ -1065,9 +1146,9 @@
       
         <tags>
             
-            <tag> 传递 </tag>
-            
             <tag> JSTL </tag>
+            
+            <tag> 传递 </tag>
             
         </tags>
       
@@ -1157,33 +1238,6 @@
     
     
     <entry>
-      <title>布局样式失效</title>
-      <link href="/2019/11/23/ssm/missimgcss/"/>
-      <url>/2019/11/23/ssm/missimgcss/</url>
-      
-        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 样式 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> JS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>iframe标签</title>
       <link href="/2019/11/23/ssm/ifream/"/>
       <url>/2019/11/23/ssm/ifream/</url>
@@ -1203,6 +1257,33 @@
             <tag> 子页面 </tag>
             
             <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> JS </tag>
             
         </tags>
       
@@ -1738,9 +1819,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -1792,9 +1873,9 @@
       
         <tags>
             
-            <tag> MAC </tag>
-            
             <tag> windows </tag>
+            
+            <tag> MAC </tag>
             
         </tags>
       
@@ -2332,9 +2413,9 @@
       
         <tags>
             
-            <tag> SQL </tag>
-            
             <tag> JBDC </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
@@ -2386,9 +2467,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> Tomcat </tag>
+            
+            <tag> 服务器 </tag>
             
         </tags>
       
@@ -2532,33 +2613,6 @@
     
     
     <entry>
-      <title>Java难点</title>
-      <link href="/2019/07/22/java/java5/"/>
-      <url>/2019/07/22/java/java5/</url>
-      
-        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 抽象类|接口 </tag>
-            
-            <tag> 访问控制符 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>域名</title>
       <link href="/2019/07/22/yuming/"/>
       <url>/2019/07/22/yuming/</url>
@@ -2578,6 +2632,33 @@
             <tag> 域名 </tag>
             
             <tag> 二级域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java难点</title>
+      <link href="/2019/07/22/java/java5/"/>
+      <url>/2019/07/22/java/java5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抽象类|接口 </tag>
+            
+            <tag> 访问控制符 </tag>
             
         </tags>
       
