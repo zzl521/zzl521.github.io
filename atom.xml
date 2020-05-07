@@ -95,9 +95,9 @@
       <category term="IDE" scheme="http://yoursite.com/categories/IDE/"/>
     
     
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
       <category term="WAR" scheme="http://yoursite.com/tags/WAR/"/>
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
     
   </entry>
   
@@ -214,7 +214,7 @@
     <link href="http://yoursite.com/2020/04/16/draiy/hobby/"/>
     <id>http://yoursite.com/2020/04/16/draiy/hobby/</id>
     <published>2020-04-15T17:59:00.000Z</published>
-    <updated>2020-04-15T16:12:44.405Z</updated>
+    <updated>2020-05-07T14:19:18.761Z</updated>
     
     <summary type="html">
     
@@ -428,9 +428,9 @@
       <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
     
     
-      <category term="FX" scheme="http://yoursite.com/tags/FX/"/>
-    
       <category term="GUI" scheme="http://yoursite.com/tags/GUI/"/>
+    
+      <category term="FX" scheme="http://yoursite.com/tags/FX/"/>
     
   </entry>
   
