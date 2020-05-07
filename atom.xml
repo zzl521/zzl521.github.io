@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-06T07:24:49.056Z</updated>
+  <updated>2020-05-07T21:48:04.891Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>For foreign friends</title>
+    <link href="http://yoursite.com/2020/05/08/draiy/friendship/"/>
+    <id>http://yoursite.com/2020/05/08/draiy/friendship/</id>
+    <published>2020-05-07T21:47:00.000Z</published>
+    <updated>2020-05-07T21:48:04.891Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;instructions&quot;&gt;&lt;a href=&quot;#instructions&quot; class=&quot;headerlink&quot; title=&quot;instructions&quot;&gt;&lt;/a&gt;instructions&lt;/h3&gt;&lt;p&gt;After a lot of thought, I
+        
+      
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+    
+    
+      <category term="H" scheme="http://yoursite.com/tags/H/"/>
+    
+  </entry>
   
   <entry>
     <title>Java-QQ邮箱发送邮件</title>
@@ -95,9 +121,9 @@
       <category term="IDE" scheme="http://yoursite.com/categories/IDE/"/>
     
     
-      <category term="WAR" scheme="http://yoursite.com/tags/WAR/"/>
-    
       <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+      <category term="WAR" scheme="http://yoursite.com/tags/WAR/"/>
     
   </entry>
   
@@ -545,34 +571,6 @@ DBAS
       <category term="FX" scheme="http://yoursite.com/tags/FX/"/>
     
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA项目转换</title>
-    <link href="http://yoursite.com/2020/02/21/idea/problem2/"/>
-    <id>http://yoursite.com/2020/02/21/idea/problem2/</id>
-    <published>2020-02-21T14:59:00.000Z</published>
-    <updated>2020-02-25T17:58:48.764Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-    
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
-      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
     
   </entry>
   
