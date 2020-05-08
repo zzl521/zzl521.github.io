@@ -696,33 +696,6 @@
     
     
     <entry>
-      <title>个人网上信息挖掘</title>
-      <link href="/2020/01/07/attark/search/"/>
-      <url>/2020/01/07/attark/search/</url>
-      
-        <content type="html"><![CDATA[<h3 id="获取一个人的地理位置"><a href="#获取一个人的地理位置" class="headerlink" title="获取一个人的地理位置"></a>获取一个人的地理位置</h3><p>可以参考<a href="http://z.ahdy.top/2019/10/11/attark/findip/" target="_blank" rel="noopener">ip定位</a><br>内容补充<a href="https://www.opengps.cn/" target="_blank" rel="noopener">高精度IP定位</a><br>进站后选择定位技术-&gt;高精度定位。  </p><p><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">百度地图开放平台</a></p><p><a href="https://lbs.amap.com" target="_blank" rel="noopener">高德地图开放平台</a>  </p><p><a href="http://www.net.cn/static/customercare/yourip.asp" target="_blank" rel="noopener">本地公网IP地址获取</a>  </p><p><a href="http://www.ip138.com/" target="_blank" rel="noopener">多功能查询地址</a></p><h3 id="人肉思路"><a href="#人肉思路" class="headerlink" title="人肉思路"></a>人肉思路</h3><p>首先可以百度QQ号，看看能不能利用搜索引擎搜索到他在网上的痕迹，一般的如果对方玩过贴吧，将会进一步为信息采集提供便利，如果能找到对方百度贴吧的ID那么就能通过找回密码的方式对对方进行骚扰，当然以前QQ也是这种，后来QQ改了，让自己给服务器发送编码，发送完成后选择我已经发送才可以修改密码，利用百度贴吧ID找回密码的信息，可以通过暴力的方式去获取对方手机号码，比如在找回密码的时候你会看到有这样一条信息请输入186<strong>**</strong>08收到验证码后输入验证码完成修改密码，这时候如果你知道对方的家在哪（IP定位），就能够根据区域号知道他中间四位数字，然后使用枚举，暴力出缺失的两位，其中必定有一个是目标的手机号，俗话所错杀一千不能放过一个你可以对暴力出的所有号码进行短信轰炸。<br>其实真正挖掘信息是非常困难的一件事情，这种方式只局限于QQ好友，微信好友等。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> diary </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 人肉 </tag>
-            
-            <tag> Message </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>爱而不得</title>
       <link href="/2020/01/07/draiy/love/"/>
       <url>/2020/01/07/draiy/love/</url>
@@ -740,6 +713,33 @@
         <tags>
             
             <tag> 日记 </tag>
+            
+            <tag> Message </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人网上信息挖掘</title>
+      <link href="/2020/01/07/attark/search/"/>
+      <url>/2020/01/07/attark/search/</url>
+      
+        <content type="html"><![CDATA[<h3 id="获取一个人的地理位置"><a href="#获取一个人的地理位置" class="headerlink" title="获取一个人的地理位置"></a>获取一个人的地理位置</h3><p>可以参考<a href="http://z.ahdy.top/2019/10/11/attark/findip/" target="_blank" rel="noopener">ip定位</a><br>内容补充<a href="https://www.opengps.cn/" target="_blank" rel="noopener">高精度IP定位</a><br>进站后选择定位技术-&gt;高精度定位。  </p><p><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">百度地图开放平台</a></p><p><a href="https://lbs.amap.com" target="_blank" rel="noopener">高德地图开放平台</a>  </p><p><a href="http://www.net.cn/static/customercare/yourip.asp" target="_blank" rel="noopener">本地公网IP地址获取</a>  </p><p><a href="http://www.ip138.com/" target="_blank" rel="noopener">多功能查询地址</a></p><h3 id="人肉思路"><a href="#人肉思路" class="headerlink" title="人肉思路"></a>人肉思路</h3><p>首先可以百度QQ号，看看能不能利用搜索引擎搜索到他在网上的痕迹，一般的如果对方玩过贴吧，将会进一步为信息采集提供便利，如果能找到对方百度贴吧的ID那么就能通过找回密码的方式对对方进行骚扰，当然以前QQ也是这种，后来QQ改了，让自己给服务器发送编码，发送完成后选择我已经发送才可以修改密码，利用百度贴吧ID找回密码的信息，可以通过暴力的方式去获取对方手机号码，比如在找回密码的时候你会看到有这样一条信息请输入186<strong>**</strong>08收到验证码后输入验证码完成修改密码，这时候如果你知道对方的家在哪（IP定位），就能够根据区域号知道他中间四位数字，然后使用枚举，暴力出缺失的两位，其中必定有一个是目标的手机号，俗话所错杀一千不能放过一个你可以对暴力出的所有号码进行短信轰炸。<br>其实真正挖掘信息是非常困难的一件事情，这种方式只局限于QQ好友，微信好友等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> diary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 人肉 </tag>
             
             <tag> Message </tag>
             
@@ -1263,33 +1263,6 @@
     
     
     <entry>
-      <title>布局样式失效</title>
-      <link href="/2019/11/23/ssm/missimgcss/"/>
-      <url>/2019/11/23/ssm/missimgcss/</url>
-      
-        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 样式 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> JS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>iframe标签</title>
       <link href="/2019/11/23/ssm/ifream/"/>
       <url>/2019/11/23/ssm/ifream/</url>
@@ -1309,6 +1282,33 @@
             <tag> 子页面 </tag>
             
             <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>布局样式失效</title>
+      <link href="/2019/11/23/ssm/missimgcss/"/>
+      <url>/2019/11/23/ssm/missimgcss/</url>
+      
+        <content type="html"><![CDATA[<h3 id="问题简介"><a href="#问题简介" class="headerlink" title="问题简介"></a>问题简介</h3><p>当使用重定向转发时发现跳转后的界面失去了布局样式，这种情况一般是路径问题。<br>当在jsp中引入css时，如果其相对路径相对于当前jsp文件的，而在一个和这个jsp的路径不一样的servlet中forward这个jsp时，就会发现这个css样式根本没有起作用。</p><p>这是因为在servlet中转发时css的路径就是相对于这个servlet的相对路径而非jsp的路径了。</p><p>所以这时候不能在jsp中用这样的路径：</p><p><link href="one.css" rel="stylesheet" type="text/css"><br>或者</p><p><link href="../../one.css" rel="stylesheet" type="text/css"></p><h4 id="在css-js的路径前加-pageContext-request-contextPath-，就可以了"><a href="#在css-js的路径前加-pageContext-request-contextPath-，就可以了" class="headerlink" title="在css/js的路径前加${pageContext.request.contextPath}，就可以了"></a>在css/js的路径前加${pageContext.request.contextPath}，就可以了</h4><p>${pageContext.request.contextPath}是JSP取得绝对路径的方法，等价于&lt;%=request.getContextPath()%&gt; 。<br>也就是取出部署的应用程序名或者是当前的项目名称</p><p>比如我的项目名称是demo1在浏览器中输入为<a href="http://localhost:8080/demo1/a.jsp" target="_blank" rel="noopener">http://localhost:8080/demo1/a.jsp</a> ${pageContext.request.contextPath}或&lt;%=request.getContextPath()%&gt;取出来的就是/demo1,而”/“代表的含义就是<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p><p>故有时候项目中这样写${pageContext.request.contextPath}/a.jsp</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 样式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> JS </tag>
             
         </tags>
       
@@ -1844,9 +1844,9 @@
       
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> windows </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
       
@@ -1898,9 +1898,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> MAC </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -1925,9 +1925,9 @@
       
         <tags>
             
-            <tag> AS </tag>
-            
             <tag> 环境 </tag>
+            
+            <tag> AS </tag>
             
         </tags>
       
@@ -2638,33 +2638,6 @@
     
     
     <entry>
-      <title>Java难点</title>
-      <link href="/2019/07/22/java/java5/"/>
-      <url>/2019/07/22/java/java5/</url>
-      
-        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 抽象类|接口 </tag>
-            
-            <tag> 访问控制符 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>域名</title>
       <link href="/2019/07/22/yuming/"/>
       <url>/2019/07/22/yuming/</url>
@@ -2684,6 +2657,33 @@
             <tag> 域名 </tag>
             
             <tag> 二级域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java难点</title>
+      <link href="/2019/07/22/java/java5/"/>
+      <url>/2019/07/22/java/java5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抽象类|接口 </tag>
+            
+            <tag> 访问控制符 </tag>
             
         </tags>
       
