@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-07T21:48:04.891Z</updated>
+  <updated>2020-05-11T10:00:19.381Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,119 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Springboot-web项目</title>
+    <link href="http://yoursite.com/2020/05/12/framework/botvoice/"/>
+    <id>http://yoursite.com/2020/05/12/framework/botvoice/</id>
+    <published>2020-05-12T04:15:00.000Z</published>
+    <updated>2020-05-11T10:00:19.381Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;絮叨&quot;&gt;&lt;a href=&quot;#絮叨&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="讯飞语音" scheme="http://yoursite.com/tags/%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Create Springboot项目</title>
+    <link href="http://yoursite.com/2020/05/11/idea/springboot/"/>
+    <id>http://yoursite.com/2020/05/11/idea/springboot/</id>
+    <published>2020-05-11T04:59:00.000Z</published>
+    <updated>2020-05-11T09:26:27.025Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;IDEA教程&quot;&gt;&lt;a href=&quot;#IDEA教程&quot; class=&quot;headerlink&quot; title=&quot;IDEA教程&quot;&gt;&lt;/a&gt;IDEA教程&lt;/h3&gt;&lt;p&gt;关于IDE其实有很多争议，我觉得IDEA比较好，能最大程度提升开发效率，毕竟时间就是金钱。&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
+    
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+      <category term="Springboot" scheme="http://yoursite.com/tags/Springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>servlet获取当前路径</title>
+    <link href="http://yoursite.com/2020/05/10/web/servletpath/"/>
+    <id>http://yoursite.com/2020/05/10/web/servletpath/</id>
+    <published>2020-05-10T04:59:00.000Z</published>
+    <updated>2020-05-11T09:41:04.880Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;对不用它的人来书可能用处不大，哈哈&quot;&gt;&lt;a href=&quot;#对不用它的人来书可能用处不大，哈哈&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="servlet" scheme="http://yoursite.com/tags/servlet/"/>
+    
+      <category term="tomcat" scheme="http://yoursite.com/tags/tomcat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA导入项目运行报错</title>
+    <link href="http://yoursite.com/2020/05/10/idea/problem4/"/>
+    <id>http://yoursite.com/2020/05/10/idea/problem4/</id>
+    <published>2020-05-10T04:59:00.000Z</published>
+    <updated>2020-05-11T09:49:32.160Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;报错&quot;&gt;&lt;a href=&quot;#报错&quot; class=&quot;headerlink&quot; title=&quot;报错&quot;&gt;&lt;/a&gt;报错&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;Cannot start compilation: the output path is not specified
+        
+      
+    
+    </summary>
+    
+      <category term="IDEA" scheme="http://yoursite.com/categories/IDEA/"/>
+    
+    
+      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
+    
+      <category term="error" scheme="http://yoursite.com/tags/error/"/>
+    
+  </entry>
   
   <entry>
     <title>For foreign friends</title>
@@ -457,120 +570,6 @@
       <category term="GUI" scheme="http://yoursite.com/tags/GUI/"/>
     
       <category term="FX" scheme="http://yoursite.com/tags/FX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java算法-API</title>
-    <link href="http://yoursite.com/2020/02/25/java/javamath/"/>
-    <id>http://yoursite.com/2020/02/25/java/javamath/</id>
-    <published>2020-02-25T14:59:00.000Z</published>
-    <updated>2020-03-06T20:23:34.843Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;字符串比较&quot;&gt;&lt;a href=&quot;#字符串比较&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="JAVA" scheme="http://yoursite.com/categories/JAVA/"/>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="String" scheme="http://yoursite.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机三级数据库备考资源</title>
-    <link href="http://yoursite.com/2020/02/24/database/note2/"/>
-    <id>http://yoursite.com/2020/02/24/database/note2/</id>
-    <published>2020-02-24T14:59:00.000Z</published>
-    <updated>2020-02-28T22:23:13.568Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;认知&quot;&gt;&lt;a href=&quot;#认知&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="国三" scheme="http://yoursite.com/categories/%E5%9B%BD%E4%B8%89/"/>
-    
-    
-      <category term="Computer" scheme="http://yoursite.com/tags/Computer/"/>
-    
-      <category term="Note" scheme="http://yoursite.com/tags/Note/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据库笔记</title>
-    <link href="http://yoursite.com/2020/02/23/database/note/"/>
-    <id>http://yoursite.com/2020/02/23/database/note/</id>
-    <published>2020-02-23T14:59:00.000Z</published>
-    <updated>2020-03-28T18:18:29.426Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;数据库应用系统生命周期&quot;&gt;&lt;a href=&quot;#数据库应用系统生命周期&quot; class=&quot;headerlink&quot; title=&quot;数据库应用系统生命周期&quot;&gt;&lt;/a&gt;数据库应用系统生命周期&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;DMS 数据库系统(概念最大的系统)
-
-DBAS
-        
-      
-    
-    </summary>
-    
-      <category term="国三" scheme="http://yoursite.com/categories/%E5%9B%BD%E4%B8%89/"/>
-    
-    
-      <category term="Computer" scheme="http://yoursite.com/tags/Computer/"/>
-    
-      <category term="Note" scheme="http://yoursite.com/tags/Note/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java GUI程序</title>
-    <link href="http://yoursite.com/2020/02/22/fx/fx1/"/>
-    <id>http://yoursite.com/2020/02/22/fx/fx1/</id>
-    <published>2020-02-22T14:59:00.000Z</published>
-    <updated>2020-03-12T08:19:20.686Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;FX简介&quot;&gt;&lt;a href=&quot;#FX简介&quot; class=&quot;headerlink&quot; title=&quot;FX简介&quot;&gt;&lt;/a&gt;FX简介&lt;/h3&gt;&lt;p&gt;Sun公司已于2008年12月05日发布了JavaFX技术的正式版，它使您能利用 JavaFX
-        
-      
-    
-    </summary>
-    
-      <category term="FX" scheme="http://yoursite.com/categories/FX/"/>
-    
-    
-      <category term="FX" scheme="http://yoursite.com/tags/FX/"/>
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
