@@ -5,8 +5,10 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Springboot-web项目, Joker">
-    <meta name="description" content="絮叨暂时没写好，过两天
-">
+    <meta name="description" content="絮叨很久都没打开编译器了，代码也生疏了，好在我会面向百度，哈哈，前前后后也搞了四五天总算是搞差不多了。
+主要功能就是文字合成语音，语音转换为文字。支持安卓端，支持音频下载。
+项目演示截图下面就开始我的开发过程。
+注册讯飞开放平台账号注册之后">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -363,14 +365,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        10
+                        1.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        1 Min
+                        7 Min
                     </div>
                     
                 
@@ -386,7 +388,220 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="絮叨"><a href="#絮叨" class="headerlink" title="絮叨"></a>絮叨</h3><p>暂时没写好，过两天</p>
+                <h3 id="絮叨"><a href="#絮叨" class="headerlink" title="絮叨"></a>絮叨</h3><p>很久都没打开编译器了，代码也生疏了，好在我会面向百度，哈哈，前前后后也搞了四五天总算是搞差不多了。</p>
+<p>主要功能就是文字合成语音，语音转换为文字。支持安卓端，支持音频下载。</p>
+<h3 id="项目演示截图"><a href="#项目演示截图" class="headerlink" title="项目演示截图"></a>项目演示截图</h3><p><img src="http://img.ahdy.top/2020-05-13_161922.png" alt><br><img src="http://img.ahdy.top/2020-05-13_161950.png" alt><br>下面就开始我的开发过程。</p>
+<h3 id="注册讯飞开放平台账号"><a href="#注册讯飞开放平台账号" class="headerlink" title="注册讯飞开放平台账号"></a>注册讯飞开放平台账号</h3><p>注册之后，会送你一万次接口使用次数，感觉还不错哦！</p>
+<p><a href="https://blog.csdn.net/qq_21808961/article/details/88344996" target="_blank" rel="noopener">先参考此处创建应用教程</a></p>
+<h4 id="将Java-SDK导入项目后"><a href="#将Java-SDK导入项目后" class="headerlink" title="将Java SDK导入项目后"></a>将Java SDK导入项目后</h4><p><a href="https://www.kancloud.cn/iflytek_sdk/msc_java/299245" target="_blank" rel="noopener">参考MSC开发指南</a></p>
+<p>这个我找了半天，我感觉讯飞的官方文档比较乱！</p>
+<p>不会用没关系，像我这么笨的看了一天才会，相信你看一眼就会了</p>
+<h4 id="语音合成关键代码解释"><a href="#语音合成关键代码解释" class="headerlink" title="语音合成关键代码解释"></a>语音合成关键代码解释</h4><p>以我合成好的代码为例</p>
+<pre><code>        public static Boolean flag = true;
+    // 合成监听器
+
+    public String convert(String message,String path){
+        try {
+            System.out.println(message);
+            //更换为自己 申请的APPID，初始化
+            SpeechUtility.createUtility(SpeechConstant.APPID + &quot;=5eb64d51&quot;);
+            //Setting.setShowLog(true);
+            // 1.创建SpeechSynthesizer对象
+            SpeechSynthesizer mTts = SpeechSynthesizer.createSynthesizer();
+            // 2.合成参数设置，详见《MSC Reference Manual》SpeechSynthesizer 类
+            String act= XunfeiConvert.actor;
+            mTts.setParameter(SpeechConstant.VOICE_NAME, act);// 设置发音人
+            mTts.setParameter(SpeechConstant.SPEED, &quot;50&quot;);// 设置语速
+            mTts.setParameter(SpeechConstant.VOLUME, &quot;80&quot;);// 设置音量，范围0~100
+            // 3.开始合成
+//            mTts.setParameter(SpeechConstant.AUDIO_FORMAT, &quot;pmc&quot;);
+//            mTts.setParameter(SpeechConstant.TTS_AUDIO_PATH, path);//设置语调，范围0~100
+            mTts.synthesizeToUri(message,path,mSynListener);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return &quot;文件生成成功！&quot;;
+    }
+    private final static SynthesizeToUriListener mSynListener = new SynthesizeToUriListener() {
+        //progress为合成进度0~100
+        public void onBufferProgress(int progress) {
+
+        }
+        //会话合成完成回调接口 URI为合成保存地址，error为错误信息，为null时表示合成会话成功
+        public void onSynthesizeCompleted(String uri, SpeechError error) {
+            System.out.println(uri);
+            System.out.println(error);
+            if(error==null){
+                System.out.println(&quot;生成路径地址:&quot;+uri);
+            }else{
+                System.out.println(error);
+            }
+            flag = true;
+        }
+        @Override
+        public void onEvent(int arg0, int arg1, int arg2, int arg3,
+                            Object arg4, Object arg5) {
+
+        }
+    };
+</code></pre><p>你可以写一个man函数来将参数传入，message为文本内容，path为生成的pcm文件地址。</p>
+<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p><a href="https://www.xfyun.cn/document/error-code?code=10111" target="_blank" rel="noopener">讯飞官方常见错误码查询</a></p>
+<pre><code>[SDK动态库未能加载-20021]
+参考地址
+https://www.cnblogs.com/john-  yang/p/8067245.html
+</code></pre><p><a href="http://bbs.xfyun.cn/forum.php?mod=viewthread&amp;tid=13010" target="_blank" rel="noopener">语音组合到本地没有pcm文件</a></p>
+<h3 id="对合成音频的处理"><a href="#对合成音频的处理" class="headerlink" title="对合成音频的处理"></a>对合成音频的处理</h3><p>这里需要用到ffmpeg处理pcm和mp3互转。ffmpeg也是一个第三方动态库。</p>
+<p><a href="https://ffmpeg.zeranoe.com/builds/" target="_blank" rel="noopener">ffmpeg下载-windows-static</a></p>
+<p><a href="https://www.jianshu.com/p/ddafe46827b7" target="_blank" rel="noopener">ffmpeg安装，环境测试</a></p>
+<p><a href="https://segmentfault.com/a/1190000016652277?utm_source=tag-newest" target="_blank" rel="noopener">ffmpeg 常用命令</a></p>
+<p><a href="https://blog.csdn.net/liutang9/article/details/75073144" target="_blank" rel="noopener">ffmpeg讯飞api下转码</a></p>
+<h3 id="配置好的ffmpeg工具类"><a href="#配置好的ffmpeg工具类" class="headerlink" title="配置好的ffmpeg工具类"></a>配置好的ffmpeg工具类</h3><pre><code>public static boolean processAudio(String oldfilepath,String newfilepath,String type) {  
+    List&lt;String&gt; commend = new ArrayList&lt;String&gt;();  
+    commend.add(&quot;D:\\ffmpeg\\bin\\ffmpeg.exe&quot;);//win  
+    //commend.add(&quot;ffmpeg&quot;);//linux Docker 
+    commend.add(&quot;-f&quot;);  
+    commend.add(&quot;s16le&quot;); 
+    commend.add(&quot;-ar&quot;);
+    commend.add(&quot;8000&quot;);
+    commend.add(&quot;-ac&quot;);
+    commend.add(&quot;2&quot;);
+    commend.add(&quot;-i&quot;);  
+    commend.add(oldfilepath);
+    commend.add(&quot;-acodec&quot;);//音频选项， 一般后面加copy表示拷贝
+    commend.add(&quot;mp3&quot;);
+    commend.add(&quot;-y&quot;);//表示覆盖旧文件
+    commend.add(newfilepath+&quot;.&quot;+type);
+    try {  
+        Process process = new ProcessBuilder(commend).redirectErrorStream(true).start();
+        BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        String line;
+        while ((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+        int exitCode = process.waitFor();// 加上这句，系统会等待转换完成。不加，就会在服务器后台自行转换。
+        System.out.println(&quot;exitCode = &quot;+exitCode);
+        Boolean flag = exitCode==0?true:false;
+        return flag;  
+    } catch (Exception e) {  
+        e.printStackTrace();  
+        return false;  
+    }  
+}
+</code></pre><h3 id="servlet代码"><a href="#servlet代码" class="headerlink" title="servlet代码"></a>servlet代码</h3><p>请求到该接口就能播放语音了，因为sdk其实是应用于安卓上的一套代码，搞到web上实属勉强。</p>
+<pre><code>@RestController
+public class XunfeiConvert  {
+public static String actor;
+public static String MP3path=null;
+@RequestMapping(&quot;/firstServlet&quot;)
+public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    String message = request.getParameter(&quot;message&quot;);
+     actor=request.getParameter(&quot;act&quot;);
+    System.out.println(actor);
+    System.out.println(message);
+    String basePath =request.getSession().getServletContext().getRealPath(&quot;&quot;);
+    Calendar c = Calendar.getInstance();
+    String audioName = String.valueOf(c.getTimeInMillis())+ Math.round(Math.random() * 100000);
+    //讯飞转PCM
+    String pcmPath = basePath+audioName+&quot;.pcm&quot;;
+//        pcmPath=pcmPath.replaceAll(&quot;\\\\&quot;,&quot;\\\\\\\\&quot;);
+    System.out.println(pcmPath);
+    try {
+        XcodeConvertUtil util = new XcodeConvertUtil();
+        String result=util.convert(message, pcmPath);
+        System.out.println(result);
+    }catch (Exception e){
+        e.printStackTrace();
+    }
+    XcodeConvertUtil util = new XcodeConvertUtil();
+    String result=util.convert(message, pcmPath);
+    System.out.println(result);
+    //由于生成PCM是异步的，这里while一直等待，直到生成
+    File file = new File(pcmPath);
+    if (!file.exists()){
+        System.out.println(&quot;file null&quot;);
+    }
+    while(true){
+        if(file.exists()){
+            //PCM转MP3
+            String audioPath =  basePath+audioName;
+            response.setHeader(&quot;Content-type&quot;, &quot;text/html;charset=UTF-8&quot;);
+            PrintWriter out = response.getWriter();
+            Boolean flag = FfmpegUtil.processAudio(pcmPath,audioPath,&quot;mp3&quot;);
+            if(flag){
+                out.println(audioName+&quot;.mp3&quot;);
+                 MP3path=audioPath+&quot;.mp3&quot;;
+                System.out.println(&quot;转换成功&quot;);
+                System.out.println(MP3path);
+            }else{
+                out.println(&quot;转换失败&quot;);
+            }
+            break;
+        }
+    }
+}
+</code></pre><h3 id="前端核心代码"><a href="#前端核心代码" class="headerlink" title="前端核心代码"></a>前端核心代码</h3><pre><code>        $(function () {
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data:{
+                title:&#39;语音合成&#39;,
+                message: &#39;请在此处粘贴文本内容&#39;
+            },
+            methods: {
+                convert: function () {
+                    if(vm.message===&quot;&quot;){vm.open(&quot;请输入文字&quot;);return}
+                    var act =document.getElementById(&#39;act&#39;).value;
+                    $.ajax({
+                        url : &quot;firstServlet&quot;,
+                        async : false,
+                        type : &#39;post&#39;,
+                        data : {&#39;time&#39; : (new Date()).toString(),&#39;message&#39;:vm.message,&#39;act&#39;:act},
+                        success : function(result) {
+                            $(&quot;#audio&quot;).attr(&quot;src&quot;,result);
+                            document.getElementById(&quot;audio&quot;).play();
+                        },
+                        error : function() {
+                            alert(&quot;网络异常&quot;);
+                        }
+                    });
+                },open: function (nodesc) {
+                    this.$Notice.open({
+                        title: &#39;温馨提示&#39;,
+                        desc: nodesc
+                    });
+                }
+            }
+        });
+    });
+</code></pre><h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><pre><code>    &lt;div id=&quot;app&quot; v-cloak style=&quot;text-align: center&quot;&gt;
+        &lt;div&gt;
+            &lt;h1 v-text=&quot;title&quot;&gt;&lt;/h1&gt;
+            &lt;i-input  v-model=&quot;message&quot; type=&quot;textarea&quot; :autosize=&quot;{minRows: 8,maxRows: 20}&quot; placeholder=&quot;请输入...&quot;&gt;&lt;/i-input&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;margin-top:10px;&quot;&gt;
+                            音色选择:
+            &lt;select id=&quot;act&quot;&gt;
+                &lt;option  value=&quot;x2_yezi&quot; &gt;少女&lt;/option&gt;
+                &lt;option  value=&quot;aisjiuxu&quot;&gt;男音&lt;/option&gt;
+                &lt;option  value=&quot;xiaoyan&quot;&gt;女音&lt;/option&gt;
+                &lt;option  value=&quot;aisbabyxu&quot;&gt;童音&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;i-button @click=&quot;convert&quot; type=&quot;primary&quot;&gt;合成播放&lt;/i-button&gt;
+            &lt;i-button  type=&quot;primary&quot;&gt;&lt;a href=&quot;download&quot; style=&quot;color: #e1f0fe&quot;&gt;下载音频&lt;/a&gt;&lt;/i-button&gt;
+
+        &lt;/div&gt;
+        &lt;div style=&quot;display: none&quot;&gt;
+            &lt;audio id=&quot;audio&quot; controls=&quot;controls&quot; &gt;&lt;/audio&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre><h3 id="语音转换文字参考"><a href="#语音转换文字参考" class="headerlink" title="语音转换文字参考"></a>语音转换文字参考</h3><p><a href="https://github.com/MedusaLeee/ContinuousSpeechRecognition" target="_blank" rel="noopener">github</a></p>
+<p>也是看了这位大神的demo，利用多线程解决了流式api只能录制60秒的问题。</p>
+<p>参数说明</p>
+<pre><code>    STT stt = new STT(Filepath+&quot;\\src\\main\\webapp\\recorder.wav&quot;, 30*1000);
+    stt.start();
+
+    //将前端传递过来的音频文件地址传递给第一个参数即可转换文字。
+</code></pre><h3 id="最后附上我的项目地址"><a href="#最后附上我的项目地址" class="headerlink" title="最后附上我的项目地址"></a>最后附上我的项目地址</h3><p>为了方便运行，集成了Springboot框架。</p>
+<p><a href="https://pan.baidu.com/s/1EtKLfbqpSPL7ckH2QygLLg" target="_blank" rel="noopener">百度网盘-提取码svjz</a></p>
 
             </div>
             <hr>
@@ -572,40 +787,38 @@
         
         <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/05/12/framework/botvoice/">
+                <a href="/2020/05/16/ssm/springbootpbm/">
                     <div class="card-image">
                         
-                        <img src="http://img.ahdy.top/171148-14912971084ea3.jpg" class="responsive-img" alt="Springboot-web项目">
+                        <img src="http://img.ahdy.top/00908e2d2300f7c450e0e1ee7f5b0bb0.png" class="responsive-img" alt="Spring Boot修改最大上传文件限制">
                         
-                        <span class="card-title">Springboot-web项目</span>
+                        <span class="card-title">Spring Boot修改最大上传文件限制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            整合讯飞语音Java SDK，实现语音文字互转。
+                            解决框架限制文件上传大小问题
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-12
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-05-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/框架/" class="post-category" target="_blank">
-                                    框架
+                            <a href="/categories/Springboot/" class="post-category" target="_blank">
+                                    Springboot
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -613,8 +826,8 @@
                         <span class="chip bg-color">框架</span>
                     </a>
                     
-                    <a href="/tags/讯飞语音/" target="_blank">
-                        <span class="chip bg-color">讯飞语音</span>
+                    <a href="/tags/报错/" target="_blank">
+                        <span class="chip bg-color">报错</span>
                     </a>
                     
                 </div>
@@ -793,7 +1006,7 @@
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">79.2k</span>
+                <span class="white-color">81.7k</span>
             
 
             

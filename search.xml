@@ -4,11 +4,146 @@
   
     
     <entry>
+      <title>Springboot前后端交互信息</title>
+      <link href="/2020/05/16/ssm/servletreponse/"/>
+      <url>/2020/05/16/ssm/servletreponse/</url>
+      
+        <content type="html"><![CDATA[<h3 id="最简单一种"><a href="#最简单一种" class="headerlink" title="最简单一种"></a>最简单一种</h3><pre><code>public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { ...         response.setContentType(&quot;text/html;charset=UTF-8&quot;); response.getWriter().write(&quot;xxxxx&quot;); response.getWriter().flush(); response.getWriter().close(); ...}</code></pre><h3 id="更多交互方式"><a href="#更多交互方式" class="headerlink" title="更多交互方式"></a>更多交互方式</h3><p><a href="https://blog.csdn.net/LinzhiQQQ/article/details/80632545" target="_blank" rel="noopener">csdn</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> IO </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Servlet </tag>
+            
+            <tag> 交互 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决盘符路径问题</title>
+      <link href="/2020/05/16/idea/patherror/"/>
+      <url>/2020/05/16/idea/patherror/</url>
+      
+        <content type="html"><![CDATA[<h3 id="解决java-net-MalformedURLException-unknown-protocol-c问题"><a href="#解决java-net-MalformedURLException-unknown-protocol-c问题" class="headerlink" title="解决java.net.MalformedURLException: unknown protocol: c问题"></a>解决java.net.MalformedURLException: unknown protocol: c问题</h3><pre><code>    String path=(&quot;file:///&quot; + 路径地址);</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IDEA </tag>
+            
+            <tag> Maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>获取HttpServletRequest中的文件对象并储存</title>
+      <link href="/2020/05/16/ssm/servletgetfile/"/>
+      <url>/2020/05/16/ssm/servletgetfile/</url>
+      
+        <content type="html"><![CDATA[<h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><pre><code>由于HttpServletRequest不能直接取出文件数据，所以将其强制转换为MultipartHttpServletRequest    MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;    List&lt;MultipartFile&gt; files = multipartRequest.getFiles(&quot;files&quot;);</code></pre><h3 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h3><pre><code>/*提交表单*/function myupload() {    $.ajax({        url:&quot;/exUploadController.do?uploadTest&quot;,        type : &quot;POST&quot;,        async: false,        cache: false,  //此处设置false        contentType: false,//必须设置false ,formupload1表单中必须设置enctype=&quot;multipart/form-data&quot;        processData: false,  //必须设置fals        data :new FormData(document.getElementById(&quot;myForm&quot;)),        success:function (data) {            alert(data);        },        error:function (XMLHttpRequest, textStatus, errorThrown) {            console.log(XMLHttpRequest);            console.log(textStatus);            console.log(errorThrown);        }    })}</code></pre><h3 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h3><pre><code>    HttpServletRequest request;　　　　　　//获取上传图片           MultipartHttpServletRequest mureq = (MultipartHttpServletRequest) request;           Map&lt;String, MultipartFile&gt; files = mureq.getFileMap();            MultipartFile file =null;           if (files != null &amp;&amp;files.size()&gt; 0) {                Map.Entry&lt;String, MultipartFile&gt; f = files.entrySet().iterator().next();                file = f.getValue();            } 　　　　　　//获取项目部署的路径　　　　　　String rootPath = request.getSession().getServletContext().getRealPath(&quot;/&quot;);　　　　 //获取上传图片的名称　　　　　　String fileName = file.getOriginalFilename();　　　　　　　　　　 //获取上传图片的大小　　　　　　float size = file.getSize()　　　　　　//在path路径下创建一个文件　　　　　　File newFile = new File(path);　　　　　　//判断文件是否存在　　　　　　if(!newFile.exists()) {　　　　　　　　newFile.mkdirs();//不存在的话，就开辟一个空间　　　　　　}　　　　　　//将上传的文件存储　　　　　　file.transferTo(newFile);</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> File </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 文件 </tag>
+            
+            <tag> Servlet </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>原生js实现from功能</title>
+      <link href="/2020/05/16/ssm/bootproblem/"/>
+      <url>/2020/05/16/ssm/bootproblem/</url>
+      
+        <content type="html"><![CDATA[<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>    &lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;XMLHttpReques&lt;/title&gt;    &lt;script&gt;        var xhr = &#39;&#39;;        if (window.XMLHttpRequest) {            xhr = new window.XMLHttpRequest();        } else {            xhr = new ActiveXObject(&#39;Microsoft.XMLHttp&#39;);        }        window.onload = function () {            document.getElementById(&quot;bnt&quot;).onclick = function () {                xhr.open(&#39;post&#39;,&#39;后台端口路径&#39;,true);                xhr.setRequestHeader(&#39;Content-Type&#39;,&#39;application/x-www-form-urlencoded&#39;);                var username = document.getElementById(&#39;username&#39;).value;                var password = document.getElementById(&#39;password&#39;).value;                xhr.send( &#39;memberId=&#39;+ username + &#39;&amp;&amp;password=&#39; + password );                xhr.onreadystatechange = function () {                    // readyState:                     //     0: 请求未初始化        //                 1: 服务器连接已建立        //                 2: 请求已接收        //                 3: 请求处理中        //                 4: 请求已完成，且响应已就绪        //             status:        //                 200: &#39;ok&#39;        //                 404: 未找到页面或接口        //                 xhr.responseText: 后端返回的数据                        if(xhr.readyState == 4 &amp;&amp; xhr.status == 200 ) {                            document.getElementById(&#39;box&#39;).innerHTML = xhr.responseText;                            var json = JSON.parse(xhr.responseText);                            console.log(json);                        }                }            }        }    &lt;/script&gt;&lt;/head&gt;&lt;body&gt;    &lt;p&gt;账号：&lt;input type=&quot;text&quot; id=&quot;username&quot;&gt;&lt;/p&gt;    &lt;p&gt;密码：&lt;input type=&quot;password&quot; name=&quot;&quot; id=&quot;password&quot;&gt;&lt;/p&gt;    &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input type=&quot;button&quot; value=&quot;登录&quot; id=&quot;bnt&quot;&gt;&lt;/p&gt;    &lt;div id=&quot;box&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> JS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 脚本 </tag>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring Boot修改最大上传文件限制</title>
+      <link href="/2020/05/16/ssm/springbootpbm/"/>
+      <url>/2020/05/16/ssm/springbootpbm/</url>
+      
+        <content type="html"><![CDATA[<h3 id="报错内容"><a href="#报错内容" class="headerlink" title="报错内容"></a>报错内容</h3><pre><code>The field file exceeds its maximum permitted size of 1048576 bytes.</code></pre><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><pre><code>pringBoot做文件上传时出现了The field file exceeds its maximum permitted size of 1048576 bytes.错误，显示文件的大小超出了允许的范围。查看了官方文档，原来Spring Boot工程嵌入的tomcat限制了请求的文件大小，这一点在Spring Boot的官方文档中有说明，原文如下</code></pre><p>文档说明表示，每个文件的配置最大为1Mb，单次请求的文件的总数不能大于10Mb。要更改这个默认值需要在配置文件（如application.properties）中加入两个配置</p><p>需要设置以下两个参数</p><p>multipart.maxFileSize<br>multipart.maxRequestSize</p><pre><code>Spring Boot 1.3.x或者之前multipart.maxFileSize=100Mbmultipart.maxRequestSize=1000MbSpring Boot 1.4.xspring.http.multipart.maxFileSize=100Mbspring.http.multipart.maxRequestSize=1000Mb</code></pre><p>很多人设置了multipart.maxFileSize但是不起作用，是因为1.4版本以上的配置改了，详见官方文档：spring boot 1.4</p><pre><code>Spring Boot 2.0之后spring.servlet.multipart.max-file-size=100MBspring.servlet.multipart.max-request-size=1000MB</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Springboot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 框架 </tag>
+            
+            <tag> 报错 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Springboot-web项目</title>
       <link href="/2020/05/12/framework/botvoice/"/>
       <url>/2020/05/12/framework/botvoice/</url>
       
-        <content type="html"><![CDATA[<h3 id="絮叨"><a href="#絮叨" class="headerlink" title="絮叨"></a>絮叨</h3><p>暂时没写好，过两天</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="絮叨"><a href="#絮叨" class="headerlink" title="絮叨"></a>絮叨</h3><p>很久都没打开编译器了，代码也生疏了，好在我会面向百度，哈哈，前前后后也搞了四五天总算是搞差不多了。</p><p>主要功能就是文字合成语音，语音转换为文字。支持安卓端，支持音频下载。</p><h3 id="项目演示截图"><a href="#项目演示截图" class="headerlink" title="项目演示截图"></a>项目演示截图</h3><p><img src="http://img.ahdy.top/2020-05-13_161922.png" alt><br><img src="http://img.ahdy.top/2020-05-13_161950.png" alt><br>下面就开始我的开发过程。</p><h3 id="注册讯飞开放平台账号"><a href="#注册讯飞开放平台账号" class="headerlink" title="注册讯飞开放平台账号"></a>注册讯飞开放平台账号</h3><p>注册之后，会送你一万次接口使用次数，感觉还不错哦！</p><p><a href="https://blog.csdn.net/qq_21808961/article/details/88344996" target="_blank" rel="noopener">先参考此处创建应用教程</a></p><h4 id="将Java-SDK导入项目后"><a href="#将Java-SDK导入项目后" class="headerlink" title="将Java SDK导入项目后"></a>将Java SDK导入项目后</h4><p><a href="https://www.kancloud.cn/iflytek_sdk/msc_java/299245" target="_blank" rel="noopener">参考MSC开发指南</a></p><p>这个我找了半天，我感觉讯飞的官方文档比较乱！</p><p>不会用没关系，像我这么笨的看了一天才会，相信你看一眼就会了</p><h4 id="语音合成关键代码解释"><a href="#语音合成关键代码解释" class="headerlink" title="语音合成关键代码解释"></a>语音合成关键代码解释</h4><p>以我合成好的代码为例</p><pre><code>        public static Boolean flag = true;    // 合成监听器    public String convert(String message,String path){        try {            System.out.println(message);            //更换为自己 申请的APPID，初始化            SpeechUtility.createUtility(SpeechConstant.APPID + &quot;=5eb64d51&quot;);            //Setting.setShowLog(true);            // 1.创建SpeechSynthesizer对象            SpeechSynthesizer mTts = SpeechSynthesizer.createSynthesizer();            // 2.合成参数设置，详见《MSC Reference Manual》SpeechSynthesizer 类            String act= XunfeiConvert.actor;            mTts.setParameter(SpeechConstant.VOICE_NAME, act);// 设置发音人            mTts.setParameter(SpeechConstant.SPEED, &quot;50&quot;);// 设置语速            mTts.setParameter(SpeechConstant.VOLUME, &quot;80&quot;);// 设置音量，范围0~100            // 3.开始合成//            mTts.setParameter(SpeechConstant.AUDIO_FORMAT, &quot;pmc&quot;);//            mTts.setParameter(SpeechConstant.TTS_AUDIO_PATH, path);//设置语调，范围0~100            mTts.synthesizeToUri(message,path,mSynListener);        } catch (Exception e) {            e.printStackTrace();        }        return &quot;文件生成成功！&quot;;    }    private final static SynthesizeToUriListener mSynListener = new SynthesizeToUriListener() {        //progress为合成进度0~100        public void onBufferProgress(int progress) {        }        //会话合成完成回调接口 URI为合成保存地址，error为错误信息，为null时表示合成会话成功        public void onSynthesizeCompleted(String uri, SpeechError error) {            System.out.println(uri);            System.out.println(error);            if(error==null){                System.out.println(&quot;生成路径地址:&quot;+uri);            }else{                System.out.println(error);            }            flag = true;        }        @Override        public void onEvent(int arg0, int arg1, int arg2, int arg3,                            Object arg4, Object arg5) {        }    };</code></pre><p>你可以写一个man函数来将参数传入，message为文本内容，path为生成的pcm文件地址。</p><h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p><a href="https://www.xfyun.cn/document/error-code?code=10111" target="_blank" rel="noopener">讯飞官方常见错误码查询</a></p><pre><code>[SDK动态库未能加载-20021]参考地址https://www.cnblogs.com/john-  yang/p/8067245.html</code></pre><p><a href="http://bbs.xfyun.cn/forum.php?mod=viewthread&amp;tid=13010" target="_blank" rel="noopener">语音组合到本地没有pcm文件</a></p><h3 id="对合成音频的处理"><a href="#对合成音频的处理" class="headerlink" title="对合成音频的处理"></a>对合成音频的处理</h3><p>这里需要用到ffmpeg处理pcm和mp3互转。ffmpeg也是一个第三方动态库。</p><p><a href="https://ffmpeg.zeranoe.com/builds/" target="_blank" rel="noopener">ffmpeg下载-windows-static</a></p><p><a href="https://www.jianshu.com/p/ddafe46827b7" target="_blank" rel="noopener">ffmpeg安装，环境测试</a></p><p><a href="https://segmentfault.com/a/1190000016652277?utm_source=tag-newest" target="_blank" rel="noopener">ffmpeg 常用命令</a></p><p><a href="https://blog.csdn.net/liutang9/article/details/75073144" target="_blank" rel="noopener">ffmpeg讯飞api下转码</a></p><h3 id="配置好的ffmpeg工具类"><a href="#配置好的ffmpeg工具类" class="headerlink" title="配置好的ffmpeg工具类"></a>配置好的ffmpeg工具类</h3><pre><code>public static boolean processAudio(String oldfilepath,String newfilepath,String type) {      List&lt;String&gt; commend = new ArrayList&lt;String&gt;();      commend.add(&quot;D:\\ffmpeg\\bin\\ffmpeg.exe&quot;);//win      //commend.add(&quot;ffmpeg&quot;);//linux Docker     commend.add(&quot;-f&quot;);      commend.add(&quot;s16le&quot;);     commend.add(&quot;-ar&quot;);    commend.add(&quot;8000&quot;);    commend.add(&quot;-ac&quot;);    commend.add(&quot;2&quot;);    commend.add(&quot;-i&quot;);      commend.add(oldfilepath);    commend.add(&quot;-acodec&quot;);//音频选项， 一般后面加copy表示拷贝    commend.add(&quot;mp3&quot;);    commend.add(&quot;-y&quot;);//表示覆盖旧文件    commend.add(newfilepath+&quot;.&quot;+type);    try {          Process process = new ProcessBuilder(commend).redirectErrorStream(true).start();        BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));        String line;        while ((line = br.readLine()) != null) {            System.out.println(line);        }        int exitCode = process.waitFor();// 加上这句，系统会等待转换完成。不加，就会在服务器后台自行转换。        System.out.println(&quot;exitCode = &quot;+exitCode);        Boolean flag = exitCode==0?true:false;        return flag;      } catch (Exception e) {          e.printStackTrace();          return false;      }  }</code></pre><h3 id="servlet代码"><a href="#servlet代码" class="headerlink" title="servlet代码"></a>servlet代码</h3><p>请求到该接口就能播放语音了，因为sdk其实是应用于安卓上的一套代码，搞到web上实属勉强。</p><pre><code>@RestControllerpublic class XunfeiConvert  {public static String actor;public static String MP3path=null;@RequestMapping(&quot;/firstServlet&quot;)public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {    String message = request.getParameter(&quot;message&quot;);     actor=request.getParameter(&quot;act&quot;);    System.out.println(actor);    System.out.println(message);    String basePath =request.getSession().getServletContext().getRealPath(&quot;&quot;);    Calendar c = Calendar.getInstance();    String audioName = String.valueOf(c.getTimeInMillis())+ Math.round(Math.random() * 100000);    //讯飞转PCM    String pcmPath = basePath+audioName+&quot;.pcm&quot;;//        pcmPath=pcmPath.replaceAll(&quot;\\\\&quot;,&quot;\\\\\\\\&quot;);    System.out.println(pcmPath);    try {        XcodeConvertUtil util = new XcodeConvertUtil();        String result=util.convert(message, pcmPath);        System.out.println(result);    }catch (Exception e){        e.printStackTrace();    }    XcodeConvertUtil util = new XcodeConvertUtil();    String result=util.convert(message, pcmPath);    System.out.println(result);    //由于生成PCM是异步的，这里while一直等待，直到生成    File file = new File(pcmPath);    if (!file.exists()){        System.out.println(&quot;file null&quot;);    }    while(true){        if(file.exists()){            //PCM转MP3            String audioPath =  basePath+audioName;            response.setHeader(&quot;Content-type&quot;, &quot;text/html;charset=UTF-8&quot;);            PrintWriter out = response.getWriter();            Boolean flag = FfmpegUtil.processAudio(pcmPath,audioPath,&quot;mp3&quot;);            if(flag){                out.println(audioName+&quot;.mp3&quot;);                 MP3path=audioPath+&quot;.mp3&quot;;                System.out.println(&quot;转换成功&quot;);                System.out.println(MP3path);            }else{                out.println(&quot;转换失败&quot;);            }            break;        }    }}</code></pre><h3 id="前端核心代码"><a href="#前端核心代码" class="headerlink" title="前端核心代码"></a>前端核心代码</h3><pre><code>        $(function () {        var vm = new Vue({            el: &#39;#app&#39;,            data:{                title:&#39;语音合成&#39;,                message: &#39;请在此处粘贴文本内容&#39;            },            methods: {                convert: function () {                    if(vm.message===&quot;&quot;){vm.open(&quot;请输入文字&quot;);return}                    var act =document.getElementById(&#39;act&#39;).value;                    $.ajax({                        url : &quot;firstServlet&quot;,                        async : false,                        type : &#39;post&#39;,                        data : {&#39;time&#39; : (new Date()).toString(),&#39;message&#39;:vm.message,&#39;act&#39;:act},                        success : function(result) {                            $(&quot;#audio&quot;).attr(&quot;src&quot;,result);                            document.getElementById(&quot;audio&quot;).play();                        },                        error : function() {                            alert(&quot;网络异常&quot;);                        }                    });                },open: function (nodesc) {                    this.$Notice.open({                        title: &#39;温馨提示&#39;,                        desc: nodesc                    });                }            }        });    });</code></pre><h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><pre><code>    &lt;div id=&quot;app&quot; v-cloak style=&quot;text-align: center&quot;&gt;        &lt;div&gt;            &lt;h1 v-text=&quot;title&quot;&gt;&lt;/h1&gt;            &lt;i-input  v-model=&quot;message&quot; type=&quot;textarea&quot; :autosize=&quot;{minRows: 8,maxRows: 20}&quot; placeholder=&quot;请输入...&quot;&gt;&lt;/i-input&gt;        &lt;/div&gt;        &lt;div style=&quot;margin-top:10px;&quot;&gt;                            音色选择:            &lt;select id=&quot;act&quot;&gt;                &lt;option  value=&quot;x2_yezi&quot; &gt;少女&lt;/option&gt;                &lt;option  value=&quot;aisjiuxu&quot;&gt;男音&lt;/option&gt;                &lt;option  value=&quot;xiaoyan&quot;&gt;女音&lt;/option&gt;                &lt;option  value=&quot;aisbabyxu&quot;&gt;童音&lt;/option&gt;            &lt;/select&gt;            &lt;i-button @click=&quot;convert&quot; type=&quot;primary&quot;&gt;合成播放&lt;/i-button&gt;            &lt;i-button  type=&quot;primary&quot;&gt;&lt;a href=&quot;download&quot; style=&quot;color: #e1f0fe&quot;&gt;下载音频&lt;/a&gt;&lt;/i-button&gt;        &lt;/div&gt;        &lt;div style=&quot;display: none&quot;&gt;            &lt;audio id=&quot;audio&quot; controls=&quot;controls&quot; &gt;&lt;/audio&gt;        &lt;/div&gt;    &lt;/div&gt;</code></pre><h3 id="语音转换文字参考"><a href="#语音转换文字参考" class="headerlink" title="语音转换文字参考"></a>语音转换文字参考</h3><p><a href="https://github.com/MedusaLeee/ContinuousSpeechRecognition" target="_blank" rel="noopener">github</a></p><p>也是看了这位大神的demo，利用多线程解决了流式api只能录制60秒的问题。</p><p>参数说明</p><pre><code>    STT stt = new STT(Filepath+&quot;\\src\\main\\webapp\\recorder.wav&quot;, 30*1000);    stt.start();    //将前端传递过来的音频文件地址传递给第一个参数即可转换文字。</code></pre><h3 id="最后附上我的项目地址"><a href="#最后附上我的项目地址" class="headerlink" title="最后附上我的项目地址"></a>最后附上我的项目地址</h3><p>为了方便运行，集成了Springboot框架。</p><p><a href="https://pan.baidu.com/s/1EtKLfbqpSPL7ckH2QygLLg" target="_blank" rel="noopener">百度网盘-提取码svjz</a></p>]]></content>
       
       
       <categories>
@@ -58,33 +193,6 @@
     
     
     <entry>
-      <title>servlet获取当前路径</title>
-      <link href="/2020/05/10/web/servletpath/"/>
-      <url>/2020/05/10/web/servletpath/</url>
-      
-        <content type="html"><![CDATA[<h3 id="对不用它的人来书可能用处不大，哈哈"><a href="#对不用它的人来书可能用处不大，哈哈" class="headerlink" title="对不用它的人来书可能用处不大，哈哈"></a>对不用它的人来书可能用处不大，哈哈</h3><p>因为，最近的项目，要对文件进行储存，所以干脆储存到项目路径下，这样避免了访问磁盘等权限问题，也方便储存文件的管理。</p><h3 id="way"><a href="#way" class="headerlink" title="way"></a>way</h3><p>可以参考下面的代码<br>    1、request.getRealPath（） 方法已过时，现在可替换的实现方法有</p><pre><code>request.getSession().getServletContext().getRealPath(“/”)在Servlet 里用this.getServletContext().getRealPath(“/”);获得绝对路径。struts里用this.getServlet().getServletContext().getRealPath(“/”)获得绝对路径。</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> web </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> servlet </tag>
-            
-            <tag> tomcat </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>IDEA导入项目运行报错</title>
       <link href="/2020/05/10/idea/problem4/"/>
       <url>/2020/05/10/idea/problem4/</url>
@@ -104,6 +212,33 @@
             <tag> IDEA </tag>
             
             <tag> error </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>servlet获取当前路径</title>
+      <link href="/2020/05/10/web/servletpath/"/>
+      <url>/2020/05/10/web/servletpath/</url>
+      
+        <content type="html"><![CDATA[<h3 id="对不用它的人来书可能用处不大，哈哈"><a href="#对不用它的人来书可能用处不大，哈哈" class="headerlink" title="对不用它的人来书可能用处不大，哈哈"></a>对不用它的人来书可能用处不大，哈哈</h3><p>因为，最近的项目，要对文件进行储存，所以干脆储存到项目路径下，这样避免了访问磁盘等权限问题，也方便储存文件的管理。</p><h3 id="way"><a href="#way" class="headerlink" title="way"></a>way</h3><p>可以参考下面的代码<br>    1、request.getRealPath（） 方法已过时，现在可替换的实现方法有</p><pre><code>request.getSession().getServletContext().getRealPath(“/”)在Servlet 里用this.getServletContext().getRealPath(“/”);获得绝对路径。struts里用this.getServlet().getServletContext().getRealPath(“/”)获得绝对路径。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> servlet </tag>
+            
+            <tag> tomcat </tag>
             
         </tags>
       
@@ -1128,33 +1263,6 @@
     
     
     <entry>
-      <title>How to use vue.js</title>
-      <link href="/2019/12/11/framework/vue/"/>
-      <url>/2019/12/11/framework/vue/</url>
-      
-        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 环境 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 环境 </tag>
-            
-            <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>简易版聊天室</title>
       <link href="/2019/12/11/java/socket/"/>
       <url>/2019/12/11/java/socket/</url>
@@ -1174,6 +1282,33 @@
             <tag> Java </tag>
             
             <tag> Socket </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to use vue.js</title>
+      <link href="/2019/12/11/framework/vue/"/>
+      <url>/2019/12/11/framework/vue/</url>
+      
+        <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>不好意思，我在演示的过程中装崩掉了，过段时间写好，自己的博客就是随心所欲，这要是在csdn上放这话，下面指定挨喷！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 环境 </tag>
+            
+            <tag> vue </tag>
             
         </tags>
       
@@ -1317,33 +1452,6 @@
     
     
     <entry>
-      <title>Session会话</title>
-      <link href="/2019/11/23/ssm/session/"/>
-      <url>/2019/11/23/ssm/session/</url>
-      
-        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> EL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session无法获取</title>
       <link href="/2019/11/23/ssm/sessionnull/"/>
       <url>/2019/11/23/ssm/sessionnull/</url>
@@ -1371,6 +1479,33 @@
     
     
     <entry>
+      <title>Session会话</title>
+      <link href="/2019/11/23/ssm/session/"/>
+      <url>/2019/11/23/ssm/session/</url>
+      
+        <content type="html"><![CDATA[<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><pre><code>El表达式获取session对象变量 session.setAttribute（&quot;age&quot;，&quot;123&quot;）;   ${ sessionScope.age}  在页面上显示的就是123了 这里相当于把123的值赋值给了age获取对象属性的值${sessionScope.age.name}前提是要将一个object对象，传给age，这样通过age才能.到对象的元素。  </code></pre><h4 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h4><p>session中是对象数组：</p><p>jstl方法：</p><p>jsp中头部添加</p><p>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c”%&gt;</p><pre><code>&lt;table&gt;&lt;c:forEach items=&quot;${list}&quot; var=&quot;bean&quot;&gt;       &lt;tr&gt;    &lt;td&gt;${bean.id}&lt;/td&gt;    &lt;td&gt;${bean.name}&lt;/td&gt;       &lt;/tr&gt; &lt;/c:forEach&gt;&lt;/table&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Session </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Session </tag>
+            
+            <tag> EL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>iframe标签</title>
       <link href="/2019/11/23/ssm/ifream/"/>
       <url>/2019/11/23/ssm/ifream/</url>
@@ -1387,9 +1522,9 @@
       
         <tags>
             
-            <tag> 子页面 </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> 子页面 </tag>
             
         </tags>
       
@@ -1414,9 +1549,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> JS </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -1913,7 +2048,7 @@
       <link href="/2019/10/22/framework/jspuplogin/"/>
       <url>/2019/10/22/framework/jspuplogin/</url>
       
-        <content type="html"><![CDATA[<h3 id="Servlet特性"><a href="#Servlet特性" class="headerlink" title="Servlet特性"></a>Servlet特性</h3><p>在Servlet3.0之后，更新了文件上传相关的API。<br>不用导入jar包就能实现文件上传功能。</p><h3 id="架构与原理"><a href="#架构与原理" class="headerlink" title="架构与原理"></a>架构与原理</h3><p>文件上传，自然少不了，前后端的结合，前端需要提供给用户选择上传文件，后者数据传输到servlet，Servlet主要利用到了两个流传输API<br><a href="https://www.jianshu.com/p/e5bc7ea5f948" target="_blank" rel="noopener">API地址</a></p><h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="[](https://www.jianshu.com/p/e5bc7ea5f948">百度网盘</a>)<br><a href="https://bbs.csdn.net/topics/390772658" target="_blank" rel="noopener">地址空指针异常问题</a><br>简单封装实现了文件的上传下载功能。</p><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>没有UI界面，原生态的，仅仅实现了功能，bug未知。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="Servlet特性"><a href="#Servlet特性" class="headerlink" title="Servlet特性"></a>Servlet特性</h3><p>在Servlet3.0之后，更新了文件上传相关的API。<br>不用导入jar包就能实现文件上传功能。</p><h3 id="架构与原理"><a href="#架构与原理" class="headerlink" title="架构与原理"></a>架构与原理</h3><p>文件上传，自然少不了，前后端的结合，前端需要提供给用户选择上传文件，后者数据传输到servlet，Servlet主要利用到了两个流传输API<br><a href="https://www.jianshu.com/p/e5bc7ea5f948" target="_blank" rel="noopener">API地址</a></p><h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://pan.baidu.com/s/1V55bf9orBK41yCKqvfICzA" target="_blank" rel="noopener">百度网盘-提取码:pthh</a><br><a href="https://bbs.csdn.net/topics/390772658" target="_blank" rel="noopener">地址空指针异常问题</a><br>简单封装实现了文件的上传下载功能。</p><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>没有UI界面，原生态的，仅仅实现了功能，bug未知。</p>]]></content>
       
       
       <categories>
@@ -1952,9 +2087,9 @@
       
         <tags>
             
-            <tag> windows </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> windows </tag>
             
         </tags>
       
@@ -2006,9 +2141,9 @@
       
         <tags>
             
-            <tag> MAC </tag>
-            
             <tag> windows </tag>
+            
+            <tag> MAC </tag>
             
         </tags>
       
@@ -2557,33 +2692,6 @@
     
     
     <entry>
-      <title>MySQL入门</title>
-      <link href="/2019/08/06/web/mysql2/"/>
-      <url>/2019/08/06/web/mysql2/</url>
-      
-        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> MySQL </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-            <tag> SQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Tomcat与服务器</title>
       <link href="/2019/08/06/web/tomcat/"/>
       <url>/2019/08/06/web/tomcat/</url>
@@ -2603,6 +2711,33 @@
             <tag> 服务器 </tag>
             
             <tag> Tomcat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL入门</title>
+      <link href="/2019/08/06/web/mysql2/"/>
+      <url>/2019/08/06/web/mysql2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="MySQL的数据库创建、删除"><a href="#MySQL的数据库创建、删除" class="headerlink" title="MySQL的数据库创建、删除"></a>MySQL的数据库创建、删除</h3><p>下面为MySQL操作成功例子，相关命令我会放在本文档后面<br>1.首先，以管理员身份启动dos命令界面，切盘到MySQL的bin目录下<br><img src="http://img.ahdy.top/2019-08-06_133616.png" alt><br>2.启动MySQL服务，登陆MySQL<br><img src="http://img.ahdy.top/2019-08-06_134251.png" alt><br>3.输入<code>show databases;</code>显示MySQL当中的数据库，这些初始化的数据库，切记不可以动，它们关系着MySQL的功能是否正常运行！接着，输入了<code>create database firstdemo;</code>就成功新创建了一个数据库<br>当然也可以初始化创建数据库时对数据库的编码进行指定<br>输入<code>create database firstdemo2 character set gbk/utf8;</code>就能创建一个指定字符集编码的数据库  </p><h5 id="指定数据库编码有什么用？"><a href="#指定数据库编码有什么用？" class="headerlink" title="指定数据库编码有什么用？"></a>指定数据库编码有什么用？</h5><p>当外界数据编码于数据库编码不一致的时，数据传入进数据库里就会产生乱码，这也是最常见的问题之一！<br><img src="http://img.ahdy.top/2019-08-06_134511.png" alt><br>4.查看数据库字符集输入<code>show create database firstdemo;</code>删除数据库输入<code>drop database firstdemo;</code>之后发现firstdemo已经被删除<br><img src="http://img.ahdy.top/2019-08-06_142216.png" alt>  </p><h3 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h3><p>首先创建一个数据库然后建表,注意一定先use +数据库名才能使用建表命令，不然会报错!<br><img src="http://img.ahdy.top/2019-08-06_154548.png" alt></p><h3 id="MySQL常用SQL命令："><a href="#MySQL常用SQL命令：" class="headerlink" title="MySQL常用SQL命令："></a>MySQL常用SQL命令：</h3><h4 id="数据库相关SQL"><a href="#数据库相关SQL" class="headerlink" title="数据库相关SQL"></a>数据库相关SQL</h4><pre><code>1.查看所有数据库    show databases;2.创建数据库    -格式：create    database 数据库名    create database newdb1;    创建数据库并且指定字符集    create database newdb1 character set gbk/utf8;3.查看数据库的详情 可以查看数据库的字符集。    show create database 数据库名。    show create database newdb1;4.删除数据库    --格式：drop database 数据库名    drop database newdb2;5.使用数据库    use newdb1;#### 表相关的操作1.查看所有表    show tables;2.创建表    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型);    create table person(name varchar(10),age int);3.查看详情    show create table person;    --数据库表引擎    1.InnoDB:支持数据库的高级操作，比如：事物，外键，索引，约束等等。    2.myisam:不支持数据库的高级操作，只支持基础的增删改查。4.创建表指定引擎和字符集。    --格式：create table 表名(字段1 字段1 类型，字段2，字段2类型)engine=innodb/myisam charset=gbk/utf8;    create table t1(name varchar(10),age int)engine=innodb charset=gbk;5.查看表字段    desc t1;6.删除表    drop table t1;#### 数据相关的SQL create table hero(name varchar(10),age int);--全表插入格式：insert into 表名 values(值1,值2);insert into hero values(&#39;刘备&#39;,18);--指定字段插入    insert into hero(name) values(&#39;李白&#39;);--批量插入数据：insert into hero values(&#39;关羽&#39;,18),(&#39;张飞&#39;,18);insert into hero(name) values(&#39;李白&#39;),(&#39;白居易&#39;),(&#39;杜甫&#39;);### 查询数据    --格式：select 字段信息 from 表名 where 条件。1.查询所有数据，所有字段信息。    select * from hero;2.查询所有的名字.    select name from hero;3.查询年龄18岁人的所有信息。    seelct * from hero where age = 18;### 修改数据    --格式：update 表名 set 字段名=数据 where 过滤条件=数据.    update hero set age=25 where name=&#39;刘备&#39;;    --注意：如果不给条件则修改全表信息。### 删除数据    delete from 表名 where 条件。    delete from hero where name=&#39;杜甫&#39;;    delete from hero;  </code></pre><h3 id="MySQL常见问题汇总"><a href="#MySQL常见问题汇总" class="headerlink" title="MySQL常见问题汇总"></a>MySQL常见问题汇总</h3><h4 id="1-修改密码时，无法修改，发送异常信息"><a href="#1-修改密码时，无法修改，发送异常信息" class="headerlink" title="1.修改密码时，无法修改，发送异常信息"></a>1.修改密码时，无法修改，发送异常信息</h4><p>报错信息如下：</p><p>ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that<br>corresponds to your MySQL server version for the right syntax to use near ‘(‘123<br>456’) where user=’root’’ at line 1</p><p>看过很多方法：</p><p> 总结如下：</p><p> 使用win+R 输入CMD进入dos界面。进入你的mysql安装路径下面的bin文件家里面；</p><p>先使用：mysql -u root -p 输入密码进入mysql命令窗口mysql&gt;:</p><p>修改密码：</p><p>方法1：</p><pre><code>     set password for 用户名@localhost=password(&#39;新密码&#39;)；</code></pre><p>方法2：</p><pre><code>    mysql&gt;set password =password(&#39;你的密码&#39;);    mysql&gt;flush privileges;</code></pre><p>方法3：</p><pre><code>   ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;123456&#39;;（我采用的是这个方式进行密码修改的，前两种仍然报错）；</code></pre><h4 id="2-MySQL服务无法启动成功，服务没有报错"><a href="#2-MySQL服务无法启动成功，服务没有报错" class="headerlink" title="2.MySQL服务无法启动成功，服务没有报错"></a>2.MySQL服务无法启动成功，服务没有报错</h4><p>这种情况分为多种可能：<br>1.没有配置好ini文件<br>2.MySQL文件夹下没有date目录<br>3.系统内存在多个不同版本的MySQL服务，并且服务在运行中<br>4.端口占用<br>这些潜在问题可能不会在启动SQL时发生，我建议，在发生未知错误时推到重新来，如果你实在装不好，可以加我QQ联系，我远程给你ko！ok？嗯，下一篇—MySQL进阶。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
@@ -2746,33 +2881,6 @@
     
     
     <entry>
-      <title>域名</title>
-      <link href="/2019/07/22/yuming/"/>
-      <url>/2019/07/22/yuming/</url>
-      
-        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 域名 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 域名 </tag>
-            
-            <tag> 二级域名 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java难点</title>
       <link href="/2019/07/22/java/java5/"/>
       <url>/2019/07/22/java/java5/</url>
@@ -2792,6 +2900,33 @@
             <tag> 抽象类|接口 </tag>
             
             <tag> 访问控制符 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>域名</title>
+      <link href="/2019/07/22/yuming/"/>
+      <url>/2019/07/22/yuming/</url>
+      
+        <content type="html"><![CDATA[<h5 id="域名是什么呢？"><a href="#域名是什么呢？" class="headerlink" title="域名是什么呢？"></a>域名是什么呢？</h5><p>我就不解释了昂，不懂可以<a href="https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D/86062?fr=aladdin" target="_blank" rel="noopener">百度百科</a>  </p><h5 id="域名获取"><a href="#域名获取" class="headerlink" title="域名获取"></a>域名获取</h5><p>域名在各大服务器运营商可以买到，国内几个知名云，阿里云，腾讯云，百度云，华为云，都可以。只需要百度一下进入他们官网实名认证一下就可以购买了，一般价格在1~？元不等。  </p><h5 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h5><p><img src="http://img.ahdy.top/2019-07-22_192041.png" alt><br>如果你购买了一个域名需要完成备案才能正常使用它，备案的过程比较漫长，一般提交审核一个月左右会完成，以前比较麻烦现在可以通过app上传照片及一些相关信息就能完成备案了，以我备案阿里域名的经历，他们会初级审核，如果你有地方不合格他们会电话通知你，直到达到备案所需的最低要求，一般他们审核过再提交给信管局基本上不会有问题。  </p><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>假如你已经有了一个成功备案的域名<br>此时你希望通过域名来访问你的网站，那么就要对域名添加解析记录，将ip地址映射给域名  </p><h5 id="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。"><a href="#如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever-xml-web-xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index-html，当然这些都是可以修改的，详细操作请百度一下。" class="headerlink" title="如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。"></a>如果你的网站不能直接通过ip地址来访问就需要去修改服务器参数，这里的服务器一般指tomcat等服务器，修改sever.xml,web.xml两个文件，可以指定IP地址访问项目路径下的网站主页，一般默认为index.html，当然这些都是可以修改的，详细操作请百度一下。</h5><p>过程如图所示（其他云服务器类似）</p><h5 id="打开控制台"><a href="#打开控制台" class="headerlink" title="打开控制台"></a>打开控制台</h5><p><img src="http://img.ahdy.top/2019-07-22_192335.png" alt></p><h5 id="选择域名"><a href="#选择域名" class="headerlink" title="选择域名"></a>选择域名</h5><p><img src="http://img.ahdy.top/2019-07-22_192442.png" alt></p><h5 id="选择解析"><a href="#选择解析" class="headerlink" title="选择解析"></a>选择解析</h5><p><img src="http://img.ahdy.top/2019-07-22_192522.png" alt></p><h5 id="添加解析记录"><a href="#添加解析记录" class="headerlink" title="添加解析记录"></a>添加解析记录</h5><p><img src="http://img.ahdy.top/2019-07-22_193513.png" alt></p><h4 id="二级域名创建"><a href="#二级域名创建" class="headerlink" title="二级域名创建"></a>二级域名创建</h4><p>步骤一样，选择CNAME<br><img src="http://img.ahdy.top/2019-07-22_195021.png" alt><br>确定后大概十分钟就会生效  </p><h5 id="二级域名应用"><a href="#二级域名应用" class="headerlink" title="二级域名应用"></a>二级域名应用</h5><p>主域名通常用来访问我们的主网页<br>1.二级域名就是主域名分出来域名。</p><p>2.二级域名是寄存在主域名之下的域名，权重低于主域名。</p><p>3.二级域名属于一个独立的分支，他有自己的收录、快照、PR值、反链等。</p><p>4.当主域名受到惩罚，二级域名也会连带惩罚。<br>二级域名可以重定向一个url地址，并且它是免费的，比如以七牛云为例子，七牛云的对象储存会提供一个测试域名，这个测试域名一个月后就会销毁，那么这个测试测试域名所生成的外链都会失效，这时候你就可以绑定一个二级域名用于dns加速，只需要将你绑定二级域名生成的CNAME复制粘贴到域名解析CNAME记录值内就可以了<br><img src="http://img.ahdy.top/2019-07-22_195142.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 域名 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 域名 </tag>
+            
+            <tag> 二级域名 </tag>
             
         </tags>
       
