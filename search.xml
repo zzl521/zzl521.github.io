@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Spring boot配置https传输</title>
+      <link href="/2020/06/04/web/https/"/>
+      <url>/2020/06/04/web/https/</url>
+      
+        <content type="html"><![CDATA[<h3 id="https"><a href="#https" class="headerlink" title="https"></a>https</h3><p>可以简单理解成是一种加密传输的方式，更加安全，也是未来发展的趋势。<br>Spring boot为我们提供了非常便利的设置，通过修改application.properties文件，就能添加HTTPS支持</p><h3 id="操作过程"><a href="#操作过程" class="headerlink" title="操作过程"></a>操作过程</h3><h4 id="1-生成证书"><a href="#1-生成证书" class="headerlink" title="1.生成证书"></a>1.生成证书</h4><p>打开cmd窗口，前提是电脑上安装好了Java环境，才能自行签发证书</p><pre><code>keytool -genkey -alias tomcat  -storetype PKCS12 -keyalg RSA -keysize 2048  -keystore keystore.p12 -validity 3650</code></pre><p>关于这几个参数的解释如下：</p><p>1.-storetype 指定密钥仓库类型</p><p>2.-keyalg 生证书的算法名称，RSA是一种非对称加密算法</p><p>3.-keysize 证书大小</p><p>4.-keystore 生成的证书文件的存储路径</p><p>5.-validity 证书的有效期</p><h4 id="2-输入密钥库口令"><a href="#2-输入密钥库口令" class="headerlink" title="2.输入密钥库口令"></a>2.输入密钥库口令</h4><p>这个自己随便设置就好，但是要记得，后面要用！</p><h4 id="3-依次填写证书相关的信息"><a href="#3-依次填写证书相关的信息" class="headerlink" title="3.依次填写证书相关的信息"></a>3.依次填写证书相关的信息</h4><p>这个也是随便设置就好！</p><p>完成之后，系统的当前用户目录下会生成一个keystore.p12文件，当然你在生成证书的时候可以改变证书的名称，那么相应的系统用户目录下就会生成相应的文件，将keystore.p12文件拷贝到我们项目的根路径下。</p><h4 id="4-修改application-properties文件，添加HTTPS支持"><a href="#4-修改application-properties文件，添加HTTPS支持" class="headerlink" title="4.修改application.properties文件，添加HTTPS支持"></a>4.修改application.properties文件，添加HTTPS支持</h4><pre><code>server.ssl.key-store=keystore.p12server.ssl.key-store-password=123456server.ssl.keyStoreType=PKCS12server.ssl.keyAlias:tomcat</code></pre><h3 id="自己生成的ssl证书，所以https请求是不被客户端识别的"><a href="#自己生成的ssl证书，所以https请求是不被客户端识别的" class="headerlink" title="自己生成的ssl证书，所以https请求是不被客户端识别的"></a>自己生成的ssl证书，所以https请求是不被客户端识别的</h3><p>可能会报不安全，如果想避免这些去阿里云或者别的运营商去申请一个免费的ssl证书，如果是企业需求的话就需要买！</p><h3 id="5-http请求转换成https请求"><a href="#5-http请求转换成https请求" class="headerlink" title="5.http请求转换成https请求"></a>5.http请求转换成https请求</h3><p>我们已经习惯用http请求访问，此时我们的项目支持的是https请求，为了方便我们可以将访问时的http请求转换成https请求<br>在main方法中添加注解bean，代码如下：<br>    @RestController<br>    @SpringBootApplication<br>    public class TestApplication {</p><pre><code>    public static void main(String[] args) {        SpringApplication.run(TestApplication.class, args);    }    @RequestMapping(value = &quot;/&quot;,produces = &quot;text/plain;charset=UTF-8&quot;)    String index(){        return &quot;Hello Spring Boot!&quot;;    }    @Bean    public EmbeddedServletContainerFactory servletContainer() {        TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {            @Override            protected void postProcessContext(Context context) {                SecurityConstraint constraint = new SecurityConstraint();                constraint.setUserConstraint(&quot;CONFIDENTIAL&quot;);                SecurityCollection collection = new SecurityCollection();                collection.addPattern(&quot;/*&quot;);                constraint.addCollection(collection);                context.addConstraint(constraint);            }        };        tomcat.addAdditionalTomcatConnectors(httpConnector());        return tomcat;    }    @Bean    public Connector httpConnector() {        Connector connector = new Connector(&quot;org.apache.coyote.http11.Http11NioProtocol&quot;);        connector.setScheme(&quot;http&quot;);        //Connector监听的http的端口号        connector.setPort(8080);        connector.setSecure(false);        //监听到http的端口号后转向到的https的端口号        connector.setRedirectPort(8081);        return connector;    }}</code></pre><p>我们现在需要将http请求转换成https请求，所以一定要区分端口号，我们在代码中将http的端口号设置为8080，在application.properties添加https的端口号</p><pre><code>server.ssl.key-store=keystore.p12server.ssl.key-store-password=123456server.ssl.keyStoreType=PKCS12server.ssl.keyAlias:tomcatserver.port=8081</code></pre><h3 id="6-同时支持http和https请求"><a href="#6-同时支持http和https请求" class="headerlink" title="6.同时支持http和https请求"></a>6.同时支持http和https请求</h3><p>如果我们想要项目同时支持http和https请求，就是说我们用http请求时不再转换成https请求，同时还支持https请求，很简单，我们只需要将代码中的connector.setSecure(false)中的false改成true就可以了</p><p>参考<a href="https://www.jianshu.com/p/71cd01fa8438" target="_blank" rel="noopener">简书</a></p><h3 id="如果仅支持https访问http访问将会请求不到页面"><a href="#如果仅支持https访问http访问将会请求不到页面" class="headerlink" title="如果仅支持https访问http访问将会请求不到页面"></a>如果仅支持https访问http访问将会请求不到页面</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTTPS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+            <tag> 传输 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏论</title>
+      <link href="/2020/05/20/draiy/game/"/>
+      <url>/2020/05/20/draiy/game/</url>
+      
+        <content type="html"><![CDATA[<h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><p>不知不觉已经玩了很久的游戏，从上小学开始吧，不得不说我玩游戏有一定天赋，竞技类游戏可能不擅长，但是玩RPG类游戏，成长的速度比一般人要快很多，只要入手很快就能霸榜。</p><p>好在随着年龄的增长，大概在18岁左右，我对游戏失去了兴趣，其实每个人都会有一个失去游戏兴趣的时间，这个时间取决于自身对外界事物的认知，不是靠着大道理，而是靠着亲身磨练才能觉悟的。如果想觉悟也很简单，离开父母的庇护，身上不要带一分钱，去到社会上生存。没有钱，权，能，无法生存，意识到缺失这些，会让你快速逾越玩游戏的思想。</p><p>有句话说只要有付出就有回报，这句话在游戏里显得淋漓尽致，游戏正是弥补了现实缺少的一面。但游戏回报的可以说是毫无价值的东西。早些年我也玩到倒服几个游戏，运营商到后来只是简单的说了一句资金不足，最后关闭了服务器。这期间无数玩家付出了大量精力，时间，金钱，到头来都成了南柯一梦。</p><p>投资房产 企业，投资金融债券股票，投资自己，投资任何东西都比游戏带来的要真实可靠。辛辛苦苦投资的游戏角色只不过是一个根本不存在的数据。</p><h3 id="为什么会忍不住打游戏"><a href="#为什么会忍不住打游戏" class="headerlink" title="为什么会忍不住打游戏"></a>为什么会忍不住打游戏</h3><p>一句话，逃避现实罢了。现实中得不到的反馈，会在游戏里得到满足。很多人选择游戏来麻痹自己，那种安逸正是人内心所向往的，久而久之成了瘾。</p><h3 id="背后"><a href="#背后" class="headerlink" title="背后"></a>背后</h3><p>游戏可以说是高智商人给低智商人上的一套枷锁，循规蹈矩的按照一定的模式去为运营商赚钱打工。游戏里其实应用了很多心理学。游戏模式，和玩家构成了一种虚拟的社会。这种社会充满着好胜，攀比，利益，虚荣，变向让玩家快速得到这些是刺激他们消费的根本目的。</p><h3 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h3><p>如果二十岁了还在玩游戏的话(无节制玩)，只能说没有彻底长大，但确实该觉悟了，毕竟人的青春有限，不能像游戏一样从头来过，不要等到觉悟的时候，发现一切都晚了，失去了重要的机会，那人的未来将会被这花花世界束缚。</p><p>游戏反馈给我最有价值的东西就是，如果想变强，就得不断的提升自己，多方面提升，多渠道提升。</p><p>把发展游戏的精力投入到发展自己身上，那么你将会是个现实中的强者     ————————————————————————————2020.5.20</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Game </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> message </tag>
+            
+            <tag> group </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Springboot前后端交互信息</title>
       <link href="/2020/05/16/ssm/servletreponse/"/>
       <url>/2020/05/16/ssm/servletreponse/</url>
@@ -766,9 +820,9 @@
       
         <tags>
             
-            <tag> FX </tag>
-            
             <tag> Java </tag>
+            
+            <tag> FX </tag>
             
         </tags>
       
@@ -874,9 +928,9 @@
       
         <tags>
             
-            <tag> 项目 </tag>
-            
             <tag> Java </tag>
+            
+            <tag> 项目 </tag>
             
         </tags>
       
@@ -939,33 +993,6 @@
     
     
     <entry>
-      <title>个人网上信息挖掘</title>
-      <link href="/2020/01/07/attark/search/"/>
-      <url>/2020/01/07/attark/search/</url>
-      
-        <content type="html"><![CDATA[<h3 id="获取一个人的地理位置"><a href="#获取一个人的地理位置" class="headerlink" title="获取一个人的地理位置"></a>获取一个人的地理位置</h3><p>可以参考<a href="http://z.ahdy.top/2019/10/11/attark/findip/" target="_blank" rel="noopener">ip定位</a><br>内容补充<a href="https://www.opengps.cn/" target="_blank" rel="noopener">高精度IP定位</a><br>进站后选择定位技术-&gt;高精度定位。  </p><p><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">百度地图开放平台</a></p><p><a href="https://lbs.amap.com" target="_blank" rel="noopener">高德地图开放平台</a>  </p><p><a href="http://www.net.cn/static/customercare/yourip.asp" target="_blank" rel="noopener">本地公网IP地址获取</a>  </p><p><a href="http://www.ip138.com/" target="_blank" rel="noopener">多功能查询地址</a></p><h3 id="人肉思路"><a href="#人肉思路" class="headerlink" title="人肉思路"></a>人肉思路</h3><p>首先可以百度QQ号，看看能不能利用搜索引擎搜索到他在网上的痕迹，一般的如果对方玩过贴吧，将会进一步为信息采集提供便利，如果能找到对方百度贴吧的ID那么就能通过找回密码的方式对对方进行骚扰，当然以前QQ也是这种，后来QQ改了，让自己给服务器发送编码，发送完成后选择我已经发送才可以修改密码，利用百度贴吧ID找回密码的信息，可以通过暴力的方式去获取对方手机号码，比如在找回密码的时候你会看到有这样一条信息请输入186<strong>**</strong>08收到验证码后输入验证码完成修改密码，这时候如果你知道对方的家在哪（IP定位），就能够根据区域号知道他中间四位数字，然后使用枚举，暴力出缺失的两位，其中必定有一个是目标的手机号，俗话所错杀一千不能放过一个你可以对暴力出的所有号码进行短信轰炸。<br>其实真正挖掘信息是非常困难的一件事情，这种方式只局限于QQ好友，微信好友等。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> diary </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 人肉 </tag>
-            
-            <tag> Message </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>爱而不得</title>
       <link href="/2020/01/07/draiy/love/"/>
       <url>/2020/01/07/draiy/love/</url>
@@ -985,6 +1012,33 @@
             <tag> 日记 </tag>
             
             <tag> Message </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人网上信息挖掘</title>
+      <link href="/2020/01/07/attark/search/"/>
+      <url>/2020/01/07/attark/search/</url>
+      
+        <content type="html"><![CDATA[<h3 id="获取一个人的地理位置"><a href="#获取一个人的地理位置" class="headerlink" title="获取一个人的地理位置"></a>获取一个人的地理位置</h3><p>可以参考<a href="http://z.ahdy.top/2019/10/11/attark/findip/" target="_blank" rel="noopener">ip定位</a><br>内容补充<a href="https://www.opengps.cn/" target="_blank" rel="noopener">高精度IP定位</a><br>进站后选择定位技术-&gt;高精度定位。  </p><p><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">百度地图开放平台</a></p><p><a href="https://lbs.amap.com" target="_blank" rel="noopener">高德地图开放平台</a>  </p><p><a href="http://www.net.cn/static/customercare/yourip.asp" target="_blank" rel="noopener">本地公网IP地址获取</a>  </p><p><a href="http://www.ip138.com/" target="_blank" rel="noopener">多功能查询地址</a></p><h3 id="人肉思路"><a href="#人肉思路" class="headerlink" title="人肉思路"></a>人肉思路</h3><p>首先可以百度QQ号，看看能不能利用搜索引擎搜索到他在网上的痕迹，一般的如果对方玩过贴吧，将会进一步为信息采集提供便利，如果能找到对方百度贴吧的ID那么就能通过找回密码的方式对对方进行骚扰，当然以前QQ也是这种，后来QQ改了，让自己给服务器发送编码，发送完成后选择我已经发送才可以修改密码，利用百度贴吧ID找回密码的信息，可以通过暴力的方式去获取对方手机号码，比如在找回密码的时候你会看到有这样一条信息请输入186<strong>**</strong>08收到验证码后输入验证码完成修改密码，这时候如果你知道对方的家在哪（IP定位），就能够根据区域号知道他中间四位数字，然后使用枚举，暴力出缺失的两位，其中必定有一个是目标的手机号，俗话所错杀一千不能放过一个你可以对暴力出的所有号码进行短信轰炸。<br>其实真正挖掘信息是非常困难的一件事情，这种方式只局限于QQ好友，微信好友等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> diary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Message </tag>
+            
+            <tag> 人肉 </tag>
             
         </tags>
       
@@ -1036,9 +1090,9 @@
       
         <tags>
             
-            <tag> Kali </tag>
-            
             <tag> 木马 </tag>
+            
+            <tag> Kali </tag>
             
         </tags>
       
@@ -1198,9 +1252,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> JSP </tag>
+            
+            <tag> web </tag>
             
         </tags>
       
@@ -1225,9 +1279,9 @@
       
         <tags>
             
-            <tag> XSS </tag>
-            
             <tag> web </tag>
+            
+            <tag> XSS </tag>
             
         </tags>
       
@@ -1263,33 +1317,6 @@
     
     
     <entry>
-      <title>简易版聊天室</title>
-      <link href="/2019/12/11/java/socket/"/>
-      <url>/2019/12/11/java/socket/</url>
-      
-        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
-            
-            <tag> Socket </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>How to use vue.js</title>
       <link href="/2019/12/11/framework/vue/"/>
       <url>/2019/12/11/framework/vue/</url>
@@ -1309,6 +1336,33 @@
             <tag> 环境 </tag>
             
             <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>简易版聊天室</title>
+      <link href="/2019/12/11/java/socket/"/>
+      <url>/2019/12/11/java/socket/</url>
+      
+        <content type="html"><![CDATA[<h3 id="随笔"><a href="#随笔" class="headerlink" title="随笔"></a>随笔</h3><p>已经有半个月没写文档了，到了大二，我深刻体会到了编程语言的博大精深，于是我陷入了思考，到底什么样算是会编程呢？我发现在一些Java书籍中，仅仅只是介绍了常用代码的使用方式，及作用，并没有涉及底层，构造原理，不懂底层也就谈不上修改，优化了，每当在写代码的时候，明明一个API下有那么多方法，我却仅仅只认得那么一两个方法，很多索引出的内容都要通过记忆单词的方式去过滤，学习知识都是照搬照抄，我真的了解编程吗？我想我并不会编程，我所使用的编程都是遵循原有的规则去实现的，那么这样走下去，我想我不会是一个程序员，顶多算一个代码搬运工，深知现状却无能为力，感慨万千：人生好难！</p><h3 id="socket实现简易聊天室"><a href="#socket实现简易聊天室" class="headerlink" title="socket实现简易聊天室"></a>socket实现简易聊天室</h3><h4 id="源码1"><a href="#源码1" class="headerlink" title="源码1"></a>源码1</h4><pre><code>package demo;import java.net.*; import java.io.*; import java.util.*; public class Server {   int port;   List&lt;Socket&gt; clients;   ServerSocket server;   public Server() { try {   port = 8083;   clients = new ArrayList&lt;Socket&gt;();   server = new ServerSocket(port);   System.out.println(&quot;服务器已启动&quot;);   int co=1;   while (true) {     Socket socket = server.accept();     clients.add(socket);     Mythread mythread = new Mythread(socket,co);     co++;     mythread.start();   } } catch (Exception ex) {   System.out.println(&quot;vv&quot;); } } public static void main(String[] args) { new Server(); } class Mythread extends Thread { Socket ssocket; private int count; private BufferedReader br; private PrintWriter pw; public String msg; public Mythread(Socket s,int c) {   ssocket = s;   count=c; } public void run() {   try {     br = new BufferedReader(new InputStreamReader(ssocket.getInputStream()));     msg = &quot;欢迎【&quot; +&quot;Client &quot;+count + &quot;】进入聊天室！当前聊天室有【&quot; + clients.size() + &quot;】人&quot;;     sendMsg();     while ((msg = br.readLine()) != null) {       msg = &quot;【&quot; +&quot;Client &quot;+count + &quot;】说：&quot; + msg;       sendMsg();     }   } catch (Exception ex) {   } } public void sendMsg() {   try {     System.out.println(msg);     for (int i = clients.size() - 1; i &gt;= 0; i--) {       pw = new PrintWriter(clients.get(i).getOutputStream(), true);       pw.println(msg);       pw.flush();     }   } catch (Exception ex) {   } } } } </code></pre><h3 id="源码2"><a href="#源码2" class="headerlink" title="源码2"></a>源码2</h3><pre><code>package demo;import java.io.*; import java.net.*; import java.util.*; public class Client {  public int port = 8083;  Socket socket = null;  public static void main(String[] args) {   new Client(); //开始执行  }  public Client() {   try {    socket = new Socket(&quot;127.0.0.1&quot;, port);    new Cthread().start();    BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));    String msg1;    while ((msg1 = br.readLine()) != null) { System.out.println(msg1);    }   } catch (Exception e) {      }  }  class Cthread extends Thread {   public void run() {    try { BufferedReader re = new BufferedReader(new InputStreamReader(System.in)); PrintWriter pw = new PrintWriter(socket.getOutputStream(), true); String msg2; while (true) {  msg2 = re.readLine();  pw.println(msg2); } } catch (Exception e) { e.printStackTrace();    }   }  } }</code></pre><p><img src="http://img.ahdy.top/2019-12-11_193934.png" alt><br>最终效果图，当然这样是无法实现多人在线聊天的，可以通过telnet来实现在线聊天，只不过这个聊天室是一个匿名的，基于cmd窗口。</p><h3 id="实现多人在线聊天"><a href="#实现多人在线聊天" class="headerlink" title="实现多人在线聊天"></a>实现多人在线聊天</h3><p>1.打开控制面板</p><p>2.找到功能和程序</p><p><img src="http://img.ahdy.top/2019-12-11_194343.png" alt></p><p>3.选择启用或关闭Windows功能</p><p>4.打开Windows当中的telnet功能</p><p><img src="http://img.ahdy.top/2019-12-11_194524.png" alt></p><p>5.win+R—&gt;cmd–&gt;输入telnet 127.0.0.1 端口号<br><img src="http://img.ahdy.top/2019-12-11_194839.png" alt><br><img src="http://img.ahdy.top/2019-12-11_194951.png" alt><br>如果让别的电脑连接聊天室需要将本机电脑的防火墙关闭（对方电脑与本机必须处于同一局域网下，否则需要将本机电脑的ip地址映射到公网上）</p><h3 id="可能发生的问题"><a href="#可能发生的问题" class="headerlink" title="可能发生的问题"></a>可能发生的问题</h3><p>无法打开到主机的连接 端口23失败？<br>可能是端口错了，因为telnet的默认连接端口是23  </p><p>格式：</p><pre><code>telnet不仅仅能连接23端口，但是telnet默认连接是23端口要连接其他端口，在cmd打命令telnet 192.168.1.1 135，中间没有“：”，是一个空格`这样telnet就连接到了对方的135端口`</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Socket </tag>
             
         </tags>
       
@@ -1522,9 +1576,9 @@
       
         <tags>
             
-            <tag> CSS </tag>
-            
             <tag> 子页面 </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -2692,33 +2746,6 @@
     
     
     <entry>
-      <title>Tomcat与服务器</title>
-      <link href="/2019/08/06/web/tomcat/"/>
-      <url>/2019/08/06/web/tomcat/</url>
-      
-        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
-      
-      
-      <categories>
-          
-          <category> Tomcat </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 服务器 </tag>
-            
-            <tag> Tomcat </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL入门</title>
       <link href="/2019/08/06/web/mysql2/"/>
       <url>/2019/08/06/web/mysql2/</url>
@@ -2738,6 +2765,33 @@
             <tag> MySQL </tag>
             
             <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tomcat与服务器</title>
+      <link href="/2019/08/06/web/tomcat/"/>
+      <url>/2019/08/06/web/tomcat/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Tomcat端口配置"><a href="#Tomcat端口配置" class="headerlink" title="Tomcat端口配置"></a>Tomcat端口配置</h3><p>tomcat服务器需配置三个端口才能启动，安装时默认启用了这三个端口，当要运行多个tomcat服务时需要修改这三个端口，不能相同。端口配置路径为tomcat\ conf\service.xml    </p><h5 id="修改Shutdown端口（默认为8005端口）"><a href="#修改Shutdown端口（默认为8005端口）" class="headerlink" title="修改Shutdown端口（默认为8005端口）"></a>修改Shutdown端口（默认为8005端口）</h5><p><code>&lt;Server port=&quot;8005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;</code>  </p><h5 id="修改http访问端口（默认为8080端口）"><a href="#修改http访问端口（默认为8080端口）" class="headerlink" title="修改http访问端口（默认为8080端口）"></a>修改http访问端口（默认为8080端口）</h5><p>负责建立HTTP连接。在通过浏览器访问Tomcat服务器的Web应用时，使用的就是这个连接器。<br><code>&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code><br><code>&lt;!-- A &quot;Connector&quot; using the shared thread pool--&gt;</code><br><code>&lt;!-- &lt;Connector executor=&quot;tomcatThreadPool&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h5 id="AJP协议访问端口（默认为8009端口）"><a href="#AJP协议访问端口（默认为8009端口）" class="headerlink" title="AJP协议访问端口（默认为8009端口）"></a>AJP协议访问端口（默认为8009端口）</h5><p>负责和其他的HTTP服务器建立连接。在把Tomcat与其他HTTP服务器集成时，就需要用到这个连接器。<br><code>&lt;!-- Define an AJP 1.3 Connector on port 8009 --&gt;</code><br><code>&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</code>  </p><h3 id="Tomcat项目路径映射"><a href="#Tomcat项目路径映射" class="headerlink" title="Tomcat项目路径映射"></a>Tomcat项目路径映射</h3><p>假如你写好了一个web项目，并且想发布到服务器上让全国各地的人都能访问你的网站，那么就需要使用一个url地址才能访问到你的web页面(通常是ip地址+项目路径才能访问的到！)，如果你想使用IP地址直接访问你的web界面，就需要对tomcat进行一定的修改。当然如果仅仅用于测试，可以不修改这些配置，但当域名解析的时候，就需要解析到一个ipv4的地址！这个地址通常就是你的服务器IP地址。  </p><h5 id="修改如下！"><a href="#修改如下！" class="headerlink" title="修改如下！"></a>修改如下！</h5><p>打开tomcat目录进入conf\service.xml<br>1.配置默认的项目路径<br>在tomcat的server.xml中<br><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;              unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;              xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</code>  </p><p>　<code>&lt;/Host&gt;</code><br>在中间加上<br><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/local/tomcat/webapps/项目路径&quot; debug=&quot;0&quot; reloadable=&quot;true&quot; /&gt;</code><br><img src="http://img.ahdy.top/2019-08-07_102251.png" alt><br>这个路径不可以过深，一般指到你项目文件名就可以了，因为可能造成部分css、js代码未解析使界面布局没有样式，一般指到你项目文件名就可以。<br>2.修改tomcat\conf\web.xml<br><img src="http://img.ahdy.top/2019-08-07_102421.png" alt><br>这个路径一般就是设置主页面，欢迎界面的意思，路径可以具体！<br>假如你想设置的主页面是一个jsp文件，最好配置一下，你的项目文件/WEB-INF/web.xml<br><img src="http://img.ahdy.top/2019-08-07_102516.png" alt><br>当然浏览器不能直接对文件进行修改还需要使用一文本编辑器，比如notepad++。  </p><h3 id="服务器端口开放"><a href="#服务器端口开放" class="headerlink" title="服务器端口开放"></a>服务器端口开放</h3><p>这里讲的服务器并不是tomcat，当然tomcat也有端口开放，比如，80/8080端口，你可以配置要开放的端口当然也可以两个端口都开放。<br>当你部署好了web项目的时候，可能会出现访问不到网页的情况，这种情况可能是你购买的云主机没有开放端口而造成的，具体操作如下：<br>1.进入你云主机的控制台—&gt;进入云主机实例<br><img src="http://img.ahdy.top/2019-08-07_105209.png" alt><br>2.进入安全组配置<br><img src="http://img.ahdy.top/2019-08-07_105544.png" alt><br>3.加入安全组<br><img src="http://img.ahdy.top/2019-08-07_105700.png" alt><br>4.配置规则<br><img src="http://img.ahdy.top/2019-08-07_110427.png" alt><br><img src="http://img.ahdy.top/2019-08-07_110453.png" alt><br>服务器端口已经配置完成！  </p><h5 id="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"><a href="#80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口" class="headerlink" title="80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口"></a>80和8080端口有什么区别？没有本质上的区别，80是因特尔提供服务的默认端口，8080是阿帕奇tomcat提供服务的默认端口</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -2881,33 +2935,6 @@
     
     
     <entry>
-      <title>Java难点</title>
-      <link href="/2019/07/22/java/java5/"/>
-      <url>/2019/07/22/java/java5/</url>
-      
-        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 抽象类|接口 </tag>
-            
-            <tag> 访问控制符 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>域名</title>
       <link href="/2019/07/22/yuming/"/>
       <url>/2019/07/22/yuming/</url>
@@ -2927,6 +2954,33 @@
             <tag> 域名 </tag>
             
             <tag> 二级域名 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java难点</title>
+      <link href="/2019/07/22/java/java5/"/>
+      <url>/2019/07/22/java/java5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="•-继承"><a href="#•-继承" class="headerlink" title="•  继承"></a>•  继承</h3><p>exdents 关键字 是继承的意思<br>Object类</p><pre><code>Java类默认继承于Object，任何类都继承了Object类的所有属性和方法，其中有三个方法，比较重要：1.toString()    重写了对象的内容。如果不重写toString()，打印对象会打印出地址值。如果重写toString()，将打印toString()方法返回    的指定的字符串。2.equals();    用来比较两个对象是否相等的方法    比较对象分为两种：&quot;引用相等&quot;与&quot;对象相等&quot;    比较引用值是否相等，使用 &quot;==&quot;    比较对象是否相等，使用&quot;equals&quot;    但是 equals需要被重写，因为Object的类的equals方法就是 ==    eques默认的比较规则是地址值的比较。    如果覆盖的话，请规循比较规则：    自反性：    对称性:    传递性:    一致性:3.hashCode();    hachCode方法要与equals方法一同覆盖(规定)    当两个对象equals比较为true时，应具有相同的hashCode值    当两个对象equals比较为false时,应具有不同的hashCode值    hashCode值要稳定，一个对象创建以后就应该在变化。    默认的hashCode值是当前堆对象地址值转换的一个整数，这个整数不是内存地址。    一般使用对象的OID值作为hashCode值。    IOD是对象的唯一编号，在项目中一般采用数据库生成IOD，也就是数据库中的&quot;主键&quot;.</code></pre><h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>重写是发生在父类与子类之间的。</p><p>父类方法被子类方法重写后，一定调用子类的。</p><h3 id="•-多态"><a href="#•-多态" class="headerlink" title="•  多态"></a>•  多态</h3><p>父类引用指向子类实例。</p><p>重写，重载都是多态的一种。</p><p>方法动态绑定对象</p><p>属性静态绑定变量类型</p><h3 id="•-继承中的构造器"><a href="#•-继承中的构造器" class="headerlink" title="•  继承中的构造器"></a>•  继承中的构造器</h3><p>子类构造器一定默认调用父类无参构造器。</p><p>子类优先调用父类无参构造器开辟内存空间,所以，父类空间先加载。</p><h3 id="•-对象的实例化过程"><a href="#•-对象的实例化过程" class="headerlink" title="•  对象的实例化过程"></a>•  对象的实例化过程</h3><h5 id="•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。"><a href="#•-在创建类之前，检查类是否被加载-是将硬盘上的-class文件加载到内存中-，如果没有加载就加载这个类-在这个类被挤在之前要加载所有的父类。" class="headerlink" title="•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。"></a>•  在创建类之前，检查类是否被加载(是将硬盘上的.class文件加载到内存中)，如果没有加载就加载这个类.在这个类被挤在之前要加载所有的父类。</h5><p>Java运行时采用的策略：懒惰式加载(按需加载)：如果第一次用到就加载，只加载一次，通过CLASSPATH指定的路径寻找文件(.class),加载以后是一个对象，类型Class.</p><h5 id="•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"><a href="#•-在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。" class="headerlink" title="•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。"></a>•  在内存堆中分配对象空间。递归分配其所有父类和子类属性空间。属性默认自动初始化。</h5><p>•  进行属性赋值</p><p>•  递归调用父类构造器(无参)</p><p>•  调用本类构造器</p><p>•  引用类型的转换</p><p>向上转换(隐式/自动类型转换)，是小类型到大类型的转换</p><p>向下转换(强制类型转换),是大类型到小类型的转换</p><p>instanceof 运算符 ,用来检查引用对象的类型,经常与引用类型的强制类型转换配合，实现安全的类型转换，避免类型转换异常。</p><h3 id="•-接口"><a href="#•-接口" class="headerlink" title="•  接口"></a>•  接口</h3><p>我们使用抽象方法或者抽象类来作为系统的分析和设计的工具。用来实现客户关系管理业务的架构。</p><p>接口的特性：</p><p>接口是特殊的抽象类</p><p>接口用来表示纯抽象的概念，没有任何具体的方法。</p><p>接口不能被实例化，可以定义变量</p><p>接口变量可以引用具体实现类的实例(多态)</p><p>接口只能被实现(继承)一个具体类实现接口，必须实现其所有的抽象方法。</p><p>接口的属性，默认是常量public static final</p><p>接口之间可以继承</p><p>一个具体的类可以实现多个接口，实现多继承现象。</p><p>接口中的方法一定是抽象方法。默认缺失public abstract xxx</p><p>实现接口，使用关键字implements，实际上是一种继承关系。</p><h3 id="•-抽象类"><a href="#•-抽象类" class="headerlink" title="•  抽象类"></a>•  抽象类</h3><p>只有行为的概念，没有具体的实现。</p><p>抽象类中的方法可以是抽象方法，也可以被具体化。抽象类不是纯抽象概念</p><p>包含抽象方法的类一定是抽象类。抽象类不能被实例化。只能定义引用变量</p><h3 id="访问控制修饰符"><a href="#访问控制修饰符" class="headerlink" title="访问控制修饰符"></a>访问控制修饰符</h3><pre><code>Java中的访问控制修饰符是修饰Java中类、属性、方法的课间范围。public 任意protected 类        包内        子类[default] 类        包内private        类同一个.java文件当中只能有一个public修饰的类</code></pre><h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><pre><code>静态修饰符.1.static修饰的资源属于类级别，是全体对象实例共享的资源静态属性    使用static修饰，属于整个类的属性。    静态资源是在类加载期间初始化的    静态资源可以直接使用类名.资源名访问。比如：System.out实例属性    属于对象的属性    必须要有对象才能够访问。静态代码块是在类加载期间运行的代码块，由于类只加载一次，所以静态代码块只执行一次。一般用来在类加载以后初始化一些静态资源的时候使用。</code></pre><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><pre><code>final修饰的类，不能被继承final修饰方法不能被重写final修饰的变量，初始化以后就不能再修改</code></pre><h3 id="JavaBean规范（开发规范）"><a href="#JavaBean规范（开发规范）" class="headerlink" title="JavaBean规范（开发规范）"></a>JavaBean规范（开发规范）</h3><pre><code>JavaBean不是语法规范，是习惯性编程规范，用这个规范写的类比较方便。有的时候，JavaBean的类也称为：POJO类(Plan Old Java Object)简化规范：1.必须有包    项目名、包名、类名、等路径名，不要使用中文。2.Java类，具有无参数构造器3.属性尽可能私有化，方法尽可能公开化    属性私有后提供set、get方法。4.必须实现序列化接口JDK提供的类几乎都符合JavaBean规范。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 抽象类|接口 </tag>
+            
+            <tag> 访问控制符 </tag>
             
         </tags>
       

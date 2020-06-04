@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-15T19:52:00.940Z</updated>
+  <updated>2020-06-04T06:02:34.326Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring boot配置https传输</title>
+    <link href="http://yoursite.com/2020/06/04/web/https/"/>
+    <id>http://yoursite.com/2020/06/04/web/https/</id>
+    <published>2020-06-04T08:25:00.000Z</published>
+    <updated>2020-06-04T06:02:34.326Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;https&quot;&gt;&lt;a href=&quot;#https&quot; class=&quot;headerlink&quot; title=&quot;https&quot;&gt;&lt;/a&gt;https&lt;/h3&gt;&lt;p&gt;可以简单理解成是一种加密传输的方式，更加安全，也是未来发展的趋势。&lt;br&gt;Spring
+        
+      
+    
+    </summary>
+    
+      <category term="HTTPS" scheme="http://yoursite.com/categories/HTTPS/"/>
+    
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+    
+      <category term="传输" scheme="http://yoursite.com/tags/%E4%BC%A0%E8%BE%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏论</title>
+    <link href="http://yoursite.com/2020/05/20/draiy/game/"/>
+    <id>http://yoursite.com/2020/05/20/draiy/game/</id>
+    <published>2020-05-19T21:47:00.000Z</published>
+    <updated>2020-05-20T11:07:01.782Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;文章&quot;&gt;&lt;a href=&quot;#文章&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Game" scheme="http://yoursite.com/categories/Game/"/>
+    
+    
+      <category term="message" scheme="http://yoursite.com/tags/message/"/>
+    
+      <category term="group" scheme="http://yoursite.com/tags/group/"/>
+    
+  </entry>
   
   <entry>
     <title>Springboot前后端交互信息</title>
@@ -514,63 +570,6 @@
       <category term="闲散" scheme="http://yoursite.com/tags/%E9%97%B2%E6%95%A3/"/>
     
       <category term="爱好" scheme="http://yoursite.com/tags/%E7%88%B1%E5%A5%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA-web项目导入</title>
-    <link href="http://yoursite.com/2020/03/14/idea/problem3/"/>
-    <id>http://yoursite.com/2020/03/14/idea/problem3/</id>
-    <published>2020-03-14T14:59:00.000Z</published>
-    <updated>2020-03-16T05:44:52.433Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-    
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
-      <category term="项目" scheme="http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux服务器</title>
-    <link href="http://yoursite.com/2020/03/02/linux/weblinux/"/>
-    <id>http://yoursite.com/2020/03/02/linux/weblinux/</id>
-    <published>2020-03-02T14:59:00.000Z</published>
-    <updated>2020-03-07T08:59:18.003Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;宝塔简介&quot;&gt;&lt;a href=&quot;#宝塔简介&quot; class=&quot;headerlink&quot; title=&quot;宝塔简介&quot;&gt;&lt;/a&gt;宝塔简介&lt;/h3&gt;&lt;p&gt;一个很好用的Linux管理工具。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.bt.cn/&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
-      <category term="宝塔" scheme="http://yoursite.com/tags/%E5%AE%9D%E5%A1%94/"/>
     
   </entry>
   
