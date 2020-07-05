@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-04T06:02:34.326Z</updated>
+  <updated>2020-07-05T05:39:46.863Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,289 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>markdown高级用法</title>
+    <link href="http://yoursite.com/2020/07/05/markdown/advanced-tutorial/"/>
+    <id>http://yoursite.com/2020/07/05/markdown/advanced-tutorial/</id>
+    <published>2020-07-05T04:44:00.000Z</published>
+    <updated>2020-07-05T05:39:46.863Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;了解基础语法可查看此篇&quot;&gt;&lt;a href=&quot;#了解基础语法可查看此篇&quot; class=&quot;headerlink&quot; title=&quot;了解基础语法可查看此篇&quot;&gt;&lt;/a&gt;了解基础语法可查看此篇&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="markdown" scheme="http://yoursite.com/categories/markdown/"/>
+    
+    
+      <category term="mark" scheme="http://yoursite.com/tags/mark/"/>
+    
+      <category term="down" scheme="http://yoursite.com/tags/down/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>油猴插件</title>
+    <link href="http://yoursite.com/2020/06/29/interest/monkey/"/>
+    <id>http://yoursite.com/2020/06/29/interest/monkey/</id>
+    <published>2020-06-29T14:44:00.000Z</published>
+    <updated>2020-07-05T05:41:17.835Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;如何下载油猴&quot;&gt;&lt;a href=&quot;#如何下载油猴&quot; class=&quot;headerlink&quot; title=&quot;如何下载油猴&quot;&gt;&lt;/a&gt;如何下载油猴&lt;/h3&gt;&lt;p&gt;百度呗！&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="插件" scheme="http://yoursite.com/categories/%E6%8F%92%E4%BB%B6/"/>
+    
+    
+      <category term="插" scheme="http://yoursite.com/tags/%E6%8F%92/"/>
+    
+      <category term="件" scheme="http://yoursite.com/tags/%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx快速上手</title>
+    <link href="http://yoursite.com/2020/06/29/nginx/nginx/"/>
+    <id>http://yoursite.com/2020/06/29/nginx/nginx/</id>
+    <published>2020-06-29T14:44:00.000Z</published>
+    <updated>2020-06-28T13:33:30.324Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Nginx&quot;&gt;&lt;a href=&quot;#Nginx&quot; class=&quot;headerlink&quot; title=&quot;Nginx&quot;&gt;&lt;/a&gt;Nginx&lt;/h3&gt;&lt;p&gt;Nginx (engine x)
+        
+      
+    
+    </summary>
+    
+      <category term="Nginx" scheme="http://yoursite.com/categories/Nginx/"/>
+    
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="代理" scheme="http://yoursite.com/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>整合springboot web项目</title>
+    <link href="http://yoursite.com/2020/06/29/springboot/freamaker/"/>
+    <id>http://yoursite.com/2020/06/29/springboot/freamaker/</id>
+    <published>2020-06-29T14:44:00.000Z</published>
+    <updated>2020-07-05T05:21:23.726Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;视频教程&quot;&gt;&lt;a href=&quot;#视频教程&quot; class=&quot;headerlink&quot; title=&quot;视频教程&quot;&gt;&lt;/a&gt;视频教程&lt;/h3&gt;&lt;p&gt;&lt;video id=&quot;video&quot; controls preload=&quot;none&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="框架" scheme="http://yoursite.com/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="整" scheme="http://yoursite.com/tags/%E6%95%B4/"/>
+    
+      <category term="合" scheme="http://yoursite.com/tags/%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA创建springboot过慢</title>
+    <link href="http://yoursite.com/2020/06/29/idea/dowload/"/>
+    <id>http://yoursite.com/2020/06/29/idea/dowload/</id>
+    <published>2020-06-29T04:44:00.000Z</published>
+    <updated>2020-06-29T04:03:06.174Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;解决方法&quot;&gt;&lt;a href=&quot;#解决方法&quot; class=&quot;headerlink&quot; title=&quot;解决方法&quot;&gt;&lt;/a&gt;解决方法&lt;/h3&gt;&lt;p&gt;参考&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="插件" scheme="http://yoursite.com/categories/%E6%8F%92%E4%BB%B6/"/>
+    
+    
+      <category term="镜像" scheme="http://yoursite.com/tags/%E9%95%9C%E5%83%8F/"/>
+    
+      <category term="阿里" scheme="http://yoursite.com/tags/%E9%98%BF%E9%87%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker快速上手</title>
+    <link href="http://yoursite.com/2020/06/27/linux/docker/"/>
+    <id>http://yoursite.com/2020/06/27/linux/docker/</id>
+    <published>2020-06-27T14:45:00.000Z</published>
+    <updated>2020-06-28T13:33:30.324Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。&lt;/p&gt;
+&lt;p&gt;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="http://yoursite.com/categories/docker/"/>
+    
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="虚拟机" scheme="http://yoursite.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>过滤器，拦截器</title>
+    <link href="http://yoursite.com/2020/06/25/web/filter/"/>
+    <id>http://yoursite.com/2020/06/25/web/filter/</id>
+    <published>2020-06-25T14:45:00.000Z</published>
+    <updated>2020-06-28T12:42:01.326Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;SUN从Servlet2.3开始添加一项激动人心的功能，就是过滤器（Filter）。&lt;/p&gt;
+&lt;p&gt;你可以通过Filter技术，对web服务器管理的所有资源：例如Jsp、Servlet、图片或html文件等进行拦截，从而实现一些特殊的功能。&lt;/p&gt;
+&lt;p&gt;这个具有拦截特点的
+        
+      
+    
+    </summary>
+    
+      <category term="bk" scheme="http://yoursite.com/categories/bk/"/>
+    
+    
+      <category term="过滤器" scheme="http://yoursite.com/tags/%E8%BF%87%E6%BB%A4%E5%99%A8/"/>
+    
+      <category term="拦截器" scheme="http://yoursite.com/tags/%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鼓励师,插件</title>
+    <link href="http://yoursite.com/2020/06/22/vscode/vscode/"/>
+    <id>http://yoursite.com/2020/06/22/vscode/vscode/</id>
+    <published>2020-06-22T14:45:00.000Z</published>
+    <updated>2020-07-05T05:45:49.900Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这东西好像只有js代码能生效吧！&lt;/p&gt;
+&lt;h3 id=&quot;安装编译器&quot;&gt;&lt;a href=&quot;#安装编译器&quot; class=&quot;headerlink&quot; title=&quot;安装编译器&quot;&gt;&lt;/a&gt;安装编译器&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="编译器" scheme="http://yoursite.com/categories/%E7%BC%96%E8%AF%91%E5%99%A8/"/>
+    
+    
+      <category term="vscode" scheme="http://yoursite.com/tags/vscode/"/>
+    
+      <category term="鼓励师" scheme="http://yoursite.com/tags/%E9%BC%93%E5%8A%B1%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://yoursite.com/2020/06/19/linux/linux/"/>
+    <id>http://yoursite.com/2020/06/19/linux/linux/</id>
+    <published>2020-06-19T14:44:00.000Z</published>
+    <updated>2020-06-25T08:59:22.042Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;come&quot;&gt;&lt;a href=&quot;#come&quot; class=&quot;headerlink&quot; title=&quot;come&quot;&gt;&lt;/a&gt;come&lt;/h3&gt;&lt;p&gt;基础常用命令&lt;br&gt;cd/pwd/ls       切地址 显示当前路径 显示当下文件夹&lt;/p&gt;
+&lt;p&gt;mkdir
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="服务器" scheme="http://yoursite.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="命令" scheme="http://yoursite.com/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Springboot项目创建报错</title>
+    <link href="http://yoursite.com/2020/06/18/springboot/error/"/>
+    <id>http://yoursite.com/2020/06/18/springboot/error/</id>
+    <published>2020-06-18T04:15:00.000Z</published>
+    <updated>2020-06-18T06:59:00.282Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;报错详情&quot;&gt;&lt;a href=&quot;#报错详情&quot; class=&quot;headerlink&quot; title=&quot;报错详情&quot;&gt;&lt;/a&gt;报错详情&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;cannot resolve xxx jar spring boot
+        
+      
+    
+    </summary>
+    
+      <category term="bug" scheme="http://yoursite.com/categories/bug/"/>
+    
+    
+      <category term="bug" scheme="http://yoursite.com/tags/bug/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring boot配置https传输</title>
@@ -49,7 +332,7 @@
     <link href="http://yoursite.com/2020/05/20/draiy/game/"/>
     <id>http://yoursite.com/2020/05/20/draiy/game/</id>
     <published>2020-05-19T21:47:00.000Z</published>
-    <updated>2020-05-20T11:07:01.782Z</updated>
+    <updated>2020-07-05T05:50:24.207Z</updated>
     
     <summary type="html">
     
@@ -295,281 +578,6 @@
       <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
     
       <category term="error" scheme="http://yoursite.com/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>servlet获取当前路径</title>
-    <link href="http://yoursite.com/2020/05/10/web/servletpath/"/>
-    <id>http://yoursite.com/2020/05/10/web/servletpath/</id>
-    <published>2020-05-10T04:59:00.000Z</published>
-    <updated>2020-05-11T09:41:04.880Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;对不用它的人来书可能用处不大，哈哈&quot;&gt;&lt;a href=&quot;#对不用它的人来书可能用处不大，哈哈&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="web" scheme="http://yoursite.com/categories/web/"/>
-    
-    
-      <category term="servlet" scheme="http://yoursite.com/tags/servlet/"/>
-    
-      <category term="tomcat" scheme="http://yoursite.com/tags/tomcat/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>For foreign friends</title>
-    <link href="http://yoursite.com/2020/05/08/draiy/friendship/"/>
-    <id>http://yoursite.com/2020/05/08/draiy/friendship/</id>
-    <published>2020-05-07T21:47:00.000Z</published>
-    <updated>2020-05-07T21:48:04.891Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;instructions&quot;&gt;&lt;a href=&quot;#instructions&quot; class=&quot;headerlink&quot; title=&quot;instructions&quot;&gt;&lt;/a&gt;instructions&lt;/h3&gt;&lt;p&gt;After a lot of thought, I
-        
-      
-    
-    </summary>
-    
-      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
-    
-    
-      <category term="H" scheme="http://yoursite.com/tags/H/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java-QQ邮箱发送邮件</title>
-    <link href="http://yoursite.com/2020/05/06/framework/qqemail/"/>
-    <id>http://yoursite.com/2020/05/06/framework/qqemail/</id>
-    <published>2020-05-05T21:59:00.000Z</published>
-    <updated>2020-05-06T07:24:49.056Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;steps&quot;&gt;&lt;a href=&quot;#steps&quot; class=&quot;headerlink&quot; title=&quot;steps&quot;&gt;&lt;/a&gt;steps&lt;/h3&gt;&lt;p&gt;When we register an account, we often see the way to send
-        
-      
-    
-    </summary>
-    
-      <category term="Email" scheme="http://yoursite.com/categories/Email/"/>
-    
-    
-      <category term="QQ" scheme="http://yoursite.com/tags/QQ/"/>
-    
-      <category term="Email" scheme="http://yoursite.com/tags/Email/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QQ超链接推广</title>
-    <link href="http://yoursite.com/2020/05/04/draiy/addqq/"/>
-    <id>http://yoursite.com/2020/05/04/draiy/addqq/</id>
-    <published>2020-05-03T21:59:00.000Z</published>
-    <updated>2020-05-03T23:28:31.960Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;方法&quot;&gt;&lt;a href=&quot;#方法&quot; class=&quot;headerlink&quot; title=&quot;方法&quot;&gt;&lt;/a&gt;方法&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;电脑端：
-代码1：tencent
-        
-      
-    
-    </summary>
-    
-      <category term="QQ" scheme="http://yoursite.com/categories/QQ/"/>
-    
-    
-      <category term="推广" scheme="http://yoursite.com/tags/%E6%8E%A8%E5%B9%BF/"/>
-    
-      <category term="好友" scheme="http://yoursite.com/tags/%E5%A5%BD%E5%8F%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDEA 项目导出WAR包</title>
-    <link href="http://yoursite.com/2020/05/02/idea/buildwar/"/>
-    <id>http://yoursite.com/2020/05/02/idea/buildwar/</id>
-    <published>2020-05-01T21:59:00.000Z</published>
-    <updated>2020-05-03T23:14:25.687Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;How-to-pack？&quot;&gt;&lt;a href=&quot;#How-to-pack？&quot; class=&quot;headerlink&quot; title=&quot;How to pack？&quot;&gt;&lt;/a&gt;How to pack？&lt;/h3&gt;&lt;p&gt;First, open the file and find
-        
-      
-    
-    </summary>
-    
-      <category term="IDE" scheme="http://yoursite.com/categories/IDE/"/>
-    
-    
-      <category term="IDEA" scheme="http://yoursite.com/tags/IDEA/"/>
-    
-      <category term="WAR" scheme="http://yoursite.com/tags/WAR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>php环境快速搭建</title>
-    <link href="http://yoursite.com/2020/05/01/php/usephp/"/>
-    <id>http://yoursite.com/2020/05/01/php/usephp/</id>
-    <published>2020-05-01T04:15:00.000Z</published>
-    <updated>2020-05-01T04:47:41.120Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Instructions&quot;&gt;&lt;a href=&quot;#Instructions&quot; class=&quot;headerlink&quot; title=&quot;Instructions&quot;&gt;&lt;/a&gt;Instructions&lt;/h3&gt;&lt;p&gt;As a software engineer, we
-        
-      
-    
-    </summary>
-    
-    
-      <category term="PHP - b - b" scheme="http://yoursite.com/tags/PHP-b-b/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#快速开发GUI</title>
-    <link href="http://yoursite.com/2020/04/26/cshrp/c/"/>
-    <id>http://yoursite.com/2020/04/26/cshrp/c/</id>
-    <published>2020-04-26T04:15:00.000Z</published>
-    <updated>2020-04-26T05:43:31.881Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;C-introduce&quot;&gt;&lt;a href=&quot;#C-introduce&quot; class=&quot;headerlink&quot; title=&quot;C# introduce&quot;&gt;&lt;/a&gt;C# introduce&lt;/h3&gt;&lt;p&gt;C# is Microsoft’s official
-        
-      
-    
-    </summary>
-    
-      <category term="C#" scheme="http://yoursite.com/categories/C/"/>
-    
-    
-      <category term="GUI" scheme="http://yoursite.com/tags/GUI/"/>
-    
-      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>磁力链</title>
-    <link href="http://yoursite.com/2020/04/19/draiy/bt/"/>
-    <id>http://yoursite.com/2020/04/19/draiy/bt/</id>
-    <published>2020-04-18T17:59:00.000Z</published>
-    <updated>2020-04-30T11:50:37.076Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="diary" scheme="http://yoursite.com/categories/diary/"/>
-    
-    
-      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="资源" scheme="http://yoursite.com/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>暗网</title>
-    <link href="http://yoursite.com/2020/04/18/attark/blackweb/"/>
-    <id>http://yoursite.com/2020/04/18/attark/blackweb/</id>
-    <published>2020-04-17T17:59:00.000Z</published>
-    <updated>2020-04-18T14:14:49.236Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;相关资料&quot;&gt;&lt;a href=&quot;#相关资料&quot; class=&quot;headerlink&quot; title=&quot;相关资料&quot;&gt;&lt;/a&gt;相关资料&lt;/h3&gt;&lt;h4 id=&quot;最近国家安全日写一下暗网科普&quot;&gt;&lt;a href=&quot;#最近国家安全日写一下暗网科普&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="diary" scheme="http://yoursite.com/categories/diary/"/>
-    
-    
-      <category term="黑暗网络" scheme="http://yoursite.com/tags/%E9%BB%91%E6%9A%97%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="洋葱网络" scheme="http://yoursite.com/tags/%E6%B4%8B%E8%91%B1%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>理财与爱好</title>
-    <link href="http://yoursite.com/2020/04/16/draiy/hobby/"/>
-    <id>http://yoursite.com/2020/04/16/draiy/hobby/</id>
-    <published>2020-04-15T17:59:00.000Z</published>
-    <updated>2020-05-07T14:19:18.761Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;说说爱好&quot;&gt;&lt;a href=&quot;#说说爱好&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="日记" scheme="http://yoursite.com/categories/%E6%97%A5%E8%AE%B0/"/>
-    
-    
-      <category term="闲散" scheme="http://yoursite.com/tags/%E9%97%B2%E6%95%A3/"/>
-    
-      <category term="爱好" scheme="http://yoursite.com/tags/%E7%88%B1%E5%A5%BD/"/>
     
   </entry>
   

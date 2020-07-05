@@ -4,6 +4,274 @@
   
     
     <entry>
+      <title>markdown高级用法</title>
+      <link href="/2020/07/05/markdown/advanced-tutorial/"/>
+      <url>/2020/07/05/markdown/advanced-tutorial/</url>
+      
+        <content type="html"><![CDATA[<h3 id="了解基础语法可查看此篇"><a href="#了解基础语法可查看此篇" class="headerlink" title="了解基础语法可查看此篇"></a>了解基础语法可查看此篇</h3><p><a href="http://z.ahdy.top/2019/07/23/markdown/" target="_blank" rel="noopener">bolg adress</a></p><h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><pre><code>&lt;video id=&quot;video&quot; controls=&quot;&quot; preload=&quot;none&quot; poster=&quot;此处为图片地址-url&quot;&gt;  &lt;source id=&quot;mp4&quot; src=&quot;此处为视频地址.mp4等格式&quot;&gt;  &lt;/video&gt;</code></pre><h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3><pre><code>&lt;audio id=&quot;audio&quot; controls=&quot;&quot; preload=&quot;none&quot;&gt;  &lt;source id=&quot;mp3&quot; src=&quot;http://qiniu.cloud.fandong.me/Music_iP%E8%B5%B5%E9%9C%B2%20-%20%E7%A6%BB%E6%AD%8C%20%28Live%29.mp3&quot;&gt;  &lt;/audio&gt;</code></pre><h3 id="给GitHub仓库点星星"><a href="#给GitHub仓库点星星" class="headerlink" title="给GitHub仓库点星星"></a>给GitHub仓库点星星</h3><pre><code>&lt;iframe                    style=&quot;margin-left: 2px; margin-bottom:-5px;&quot;                    frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;100px&quot; height=&quot;20px&quot;                    src=&quot;仓库地址&quot; &gt;                &lt;/iframe&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mark </tag>
+            
+            <tag> down </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>油猴插件</title>
+      <link href="/2020/06/29/interest/monkey/"/>
+      <url>/2020/06/29/interest/monkey/</url>
+      
+        <content type="html"><![CDATA[<h3 id="如何下载油猴"><a href="#如何下载油猴" class="headerlink" title="如何下载油猴"></a>如何下载油猴</h3><p>百度呗！<br><a href="https://addons.mozilla.org/zh-CN/firefox/addon/tampermonkey/?src=search" target="_blank" rel="noopener">这里给出firefox插件安装地址</a><br><a href="https://www.tampermonkey.net/index.php?version=4.10&amp;ext=dhdg&amp;show=dhdg" target="_blank" rel="noopener">adress</a></p><h3 id="插件搜索地址"><a href="#插件搜索地址" class="headerlink" title="插件搜索地址"></a>插件搜索地址</h3><p><a href="https://greasyfork.org/zh-CN/scripts" target="_blank" rel="noopener">需要啥搜啥，可能需要梯子，可以找找国内的</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 插件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 插 </tag>
+            
+            <tag> 件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Nginx快速上手</title>
+      <link href="/2020/06/29/nginx/nginx/"/>
+      <url>/2020/06/29/nginx/nginx/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><p>Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。<br>其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。2011年6月1日，nginx 1.0.4发布。<br>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p><h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>反向代理服务器位于用户与目标服务器之间，但是对于用户而言，反向代理服务器就相当于目标服务器，即用户直接访问反向代理服务器就可以获得目标服务器的资源。同时，用户不需要知道目标服务器的地址，也无须在用户端作任何设定。反向代理服务器通常可用来作为Web加速，即使用反向代理作为Web服务器的前置机来降低网络和服务器的负载，提高访问效率。</p><h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><p>比如使用多个tom来分工干活</p><h3 id="linux安装"><a href="#linux安装" class="headerlink" title="linux安装"></a>linux安装</h3><p>当然也是可以装在windows上的但是呢，我们都知道 80%的网站都是使用Linux作为服务器。<br>为了测试方便呢，选在在VMware虚拟机当中进行操作！如果你有一台Linux境相的服务器，更好！<br>关于如何使用VMware安装Linux不用我多说了吧，这么大人了该学会面向百度了！<br>这里提供一下 Linux镜像的地址-<a href="https://www.centos.org/download/" target="_blank" rel="noopener">address</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Nginx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> 代理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>整合springboot web项目</title>
+      <link href="/2020/06/29/springboot/freamaker/"/>
+      <url>/2020/06/29/springboot/freamaker/</url>
+      
+        <content type="html"><![CDATA[<h3 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h3><p><video id="video" controls preload="none" poster="http://img.ahdy.top/2020-07-02_211101.png"><br> <source id="mp4" src="http://img.ahdy.top/QQ%E5%BD%95%E5%B1%8F20200701025339%20%2811%29.mp4"><br>  </video></p><h3 id="配置文档"><a href="#配置文档" class="headerlink" title="配置文档"></a>配置文档</h3><p><a href="https://share.weiyun.com/yOePJ1DT" target="_blank" rel="noopener">微云</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 框架 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 整 </tag>
+            
+            <tag> 合 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA创建springboot过慢</title>
+      <link href="/2020/06/29/idea/dowload/"/>
+      <url>/2020/06/29/idea/dowload/</url>
+      
+        <content type="html"><![CDATA[<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>参考<a href="https://blog.csdn.net/zhangjianming2018/article/details/103209379?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">adress</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 插件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 镜像 </tag>
+            
+            <tag> 阿里 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker快速上手</title>
+      <link href="/2020/06/27/linux/docker/"/>
+      <url>/2020/06/27/linux/docker/</url>
+      
+        <content type="html"><![CDATA[<p>Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。</p><p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p><p>容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。<br>Docker的应用场景<br>Web 应用的自动化打包和发布。</p><p>自动化测试和持续集成、发布。</p><p>在服务型环境中部署和调整数据库或其他的后台应用。</p><p>从头编译或者扩展现有的 OpenShift 或 Cloud Foundry 平台来搭建自己的 PaaS 环境。</p><p>Docker 的优点<br>Docker 是一个用于开发，交付和运行应用程序的开放平台。Docker 使您能够将应用程序与基础架构分开，从而可以快速交付软件。借助 Docker，您可以与管理应用程序相同的方式来管理基础架构。通过利用 Docker 的方法来快速交付，测试和部署代码，您可以大大减少编写代码和在生产环境中运行代码之间的延迟。</p><p>1、快速，一致地交付您的应用程序<br>Docker 允许开发人员使用您提供的应用程序或服务的本地容器在标准化环境中工作，从而简化了开发的生命周期。</p><p>容器非常适合持续集成和持续交付（CI / CD）工作流程，请考虑以下示例方案：</p><p>您的开发人员在本地编写代码，并使用 Docker 容器与同事共享他们的工作。<br>他们使用 Docker 将其应用程序推送到测试环境中，并执行自动或手动测试。<br>当开发人员发现错误时，他们可以在开发环境中对其进行修复，然后将其重新部署到测试环境中，以进行测试和验证。<br>测试完成后，将修补程序推送给生产环境，就像将更新的镜像推送到生产环境一样简单。<br>2、响应式部署和扩展<br>Docker 是基于容器的平台，允许高度可移植的工作负载。Docker 容器可以在开发人员的本机上，数据中心的物理或虚拟机上，云服务上或混合环境中运行。</p><p>Docker 的可移植性和轻量级的特性，还可以使您轻松地完成动态管理的工作负担，并根据业务需求指示，实时扩展或拆除应用程序和服务。</p><p>3、在同一硬件上运行更多工作负载<br>Docker 轻巧快速。它为基于虚拟机管理程序的虚拟机提供了可行、经济、高效的替代方案，因此您可以利用更多的计算能力来实现业务目标。Docker 非常适合于高密度环境以及中小型部署，而您可以用更少的资源做更多的事情。</p><h3 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h3><p>一个简易版虚拟机，并且可从远程仓库拉取镜像，创建容器递交至 docker hub</p><h3 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h3><p>关于docker的安装，还是参考官网比较好，毕竟其他地方的文档都是根据官网上的翻译过来的。</p><p><a href="https://docs.docker.com/engine/install/centos/" target="_blank" rel="noopener">官网-centos</a></p><p>有一个致命点需要注意，在安装docker时需要外网才能下载成功！，centos8的网络需要手动连接！</p><h4 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h4><p>这里需要注意的是，Linux中自带了podman，安装docker可能会出现冲突，会出现安装错误，需要指定版本，具体原因可百度。<br>centos8默认使用podman代替docker，但是当前还是需要docker，<br>执行yum install docker-ce docker-ce-cli containerd.io，<br>会报错Problem: package docker-ce-3:19.03.3-3.el7.x86_64 requires containerd.io &gt;= 1.2.2-3, but none of the providers can be installed</p><p>2，什么是Podman？<br>Podman 是一个开源的容器运行时项目，可在大多数 Linux 平台上使用。Podman 提供与 Docker 非常相似的功能。正如前面提到的那样，它不需要在你的系统上运行任何守护进程，并且它也可以在没有 root 权限的情况下运行。<br>Podman 可以管理和运行任何符合 OCI（Open Container Initiative）规范的容器和容器镜像。Podman 提供了一个与 Docker 兼容的命令行前端来管理 Docker 镜像。</p><p>Podman 官网地址：<a href="https://podman.io/" target="_blank" rel="noopener">https://podman.io/</a><br>Podman 项目地址：<a href="https://github.com/containers/libpod" target="_blank" rel="noopener">https://github.com/containers/libpod</a></p><p>这里不过多了解podman主要以docker学习为主</p><h5 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h5><pre><code>1.yum install -y yum-utils device-mapper-persistent-data lvm2</code></pre><h5 id="安装阿里云镜像源"><a href="#安装阿里云镜像源" class="headerlink" title="安装阿里云镜像源"></a>安装阿里云镜像源</h5><pre><code>2. yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo </code></pre><h5 id="下载安装docker"><a href="#下载安装docker" class="headerlink" title="下载安装docker"></a>下载安装docker</h5><pre><code>4.dnf -y  install docker-ce --nobest5. 启动dockersystemctl start docker6.查看版本docker --version7.开机自启systemctl enable docker</code></pre><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><pre><code>[root@localhost wo]# docker run hello-worldUnable to find image &#39;hello-world:latest&#39; locallylatest: Pulling from library/hello-world0e03bdcc26d7: Pull complete Digest: sha256:d58e752213a51785838f9eed2b7a498ffa1cb3aa7f946dda11af39286c3db9a9Status: Downloaded newer image for hello-world:latestHello from Docker!This message shows that your installation appears to be working correctly.To generate this message, Docker took the following steps: 1. The Docker client contacted the Docker daemon. 2. The Docker daemon pulled the &quot;hello-world&quot; image from the Docker Hub.    (amd64) 3. The Docker daemon created a new container from that image which runs the    executable that produces the output you are currently reading. 4. The Docker daemon streamed that output to the Docker client, which sent it    to your terminal.To try something more ambitious, you can run an Ubuntu container with: $ docker run -it ubuntu bashShare images, automate workflows, and more with a free Docker ID: https://hub.docker.com/For more examples and ideas, visit: https://docs.docker.com/get-started/</code></pre><p>出现如上信息说明docker安装成。</p><h3 id="配置阿里云专属镜像加速"><a href="#配置阿里云专属镜像加速" class="headerlink" title="配置阿里云专属镜像加速"></a>配置阿里云专属镜像加速</h3><p><img src="http://img.ahdy.top/2020-06-21_17311.png" alt="登录你的阿里云，将下面的命令自行到终端，当然这个是我的！我的！不要用我的，用你自己的"></p><h3 id="测试镜像"><a href="#测试镜像" class="headerlink" title="测试镜像"></a>测试镜像</h3><p>docker info 查看镜像是否设置成功，一般这个信息会在最下方</p><p>docker search tomcat 查看是否能从镜像地址中拉取到tomcat镜像文件。</p><h3 id="显示当前运行镜像"><a href="#显示当前运行镜像" class="headerlink" title="显示当前运行镜像"></a>显示当前运行镜像</h3><pre><code>docker psdocker ps -l docker ps -q  </code></pre><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>1.docker pull [options] NAME[:TAG]</p><p>通过此命令可以docker远程仓库拉取镜像到本地.</p><p>name是拉取镜像的名称,:TAG表示是可选的,如果不选表明时latest,如果选择表明是指定版本的.</p><p>options是拉去的一些参数.</p><p>如果不指定任何参数的话 可以直接使用docker pull tomcat 方式将tomcat从镜像仓库拉去到本地</p><h4 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h4><p>docker run XXXX</p><p>docker run -d xxxx   后台运行镜像</p><h4 id="查看运行的容器"><a href="#查看运行的容器" class="headerlink" title="查看运行的容器"></a>查看运行的容器</h4><p>docker ps</p><h4 id="查看更多的-run-命令"><a href="#查看更多的-run-命令" class="headerlink" title="查看更多的 run 命令"></a>查看更多的 run 命令</h4><p>docker run –help</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> 虚拟机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>过滤器，拦截器</title>
+      <link href="/2020/06/25/web/filter/"/>
+      <url>/2020/06/25/web/filter/</url>
+      
+        <content type="html"><![CDATA[<p>SUN从Servlet2.3开始添加一项激动人心的功能，就是过滤器（Filter）。</p><p>你可以通过Filter技术，对web服务器管理的所有资源：例如Jsp、Servlet、图片或html文件等进行拦截，从而实现一些特殊的功能。</p><p>这个具有拦截特点的技术，我们叫做过滤器（Filter）。</p><p>用技术的措辞来讲，Servlet API中提供了一个Filter接口，开发web应用时，如果编写的Java类实现了这个接口，则把这个java类称之为过滤器Filter。</p><p>通过Filter技术，开发人员可以实现用户在访问某个目标资源之前，对访问的请求和响应进行拦截</p><p>public void init(FilterConfig filterConfig)throws ServletException;//初始化</p><p>Filter的创建和销毁由web服务器负责。</p><p>web应用程序启动时，web服务器将创建Filter的实例对象，并调用其init方法，读取web.xml配置，完成对象的初始化功能。</p><p>Filter对象只会创建一次，init方法也只会执行一次。</p><p>执行拦截</p><pre><code>public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException;//拦截请求</code></pre><p>这个方法完成实际的过滤操作。当客户请求访问与过滤器关联的URL的时候，Servlet过滤器将先执行doFilter方法。FilterChain参数用于访问后续过滤器。</p><p>public void destroy();//销毁</p><p>Filter对象创建后会驻留在内存，当web应用移除或服务器停止时才被销毁。</p><p>该方法在Filter的生命周期中仅执行一次。在这个方法中，可以释放过滤器使用的资源。</p><p><img src="http://img.ahdy.top/2020-06-25_175017.png" alt></p><h3 id="监听器"><a href="#监听器" class="headerlink" title="监听器"></a>监听器</h3><p>什么是Listener</p><p>监听器是一个专门用于对其它对象身上发生的事件或状态改变进行监听和相应处理的对象，当被监视的对象发生情况时，立即采取相应的行动。</p><p>我们把上面难懂的表述分解一下，发现整个监听器模型由三大部件组成：</p><p>   事件源：谁被监听了。    blob.png<br>   事件：什么事情发生会被监听。<br>   事件监听器：当监听到事件发生时，采取的动作。</p><p>avaWeb中的监听器是Servlet规范中定义的一种特殊类，它用于监听web应用程序中的ServletContext、HttpSession和ServletRequest这3个对象的创建与销毁事件，以及监听这些对象中的属性发生修改的事件。</p><p>我们按照监听模型来梳理一下三大关键部件：</p><p>  事件源：谁被监听了</p><pre><code>下面这三个家伙被监听了：ServletContext、HttpSession、ServletRequest</code></pre><p>  事件：什么事情发生会被监听，举例：</p><pre><code>ServletContext初始化和销毁的事件：contextInitialized、contextDestroyed HttpSession创建和销毁的事件：sessionCreated、sessionDestroyedServletRequest创建和销毁事件：requestInitialized、requestDestroyed</code></pre><p>  事件监听器：当监听到事情发生时，采取的动作</p><pre><code>自定义一个类，比如，实现HttpSessionListener接口中的sessionCreated、sessionDestroyed的方法，采取的动作需要在方法中实现自己的逻辑。</code></pre><p>Listener的分类</p><p>1）ServletContext监听</p><p>  ServletContextListener：用于对Servlet整个上下文进行监听(创建、销毁)。</p><p>  ServletContextAttributeListener：对Servlet上下文属性的监听(增删改属性)。</p><p>2）Session监听</p><p>  HttpSessionListener接口：对Session的整体状态的监听。</p><p>  HttpSessionAttributeListener接口：对Session的属性监听。</p><p>3）Request监听</p><p>  ServletRequestListener：用于对Request请求进行监听(创建、销毁)。</p><p>  ServletRequestAttributeListener：对Request的属性的监听(增删改属性)。</p><p>有了监听器，下面的这些场景需求，您就可以轻松应对了：</p><p>  统计当前在线人数：在JavaWeb应用开发中，有时候我们需要统计当前在线的用户数，此时就可以使用监听器技术来实现这个功能了。</p><p>  Session管理器：当一个Web应用创建的Session很多时，为了避免Session占用太多的内存，我们可以选择手动将这些内存中的session销毁，那么此时也可以借助监听器技术来实现。</p><p><img src="http://img.ahdy.top/2020-06-25_180356.png" alt></p><h3 id="spring-boot-拦截，过滤器配置"><a href="#spring-boot-拦截，过滤器配置" class="headerlink" title="spring boot 拦截，过滤器配置"></a>spring boot 拦截，过滤器配置</h3><p><a href="https://www.cnblogs.com/yifeiyaoshangtian/p/10280808.html" target="_blank" rel="noopener">adress</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> bk </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 过滤器 </tag>
+            
+            <tag> 拦截器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>鼓励师,插件</title>
+      <link href="/2020/06/22/vscode/vscode/"/>
+      <url>/2020/06/22/vscode/vscode/</url>
+      
+        <content type="html"><![CDATA[<p>这东西好像只有js代码能生效吧！</p><h3 id="安装编译器"><a href="#安装编译器" class="headerlink" title="安装编译器"></a>安装编译器</h3><p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">官网下载</a><br>怎么下载的，不教了，傻瓜都能装上。<br>开始搜索Chinese把中文环境插件装上，英文好当我没说。<br><a href="https://marketplace.visualstudio.com/items?itemName=saekiraku.rainbow-fart" target="_blank" rel="noopener">插件地址-会自动打开vscode</a><br>    下载rainbow-fart<br>    目前在vscode中还不能搜索到此插件，只能从官网中下载，官方地址：<br>    <a href="https://saekiraku.github.io/vscode-rainbow-fart/#/zh/" target="_blank" rel="noopener">https://saekiraku.github.io/vscode-rainbow-fart/#/zh/</a></p><pre><code>安装rainbow-fart在vscode软件中使用ctrl+shift+p 打开命令面板，复制Extensions: Install from VSIX 后回车启动rainbow-fart在vscode软件中使用ctrl+shift+p 打开命令面板，复制Enable Rainbow Fart 后回车，右下方弹出的提示后点击open按钮，或直接访问（http://127.0.0.1:7777/ ）启动语音服务在弹出的页面出，点击此处激活使用，即可愉快的使用了。</code></pre><p><a href="https://www.bilibili.com/video/BV13441117ky?from=search&amp;seid=7347435034364534739" target="_blank" rel="noopener">vscode设置Java环境</a></p><h4 id="另一个比较好的教程"><a href="#另一个比较好的教程" class="headerlink" title="另一个比较好的教程"></a>另一个比较好的教程</h4><p><a href="https://www.appinn.com/vscode-rainbow-fart/" target="_blank" rel="noopener">address</a></p><h3 id="idea安装鼓励师"><a href="#idea安装鼓励师" class="headerlink" title="idea安装鼓励师"></a>idea安装鼓励师</h3><p>这个好像jb那边没过审呢吧！</p><pre><code>https://plugins.jetbrains.com/plugin/14543-rainbow-fart  事实是有的</code></pre><h4 id="安利一下idea别的插件吧，用了之后菜鸟变B王"><a href="#安利一下idea别的插件吧，用了之后菜鸟变B王" class="headerlink" title="安利一下idea别的插件吧，用了之后菜鸟变B王"></a>安利一下idea别的插件吧，用了之后菜鸟变B王</h4><p><a href="https://blog.csdn.net/CSDN2497242041/article/details/102617806?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">adress</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vscode </tag>
+            
+            <tag> 鼓励师 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux常用命令</title>
+      <link href="/2020/06/19/linux/linux/"/>
+      <url>/2020/06/19/linux/linux/</url>
+      
+        <content type="html"><![CDATA[<h3 id="come"><a href="#come" class="headerlink" title="come"></a>come</h3><p>基础常用命令<br>cd/pwd/ls       切地址 显示当前路径 显示当下文件夹</p><p>mkdir rmdir     创建删除文件夹</p><p>cp/rm/mv        复制 删除 移动</p><p>tar/zip/unzip    文件打包</p><p>rmdir：删除一个空的目录</p><p>TAB键有自动补全功能</p><pre><code>1、设置root用户的密码：sudo passwd root2、切换到root用户权限su3、切换回个人用户权限exit</code></pre><h3 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h3><p>该命令可以创建一个文件夹，然后可读可写，i插入 w保存 :wq!保存退出<br>输入模式<br>在命令模式下按下i就进入了输入模式。</p><pre><code>在输入模式中，可以使用以下按键：字符按键以及Shift组合，输入字符ENTER，回车键，换行BACK SPACE，退格键，删除光标前一个字符DEL，删除键，删除光标后一个字符方向键，在文本中移动光标HOME/END，移动光标到行首/行尾Page Up/Page Down，上/下翻页Insert，切换光标为输入/替换模式，光标将变成竖线/下划线ESC，退出输入模式，切换到命令模式</code></pre><p>如果你想要使用 vi 来建立一个名为 runoob.txt 的文件时，你可以这样做：</p><p>$ vim runoob.txt</p><h3 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h3><p>yum（ Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。</p><h4 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h4><p>运行以下命令生成缓存</p><p>yum clean all</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> 命令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Springboot项目创建报错</title>
+      <link href="/2020/06/18/springboot/error/"/>
+      <url>/2020/06/18/springboot/error/</url>
+      
+        <content type="html"><![CDATA[<h3 id="报错详情"><a href="#报错详情" class="headerlink" title="报错详情"></a>报错详情</h3><pre><code>cannot resolve xxx jar spring boot version等错误</code></pre><p>org.springframework.boot.SpringApplication等无法导入，提示“cannot resolve xxxx”。</p><p>呃！，这个问题主要是maven没有配置好，先前嫌电脑太卡然后重置了磁盘，导致idea时去了最初maven仓库的配置信息，所以，去settings设置好一下即可</p><p>安装配置好的路径，之后IDEA就会下载一大堆文件，在下载完成之后，这个spring boot的demo项目就可以正常运行了。<br><img src="http://img.ahdy.top/20190813154313362.png" alt></p><p>如果不会装maven可以参考这篇文档<a href="http://z.ahdy.top/2019/10/23/framework/maven/" target="_blank" rel="noopener">maven安装</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> bug </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring boot配置https传输</title>
       <link href="/2020/06/04/web/https/"/>
       <url>/2020/06/04/web/https/</url>
@@ -35,7 +303,7 @@
       <link href="/2020/05/20/draiy/game/"/>
       <url>/2020/05/20/draiy/game/</url>
       
-        <content type="html"><![CDATA[<h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><p>不知不觉已经玩了很久的游戏，从上小学开始吧，不得不说我玩游戏有一定天赋，竞技类游戏可能不擅长，但是玩RPG类游戏，成长的速度比一般人要快很多，只要入手很快就能霸榜。</p><p>好在随着年龄的增长，大概在18岁左右，我对游戏失去了兴趣，其实每个人都会有一个失去游戏兴趣的时间，这个时间取决于自身对外界事物的认知，不是靠着大道理，而是靠着亲身磨练才能觉悟的。如果想觉悟也很简单，离开父母的庇护，身上不要带一分钱，去到社会上生存。没有钱，权，能，无法生存，意识到缺失这些，会让你快速逾越玩游戏的思想。</p><p>有句话说只要有付出就有回报，这句话在游戏里显得淋漓尽致，游戏正是弥补了现实缺少的一面。但游戏回报的可以说是毫无价值的东西。早些年我也玩到倒服几个游戏，运营商到后来只是简单的说了一句资金不足，最后关闭了服务器。这期间无数玩家付出了大量精力，时间，金钱，到头来都成了南柯一梦。</p><p>投资房产 企业，投资金融债券股票，投资自己，投资任何东西都比游戏带来的要真实可靠。辛辛苦苦投资的游戏角色只不过是一个根本不存在的数据。</p><h3 id="为什么会忍不住打游戏"><a href="#为什么会忍不住打游戏" class="headerlink" title="为什么会忍不住打游戏"></a>为什么会忍不住打游戏</h3><p>一句话，逃避现实罢了。现实中得不到的反馈，会在游戏里得到满足。很多人选择游戏来麻痹自己，那种安逸正是人内心所向往的，久而久之成了瘾。</p><h3 id="背后"><a href="#背后" class="headerlink" title="背后"></a>背后</h3><p>游戏可以说是高智商人给低智商人上的一套枷锁，循规蹈矩的按照一定的模式去为运营商赚钱打工。游戏里其实应用了很多心理学。游戏模式，和玩家构成了一种虚拟的社会。这种社会充满着好胜，攀比，利益，虚荣，变向让玩家快速得到这些是刺激他们消费的根本目的。</p><h3 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h3><p>如果二十岁了还在玩游戏的话(无节制玩)，只能说没有彻底长大，但确实该觉悟了，毕竟人的青春有限，不能像游戏一样从头来过，不要等到觉悟的时候，发现一切都晚了，失去了重要的机会，那人的未来将会被这花花世界束缚。</p><p>游戏反馈给我最有价值的东西就是，如果想变强，就得不断的提升自己，多方面提升，多渠道提升。</p><p>把发展游戏的精力投入到发展自己身上，那么你将会是个现实中的强者     ————————————————————————————2020.5.20</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h3><p>不知不觉已经玩了很久的游戏，从上小学开始吧，不得不说我玩游戏有一定天赋，竞技类游戏可能不擅长，但是玩RPG类游戏，成长的速度比一般人要快很多，只要入手很快就能霸榜。</p><p>好在随着年龄的增长，大概在18岁左右，我对游戏失去了兴趣，其实每个人都会有一个失去游戏兴趣的时间，这个时间取决于自身对外界事物的认知，不是靠着大道理，而是靠着亲身磨练才能觉悟的。如果想觉悟也很简单，离开父母的庇护，身上不要带一分钱，去到社会上生存。没有钱，权，能，无法生存，意识到缺失这些，会让你快速逾越玩游戏的思想。</p><p>有句话说只要有付出就有回报，这句话在游戏里显得淋漓尽致，游戏正是弥补了现实缺少的一面。但游戏回报的可以说是毫无价值的东西。早些年我也玩到倒服几个游戏，运营商到后来只是简单的说了一句资金不足，最后关闭了服务器。这期间无数玩家付出了大量精力，时间，金钱，到头来都成了南柯一梦。</p><p>投资房产 企业，投资金融债券股票，投资自己，投资任何东西都比游戏带来的要真实可靠。辛辛苦苦投资的游戏角色只不过是一个根本不存在的数据。</p><h3 id="为什么会忍不住打游戏"><a href="#为什么会忍不住打游戏" class="headerlink" title="为什么会忍不住打游戏"></a>为什么会忍不住打游戏</h3><p>一句话，逃避现实罢了。现实中得不到的反馈，会在游戏里得到满足。很多人选择游戏来麻痹自己，那种安逸正是人内心所向往的，久而久之成了瘾。</p><h3 id="背后"><a href="#背后" class="headerlink" title="背后"></a>背后</h3><p>游戏可以说是高智商人给低智商人上的一套枷锁，循规蹈矩的按照一定的模式去为运营商赚钱打工。游戏里其实应用了很多心理学。游戏模式，和玩家构成了一种虚拟的社会。这种社会充满着好胜，攀比，利益，虚荣，变向让玩家快速得到这些是刺激他们消费的根本目的。</p><h3 id="反馈"><a href="#反馈" class="headerlink" title="反馈"></a>反馈</h3><p>如果到了一定年龄确实该觉悟了，毕竟人的青春有限，不能像游戏一样从头来过，不要等到觉悟的时候，发现一切都晚了，失去了重要的机会，那人的未来将会被这花花世界束缚。</p><p>游戏反馈给我最有价值的东西就是，如果想变强，就得不断的提升自己，多方面提升，多渠道提升。</p><p>把发展游戏的精力投入到发展自己身上，那么你将会是个现实中的强者     ————————————————————————————2020.5.20</p>]]></content>
       
       
       <categories>
@@ -712,9 +980,9 @@
       
         <tags>
             
-            <tag> GUI </tag>
-            
             <tag> FX </tag>
+            
+            <tag> GUI </tag>
             
         </tags>
       
@@ -1182,33 +1450,6 @@
     
     
     <entry>
-      <title>枪版电影网</title>
-      <link href="/2019/12/22/framework/movies/"/>
-      <url>/2019/12/22/framework/movies/</url>
-      
-        <content type="html"><![CDATA[<h3 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h3><p><a href="https://www.jianshu.com/p/d51bd21b33dd" target="_blank" rel="noopener">简书</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 电影 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 电影 </tag>
-            
-            <tag> movies </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Windows10快捷键</title>
       <link href="/2019/12/22/framework/windows/"/>
       <url>/2019/12/22/framework/windows/</url>
@@ -1506,33 +1747,6 @@
     
     
     <entry>
-      <title>Session无法获取</title>
-      <link href="/2019/11/23/ssm/sessionnull/"/>
-      <url>/2019/11/23/ssm/sessionnull/</url>
-      
-        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Session </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Session </tag>
-            
-            <tag> 传递 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Session会话</title>
       <link href="/2019/11/23/ssm/session/"/>
       <url>/2019/11/23/ssm/session/</url>
@@ -1552,6 +1766,33 @@
             <tag> Session </tag>
             
             <tag> EL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Session无法获取</title>
+      <link href="/2019/11/23/ssm/sessionnull/"/>
+      <url>/2019/11/23/ssm/sessionnull/</url>
+      
+        <content type="html"><![CDATA[<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>暂时的解决方法有两种，亲测有效：</p><p>方法一：  将页面跳转方式由a标签改为请求转发request.getRequestDispatcher(“stu_list.jsp”).forward(request, response)，然后用EL表达式在页面获取。</p><p>方法二 ： 将session的ID存到Cookie中，并设置失效时间，跳转页面之后session依然可用<br><img src="http://img.ahdy.top/Cookie.png" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Session </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Session </tag>
+            
+            <tag> 传递 </tag>
             
         </tags>
       
@@ -2465,9 +2706,9 @@
       
         <tags>
             
-            <tag> 语法 </tag>
-            
             <tag> JSP </tag>
+            
+            <tag> 语法 </tag>
             
         </tags>
       
@@ -2546,9 +2787,9 @@
       
         <tags>
             
-            <tag> 语法 </tag>
-            
             <tag> JS </tag>
+            
+            <tag> 语法 </tag>
             
         </tags>
       
@@ -2573,9 +2814,9 @@
       
         <tags>
             
-            <tag> 语法 </tag>
-            
             <tag> JS </tag>
+            
+            <tag> 语法 </tag>
             
         </tags>
       
@@ -2627,9 +2868,9 @@
       
         <tags>
             
-            <tag> 语法 </tag>
-            
             <tag> CSS </tag>
+            
+            <tag> 语法 </tag>
             
         </tags>
       
@@ -2654,9 +2895,9 @@
       
         <tags>
             
-            <tag> 语法 </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> 语法 </tag>
             
         </tags>
       
@@ -2909,8 +3150,8 @@
     
     <entry>
       <title>Markdown</title>
-      <link href="/2019/07/23/markdown/"/>
-      <url>/2019/07/23/markdown/</url>
+      <link href="/2019/07/23/markdown/markdown/"/>
+      <url>/2019/07/23/markdown/markdown/</url>
       
         <content type="html"><![CDATA[<h5 id="内容如图"><a href="#内容如图" class="headerlink" title="内容如图"></a>内容如图</h5><p>为啥上图呢，因为我的文档就是markdown写的，直接写的话会对文档产生效果，so。<br><img src="http://img.ahdy.top/20190723103212.png" alt><br><img src="http://img.ahdy.top/20190723103225.png" alt><br><img src="http://img.ahdy.top/20190723103233.png" alt></p>]]></content>
       
@@ -3101,7 +3342,7 @@
       <link href="/2019/07/08/composition/"/>
       <url>/2019/07/08/composition/</url>
       
-        <content type="html"><![CDATA[<p>我也是无语啦，写了三千字，没保存，so 使用markdown一定要选启用自动保存啊！！！<br>没啥好命名的题目，随便开始写吧！<br>在我过去一年的大学生涯里，我深刻的体会到了当代大学生的迷惘和困惑。一进学校就开始焦虑自己的未来，非常功利的规划自己每一步，我要怎么怎么样，但现实是残酷的，其实我高中时并不是这样的人，那时我行我素，固步自封，用俗话讲就是头铁吧！下面讲个故事吧，所谓事情的发展总是两面性的，物极必反，在那样“头铁”的性子下，我离家出走了，我一直认为一个人也可以生活的很好，然而…还是那句话，现实是残酷的，很快我身上带的钱所剩无几，这意味着我不赚钱将会面临挨饿，那是我第一次感受到危机感，迫于生活，我找到了一家中介公司，中介以强硬的态度让我签下很多份含有不平等条约的合同，当时，我还有些高兴，我找到工作了，但这只是故事的开始。<br>我如期的进到了一家洗衣液外包工厂，老油条们都喜欢欺负新人，什么重活脏活都给我，车间头儿也是有点小权时时刻刻发挥到极致，我任劳任怨的虚度着光阴，我其实是一个利他主义者，或许这种行为的本质就是内心善良吧，然而这种善良并不会被人们珍惜，反而会被肆意践踏。直到有一天我被调到厂里流水线作业量最大的生产线上，我因为跟不上巨大的工作量，boss直接要开除我，并扬言不会给一分钱工钱。<br>从小就听老师讲，有问题找警察，嗯，于是我就报警啦，然而警察告诉我，这方面事情，他们管不了，这种事要去劳动局，申诉，劳动仲裁，法院起诉，一系列流程，我深刻的意识到这个时间我是耗不起的，当时啊真的是穷困潦倒，风餐露宿。不知道你们报没报过警，他们如果出动了警力，需要对报警人信息做一个备案，就这样我还被带去派出所一趟。没办法我还是去了劳动局，我等了很久排上号，那个服务区的人就给我一种有理也没地方说的感觉吧！最后那人讲了一句，小兄弟回家吧！别出来打工了，他就喊了下一号，顿时什么贪污受贿，狼狈为奸，官官相护出现在我的脑海，我不甘，在那等了一夜，第二天他一上班我又来了，我如愿的要到了一张申诉表，最后经过“他们”之间的协商，给了我三百块钱，我记得当时干了十天，一天十二小时吧，十天我就被开除了，因为啥啊，就因为我是临时的呗，这是资本主义管用的手法，杀一儆百。嗯，当时就一个想法，以后不想再那么累，我又想到父亲说的一些话，韵味深长。所以呢我写这个故事希望能前车之鉴，让你有些感悟少走些弯路。  </p><p>#####努力不一定成功，也不一定就有什么结果，但你努力过就会有收获（经历）。  </p><p>身边的很多人，焦虑为什么别人目标那么明确，自己却没有那么清晰。出于某种补偿心理，他们会一方面参加各种各样的社团活动，社会实践，另一-方面门门考试逼着自己拿A。其实在这种全方面恶性竞争的生态下，只会造就两种人，全面彻底的输家，和全面彻底的但是却是insecured overacheivers的赢家。都说大学教育正在堕落成为失去灵魂的卓越，当然这不是大学问题，而是后现代性的社会出现的必然问题，在此不表，有空另开小灶。但是在我看来，更可忧虑的是那些赢家并不因此成就”卓越”，反倒可能因为熟谙了各种潜规则而变成蝇营狗苟的现实主义者，与此相对，输家则因为遭遇挫或不公而成为愤世嫉俗者和犬儒主义者。无论是哪一种结果，都以丧失灵魂为代价。所以这就是为什么部分大学生涯里我在我的四周自己给自己修起了一座高墙，自己不想出去，也不准别人走进的原因:当谈论的只是各种八卦新闻、网络游戏或说纯粹的男欢女爱，这样的大学一定不可能是卓越的，因为它背离了大学的本义。<br>或许长此以往，我也会变成那种我曾经讨厌的人，此时我想起一首歌<br>有人浪迹江湖，有人寒窗苦读</p><p>有人阿谀奉承，有人早已麻木</p><p>有人嫌贫爱富，有人唯利是图</p><p>有人精打细算，有人满不在乎  </p><p>为此我经常体会到了自己的矛盾，我，你，都是社会性体会。要在社会里走下去，必须要玩社会本身的游戏规则，尤其潜规则玩好比实打实的规则更重要。至于如何调整、引导这个矛盾，是我一直在学习的一件事情。我目前的方法是:是专注。走不出去，，那就专注的做好每件事情吧，那就把它做到极致吧。每个人都在寻找那个可以用尽全身气力去拥抱的对象，并且希望这个拥抱可以让自己变得安全、强大甚至完满。但随着年复一年的变更，我越来越认同昂山素季的这个说法“真正的改变是通过理解、同情、正义、爱心后的内在变化。”只有经历了如此这般的内在变化，你才会和自己停战，才能够学会不自负、不迟疑、也不骄慢”地与世界媾和。小至个体，大到国家，概莫能外。  </p><p>我总是亦步亦趋，因为我害怕失败，其实不过是自尊心作祟，我已经是个彻彻底底的loser，我还有什么释怀不了呢，其实最大的敌人莫过于自己，加油！</p>]]></content>
+        <content type="html"><![CDATA[<p>我也是无语，写了三千字，没保存，so 使用markdown一定要选启用自动保存啊！！！<br>没啥好命名的题目，随便开始写吧！<br>在我过去一年的大学生涯里，我深刻的体会到了当代大学生的迷惘和困惑。一进学校就开始焦虑自己的未来，非常功利的规划自己每一步，我要怎么怎么样，但现实是残酷的，其实我高中时并不是这样的人，那时我行我素，固步自封，用俗话讲就是头铁吧！下面讲个故事吧，所谓事情的发展总是两面性的，物极必反，在那样“头铁”的性子下，我离家出走了，我一直认为一个人也可以生活的很好，然而…还是那句话，现实是残酷的，很快我身上带的钱所剩无几，这意味着我不赚钱将会面临挨饿，那是我第一次感受到危机感，迫于生活，我找到了一家中介公司，中介以强硬的态度让我签下很多份含有不平等条约的合同，当时，我还有些高兴，我找到工作了，但这只是故事的开始。<br>我如期的进到了一家洗衣液外包工厂，老油条们都喜欢欺负新人，什么重活脏活都给我，车间头儿也是有点小权时时刻刻发挥到极致，我任劳任怨的虚度着光阴，我其实是一个利他主义者，或许这种行为的本质就是内心善良吧，然而这种善良并不会被人们珍惜，反而会被肆意践踏。直到有一天我被调到厂里流水线作业量最大的生产线上，我因为跟不上巨大的工作量，boss直接要开除我，并扬言不会给一分钱工钱。<br>从小就听老师讲，有问题找警察，嗯，于是我就报警啦，然而警察告诉我，这方面事情，他们管不了，这种事要去劳动局，申诉，劳动仲裁，法院起诉，一系列流程，我深刻的意识到这个时间我是耗不起的，当时啊真的是穷困潦倒，风餐露宿。不知道你们报没报过警，他们如果出动了警力，需要对报警人信息做一个备案，就这样我还被带去派出所一趟。没办法我还是去了劳动局，我等了很久排上号，那个服务区的人就给我一种有理也没地方说的感觉吧！最后那人讲了一句，小兄弟回家吧！别出来打工了，他就喊了下一号，顿时什么贪污受贿，狼狈为奸，官官相护出现在我的脑海，我不甘，在那等了一夜，第二天他一上班我又来了，我如愿的要到了一张申诉表，最后经过“他们”之间的协商，给了我三百块钱，我记得当时干了十天，一天十二小时吧，十天我就被开除了，因为啥啊，就因为我是临时的呗，这是资本主义管用的手法，杀一儆百。嗯，当时就一个想法，以后不想再那么累，我又想到父亲说的一些话，韵味深长。所以呢我写这个故事希望能前车之鉴，让你有些感悟少走些弯路。  </p><p>#####努力不一定成功，也不一定就有什么结果，但你努力过就会有收获（经历）。  </p><p>身边的很多人，焦虑为什么别人目标那么明确，自己却没有那么清晰。出于某种补偿心理，他们会一方面参加各种各样的社团活动，社会实践，另一-方面门门考试逼着自己拿A。其实在这种全方面恶性竞争的生态下，只会造就两种人，全面彻底的输家，和全面彻底的但是却是insecured overacheivers的赢家。都说大学教育正在堕落成为失去灵魂的卓越，当然这不是大学问题，而是后现代性的社会出现的必然问题，在此不表，有空另开小灶。但是在我看来，更可忧虑的是那些赢家并不因此成就”卓越”，反倒可能因为熟谙了各种潜规则而变成蝇营狗苟的现实主义者，与此相对，输家则因为遭遇挫或不公而成为愤世嫉俗者和犬儒主义者。无论是哪一种结果，都以丧失灵魂为代价。所以这就是为什么部分大学生涯里我在我的四周自己给自己修起了一座高墙，自己不想出去，也不准别人走进的原因:当谈论的只是各种八卦新闻、网络游戏或说纯粹的男欢女爱，这样的大学一定不可能是卓越的，因为它背离了大学的本义。<br>或许长此以往，我也会变成那种我曾经讨厌的人，此时我想起一首歌<br>有人浪迹江湖，有人寒窗苦读</p><p>有人阿谀奉承，有人早已麻木</p><p>有人嫌贫爱富，有人唯利是图</p><p>有人精打细算，有人满不在乎  </p><p>为此我经常体会到了自己的矛盾，我，你，都是社会性体会。要在社会里走下去，必须要玩社会本身的游戏规则，尤其潜规则玩好比实打实的规则更重要。至于如何调整、引导这个矛盾，是我一直在学习的一件事情。我目前的方法是:是专注。走不出去，，那就专注的做好每件事情吧，那就把它做到极致吧。每个人都在寻找那个可以用尽全身气力去拥抱的对象，并且希望这个拥抱可以让自己变得安全、强大甚至完满。但随着年复一年的变更，我越来越认同昂山素季的这个说法“真正的改变是通过理解、同情、正义、爱心后的内在变化。”只有经历了如此这般的内在变化，你才会和自己停战，才能够学会不自负、不迟疑、也不骄慢”地与世界媾和。小至个体，大到国家，概莫能外。  </p><p>我总是亦步亦趋，因为我害怕失败，其实不过是自尊心作祟，我已经是个彻彻底底的loser，我还有什么释怀不了呢，其实最大的敌人莫过于自己，加油！</p>]]></content>
       
       
       <categories>
