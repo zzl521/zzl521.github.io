@@ -377,9 +377,9 @@
       <category term="IO" scheme="http://yoursite.com/categories/IO/"/>
     
     
-      <category term="Servlet" scheme="http://yoursite.com/tags/Servlet/"/>
-    
       <category term="交互" scheme="http://yoursite.com/tags/%E4%BA%A4%E4%BA%92/"/>
+    
+      <category term="Servlet" scheme="http://yoursite.com/tags/Servlet/"/>
     
   </entry>
   
@@ -433,9 +433,9 @@
       <category term="File" scheme="http://yoursite.com/categories/File/"/>
     
     
-      <category term="文件" scheme="http://yoursite.com/tags/%E6%96%87%E4%BB%B6/"/>
-    
       <category term="Servlet" scheme="http://yoursite.com/tags/Servlet/"/>
+    
+      <category term="文件" scheme="http://yoursite.com/tags/%E6%96%87%E4%BB%B6/"/>
     
   </entry>
   

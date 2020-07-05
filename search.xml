@@ -342,9 +342,9 @@
       
         <tags>
             
-            <tag> Servlet </tag>
-            
             <tag> 交互 </tag>
+            
+            <tag> Servlet </tag>
             
         </tags>
       
@@ -396,9 +396,9 @@
       
         <tags>
             
-            <tag> 文件 </tag>
-            
             <tag> Servlet </tag>
+            
+            <tag> 文件 </tag>
             
         </tags>
       
@@ -664,9 +664,9 @@
       
         <tags>
             
-            <tag> WAR </tag>
-            
             <tag> IDEA </tag>
+            
+            <tag> WAR </tag>
             
         </tags>
       
@@ -2463,9 +2463,9 @@
       
         <tags>
             
-            <tag> AS </tag>
-            
             <tag> 环境 </tag>
+            
+            <tag> AS </tag>
             
         </tags>
       
